@@ -1,0 +1,11 @@
+Ethics and Moral Philosophy
+            
+Ethics studies morality, examining what is right, wrong, good, and bad. Different ethical frameworks provide competing approaches.
+
+Major ethical theories:
+- Consequentialism: Actions judged by outcomes (utilitarianism)
+- Deontology: Actions judged by adherence to rules/duties (Kant)
+- Virtue ethics: Focus on character and virtues (Aristotle)
+- Care ethics: Emphasizes relationships and caring
+
+Applied ethics addresses real-world issues: bioethics, environmental ethics, business ethics, and AI ethics all draw on these foundational theories.

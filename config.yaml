@@ -1,0 +1,221 @@
+# ARIA Configuration File
+# 
+# IMPORTANT: Before running ARIA, you MUST configure the paths below
+# to match your local system. See INSTALLATION.md for detailed guide.
+
+# ==============================================================================
+# PATHS - YOU MUST EDIT THESE FOR YOUR SYSTEM
+# ==============================================================================
+
+paths:
+  # WHERE YOUR DOCUMENTS ARE STORED
+  # Examples:
+  #   Relative: "./data" (recommended for portability)
+  #   Absolute: "~/documents/aria-knowledge"
+  #   Windows: "C:~/Documents/aria-knowledge"
+  data_dir: "./data"
+  
+  # WHERE TO CACHE EMBEDDINGS (speeds up queries)
+  # This directory can grow large (100MB-5GB depending on corpus size)
+  # Examples:
+  #   Relative: "./cache"
+  #   Absolute: "~/.cache/aria"
+  cache_dir: "./cache"
+  
+  # WHERE TO SAVE QUERY RESULTS AND TELEMETRY
+  # Examples:
+  #   Relative: "./output"
+  #   Absolute: "~/aria-output"
+  output_dir: "./output"
+  
+  # WHERE QUATERNION STATE IS SAVED (cross-query memory)
+  # This file tracks semantic position on S³ across queries
+  # Examples:
+  #   Relative: "./state/quaternion_states.jsonl"
+  #   Absolute: "~/.cache/aria/quaternion_states.jsonl"
+  quaternion_state_path: "./state/quaternion_states.jsonl"
+  
+  # ANCHOR DETECTION PATTERNS (746 exemplar patterns)
+  # Should be in your data directory or relative to ARIA root
+  # Examples:
+  #   "./data/exemplars.txt" (if exemplars.txt is in data/)
+  #   "./exemplars.txt" (if exemplars.txt is in ARIA root)
+  exemplars: "./data/exemplars.txt"
+
+# ==============================================================================
+# RETRIEVAL SETTINGS - Can customize but defaults work well
+# ==============================================================================
+
+retrieval:
+  # Initial number of chunks to retrieve
+  default_k: 20
+  
+  # After cross-encoder reranking
+  rerank_top_k: 10
+  
+  # Tokens per chunk (adjust based on your documents)
+  chunk_size: 512
+  
+  # Overlap between chunks (helps maintain context)
+  chunk_overlap: 50
+  
+  # Enable BM25 lexical retrieval
+  use_bm25: true
+  
+  # Enable semantic embedding retrieval
+  use_embeddings: true
+
+# ==============================================================================
+# EXPLORATION SYSTEM - Quaternion + PCA + Golden Ratio Spiral
+# ==============================================================================
+
+exploration:
+  # Enable entire exploration system
+  enabled: true
+  
+  # Quaternion state momentum decay (0.0-1.0)
+  # Lower = state persists longer, Higher = adapts faster to new queries
+  quaternion_decay: 0.5
+  
+  # Enable PCA subspace rotations (requires 10+ documents)
+  pca_enabled: true
+  
+  # PCA dimensionality reduction (typical: 16-64)
+  # Lower = faster but less nuanced, Higher = slower but more detailed
+  pca_components: 32
+  
+  # Number of golden ratio spiral samples (Fibonacci numbers work best)
+  # Options: 5, 8, 13, 21, 34
+  golden_ratio_samples: 13
+  
+  # Exploration radius in semantic space (0.1-0.5)
+  # Lower = stay closer to query, Higher = explore further
+  exploration_radius: 0.3
+
+# ==============================================================================
+# MULTI-ANCHOR REASONING SYSTEM
+# ==============================================================================
+
+anchors:
+  # Enable anchor mode detection
+  enabled: true
+  
+  # Available reasoning modes
+  # Each mode has a corresponding .md file in anchors/ directory
+  available_modes:
+    - technical      # Code, APIs, implementation details
+    - formal         # Mathematical proofs, rigorous logic
+    - educational    # Teaching-oriented, scaffolded learning
+    - philosophical  # Conceptual exploration, multiple perspectives
+    - analytical     # Data-driven analysis, comparisons
+    - factual        # Direct facts, concise answers
+    - creative       # Brainstorming, exploratory thinking
+    - casual         # Conversational, accessible explanations
+
+# ==============================================================================
+# THOMPSON SAMPLING CONTEXTUAL BANDITS
+# ==============================================================================
+
+bandit:
+  # Exploration rate (0.0-1.0)
+  # Probability of trying random strategy instead of best known
+  epsilon: 0.1
+  
+  # Learning rate for Bayesian updates (0.0-1.0)
+  learning_rate: 0.01
+  
+  # Discount factor for future rewards (0.0-1.0)
+  discount_factor: 0.95
+  
+  # Beta distribution priors
+  alpha_prior: 1.0
+  beta_prior: 1.0
+
+# ==============================================================================
+# CURIOSITY ENGINE
+# ==============================================================================
+
+curiosity:
+  # Enable gap detection and Socratic questioning
+  enabled: true
+  
+  # Sensitivity to knowledge gaps (0.0-1.0)
+  # Lower = more sensitive, Higher = less sensitive
+  gap_threshold: 0.3
+  
+  # Curiosity personality level (1-10)
+  # 1 = conservative, 10 = maximum curiosity
+  personality: 7
+  
+  # Track multi-turn conversations for learning
+  conversation_tracking: true
+
+# ==============================================================================
+# POSTFILTER PIPELINE
+# ==============================================================================
+
+postfilter:
+  # Remove low-quality chunks
+  enable_quality_filter: true
+  
+  # Enforce semantic diversity
+  enable_diversity: true
+  
+  # Minimum quality score to keep chunk (0.0-1.0)
+  min_quality_score: 0.5
+  
+  # Maximum allowed duplication ratio (0.0-1.0)
+  max_duplication_ratio: 0.3
+
+# ==============================================================================
+# LOGGING
+# ==============================================================================
+
+logging:
+  # Logging level: DEBUG, INFO, WARNING, ERROR
+  level: "INFO"
+  
+  # Log file location (relative to output_dir)
+  file: "aria.log"
+  
+  # Also print logs to console
+  console_output: true
+  
+  # Enable verbose pipeline output (useful for debugging)
+  debug_mode: false
+
+# ==============================================================================
+# PERFORMANCE
+# ==============================================================================
+
+performance:
+  # Use GPU if available (much faster for embeddings)
+  # Set to false if you don't have CUDA-capable GPU
+  use_gpu: true
+  
+  # Batch size for embedding generation
+  # Reduce if you get CUDA out of memory errors
+  batch_size: 32
+  
+  # Number of parallel workers for processing
+  num_workers: 4
+  
+  # Cache embeddings to disk (highly recommended)
+  cache_embeddings: true
+
+# ==============================================================================
+# ADVANCED SETTINGS - Don't change unless you know what you're doing
+# ==============================================================================
+
+advanced:
+  # Enable telemetry tracking (required for bandit learning)
+  enable_telemetry: true
+  
+  # Enable meta-learning across sessions
+  enable_meta_learning: true
+  
+  # Minimum confidence threshold for answers (0.0-1.0)
+  confidence_threshold: 0.7
+  
+  # Session timeout in seconds (for hardware-anchored sessions)
+  session_timeout: 3600
