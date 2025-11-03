@@ -1,0 +1,11 @@
+Supervised Learning
+            
+Supervised learning is a machine learning paradigm where models learn from labeled training data. The algorithm receives input-output pairs and learns to map inputs to correct outputs.
+
+Key concepts:
+- Training data consists of features (X) and labels (y)
+- Model learns a function f: X → y
+- Performance measured using loss functions
+- Common algorithms: Linear regression, logistic regression, decision trees, neural networks
+
+Applications include classification, regression, and prediction tasks. The model's success depends on data quality, feature engineering, and proper validation.

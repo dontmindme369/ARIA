@@ -1,0 +1,11 @@
+Thermodynamics
+            
+Thermodynamics studies the relationships between heat, work, temperature, and energy. It governs macroscopic systems through four fundamental laws.
+
+Laws of Thermodynamics:
+1. Energy is conserved (First Law)
+2. Entropy always increases in isolated systems (Second Law)
+3. Absolute zero is unreachable (Third Law)
+4. Entropy of perfect crystals approaches zero at absolute zero (Zeroth Law)
+
+Applications span physics, chemistry, engineering, and biology. Statistical mechanics provides the microscopic foundation for thermodynamic principles.

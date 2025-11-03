@@ -1,0 +1,11 @@
+Quantum Mechanics
+            
+Quantum mechanics is the fundamental theory describing nature at atomic and subatomic scales. It introduces concepts that challenge classical intuition.
+
+Core principles:
+- Wave-particle duality: Particles exhibit both wave and particle properties
+- Uncertainty principle: Position and momentum cannot be simultaneously known
+- Quantum superposition: Systems exist in multiple states simultaneously
+- Quantum entanglement: Particles can be correlated across distances
+
+The theory has been experimentally verified countless times and forms the basis of modern physics and chemistry.
