@@ -56,6 +56,7 @@ class ARIAConfig:
     # Logging
     logging_save_telemetry: bool = True
     logging_debug_mode: bool = False
+    logging_verbose: bool = False  # Control detailed [ARIA] messages
     
     # Curiosity
     curiosity_enabled: bool = True
@@ -150,6 +151,7 @@ class ARIAConfig:
             'logging': {
                 'save_telemetry': self.logging_save_telemetry,
                 'debug_mode': self.logging_debug_mode,
+                'verbose': self.logging_verbose,
             },
             'curiosity': {
                 'enabled': self.curiosity_enabled,
@@ -188,9 +190,9 @@ def load_config(yaml_path: Optional[str] = None, existing_config: Optional[ARIAC
         # Try common locations
         candidates = [
             Path.cwd() / "aria_config.yaml",
+            Path.cwd() / "config.yaml",
             Path.home() / ".aria" / "config.yaml",
-            Path("/media/notapplicable/ARIA-knowledge/aria_config.yaml"),
-            Path("/media/notapplicable/Internal-SSD/ai-quaternions-model/aria_config.yaml"),
+            Path.home() / ".config" / "aria" / "config.yaml",
         ]
         
         for candidate in candidates:
@@ -263,6 +265,7 @@ def load_config(yaml_path: Optional[str] = None, existing_config: Optional[ARIAC
             log = data['logging']
             config.logging_save_telemetry = log.get('save_telemetry', config.logging_save_telemetry)
             config.logging_debug_mode = log.get('debug_mode', config.logging_debug_mode)
+            config.logging_verbose = log.get('verbose', config.logging_verbose)
         
         if 'curiosity' in data:
             cur = data['curiosity']
