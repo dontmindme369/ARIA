@@ -1,0 +1,15 @@
+Theory of Relativity
+            
+Einstein's theory of relativity revolutionized our understanding of space, time, and gravity. It consists of special and general relativity.
+
+Special Relativity:
+- Time and space are relative to the observer
+- Speed of light is constant in all reference frames
+- Mass-energy equivalence: E = mc²
+
+General Relativity:
+- Gravity is curvature of spacetime
+- Massive objects bend spacetime
+- Predicts black holes, gravitational waves
+
+These theories have been confirmed through numerous experiments and observations.
