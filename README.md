@@ -25,7 +25,7 @@ With that being said, share this far and wide and go make this better than I eve
 
 ARIA is a **privacy-first, self-optimizing AI reasoning system** that fundamentally reimagines how retrieval systems work by treating semantic search as navigation through 4-dimensional space. Unlike traditional RAG systems that treat all queries identically and rely on simple vector similarity, ARIA incorporates:
 
-- **Quantum-Inspired State Management** - Semantic positions tracked as quaternions on S³ (unit 3-sphere) with SLERP interpolation
+- **Aether-Inspired State Management** - Semantic positions tracked as quaternions on S³ (unit 3-sphere) with SLERP interpolation
 - **Golden Ratio Exploration** - φ-based (1.618...) optimal angle spacing for comprehensive semantic coverage without redundancy
 - **Cross-Query Memory** - Persistent state that recalls and biases toward similar past explorations
 - **Multi-Anchor Hybrid Reasoning** - 8 specialized modes that automatically adapt to query intent
