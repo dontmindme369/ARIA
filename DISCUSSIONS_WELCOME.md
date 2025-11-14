@@ -107,9 +107,9 @@ Community-created tutorials, guides, and best practices.
 ### New to ARIA?
 
 1. **Read the Documentation**
-   - [README](../README.md) - Project overview
-   - [Getting Started](../GETTING_STARTED.md) - Quick start guide
-   - [Documentation](../docs/) - Complete guides
+   - [README](https://github.com/dontmindme369/ARIA/blob/main/README.md) - Project overview
+   - [Getting Started](https://github.com/dontmindme369/ARIA/blob/main/GETTING_STARTED.md) - Quick start guide
+   - [Documentation](https://github.com/dontmindme369/ARIA/tree/main/docs) - Complete guides
 
 2. **Run the Tests**
    ```bash
@@ -129,8 +129,8 @@ Community-created tutorials, guides, and best practices.
 ### Have a Question?
 
 Before posting, check:
-- [FAQ](../docs/FAQ.md) - Frequently asked questions
-- [Troubleshooting](../docs/INSTALLATION.md#troubleshooting) - Common issues
+- [FAQ](https://github.com/dontmindme369/ARIA/blob/main/docs/FAQ.md) - Frequently asked questions
+- [Troubleshooting](https://github.com/dontmindme369/ARIA/blob/main/docs/INSTALLATION.md#troubleshooting) - Common issues
 - [Existing discussions](https://github.com/dontmindme369/ARIA/discussions) - Someone may have asked already
 
 ---
@@ -199,10 +199,10 @@ What would you like feedback on?
 ## 🔗 Useful Links
 
 ### Documentation
-- [Architecture](../docs/ARCHITECTURE.md) - System internals
-- [API Reference](../docs/API_REFERENCE.md) - Programmatic usage
-- [Quaternions](../docs/QUATERNIONS.md) - Mathematical foundations
-- [Contributing](../docs/CONTRIBUTING.md) - Development guide
+- [Architecture](https://github.com/dontmindme369/ARIA/blob/main/docs/ARCHITECTURE.md) - System internals
+- [API Reference](https://github.com/dontmindme369/ARIA/blob/main/docs/API_REFERENCE.md) - Programmatic usage
+- [Quaternions](https://github.com/dontmindme369/ARIA/blob/main/docs/QUATERNIONS.md) - Mathematical foundations
+- [Contributing](https://github.com/dontmindme369/ARIA/blob/main/docs/CONTRIBUTING.md) - Development guide
 
 ### External Resources
 - [Thompson Sampling](https://en.wikipedia.org/wiki/Thompson_sampling) - Multi-armed bandits
@@ -252,7 +252,7 @@ What would you like feedback on?
 - "Why am I getting no results?" → Check knowledge base path, try broader query
 - "Queries are slow" → Use `fast` preset, enable GPU, reduce top_k
 - "Student watcher not capturing" → Check LM Studio path, verify permissions
-- "How to integrate with my LLM?" → See [Usage Guide](../docs/USAGE.md#integration-with-llms)
+- "How to integrate with my LLM?" → See [Usage Guide](https://github.com/dontmindme369/ARIA/blob/main/docs/USAGE.md#integration-with-llms)
 
 ---
 
