@@ -1,0 +1,107 @@
+{
+  "educational": {
+    "markers": [
+      "explain",
+      "understand",
+      "learn",
+      "tutorial",
+      "introduction",
+      "basics",
+      "fundamentals",
+      "beginner",
+      "guide",
+      "how to"
+    ],
+    "domains": {}
+  },
+  "diagnostic": {
+    "markers": [
+      "error",
+      "failure",
+      "debug",
+      "troubleshoot",
+      "problem",
+      "issue",
+      "bug",
+      "crash",
+      "malfunction",
+      "diagnostic"
+    ],
+    "domains": {}
+  },
+  "security": {
+    "markers": [
+      "vulnerability",
+      "exploit",
+      "breach",
+      "malicious",
+      "attack",
+      "threat",
+      "risk",
+      "secure",
+      "authentication",
+      "authorization"
+    ],
+    "domains": {}
+  },
+  "implementation": {
+    "markers": [
+      "build",
+      "create",
+      "implement",
+      "develop",
+      "construct",
+      "design",
+      "engineer",
+      "fabricate",
+      "deploy",
+      "integrate"
+    ],
+    "domains": {}
+  },
+  "research": {
+    "markers": [
+      "hypothesis",
+      "experiment",
+      "analyze",
+      "investigate",
+      "study",
+      "research",
+      "empirical",
+      "methodology",
+      "findings",
+      "conclusion"
+    ],
+    "domains": {}
+  },
+  "theoretical": {
+    "markers": [
+      "theory",
+      "model",
+      "framework",
+      "conceptual",
+      "abstract",
+      "principle",
+      "axiom",
+      "postulate",
+      "theorem",
+      "formalism"
+    ],
+    "domains": {}
+  },
+  "practical": {
+    "markers": [
+      "application",
+      "use case",
+      "real-world",
+      "practice",
+      "applied",
+      "operational",
+      "deployment",
+      "production",
+      "field",
+      "hands-on"
+    ],
+    "domains": {}
+  }
+}

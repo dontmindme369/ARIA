@@ -1,0 +1,148 @@
+# ARIA Configuration - Portable Default
+# All paths use ~/ (user home) or ./ (project root) for portability
+
+# =============================================================================
+# PATHS - Edit these to match your system
+# =============================================================================
+paths:
+  # Where your knowledge base lives (expand to your actual path)
+  index_roots:
+    - ~/Documents/knowledge        # User's Documents folder
+    # - ./sample_data              # Or use project-relative sample data
+
+  # Where ARIA outputs go
+  output_dir: ./aria_packs         # Relative to project root
+
+  # Training data and state
+  exemplars: ./data/exemplars.txt
+  bandit_state: ~/.aria/bandit_state.json
+  domain_dictionaries: ./data/domain_dictionaries
+
+  # Logs and telemetry
+  logs_dir: ./var/logs
+  cache_dir: ./var/cache
+  state_dir: ./var/state
+
+# =============================================================================
+# RETRIEVAL - Search and indexing settings
+# =============================================================================
+retrieval:
+  # Query settings
+  top_k: 128                       # Max chunks to retrieve
+  per_file_limit: 10000            # Max chars per file
+  max_per_file: 32                 # Max chunks per file
+  max_files_to_scan: 10000         # Max files to scan
+
+  # Semantic search
+  use_semantic: true               # Enable semantic search
+  semantic_model: all-MiniLM-L6-v2 # Sentence transformer model
+  semantic_weight: 0.7             # Weight of semantic vs BM25 (0.0-1.0)
+  semantic_rotations: 3            # PCA rotation iterations
+  semantic_limit: 256              # Top N docs for semantic scoring
+
+# =============================================================================
+# POSTFILTER - Quality and diversity filtering
+# =============================================================================
+postfilter:
+  enabled: true
+
+  # Filters (tuned for small-to-medium datasets)
+  quality_filter: false            # Disabled - can be too aggressive
+  topic_filter: false              # Disabled - for broader results
+  diversity_filter: true           # Keep variety in results
+
+  # Thresholds
+  max_per_source: 15               # Max chunks per source file
+  min_keep: 20                     # Minimum chunks to keep
+  min_alpha_ratio: 0.2             # Letter ratio threshold (0.0-1.0)
+  min_score: 0.001                 # Minimum relevance score (very lenient)
+
+# =============================================================================
+# BANDIT - Adaptive preset selection
+# =============================================================================
+bandit:
+  enabled: true
+  exploration_pulls: 20            # First 20 queries explore randomly
+
+# =============================================================================
+# CONTEXT - How context is built for LLM
+# =============================================================================
+context:
+  max_chars: 500000                # Max total context size (500KB)
+  max_item_chars: 5000             # Max per chunk (5KB)
+  min_item_chars: 1000             # Min per chunk (1KB)
+  separator: "\n\n---\n\n"         # Separator between chunks
+
+# =============================================================================
+# TERMINAL - UI and logging
+# =============================================================================
+terminal:
+  colors: true                     # Colorized output
+  verbose: false                   # Verbose logging (set true for debugging)
+  log_level: INFO                  # DEBUG, INFO, WARNING, ERROR
+
+# =============================================================================
+# PERSPECTIVE - 8-perspective detection
+# =============================================================================
+perspective:
+  enabled: true
+  modes:
+    - educational
+    - practical
+    - diagnostic
+    - exploratory
+    - analytical
+    - creative
+    - philosophical
+    - technical
+
+# =============================================================================
+# ANCHORS - 16-anchor reasoning modes
+# =============================================================================
+anchors:
+  enabled: true
+
+  # Core response modes (8)
+  core_modes:
+    - formal
+    - casual
+    - philosophical
+    - analytical
+    - factual
+    - creative
+    - feedback_correction
+    - educational
+
+  # Domain-specific technical modes (8)
+  technical_modes:
+    - code
+    - technical
+    - engineering
+    - medical
+    - science
+    - mathematics
+    - business
+    - law
+
+# =============================================================================
+# STUDENT ARIA - Learning from interactions
+# =============================================================================
+student:
+  enabled: true
+  corpus_dir: ./var/student_corpus
+  watcher_state: ./var/state/watcher_state.json
+  auto_save_interval: 10           # Save state every N messages
+
+# =============================================================================
+# MONITORING - Telemetry and metrics
+# =============================================================================
+monitoring:
+  enabled: true
+  telemetry_dir: ./var/telemetry
+  metrics_retention_days: 30
+
+  # What to track
+  track_query_latency: true
+  track_retrieval_quality: true
+  track_bandit_performance: true
+  track_perspective_accuracy: true

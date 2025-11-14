@@ -1,0 +1,36 @@
+{
+  "educational": [
+    "general"
+  ],
+  "diagnostic": [
+    "medicine",
+    "computer_science"
+  ],
+  "security": [
+    "security",
+    "computer_science"
+  ],
+  "implementation": [
+    "computer_science",
+    "engineering"
+  ],
+  "research": [
+    "biology",
+    "chemistry",
+    "physics",
+    "medicine"
+  ],
+  "theoretical": [
+    "mathematics",
+    "physics"
+  ],
+  "practical": [
+    "engineering",
+    "computer_science"
+  ],
+  "reference": [
+    "general",
+    "mathematics",
+    "computer_science"
+  ]
+}

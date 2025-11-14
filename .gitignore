@@ -1,3 +1,5 @@
+# ARIA .gitignore - Portable GitHub Release
+
 # Python
 __pycache__/
 *.py[cod]
@@ -19,40 +21,53 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
-# Virtual environments
+# Virtual Environments
 venv/
-env/
 ENV/
+env/
 .venv
 
-# IDEs
+# ARIA Outputs (User Data - DO NOT COMMIT)
+aria_packs/
+rag_runs/
+var/
+!var/.gitkeep
+
+# State files
+*.state.json
+*_state.json
+
+# Logs
+*.log
+logs/
+telemetry/
+
+# Cache
+cache/
+*.cache
+
+# User Data
+knowledge/
+datasets/
+aria_config.local.yaml
+.aria/
+sessions/
+
+# Development
 .vscode/
 .idea/
 *.swp
-*.swo
 *~
 .DS_Store
 
 # Testing
 .pytest_cache/
 .coverage
-.coverage.*
 htmlcov/
-.tox/
-.nox/
 
-# ARIA specific
-cache/
-output/
-*.log
-data/*.txt
-!data/exemplars.txt
-rag_runs/
-
-# Secrets
-*.key
-*.pem
-config_local.yaml
-.env
+# ARIA Specific
+.aria_initialized
+.rag_bandit_state.json
+bandit_state.json
+watcher_state.json

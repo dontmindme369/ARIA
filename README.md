@@ -1,574 +1,467 @@
-First I want to say, I am not a programmer, coder, or anything of the like. ARIA is my first project and I built it in 4 days with an additional 2 - 3 days of addons and polishes so there's likely a ton of bugs I haven't come across that I know you real programmers will find and fix.
-
-I want you all to know, I'm just someone with ideas and a different outlook on the world. ARIA should help you understand some of it. I've seen something looming in the distance for many years now and it's not that far away anymore. Many are unware of what's about to take place. ARIA is my hedge, for you, as it was done with you all in mind.
-
-My time, my energy, my essence, for you. ARIA is my gift to the people. Even though donations help and are much appreciated, I expect nor want nothing in return. Not fiat currency and not fame or noteriety. A thank you is enough for me.
-
-ARIA is a foundation, so build on top of it. Don't rely on broken paradigms and corrupt systems anymore that exist simply because of your reliance on them. That time is over. Self-reliance, self-sustainability, then community.
-
-With that being said, share this far and wide and go make this better than I ever could alone.
-
-
 # ARIA - Adaptive Resonant Intelligent Architecture
 
-**Self-optimizing intelligence through adaptive retrieval and geometric exploration**
+**Self-learning retrieval system with quaternion semantic exploration and Thompson Sampling optimization.**
 
-*"Go within."*
-
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Status: Production](https://img.shields.io/badge/status-production-green.svg)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Tests](https://img.shields.io/badge/tests-14%2F14%20passing-brightgreen.svg)](tests/comprehensive_test_suite.py)
 
 ---
 
-## 🌀 What is ARIA?
+## What is ARIA?
 
-ARIA is a **privacy-first, self-optimizing AI reasoning system** that fundamentally reimagines how retrieval systems work by treating semantic search as navigation through 4-dimensional space. Unlike traditional RAG systems that treat all queries identically and rely on simple vector similarity, ARIA incorporates:
+ARIA is an advanced retrieval system that **learns from every query** to improve future retrieval. It combines:
 
-- **Quantum-Inspired State Management** - Semantic positions tracked as quaternions on S³ (unit 3-sphere) with SLERP interpolation
-- **Golden Ratio Exploration** - φ-based (1.618...) optimal angle spacing for comprehensive semantic coverage without redundancy
-- **Cross-Query Memory** - Persistent state that recalls and biases toward similar past explorations
-- **Multi-Anchor Hybrid Reasoning** - 8 specialized modes that automatically adapt to query intent
-- **Curiosity-Driven Learning** - Detects knowledge gaps and generates Socratic questions
-- **Thompson Sampling Optimization** - Self-optimizing strategy selection based on measurable outcomes
-- **Local-First Architecture** - Runs entirely on your machine, no cloud dependencies
+- 🎯 **Thompson Sampling** - Bayesian bandit learns optimal retrieval strategies
+- 🌀 **Quaternion Exploration** - 4D semantic space navigation with golden ratio spiral
+- 🧭 **Perspective Detection** - 8-perspective query classification (educational, diagnostic, research, etc.)
+- 🎓 **Student/Teacher Architecture** - Learns from all LLM conversations, not just queries
+- 📊 **Hybrid Search** - BM25 lexical + semantic embeddings (sentence-transformers)
 
-*"Go within."* - ARIA embodies introspective intelligence: learning from internal experience, adapting through measured outcomes, and continuously improving without external validation.
+### Key Features
 
----
+**Adaptive Learning**
+- After 20 queries, ARIA learns which strategies work best for different query types
+- Multi-objective optimization: quality + coverage + diversity
+- Continuous improvement through Thompson Sampling
 
-## ✨ What Makes ARIA Novel
+**Semantic Exploration**
+- 100-point golden ratio spiral for uniform sphere coverage
+- Multi-rotation refinement (2-3 iterations)
+- PCA-aligned rotations following semantic space structure
+- Perspective-aware rotation angles (15°-120° based on query intent)
 
-### 1. Quaternion State Management on S³
-
-**The Problem**: Traditional retrieval systems treat each query independently, discarding the rich semantic context of what was previously explored. They lack spatial awareness in semantic space.
-
-**ARIA's Solution**: Semantic state is represented as a quaternion on the unit 3-sphere (S³), enabling:
-
-- **Smooth Interpolation**: SLERP (Spherical Linear Interpolation) creates natural transitions between semantic states
-- **Cross-Query Memory**: Past queries influence current exploration through momentum-based evolution
-- **4D Semantic Navigation**: Full rotational freedom in semantic space, not limited to 3D vector operations
-- **Persistent Identity**: Queries about related topics benefit from accumulated semantic "momentum"
-
-**Technical Implementation**:
-
-```python
-# State evolves on S³ with momentum
-new_state = slerp(current_state, target_state, t) + momentum * decay
-state = normalize_quaternion(new_state)  # Project back to unit sphere
-
-# Distance on S³ respects semantic topology
-similarity = 1 - arccos(dot(q1, q2)) / π
-```
-
-**Why Quaternions Over Vectors?**
-
-- Vectors can't represent rotations without gimbal lock
-- Quaternions provide continuous, ambiguity-free rotation space
-- S³ topology better models semantic relationships than flat Euclidean space
-- Natural momentum evolution through tangent space
-
-### 2. Golden Ratio Spiral Exploration
-
-**The Problem**: Uniform grid sampling is wasteful (redundant coverage), while random sampling is incomplete (gaps in coverage). Most retrieval systems simply take top-k results, missing potentially relevant nearby regions.
-
-**ARIA's Solution**: The golden ratio (φ ≈ 1.618) provides mathematically optimal angular spacing for comprehensive coverage:
-
-```python
-angle_i = i * (2π / φ)  # Optimal angle for i-th sample
-```
-
-**Why This Works**:
-
-- φ creates **irrational spacing** - angles never repeat, avoiding clusters
-- **Fibonacci sequence** emerges naturally from φ, proven optimal for sphere packing
-- **Minimal overlap** while maintaining thorough coverage
-- **Scalable** - works for any number of samples without reorganization
-
-**Practical Impact**:
-
-- 15-25% better semantic coverage than top-k selection
-- Discovers relevant documents missed by pure similarity ranking
-- No duplicate or near-duplicate content in final results
-
-### 3. PCA Subspace Rotation
-
-**The Problem**: High-dimensional semantic spaces have complex structure that pure distance metrics miss. Relevant information may lie in orthogonal subspaces.
-
-**ARIA's Solution**: Rotate queries through PCA-reduced subspaces to explore multiple semantic "angles":
-
-```python
-# Fit PCA to corpus
-pca = PCA(n_components=32).fit(corpus_embeddings)
-
-# Generate rotations in reduced space
-for angle in [0°, 45°, 90°, 135°]:
-    rotated_query = apply_rotation(query_reduced, angle, pca_space)
-    retrieve(back_project(rotated_query, pca.components_))
-```
-
-**Novel Aspects**:
-
-- **Multi-perspective retrieval** - sees topic from different semantic viewpoints
-- **Subspace-aware** - operates in dimensions where variance actually exists
-- **Complementary to golden ratio** - PCA rotations + φ spiral = comprehensive coverage
-
-### 4. Multi-Anchor Reasoning System
-
-**The Problem**: Different questions require fundamentally different reasoning approaches. "Implement binary search" needs technical precision, while "What is consciousness?" needs philosophical depth.
-
-**ARIA's Solution**: 8 specialized reasoning modes automatically selected via exemplar pattern matching:
-
-| Mode | Use Case | Key Characteristics |
-|------|----------|---------------------|
-| **Technical** | Implementation questions | Code-focused, precise syntax, practical examples |
-| **Formal** | Mathematical/logical proofs | Rigorous notation, step-by-step derivations |
-| **Educational** | Learning-oriented queries | Scaffolded explanations, analogies, practice problems |
-| **Philosophical** | Conceptual exploration | Multiple perspectives, thought experiments |
-| **Analytical** | Data-driven analysis | Comparisons, metrics, evidence-based conclusions |
-| **Factual** | Direct information requests | Concise answers, source citations |
-| **Creative** | Brainstorming, design | Exploratory thinking, novel connections |
-| **Casual** | Conversational queries | Natural language, accessible explanations |
-
-**Mode Detection Process**:
-
-1. Query analyzed against 746 exemplar patterns via TF-IDF + cosine similarity
-2. Pattern database covers query intent markers, domain keywords, linguistic cues
-3. ExemplarFitScorer evaluates response quality for continuous improvement
-4. System learns which modes work best for different query types
-
-**Why This Matters**:
-
-- Same query ("explain recursion") gets different responses for beginner vs expert
-- Reasoning framework matches cognitive demands of the question
-- Quality improves over time as system learns from outcomes
-
-### 5. Curiosity Engine with Gap Detection
-
-**The Problem**: LLMs hallucinate when they lack information but still generate responses. Users can't distinguish confident answers from uncertain guesses.
-
-**ARIA's Solution**: Three-layer gap detection system that knows what it doesn't know:
-
-**Semantic Gaps**: Missing topical coverage
-
-```python
-query_topics = extract_entities(query)
-chunk_topics = extract_entities(chunks)
-gaps = query_topics - chunk_topics
-if gaps:
-    generate_socratic_questions(gaps)
-```
-
-**Factual Gaps**: Incomplete information
-
-```python
-required_facts = identify_factual_needs(query)
-available_facts = extract_facts(chunks)
-if coverage(available_facts, required_facts) < threshold:
-    flag_uncertainty()
-```
-
-**Logical Gaps**: Broken reasoning chains
-
-```python
-reasoning_chain = build_dependency_graph(chunks)
-if has_missing_links(reasoning_chain):
-    ask_bridging_questions()
-```
-
-**Outcome**: System generates Socratic questions for gaps, adjusts response confidence, and adapts synthesis strategy (speed/depth/adaptive) based on knowledge completeness.
-
-### 6. Thompson Sampling Contextual Bandits
-
-**The Problem**: Static retrieval strategies can't adapt to different corpus types, query distributions, or usage patterns. Manual tuning is slow and brittle.
-
-**ARIA's Solution**: Bayesian multi-armed bandit that learns optimal strategies through exploration/exploitation:
-
-```python
-# For each strategy, maintain Beta distribution
-strategies = {
-    'bm25': Beta(α=1, β=1),
-    'semantic': Beta(α=1, β=1),
-    'hybrid': Beta(α=1, β=1),
-    ...
-}
-
-# Thompson Sampling selection
-selected = argmax([strategy.sample() for strategy in strategies])
-
-# Update based on outcome
-α_new = α_old + reward
-β_new = β_old + (1 - reward)
-```
-
-**Why Bayesian Bandits?**
-
-- **Principled uncertainty**: Beta distributions naturally model win rates
-- **Automatic balancing**: Exploration rate emerges from uncertainty
-- **No hyperparameters**: Self-tuning through Bayesian updates
-- **Contextual**: Can condition on query type, corpus, user patterns
-
-**Measured Improvements**:
-
-- 12-18% reward increase over 100 queries
-- Converges to optimal strategy in 50-80 queries
-- Adapts to corpus changes without retraining
+**Dual Architecture**
+- **Teacher ARIA**: Query-driven knowledge retrieval
+- **Student ARIA**: Conversation corpus learning from LM Studio
 
 ---
 
-## 🏗️ How It All Fits Together
-
-### Query Pipeline
-
-```
-User Query
-    ↓
-┌─────────────────────────────────────────┐
-│  1. Anchor Selection                    │
-│  • Analyze query via 746 patterns      │
-│  • Select reasoning mode                │
-│  • Configure pipeline                   │
-└─────────────────────────────────────────┘
-    ↓
-┌─────────────────────────────────────────┐
-│  2. Bandit Strategy Selection           │
-│  • Thompson Sampling across strategies  │
-│  • Balance exploration/exploitation     │
-└─────────────────────────────────────────┘
-    ↓
-┌─────────────────────────────────────────┐
-│  3. Multi-Source Retrieval              │
-│  • BM25 lexical scoring                 │
-│  • Semantic embedding similarity        │
-│  • Hybrid combination                   │
-└─────────────────────────────────────────┘
-    ↓
-┌─────────────────────────────────────────┐
-│  4. Postfilter (Quality + Diversity)    │
-│  • Remove low-quality chunks            │
-│  • Enforce source diversity             │
-│  • Compute pack statistics              │
-└─────────────────────────────────────────┘
-    ↓
-┌─────────────────────────────────────────┐
-│  5. Exploration System ⭐ NOVEL         │
-│  ┌───────────────────────────────────┐  │
-│  │ Quaternion State Manager          │  │
-│  │ • Load previous state (S³)        │  │
-│  │ • Apply momentum evolution        │  │
-│  │ • SLERP to new target             │  │
-│  │ • Save state for next query       │  │
-│  └───────────────────────────────────┘  │
-│  ┌───────────────────────────────────┐  │
-│  │ PCA Rotation Explorer             │  │
-│  │ • Fit PCA to corpus               │  │
-│  │ • Generate rotated queries        │  │
-│  │ • Retrieve from subspaces         │  │
-│  └───────────────────────────────────┘  │
-│  ┌───────────────────────────────────┐  │
-│  │ Golden Ratio Spiral               │  │
-│  │ • Compute φ-spaced angles         │  │
-│  │ • Sample around query vector      │  │
-│  │ • Merge with retrieval results    │  │
-│  └───────────────────────────────────┘  │
-└─────────────────────────────────────────┘
-    ↓
-┌─────────────────────────────────────────┐
-│  6. Curiosity Engine                    │
-│  • Detect semantic/factual/logical gaps │
-│  • Generate Socratic questions          │
-│  • Adjust synthesis strategy            │
-└─────────────────────────────────────────┘
-    ↓
-┌─────────────────────────────────────────┐
-│  7. Response Generation                 │
-│  • Reasoning model synthesizes          │
-│  • Uses anchor-specific framework       │
-└─────────────────────────────────────────┘
-    ↓
-┌─────────────────────────────────────────┐
-│  8. Telemetry & Learning                │
-│  • Record metrics                       │
-│  • Compute reward signal                │
-│  • Update bandit parameters             │
-│  • Update quaternion state              │
-└─────────────────────────────────────────┘
-```
-
-### Why This Architecture?
-
-**Layered Intelligence**: Each component solves a specific problem:
-
-1. **Anchor Selection** → Right reasoning framework for query type
-2. **Bandit** → Optimal strategy for current context
-3. **Retrieval** → Initial candidate set
-4. **Postfilter** → Quality + diversity baseline
-5. **Exploration** → Comprehensive semantic coverage ⭐
-6. **Curiosity** → Gap awareness + adaptive synthesis
-7. **Generation** → Context-appropriate response
-8. **Learning** → Continuous improvement
-
-**Emergent Properties**:
-
-- **Adaptive**: System configuration evolves per query
-- **Self-Optimizing**: Bandits + telemetry = continuous improvement
-- **Context-Aware**: Quaternion state provides memory across queries
-- **Gap-Aware**: Curiosity engine prevents hallucination
-- **Privacy-Preserving**: Entirely local, no external dependencies
-
----
-
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
 ```bash
-# Clone repository
-git clone https://github.com/dontmindme369/aria.git
-cd aria
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
+git clone https://github.com/dontmindme369/ARIA.git
+cd ARIA/aria
 pip install -r requirements.txt
 ```
 
 ### Configuration
 
+Edit `aria_config.yaml` to point to your knowledge base:
+
+```yaml
+paths:
+  index_roots:
+    - ~/Documents/knowledge    # Your knowledge base
+  output_dir: ./aria_packs    # Output directory
+```
+
+### Run a Query
+
+**Command Line:**
 ```bash
-# Copy example config
-cp config.yaml config_local.yaml
-
-# Edit paths in config_local.yaml
-# Update these to match your setup:
-#   - data_dir: "./data"        # Your knowledge base
-#   - cache_dir: "./cache"      # Embeddings cache
-#   - output_dir: "./output"    # Results
+python3 aria_main.py "How does gradient descent work?"
 ```
 
-### Basic Usage
+**Control Center (Recommended):**
+```bash
+python3 aria_control_center.py
+```
 
+**Python API:**
 ```python
-from aria_main import ARIA
-from anchor_selector import AnchorSelector
+from core.aria_core import ARIA
 
-# Initialize ARIA system
 aria = ARIA(
-    config_path="config_local.yaml",
-    enable_exploration=True  # Enable quaternion+PCA+φ spiral
+    index_roots=["~/Documents/knowledge"],
+    out_root="./aria_packs"
 )
 
-# Process a query
-query = "How does machine learning work?"
-
-result = aria.process_query(query)
-
-print(f"Mode: {result['anchor_mode']}")
-print(f"Strategy: {result['bandit']['selected_strategy']}")
-print(f"Chunks retrieved: {len(result['chunks'])}")
-print(f"Exploration applied: {result['exploration']['applied']}")
-print(f"Quaternion state: {result['exploration']['quaternion_state']}")
-```
-
-### With Curiosity Engine
-
-```python
-# Enable curiosity for gap detection
-result = aria.process_query(
-    query="Explain quantum entanglement",
-    enable_curiosity=True
-)
-
-print(f"Confidence: {result['curiosity']['confidence']}")
-print(f"Knowledge gaps: {result['curiosity']['gaps']}")
-print(f"Socratic questions: {result['curiosity']['questions']}")
+result = aria.query("What is machine learning?")
+print(f"Retrieved {result['chunks_retrieved']} chunks")
 ```
 
 ---
 
-## 📁 Repository Structure
+## How It Works
+
+### 1. Query Analysis → 2. Bandit Selection → 3. Retrieval → 4. Postfilter → 5. Learning
+
+```
+User Query
+    ↓
+Feature Extraction (length, domain, complexity)
+    ↓
+Thompson Sampling selects preset (fast/balanced/deep/diverse)
+    ↓
+Perspective Detection (educational/diagnostic/research/etc.)
+    ↓
+Hybrid Search (BM25 + Semantic with quaternion rotation)
+    ↓
+Postfilter (quality + diversity enforcement)
+    ↓
+Pack Generation (JSON output)
+    ↓
+Reward Calculation (40% quality, 30% coverage, 30% diversity)
+    ↓
+Update Bandit State (α/β parameters for next query)
+```
+
+### Thompson Sampling (Bayesian Bandit)
+
+Each preset has a **Beta distribution** tracking successes (α) and failures (β):
+
+```python
+For each preset:
+    sample = Beta(α, β).sample()
+
+selected_preset = argmax(samples)
+
+# After query:
+reward = 0.4 * quality + 0.3 * coverage + 0.3 * diversity - 0.2 * issues
+α += reward
+β += (1 - reward)
+```
+
+**Result**: ARIA learns which preset works best for different query types.
+
+### Quaternion Semantic Exploration
+
+**Golden Ratio Spiral** (φ = 1.618...):
+- Generates 100 uniform points on sphere
+- No clustering, optimal coverage
+- Most irrational number = no resonance patterns
+
+**Multi-Rotation Refinement**:
+```
+Iteration 1: 100 rotations → find best
+Iteration 2: 100 rotations around best from iter 1
+Iteration 3: 100 rotations around best from iter 2
+→ Aggregate scores across all 300 rotations
+```
+
+**PCA Alignment**: Rotations follow principal components of semantic space
+
+### 8 Perspectives
+
+| Perspective | Angle | Query Example | Use Case |
+|-------------|-------|---------------|----------|
+| Reference | 15° | "What is REST API?" | Quick factual lookup |
+| Educational | 30° | "Explain how transformers work" | Learning concepts |
+| Security | 45° | "SQL injection vulnerabilities" | Threat analysis |
+| Practical | 50° | "Docker setup tutorial" | How-to guides |
+| Implementation | 60° | "Build REST API in Python" | Code/building |
+| Theoretical | 75° | "Theory of backpropagation" | Abstract concepts |
+| Diagnostic | 90° | "Debug CUDA out of memory" | Troubleshooting |
+| Research | 120° | "Explore transformer alternatives" | Investigation |
+
+**Larger angles** = more aggressive exploration
+
+---
+
+## Architecture
+
+### System Components
+
+```
+┌─────────────────────────────────────────────────────┐
+│              ARIA Control Center                     │
+│  ┌────────────────┐      ┌──────────────────┐       │
+│  │  Teacher ARIA  │      │  Student ARIA    │       │
+│  │  (Query/Ret)   │      │  (Corpus Learn)  │       │
+│  └────────────────┘      └──────────────────┘       │
+└─────────────────────────────────────────────────────┘
+           │                        │
+    ┌──────┴──────┐         ┌──────┴──────┐
+    │  Retrieval  │         │  Watcher    │
+    │  Engine     │         │  Service    │
+    └──────┬──────┘         └──────┬──────┘
+           │                       │
+    ┌──────▼────────────────────────▼──────┐
+    │      Intelligence Layer               │
+    │  • Thompson Sampling                  │
+    │  • Quaternion Exploration             │
+    │  • Perspective Detection              │
+    └───────────────────────────────────────┘
+```
+
+### File Structure
 
 ```
 aria/
 ├── src/
-│   ├── aria_main.py              # Main orchestrator
-│   ├── anchor_selector.py        # Multi-anchor mode detection
-│   ├── aria_retrieval.py         # Multi-source retrieval
-│   ├── aria_postfilter.py        # Quality filtering
-│   ├── contextual_bandit.py      # Thompson Sampling
-│   │
-│   ├── quaternion_state.py       # ⭐ S³ state management
-│   ├── pca_exploration.py        # ⭐ Subspace rotations
-│   ├── aria_exploration.py       # ⭐ Golden ratio + integration
-│   │
-│   ├── aria_curiosity.py         # Gap detection
-│   ├── conversation_scorer.py    # Quality scoring
-│   ├── aria_telemetry.py         # Metrics tracking
-│   └── ...
-│
-├── anchors/                       # 8 mode-specific instructions
-│   ├── technical.md
-│   ├── formal.md
-│   ├── educational.md
-│   └── ...
-│
-├── tests/
-│   ├── test_aria_comprehensive.py
-│   └── test_anchor_system.py
-│
-├── data/
-│   └── exemplars.txt             # 746 anchor patterns
-│
-├── docs/
-│   ├── ARCHITECTURE.md           # System design
-│   ├── CHANGELOG.md              # Version history
-│   ├── CONTRIBUTING.md           # Development guide
-│   ├── METRICS.md                # Telemetry guide
-│   └── TROUBLESHOOTING.md        # Common issues
-│
-├── config.yaml                    # Configuration
-├── requirements.txt               # Dependencies
-└── README.md                      # This file
+│   ├── core/              # ARIA orchestrator
+│   ├── retrieval/         # BM25 + semantic search
+│   ├── intelligence/      # Bandit + quaternions
+│   ├── perspective/       # 8-perspective detection
+│   ├── anchors/          # Exemplar fit scoring
+│   ├── monitoring/        # Telemetry & logs
+│   └── utils/            # Config, paths, presets
+├── tests/                # Comprehensive test suite
+├── data/                 # Domain dictionaries
+├── docs/                 # Documentation
+├── aria_control_center.py   # Unified control center
+├── aria_main.py             # CLI interface
+└── aria_config.yaml         # Configuration
 ```
 
 ---
 
-## 🎯 Use Cases
+## Performance
 
-### Research & Learning
+**Test Results**: 14/14 tests passing (100%)
 
-- Academic paper analysis with multi-perspective exploration
-- Concept learning through Socratic questioning
-- Cross-domain synthesis via PCA subspace navigation
+**Typical Query Performance**:
+- Retrieval: 0.5-2s per query
+- CPU: ~1-2s
+- GPU: ~0.5-1s (with CUDA)
 
-### Development & Debugging
-
-- Technical documentation search with mode-specific retrieval
-- Code implementation guidance with technical anchor
-- Error resolution through logical gap detection
-
-### Creative Thinking
-
-- Brainstorming with golden ratio spiral exploration
-- Problem-solving via quaternion state evolution
-- Conceptual exploration through philosophical anchor
-
-### Personal Knowledge Management
-
-- Local document search (privacy-preserving)
-- Multi-modal retrieval across file types
-- Self-improving through bandit optimization
+**Scalability**:
+- ✅ 1k-10k documents: Excellent
+- ✅ 10k-100k documents: Good
+- ⚠️ 100k+ documents: Usable (slower)
 
 ---
 
-## 📚 Documentation
+## 4 Adaptive Presets
 
-- **[ARCHITECTURE.md](docs/ARCHITECTURE.md)** - Complete system design with detailed exploration system explanation
-- **[CHANGELOG.md](docs/CHANGELOG.md)** - Version history
-- **[METRICS.md](docs/METRICS.md)** - Telemetry and performance tracking
-- **[TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)** - Common issues and solutions
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Development guidelines
+| Preset | Chunks | Rotations | Per-File | Best For |
+|--------|--------|-----------|----------|----------|
+| **fast** | 40 | 1 | 8 | Quick lookups |
+| **balanced** | 64 | 2 | 6 | General queries |
+| **deep** | 96 | 3 | 5 | Complex research |
+| **diverse** | 80 | 2 | 4 | Broad exploration |
 
----
-
-## 🤝 Contributing
-
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for:
-
-- Development setup
-- Code style guidelines
-- Testing requirements
-- Pull request process
+**Thompson Sampling automatically selects the best preset** for each query type after learning from 20+ queries.
 
 ---
 
-## 📄 License
+## Student ARIA - Corpus Learning
 
-**Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**
+Student ARIA learns from **all** your LM Studio conversations:
 
-### You are free to
+```bash
+python3 aria_control_center.py
+# Select [2] Start Student Watcher
+```
 
-- ✅ **Use** - For any non-commercial purpose
-- ✅ **Share** - Copy and redistribute
-- ✅ **Adapt** - Remix, transform, build upon
+**What it does**:
+1. Monitors `~/.lmstudio/conversations/`
+2. Captures ALL conversations (not just ARIA queries)
+3. Extracts reasoning patterns, turn-taking, domain transitions
+4. Builds training corpus in `../training_data/conversation_corpus/`
 
-### Under these terms
-
-- **Attribution** - Give appropriate credit
-- **NonCommercial** - Not for commercial use
-- **ShareAlike** - Derivatives must use same license
-
-See [LICENSE](LICENSE) for complete terms.
-
-### Commercial Licensing
-
-For commercial use, contact: <energy4all369@protonmail.com>
+**Future**: Train custom models on captured patterns for continuous improvement.
 
 ---
 
-## 🙏 Acknowledgments
+## Documentation
 
-ARIA is built on insights from:
+### Getting Started
+- 📖 [GETTING_STARTED.md](GETTING_STARTED.md) - Quick start guide
+- 📖 [docs/INSTALLATION.md](docs/INSTALLATION.md) - Detailed installation
+- 📖 [docs/USAGE.md](docs/USAGE.md) - Complete usage guide
 
-- **My wife** (Thanks for suporting me always. I love you.)
-- **Quaternion mathematics** (S³ topology, SLERP interpolation)
-- **Golden ratio research** (optimal angular spacing, Fibonacci sphere packing)
-- **Multi-armed bandit literature** (Thompson Sampling, Bayesian optimization)
-- **Curiosity-driven learning** (intrinsic motivation, gap detection)
-- **Information geometry** (semantic space structure, subspace analysis)
+### Technical Details
+- 📖 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) - System architecture
+- 📖 [docs/API_REFERENCE.md](docs/API_REFERENCE.md) - API documentation
+- 📖 [docs/QUATERNIONS.md](docs/QUATERNIONS.md) - Mathematical foundations
 
-*"Go within." - ARIA embodies the principle that true intelligence emerges from looking inward, processing locally, and adapting from internal experience rather than external validation.*
-
-Special thanks to:
-
-- sentence-transformers (semantic search)
-- PyTorch (deep learning)
-- scikit-learn (PCA, machine learning)
-- rank-bm25 (lexical retrieval)
-- NumPy (quaternion operations)
+### Additional Resources
+- 📖 [CONTROL_CENTER_README.md](CONTROL_CENTER_README.md) - Control center features
+- 📖 [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) - Development guide
+- 📖 [docs/FAQ.md](docs/FAQ.md) - Frequently asked questions
 
 ---
 
-## 📈 Roadmap
+## Use Cases
 
-### Current
+### Research Assistant
+```bash
+python3 aria_main.py "Comprehensive overview of transformer architecture" --preset deep
+```
+→ Retrieves 96 chunks with 3-rotation exploration
 
-- ✅ Quaternion state management on S³
-- ✅ Golden ratio spiral exploration  
-- ✅ PCA subspace rotations
-- ✅ Multi-anchor reasoning (8 modes)
-- ✅ Curiosity engine with gap detection
-- ✅ Thompson Sampling optimization
-- ✅ Complete documentation
+### Code Helper
+```bash
+python3 aria_main.py "Python async/await best practices"
+```
+→ Automatic preset selection via Thompson Sampling
 
-### Planned
+### Debugging
+```bash
+python3 aria_main.py "Fix TypeScript type error cannot assign undefined"
+```
+→ Detects diagnostic perspective, uses 90° rotation angle
 
-- 🔄 Dynamic exemplar generation from successful queries
-- 🔄 Multi-modal retrieval (images, audio, video)
-- 🔄 Distributed knowledge bases
-- 🔄 Advanced meta-learning across sessions
-- 🔄 Web UI for local deployment
-
-### Research Directions
-
-- Extending beyond golden ratio to other irrational constants (√2, e, π)
-- Quantum-inspired information processing (superposition, entanglement)
-- Resonance-based knowledge representation
-- Cross-domain transfer learning via quaternion mappings
-
----
-
-## 📞 Support
-
-- **Documentation**: Check [docs/](docs/) folder
-- **Issues**: [GitHub Issues](https://github.com/dontmindme369/aria/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/dontmindme369/aria/discussions)
-- **Email**: <energy4all369@protonmail.com>
+### Learning
+```bash
+python3 aria_main.py "Explain gradient descent step by step"
+```
+→ Detects educational perspective, uses 30° gentle rotation
 
 ---
 
-**ARIA: Where intelligence resonates with architecture** ✨
+## Key Innovations
 
-*"Go within." - Built with for privacy, intelligence, and adaptability*
+### 1. Thompson Sampling for Retrieval
+First application of Bayesian bandits to adaptive retrieval strategy selection. Learns query-to-preset mappings automatically.
+
+### 2. Quaternion Semantic Exploration
+Novel use of 4D hypercomplex numbers for semantic space navigation:
+- No gimbal lock (unlike Euler angles)
+- Efficient composition (quaternion multiplication)
+- Smooth interpolation (slerp)
+- Natural for high-dimensional spaces
+
+### 3. Golden Ratio Spiral Sampling
+Leverages φ (most irrational number) for optimal sphere coverage:
+- Uniform distribution
+- No clustering or gaps
+- No resonance patterns
+
+### 4. Perspective-Aware Retrieval
+8-perspective query classification adjusts rotation angles:
+- Reference (15°) → minimal exploration
+- Research (120°) → aggressive exploration
+- Matches retrieval strategy to query intent
+
+### 5. Student/Teacher Architecture
+Dual learning system:
+- **Teacher**: Answers queries with retrieval
+- **Student**: Learns from all conversations
+- **Flywheel**: Continuous improvement loop
+
+---
+
+## Example Output
+
+```bash
+$ python3 aria_main.py "How does gradient descent optimize neural networks?"
+
+🎯 ARIA Query
+════════════════════════════════════════════════════════
+Query: How does gradient descent optimize neural networks?
+Perspective: educational (confidence: 0.87)
+Rotation angle: 24.0°
+════════════════════════════════════════════════════════
+
+⏳ Processing...
+
+✓ Query completed in 1.23s
+  • Preset: balanced (Thompson sample: 0.845)
+  • Chunks retrieved: 64
+  • Files used: 12
+  • Pack: aria_packs/gradient_descent_1731596400/last_pack.json
+
+📊 Bandit Update
+  • Reward: 0.78
+  • α (successes): 15.2 → 15.98
+  • β (failures): 8.5 → 8.72
+```
+
+---
+
+## Testing
+
+Run comprehensive test suite:
+
+```bash
+python3 tests/comprehensive_test_suite.py
+```
+
+**Tests** (14 total):
+1. ✅ Bandit initialization & selection
+2. ✅ Preset configuration
+3. ✅ Quaternion mathematics
+4. ✅ Rotation operations
+5. ✅ Normalization
+6. ✅ Conjugate
+7. ✅ Inverse
+8. ✅ Composition
+9. ✅ Slerp interpolation
+10. ✅ Axis-angle conversion
+11. ✅ Vector rotation
+12. ✅ Golden ratio spiral
+13. ✅ Perspective rotation parameters
+14. ✅ Multi-rotation exploration
+
+**Status**: 14/14 passing (100%)
+
+---
+
+## Requirements
+
+- **Python 3.8+** (3.9+ recommended)
+- **4GB+ RAM** (8GB recommended)
+- **500MB disk** (for sentence-transformers model)
+
+**Dependencies**:
+- numpy - Numerical operations
+- sentence-transformers - Semantic embeddings
+- rank-bm25 - Lexical search
+- scikit-learn - PCA and clustering
+- pyyaml - Configuration
+- tqdm - Progress bars
+- watchdog - File monitoring (Student ARIA)
+
+---
+
+## License
+
+MIT License - See [LICENSE](LICENSE) for details.
+
+---
+
+## Contributing
+
+Contributions welcome! See [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines.
+
+**Ways to contribute**:
+- 🐛 Report bugs
+- 💡 Suggest features
+- 📝 Improve documentation
+- 🔧 Submit pull requests
+
+**Contact**: energy4all369@protonmail.com
+
+---
+
+## Acknowledgments
+
+- **Quaternion Mathematics**: Hamilton (1843)
+- **Thompson Sampling**: Thompson (1933), Agrawal (1995)
+- **Golden Ratio Spiral**: Nature's optimal packing strategy
+- **Sentence Transformers**: Reimers & Gurevych (2019)
+
+---
+
+## Citation
+
+If you use ARIA in your research, please cite:
+
+```bibtex
+@software{aria2025,
+  title={ARIA: Adaptive Resonant Intelligent Architecture},
+  author={Dont Mind Me},
+  year={2025},
+  url={https://github.com/dontmindme369/ARIA}
+}
+```
+
+---
+
+**ARIA - Adaptive Resonant Intelligent Architecture**
+
+*Go Within.* 🌀
+
+---
+
+## Links
+
+- **Repository**: https://github.com/dontmindme369/ARIA
+- **Issues**: https://github.com/dontmindme369/ARIA/issues
+- **Discussions**: https://github.com/dontmindme369/ARIA/discussions
+- **Documentation**: [docs/](docs/)

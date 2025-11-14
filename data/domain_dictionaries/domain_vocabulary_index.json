@@ -1,0 +1,446 @@
+{
+  "physics": {
+    "quantum physics": [
+      "placeholder_term_quantum physics"
+    ],
+    "thermodynamics": [
+      "placeholder_term_thermodynamics"
+    ],
+    "electromagnetism": [
+      "placeholder_term_electromagnetism"
+    ],
+    "optics": [
+      "placeholder_term_optics"
+    ],
+    "mechanics": [
+      "placeholder_term_mechanics"
+    ]
+  },
+  "mathematics": {
+    "algebra": [
+      "placeholder_term_algebra"
+    ],
+    "calculus": [
+      "placeholder_term_calculus"
+    ],
+    "topology": [
+      "placeholder_term_topology"
+    ],
+    "linear algebra": [
+      "placeholder_term_linear algebra"
+    ],
+    "number theory": [
+      "placeholder_term_number theory"
+    ],
+    "statistics": [
+      "placeholder_term_statistics"
+    ]
+  },
+  "chemistry": {
+    "organic chemistry": [
+      "placeholder_term_organic chemistry"
+    ],
+    "inorganic chemistry": [
+      "placeholder_term_inorganic chemistry"
+    ],
+    "biochemistry": [
+      "placeholder_term_biochemistry"
+    ],
+    "physical chemistry": [
+      "placeholder_term_physical chemistry"
+    ]
+  },
+  "biology": {
+    "molecular biology": [
+      "placeholder_term_molecular biology"
+    ],
+    "genetics": [
+      "placeholder_term_genetics"
+    ],
+    "ecology": [
+      "placeholder_term_ecology"
+    ],
+    "physiology": [
+      "placeholder_term_physiology"
+    ],
+    "microbiology": [
+      "placeholder_term_microbiology"
+    ]
+  },
+  "medicine": {
+    "anatomy": [
+      "placeholder_term_anatomy"
+    ],
+    "pathology": [
+      "placeholder_term_pathology"
+    ],
+    "pharmacology": [
+      "placeholder_term_pharmacology"
+    ],
+    "clinical medicine": [
+      "placeholder_term_clinical medicine"
+    ],
+    "surgery": [
+      "placeholder_term_surgery"
+    ]
+  },
+  "computer_science": {
+    "algorithms": [
+      "placeholder_term_algorithms"
+    ],
+    "data structures": [
+      "placeholder_term_data structures"
+    ],
+    "machine learning": [
+      "placeholder_term_machine learning"
+    ],
+    "artificial intelligence": [
+      "placeholder_term_artificial intelligence"
+    ],
+    "databases": [
+      "placeholder_term_databases"
+    ]
+  },
+  "electrical_engineering": {
+    "circuits": [
+      "placeholder_term_circuits"
+    ],
+    "signal processing": [
+      "placeholder_term_signal processing"
+    ],
+    "control systems": [
+      "placeholder_term_control systems"
+    ],
+    "power systems": [
+      "placeholder_term_power systems"
+    ]
+  },
+  "mechanical_engineering": {
+    "thermodynamics": [
+      "placeholder_term_thermodynamics"
+    ],
+    "fluid mechanics": [
+      "placeholder_term_fluid mechanics"
+    ],
+    "materials science": [
+      "placeholder_term_materials science"
+    ],
+    "robotics": [
+      "placeholder_term_robotics"
+    ]
+  },
+  "civil_engineering": {
+    "structural engineering": [
+      "placeholder_term_structural engineering"
+    ],
+    "geotechnical": [
+      "placeholder_term_geotechnical"
+    ],
+    "transportation": [
+      "placeholder_term_transportation"
+    ],
+    "hydraulics": [
+      "placeholder_term_hydraulics"
+    ]
+  },
+  "software_engineering": {
+    "design patterns": [
+      "placeholder_term_design patterns"
+    ],
+    "architecture": [
+      "placeholder_term_architecture"
+    ],
+    "testing": [
+      "placeholder_term_testing"
+    ],
+    "devops": [
+      "placeholder_term_devops"
+    ]
+  },
+  "psychology": {
+    "cognitive psychology": [
+      "placeholder_term_cognitive psychology"
+    ],
+    "behavioral psychology": [
+      "placeholder_term_behavioral psychology"
+    ],
+    "neuroscience": [
+      "placeholder_term_neuroscience"
+    ],
+    "clinical psychology": [
+      "placeholder_term_clinical psychology"
+    ]
+  },
+  "linguistics": {
+    "phonetics": [
+      "placeholder_term_phonetics"
+    ],
+    "syntax": [
+      "placeholder_term_syntax"
+    ],
+    "semantics": [
+      "placeholder_term_semantics"
+    ],
+    "pragmatics": [
+      "placeholder_term_pragmatics"
+    ],
+    "morphology": [
+      "placeholder_term_morphology"
+    ]
+  },
+  "philosophy": {
+    "epistemology": [
+      "placeholder_term_epistemology"
+    ],
+    "metaphysics": [
+      "placeholder_term_metaphysics"
+    ],
+    "ethics": [
+      "placeholder_term_ethics"
+    ],
+    "logic": [
+      "placeholder_term_logic"
+    ],
+    "phenomenology": [
+      "placeholder_term_phenomenology"
+    ]
+  },
+  "economics": {
+    "microeconomics": [
+      "placeholder_term_microeconomics"
+    ],
+    "macroeconomics": [
+      "placeholder_term_macroeconomics"
+    ],
+    "econometrics": [
+      "placeholder_term_econometrics"
+    ],
+    "behavioral economics": [
+      "placeholder_term_behavioral economics"
+    ]
+  },
+  "sociology": {
+    "social theory": [
+      "placeholder_term_social theory"
+    ],
+    "demography": [
+      "placeholder_term_demography"
+    ],
+    "criminology": [
+      "placeholder_term_criminology"
+    ],
+    "urban studies": [
+      "placeholder_term_urban studies"
+    ]
+  },
+  "law": {
+    "constitutional law": [
+      "placeholder_term_constitutional law"
+    ],
+    "criminal law": [
+      "placeholder_term_criminal law"
+    ],
+    "contract law": [
+      "placeholder_term_contract law"
+    ],
+    "tort law": [
+      "placeholder_term_tort law"
+    ],
+    "international law": [
+      "placeholder_term_international law"
+    ]
+  },
+  "political_science": {
+    "political theory": [
+      "placeholder_term_political theory"
+    ],
+    "comparative politics": [
+      "placeholder_term_comparative politics"
+    ],
+    "international relations": [
+      "placeholder_term_international relations"
+    ]
+  },
+  "business": {
+    "management": [
+      "placeholder_term_management"
+    ],
+    "finance": [
+      "placeholder_term_finance"
+    ],
+    "marketing": [
+      "placeholder_term_marketing"
+    ],
+    "operations": [
+      "placeholder_term_operations"
+    ],
+    "strategy": [
+      "placeholder_term_strategy"
+    ]
+  },
+  "education": {
+    "pedagogy": [
+      "placeholder_term_pedagogy"
+    ],
+    "curriculum": [
+      "placeholder_term_curriculum"
+    ],
+    "assessment": [
+      "placeholder_term_assessment"
+    ],
+    "educational psychology": [
+      "placeholder_term_educational psychology"
+    ]
+  },
+  "security": {
+    "cryptography": [
+      "placeholder_term_cryptography"
+    ],
+    "network security": [
+      "placeholder_term_network security"
+    ],
+    "information security": [
+      "placeholder_term_information security"
+    ],
+    "cyber defense": [
+      "placeholder_term_cyber defense"
+    ]
+  },
+  "healthcare": {
+    "nursing": [
+      "placeholder_term_nursing"
+    ],
+    "public health": [
+      "placeholder_term_public health"
+    ],
+    "epidemiology": [
+      "placeholder_term_epidemiology"
+    ],
+    "healthcare administration": [
+      "placeholder_term_healthcare administration"
+    ]
+  },
+  "art": {
+    "visual arts": [
+      "placeholder_term_visual arts"
+    ],
+    "art history": [
+      "placeholder_term_art history"
+    ],
+    "art theory": [
+      "placeholder_term_art theory"
+    ],
+    "aesthetics": [
+      "placeholder_term_aesthetics"
+    ]
+  },
+  "literature": {
+    "literary theory": [
+      "placeholder_term_literary theory"
+    ],
+    "criticism": [
+      "placeholder_term_criticism"
+    ],
+    "creative writing": [
+      "placeholder_term_creative writing"
+    ],
+    "rhetoric": [
+      "placeholder_term_rhetoric"
+    ]
+  },
+  "music": {
+    "music theory": [
+      "placeholder_term_music theory"
+    ],
+    "composition": [
+      "placeholder_term_composition"
+    ],
+    "musicology": [
+      "placeholder_term_musicology"
+    ],
+    "ethnomusicology": [
+      "placeholder_term_ethnomusicology"
+    ]
+  },
+  "architecture": {
+    "architectural theory": [
+      "placeholder_term_architectural theory"
+    ],
+    "urban planning": [
+      "placeholder_term_urban planning"
+    ],
+    "landscape architecture": [
+      "placeholder_term_landscape architecture"
+    ]
+  },
+  "environmental_science": {
+    "ecology": [
+      "placeholder_term_ecology"
+    ],
+    "climate science": [
+      "placeholder_term_climate science"
+    ],
+    "conservation": [
+      "placeholder_term_conservation"
+    ],
+    "sustainability": [
+      "placeholder_term_sustainability"
+    ]
+  },
+  "materials_science": {
+    "polymers": [
+      "placeholder_term_polymers"
+    ],
+    "ceramics": [
+      "placeholder_term_ceramics"
+    ],
+    "metallurgy": [
+      "placeholder_term_metallurgy"
+    ],
+    "nanomaterials": [
+      "placeholder_term_nanomaterials"
+    ]
+  },
+  "astronomy": {
+    "astrophysics": [
+      "placeholder_term_astrophysics"
+    ],
+    "cosmology": [
+      "placeholder_term_cosmology"
+    ],
+    "planetary science": [
+      "placeholder_term_planetary science"
+    ],
+    "observational astronomy": [
+      "placeholder_term_observational astronomy"
+    ]
+  },
+  "geology": {
+    "mineralogy": [
+      "placeholder_term_mineralogy"
+    ],
+    "petrology": [
+      "placeholder_term_petrology"
+    ],
+    "geophysics": [
+      "placeholder_term_geophysics"
+    ],
+    "paleontology": [
+      "placeholder_term_paleontology"
+    ]
+  },
+  "agriculture": {
+    "agronomy": [
+      "placeholder_term_agronomy"
+    ],
+    "horticulture": [
+      "placeholder_term_horticulture"
+    ],
+    "animal science": [
+      "placeholder_term_animal science"
+    ],
+    "soil science": [
+      "placeholder_term_soil science"
+    ]
+  }
+}
