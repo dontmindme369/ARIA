@@ -185,7 +185,7 @@ ARIA consists of 8 integrated layers:
 
 ---
 
-## LinUCB Migration (Nov 2024)
+## LinUCB Migration (Nov 2025)
 
 ARIA has migrated from Thompson Sampling to **LinUCB (Linear Upper Confidence Bound)** contextual bandits for superior performance:
 
