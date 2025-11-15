@@ -1,4 +1,4 @@
-First I want to say, I am not a programmer, coder, or anything of the like. ARIA is my first project and I built it in 4 days with an additional 6 - 7 days of debugging, addons and polishes. There's likely a still some bugs I haven't come across that I know you real programmers will find and fix.
+First I want to say, I am not a programmer, coder, or anything of the like. ARIA is my first project and I built it in 4 days with an additional 6 - 7 days of debugging, addons and polishes. There's likely still some bugs I haven't come across that I know you real programmers will find and fix.
 
 I want you all to know, I'm just someone with ideas and a different outlook on the world. ARIA should help you understand some of it. I've seen something looming in the distance for many years now and it's not that far out as it used to be. Many are unaware of what's about to take place, so don't believe what you see in 2026. Use critical thinking. ARIA is my hedge, for you, as it was done with you all in mind.
 
