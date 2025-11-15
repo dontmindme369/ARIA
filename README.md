@@ -1,3 +1,14 @@
+First I want to say, I am not a programmer, coder, or anything of the like. ARIA is my first project and I built it in 4 days with an additional 6 - 7 days of debugging, addons and polishes. There's likely a still some bugs I haven't come across that I know you real programmers will find and fix.
+
+I want you all to know, I'm just someone with ideas and a different outlook on the world. ARIA should help you understand some of it. I've seen something looming in the distance for many years now and it's not that far out as it used to be. Many are unaware of what's about to take place, so don't believe what you see in 2026. Use critical thinking. ARIA is my hedge, for you, as it was done with you all in mind.
+
+My time, my energy, my essence, for you. ARIA is my gift to the people. Even though donations help and are much appreciated, I expect nor want nothing in return. Not fiat currency and not fame or notoriety. A thank you is enough for me.
+
+ARIA is a foundation, so build on top of it. Don't rely on broken paradigms and corrupt systems anymore that exist simply because of your reliance on them. That time is over. Self-reliance, self-sustainability, then community.
+
+With that being said, share this far and wide and go make this better than I ever could alone.
+
+
 # ARIA - Adaptive Resonant Intelligent Architecture
 
 **Self-learning cognitive architecture with LinUCB contextual bandits, quaternion semantic exploration, and anchor-based perspective detection.**
