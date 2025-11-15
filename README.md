@@ -361,36 +361,8 @@ MIT License - see [LICENSE](LICENSE) for details
 
 ---
 
-## Citation
-
-If you use ARIA in your research, please cite:
-
-```bibtex
-@software{aria2024,
-  title={ARIA: Adaptive Resonant Intelligent Architecture},
-  author={Your Name},
-  year={2024},
-  url={https://github.com/yourusername/ARIA}
-}
-```
-
----
-
-## Acknowledgments
-
-- Quaternion mathematics inspired by spacecraft attitude control
-- Golden ratio spiral from Vogel's sunflower seed pattern
-- LinUCB algorithm from contextual bandit literature
-- Anchor framework based on Aristotelian philosophy
-
----
-
 ## Contact & Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/ARIA/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/ARIA/discussions)
+- **Issues**: [GitHub Issues](https://github.com/dontmindme369/ARIA/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/dontmindme369/ARIA/discussions)
 - **Documentation**: [docs/](docs/)
-
----
-
-**Built with ❤️ for better information retrieval**

@@ -17,8 +17,6 @@ setup(
     description="Self-learning cognitive architecture with quaternion exploration and LinUCB bandits",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="Your Name",
-    author_email="your.email@example.com",
     url="https://github.com/dontmindme369/aria",
     license="MIT",
     
