@@ -1,0 +1,33 @@
+{
+  "version": "2.0",
+  "description": "Perspective signatures from Enhanced Semantic Network v2.0",
+  "generated_from": "domain_vocabulary_index_v2.json",
+  "files": {
+    "anchor_signatures": "anchor_perspective_signatures_v2.json",
+    "domain_signatures": "domain_perspective_signatures_v2.json",
+    "meta_patterns": "meta_cognitive_patterns_v2.json",
+    "concept_topology": "concept_topology_v2.json"
+  },
+  "anchors": [
+    "philosophical",
+    "engineering",
+    "law",
+    "business",
+    "creative",
+    "analytical_educational",
+    "technical",
+    "analytical_mathematics_science"
+  ],
+  "domains": [
+    "philosophy",
+    "engineering",
+    "law",
+    "business",
+    "creative_arts",
+    "social_sciences",
+    "security",
+    "data_science"
+  ],
+  "total_anchors": 8,
+  "total_domains": 8
+}

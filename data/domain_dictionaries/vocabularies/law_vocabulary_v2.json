@@ -1,0 +1,475 @@
+{
+  "domain": "law",
+  "version": "2.0",
+  "last_updated": "2024-11-14T00:00:00Z",
+  "anchor_alignment": "law",
+  "concepts": {
+    "IRAC": {
+      "term": "IRAC",
+      "definition": "Legal analysis framework: Issue, Rule, Application, Conclusion",
+      "synonyms": ["legal reasoning method", "case analysis structure"],
+      "related_concepts": ["legal_analysis", "case_brief", "argument_structure", "precedent"],
+      "category": "legal_method",
+      "complexity": "basic",
+      "mental_models": ["structured_reasoning", "precedent_application", "fact_pattern_matching"],
+      "common_errors": ["skipping issue identification", "incomplete rule statement", "weak application"],
+      "detection_patterns": ["issue", "rule", "analysis", "conclusion", "legal reasoning"],
+      "epistemic_markers": {
+        "evidence_type": "legal_authority",
+        "certainty_level": "framework"
+      },
+      "reasoning_patterns": ["identify legal issue", "state governing rule", "apply rule to facts", "draw conclusion"],
+      "examples": ["contract dispute analysis", "tort claim evaluation", "constitutional question"],
+      "prerequisites": ["legal_principles", "case_reading"],
+      "applications": ["legal_writing", "exam_answers", "memoranda", "briefs"]
+    },
+    "precedent": {
+      "term": "precedent",
+      "definition": "Prior court decision that establishes principle or rule for future cases",
+      "synonyms": ["stare decisis", "case law"],
+      "related_concepts": ["binding_authority", "persuasive_authority", "distinguishing", "overruling"],
+      "category": "legal_doctrine",
+      "complexity": "basic",
+      "mental_models": ["hierarchical_authority", "consistency_principle", "factual_similarity"],
+      "common_errors": ["citing non-binding authority", "ignoring distinctions", "outdated precedent"],
+      "detection_patterns": ["binding", "persuasive", "controlling", "on point", "distinguishable"],
+      "epistemic_markers": {
+        "evidence_type": "judicial_decision",
+        "certainty_level": "authoritative"
+      },
+      "reasoning_patterns": ["identify binding vs persuasive", "analyze factual similarity", "apply holding"],
+      "examples": ["Supreme Court binds lower courts", "sister state decisions persuasive", "distinguishable facts"],
+      "prerequisites": ["court_hierarchy", "case_reading"],
+      "applications": ["legal_argument", "predicting_outcomes", "advising_clients"]
+    },
+    "jurisdiction": {
+      "term": "jurisdiction",
+      "definition": "Legal authority of a court to hear and decide a case",
+      "synonyms": ["judicial authority", "court power"],
+      "related_concepts": ["subject_matter_jurisdiction", "personal_jurisdiction", "venue", "standing"],
+      "category": "civil_procedure",
+      "complexity": "intermediate",
+      "mental_models": ["territorial_authority", "case_type_authority", "minimum_contacts"],
+      "common_errors": ["filing in wrong court", "insufficient minimum contacts", "lacking standing"],
+      "detection_patterns": ["jurisdiction", "venue", "personal jurisdiction", "subject matter jurisdiction"],
+      "epistemic_markers": {
+        "evidence_type": "constitutional_and_statutory",
+        "certainty_level": "threshold_requirement"
+      },
+      "reasoning_patterns": ["check subject matter jurisdiction", "verify personal jurisdiction", "assess venue"],
+      "examples": ["federal question jurisdiction", "diversity jurisdiction", "long-arm statute"],
+      "prerequisites": ["court_system", "constitutional_law"],
+      "applications": ["filing_suit", "motion_to_dismiss", "forum_selection"]
+    },
+    "burden_of_proof": {
+      "term": "burden_of_proof",
+      "definition": "Party's obligation to prove allegations or defenses",
+      "synonyms": ["onus of proof", "burden of persuasion"],
+      "related_concepts": ["standard_of_proof", "prima_facie_case", "shifting_burden", "preponderance"],
+      "category": "evidence",
+      "complexity": "intermediate",
+      "mental_models": ["evidentiary_threshold", "allocation_of_proof", "quantum_of_evidence"],
+      "common_errors": ["confusing burden with standard", "not meeting prima facie burden", "misallocating burden"],
+      "detection_patterns": ["burden", "prima facie", "proof", "standard"],
+      "epistemic_markers": {
+        "evidence_type": "evidentiary",
+        "certainty_level": "standard_dependent"
+      },
+      "reasoning_patterns": ["identify who has burden", "determine standard", "assess if met"],
+      "examples": ["plaintiff in civil case", "prosecution in criminal case", "preponderance vs beyond reasonable doubt"],
+      "prerequisites": ["evidence_law", "civil_vs_criminal"],
+      "applications": ["trial_strategy", "motion_practice", "settlement_evaluation"]
+    },
+    "contract": {
+      "term": "contract",
+      "definition": "Legally enforceable agreement between parties",
+      "synonyms": ["agreement", "enforceable promise"],
+      "related_concepts": ["offer", "acceptance", "consideration", "breach", "damages"],
+      "category": "contract_law",
+      "complexity": "basic",
+      "mental_models": ["mutual_assent", "bargained_for_exchange", "meeting_of_minds"],
+      "common_errors": ["no consideration", "indefinite terms", "statute of frauds violation"],
+      "detection_patterns": ["contract", "agreement", "offer", "acceptance", "consideration"],
+      "epistemic_markers": {
+        "evidence_type": "legal_elements",
+        "certainty_level": "element_analysis"
+      },
+      "reasoning_patterns": ["check offer and acceptance", "verify consideration", "assess defenses"],
+      "examples": ["sale of goods", "employment agreement", "service contract"],
+      "prerequisites": ["offer_acceptance", "consideration"],
+      "applications": ["contract_formation", "breach_analysis", "damages_calculation"]
+    },
+    "tort": {
+      "term": "tort",
+      "definition": "Civil wrong causing harm for which law provides remedy",
+      "synonyms": ["civil wrong"],
+      "related_concepts": ["negligence", "intentional_tort", "strict_liability", "damages", "duty"],
+      "category": "tort_law",
+      "complexity": "basic",
+      "mental_models": ["wrongful_conduct", "causation", "harm_and_remedy"],
+      "common_errors": ["confusing with crime", "missing causation", "no duty"],
+      "detection_patterns": ["tort", "negligence", "duty", "breach", "causation", "damages"],
+      "epistemic_markers": {
+        "evidence_type": "legal_elements",
+        "certainty_level": "element_analysis"
+      },
+      "reasoning_patterns": ["identify tort type", "check elements", "assess damages"],
+      "examples": ["negligence (car accident)", "battery (harmful contact)", "defamation"],
+      "prerequisites": ["duty", "causation", "damages"],
+      "applications": ["personal_injury", "medical_malpractice", "product_liability"]
+    },
+    "negligence": {
+      "term": "negligence",
+      "definition": "Failure to exercise reasonable care causing harm",
+      "synonyms": ["carelessness", "breach of duty"],
+      "related_concepts": ["duty", "breach", "causation", "damages", "reasonable_person"],
+      "category": "tort_law",
+      "complexity": "intermediate",
+      "mental_models": ["four_elements", "reasonable_person_standard", "but_for_causation"],
+      "common_errors": ["missing element", "no proximate cause", "contributory negligence"],
+      "detection_patterns": ["duty", "breach", "causation", "damages", "reasonable care"],
+      "epistemic_markers": {
+        "evidence_type": "factual_and_legal",
+        "certainty_level": "jury_question"
+      },
+      "reasoning_patterns": ["establish duty", "show breach", "prove causation", "demonstrate damages"],
+      "examples": ["car accident", "medical malpractice", "premises liability"],
+      "prerequisites": ["tort_law", "causation"],
+      "applications": ["personal_injury_claims", "malpractice_cases", "insurance"]
+    },
+    "strict_liability": {
+      "term": "strict_liability",
+      "definition": "Liability without fault for certain activities or defective products",
+      "synonyms": ["liability without fault", "absolute liability"],
+      "related_concepts": ["product_liability", "abnormally_dangerous_activity", "defect", "causation"],
+      "category": "tort_law",
+      "complexity": "advanced",
+      "mental_models": ["no_fault_liability", "policy_based", "risk_allocation"],
+      "common_errors": ["requiring negligence", "ignoring causation", "wrong activity type"],
+      "detection_patterns": ["strict liability", "defective product", "abnormally dangerous", "no fault"],
+      "epistemic_markers": {
+        "evidence_type": "policy_and_precedent",
+        "certainty_level": "categorical"
+      },
+      "reasoning_patterns": ["identify if strict liability applies", "show causation", "assess damages"],
+      "examples": ["dynamite blasting", "defective product", "wild animals"],
+      "prerequisites": ["tort_law", "policy_rationale"],
+      "applications": ["product_liability", "environmental", "dangerous_activities"]
+    },
+    "constitutional_law": {
+      "term": "constitutional_law",
+      "definition": "Body of law derived from constitution interpreting governmental powers and rights",
+      "synonyms": ["fundamental law"],
+      "related_concepts": ["due_process", "equal_protection", "federalism", "separation_of_powers", "judicial_review"],
+      "category": "constitutional_law",
+      "complexity": "advanced",
+      "mental_models": ["fundamental_rights", "levels_of_scrutiny", "structural_limitations"],
+      "common_errors": ["wrong scrutiny level", "ignoring state action", "misapplying standards"],
+      "detection_patterns": ["constitutional", "due process", "equal protection", "scrutiny", "fundamental right"],
+      "epistemic_markers": {
+        "evidence_type": "constitutional_text_and_precedent",
+        "certainty_level": "interpretive"
+      },
+      "reasoning_patterns": ["identify right or power", "determine scrutiny level", "apply test"],
+      "examples": ["free speech", "search and seizure", "equal protection challenge"],
+      "prerequisites": ["constitutional_structure", "bill_of_rights"],
+      "applications": ["civil_rights", "government_actions", "legislation_challenges"]
+    },
+    "statutory_interpretation": {
+      "term": "statutory_interpretation",
+      "definition": "Process of determining meaning and application of legislation",
+      "synonyms": ["statutory construction"],
+      "related_concepts": ["plain_meaning", "legislative_intent", "canons_of_construction", "ambiguity"],
+      "category": "legal_method",
+      "complexity": "advanced",
+      "mental_models": ["textualism", "purposivism", "canons", "legislative_history"],
+      "common_errors": ["ignoring plain meaning", "selective legislative history", "conflicting canons"],
+      "detection_patterns": ["statutory interpretation", "plain meaning", "legislative intent", "ambiguous"],
+      "epistemic_markers": {
+        "evidence_type": "textual_and_contextual",
+        "certainty_level": "interpretive"
+      },
+      "reasoning_patterns": ["read statute", "apply plain meaning if clear", "use canons if ambiguous", "consider purpose"],
+      "examples": ["tax statute", "regulatory statute", "criminal statute"],
+      "prerequisites": ["reading_statutes", "legal_reasoning"],
+      "applications": ["advising_clients", "litigation", "compliance"]
+    },
+    "criminal_law": {
+      "term": "criminal_law",
+      "definition": "Body of law defining crimes and punishments",
+      "synonyms": ["penal law"],
+      "related_concepts": ["mens_rea", "actus_reus", "defenses", "constitutional_protections"],
+      "category": "criminal_law",
+      "complexity": "intermediate",
+      "mental_models": ["elements_of_crime", "mental_state", "voluntary_act"],
+      "common_errors": ["missing mens rea", "no actus reus", "ignoring defenses"],
+      "detection_patterns": ["crime", "mens rea", "actus reus", "intent", "criminal"],
+      "epistemic_markers": {
+        "evidence_type": "statutory_and_precedent",
+        "certainty_level": "beyond_reasonable_doubt"
+      },
+      "reasoning_patterns": ["identify elements", "prove actus reus", "prove mens rea", "address defenses"],
+      "examples": ["murder", "theft", "assault", "fraud"],
+      "prerequisites": ["criminal_elements", "constitutional_protections"],
+      "applications": ["prosecution", "defense", "sentencing"]
+    },
+    "evidence": {
+      "term": "evidence",
+      "definition": "Information presented to prove or disprove facts at trial",
+      "synonyms": ["proof", "testimony", "exhibits"],
+      "related_concepts": ["relevance", "hearsay", "authentication", "privilege", "admissibility"],
+      "category": "evidence_law",
+      "complexity": "advanced",
+      "mental_models": ["relevance_balancing", "hearsay_exclusion", "privilege_protection"],
+      "common_errors": ["hearsay without exception", "irrelevant evidence", "unfair prejudice"],
+      "detection_patterns": ["evidence", "admissible", "hearsay", "relevant", "prejudicial"],
+      "epistemic_markers": {
+        "evidence_type": "evidentiary_rules",
+        "certainty_level": "rule_based"
+      },
+      "reasoning_patterns": ["check relevance", "identify hearsay and exceptions", "balance probative vs prejudicial"],
+      "examples": ["witness testimony", "documents", "physical evidence", "expert opinion"],
+      "prerequisites": ["trial_procedure", "relevance"],
+      "applications": ["trial", "motions_in_limine", "objections"]
+    },
+    "remedy": {
+      "term": "remedy",
+      "definition": "Legal or equitable relief granted by court",
+      "synonyms": ["relief", "redress"],
+      "related_concepts": ["damages", "injunction", "specific_performance", "restitution", "declaratory_judgment"],
+      "category": "remedies",
+      "complexity": "intermediate",
+      "mental_models": ["compensatory", "equitable", "adequate_remedy_at_law"],
+      "common_errors": ["seeking unavailable remedy", "inadequate remedy at law not shown", "punitive without malice"],
+      "detection_patterns": ["damages", "injunction", "specific performance", "remedy", "relief"],
+      "epistemic_markers": {
+        "evidence_type": "legal_and_factual",
+        "certainty_level": "discretionary"
+      },
+      "reasoning_patterns": ["identify harm", "determine appropriate remedy", "assess availability"],
+      "examples": ["money damages", "preliminary injunction", "specific performance of contract"],
+      "prerequisites": ["substantive_law", "equity"],
+      "applications": ["complaint_drafting", "settlement", "trial"]
+    },
+    "mens_rea": {
+      "term": "mens_rea",
+      "definition": "Mental state or intent required for criminal liability",
+      "synonyms": ["criminal intent", "guilty mind"],
+      "related_concepts": ["intent", "knowledge", "recklessness", "negligence", "strict_liability"],
+      "category": "criminal_law",
+      "complexity": "intermediate",
+      "mental_models": ["mental_state_hierarchy", "culpability_levels"],
+      "common_errors": ["wrong mental state", "strict liability treated as requiring mens rea", "confusing intent types"],
+      "detection_patterns": ["intent", "knowingly", "recklessly", "negligently", "mens rea"],
+      "epistemic_markers": {
+        "evidence_type": "mental_state_proof",
+        "certainty_level": "inferential"
+      },
+      "reasoning_patterns": ["identify required mens rea", "assess evidence of mental state", "apply to facts"],
+      "examples": ["purposeful (murder)", "knowing (knowing possession)", "reckless (manslaughter)"],
+      "prerequisites": ["criminal_elements"],
+      "applications": ["criminal_prosecution", "criminal_defense", "jury_instructions"]
+    },
+    "hearsay": {
+      "term": "hearsay",
+      "definition": "Out-of-court statement offered to prove truth of matter asserted",
+      "synonyms": ["second-hand statement"],
+      "related_concepts": ["declarant", "out_of_court", "exceptions", "confrontation_clause"],
+      "category": "evidence_law",
+      "complexity": "advanced",
+      "mental_models": ["three_part_test", "exceptions", "reliability_rationale"],
+      "common_errors": ["missing exception", "non-hearsay purposes", "confrontation clause violation"],
+      "detection_patterns": ["hearsay", "out of court", "truth of matter", "declarant"],
+      "epistemic_markers": {
+        "evidence_type": "rule_based",
+        "certainty_level": "generally_inadmissible"
+      },
+      "reasoning_patterns": ["is it out of court?", "offered for truth?", "exception applies?"],
+      "examples": ["witness repeating what someone said", "present sense impression exception", "excited utterance"],
+      "prerequisites": ["evidence_basics", "confrontation_clause"],
+      "applications": ["trial_objections", "motion_in_limine", "preparing_witnesses"]
+    }
+  },
+  "reasoning_heuristics": [
+    {
+      "pattern": "Always identify jurisdiction first",
+      "context": "Beginning legal analysis",
+      "limitations": "Uniform laws may apply across jurisdictions",
+      "examples": ["Federal vs state", "which state's law", "choice of law"]
+    },
+    {
+      "pattern": "Use IRAC structure for legal analysis",
+      "context": "Writing legal analysis",
+      "limitations": "Some contexts need variation (CREAC, etc.)",
+      "examples": ["Issue, Rule, Application, Conclusion"]
+    },
+    {
+      "pattern": "Distinguish binding from persuasive authority",
+      "context": "Citing precedent",
+      "limitations": "Strong persuasive authority can influence",
+      "examples": ["Supreme Court binds all", "sister state persuasive only"]
+    },
+    {
+      "pattern": "Check all elements of legal claim or defense",
+      "context": "Analyzing legal issue",
+      "limitations": "Some elements may be undisputed",
+      "examples": ["Negligence: duty, breach, causation, damages"]
+    },
+    {
+      "pattern": "Consider both sides of legal argument",
+      "context": "Advising clients or writing",
+      "limitations": "Some positions clearly stronger",
+      "examples": ["Opposing interpretation", "counterarguments"]
+    },
+    {
+      "pattern": "Apply plain meaning first in statutory interpretation",
+      "context": "Interpreting statutes",
+      "limitations": "Ambiguity may require other tools",
+      "examples": ["Read statute", "if clear, apply it"]
+    },
+    {
+      "pattern": "Identify standard of review on appeal",
+      "context": "Appellate analysis",
+      "limitations": "Mixed standards for different issues",
+      "examples": ["De novo (law)", "clear error (facts)", "abuse of discretion"]
+    },
+    {
+      "pattern": "Check statute of limitations",
+      "context": "New matter",
+      "limitations": "Tolling rules may apply",
+      "examples": ["Time bar", "discovery rule", "tolling"]
+    },
+    {
+      "pattern": "Verify standing before merits",
+      "context": "Constitutional or procedural analysis",
+      "limitations": "Standing may be assumed in some contexts",
+      "examples": ["Injury in fact", "causation", "redressability"]
+    },
+    {
+      "pattern": "Distinguish facts from holdings when reading cases",
+      "context": "Case reading and citation",
+      "limitations": "Broad holdings may extend beyond facts",
+      "examples": ["Ratio decidendi vs obiter dicta"]
+    }
+  ],
+  "common_errors": [
+    {
+      "error_type": "wrong_jurisdiction",
+      "description": "Citing or applying law from wrong jurisdiction",
+      "symptoms": ["Irrelevant authority", "non-binding precedent treated as binding"],
+      "causes": ["Not checking jurisdiction", "assuming uniform law"],
+      "prevention": ["Always verify jurisdiction", "check if law is binding"],
+      "correction": ["Find correct jurisdiction's law", "cite properly"]
+    },
+    {
+      "error_type": "missing_element",
+      "description": "Failing to address all elements of claim or defense",
+      "symptoms": ["Incomplete analysis", "overlooked element"],
+      "causes": ["Not identifying all elements", "focusing on disputed elements only"],
+      "prevention": ["List all elements", "check each one"],
+      "correction": ["Address missing element", "complete analysis"]
+    },
+    {
+      "error_type": "confusing_standard_of_proof",
+      "description": "Applying wrong evidentiary standard",
+      "symptoms": ["Using criminal standard in civil case", "vice versa"],
+      "causes": ["Not identifying case type", "confusion between standards"],
+      "prevention": ["Identify civil vs criminal", "know standards"],
+      "correction": ["Apply correct standard", "reassess evidence"]
+    },
+    {
+      "error_type": "inadequate_authority",
+      "description": "Citing insufficient or non-authoritative sources",
+      "symptoms": ["Weak support", "persuasive only", "secondary sources alone"],
+      "causes": ["Insufficient research", "preferring easy sources"],
+      "prevention": ["Find primary authority", "check binding precedent"],
+      "correction": ["Upgrade authority", "find binding cases"]
+    },
+    {
+      "error_type": "statute_of_limitations_bar",
+      "description": "Missing time deadline to file",
+      "symptoms": ["Claim time-barred", "motion to dismiss granted"],
+      "causes": ["Not checking SOL", "miscalculating accrual date"],
+      "prevention": ["Check SOL immediately", "calendar deadlines", "verify tolling"],
+      "correction": ["If possible, argue tolling or discovery rule"]
+    },
+    {
+      "error_type": "improper_hearsay",
+      "description": "Offering hearsay without applicable exception",
+      "symptoms": ["Objection sustained", "evidence excluded"],
+      "causes": ["Not recognizing hearsay", "no exception available"],
+      "prevention": ["Check for hearsay", "identify exception", "prepare foundation"],
+      "correction": ["Find exception or non-hearsay purpose"]
+    },
+    {
+      "error_type": "failing_to_distinguish",
+      "description": "Not distinguishing adverse precedent",
+      "symptoms": ["Precedent applied against position", "weak argument"],
+      "causes": ["Not addressing contrary cases", "assuming they don't apply"],
+      "prevention": ["Identify all relevant cases", "distinguish or overrule"],
+      "correction": ["Show factual or legal distinction"]
+    },
+    {
+      "error_type": "procedural_default",
+      "description": "Missing procedural requirement or deadline",
+      "symptoms": ["Motion denied on procedural grounds", "waiver"],
+      "causes": ["Not knowing rules", "missing deadlines", "improper filing"],
+      "prevention": ["Know court rules", "calendar all deadlines", "check requirements"],
+      "correction": ["Move to vacate if grounds exist", "comply going forward"]
+    }
+  ],
+  "epistemic_standards": {
+    "preferred_evidence": [
+      "Binding precedent from controlling court",
+      "Statutory text and legislative history",
+      "Constitutional provisions and interpretations",
+      "Restatements and uniform laws",
+      "Persuasive precedent from respected jurisdictions",
+      "Treatises and legal scholarship"
+    ],
+    "burden_of_proof": "Varies by context: Beyond reasonable doubt (criminal), preponderance (civil), clear and convincing (some civil)",
+    "certainty_levels": {
+      "certain": "Clear statutory text, unambiguous binding precedent, settled law",
+      "probable": "Weight of authority, strong precedent, likely outcome",
+      "uncertain": "Novel issue, conflicting precedent, evolving area",
+      "speculative": "No direct authority, analogy required, policy arguments"
+    }
+  },
+  "mental_models": [
+    {
+      "model_name": "IRAC",
+      "description": "Issue, Rule, Application, Conclusion framework for legal analysis",
+      "use_cases": ["Legal writing", "exam answers", "memoranda"],
+      "limitations": ["May need variation (CREAC)", "not for all documents"],
+      "related_concepts": ["legal_analysis", "argument_structure"]
+    },
+    {
+      "model_name": "elements_analysis",
+      "description": "Breaking legal claim or defense into required elements",
+      "use_cases": ["Analyzing claims", "checking defenses", "jury instructions"],
+      "limitations": ["Elements vary by jurisdiction", "affirmative defenses separate"],
+      "related_concepts": ["prima_facie_case", "burden_of_proof"]
+    },
+    {
+      "model_name": "hierarchy_of_authority",
+      "description": "Understanding which courts bind which courts",
+      "use_cases": ["Citing precedent", "predicting outcomes", "jurisdictional analysis"],
+      "limitations": ["Horizontal vs vertical", "federal vs state complexity"],
+      "related_concepts": ["binding_precedent", "persuasive_authority"]
+    },
+    {
+      "model_name": "balancing_test",
+      "description": "Weighing competing interests or factors",
+      "use_cases": ["Constitutional law", "equitable remedies", "discretionary decisions"],
+      "limitations": ["Subjective factors", "outcome-dependent"],
+      "related_concepts": ["strict_scrutiny", "intermediate_scrutiny", "rational_basis"]
+    },
+    {
+      "model_name": "textualism_vs_purposivism",
+      "description": "Competing approaches to statutory interpretation",
+      "use_cases": ["Interpreting statutes", "regulatory analysis"],
+      "limitations": ["Philosophical differences", "may reach different results"],
+      "related_concepts": ["plain_meaning", "legislative_intent", "canons"]
+    }
+  ]
+}

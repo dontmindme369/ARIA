@@ -1,0 +1,476 @@
+{
+  "domain": "social_sciences",
+  "version": "2.0",
+  "last_updated": "2024-11-14T00:00:00Z",
+  "anchor_alignment": "analytical_educational",
+  "concepts": {
+    "cognitive_bias": {
+      "term": "cognitive_bias",
+      "definition": "Systematic pattern of deviation from rationality in judgment",
+      "synonyms": ["mental heuristic error", "judgment bias"],
+      "related_concepts": ["confirmation_bias", "availability_heuristic", "anchoring", "dunning_kruger"],
+      "category": "cognitive_psychology",
+      "complexity": "intermediate",
+      "mental_models": ["system_1_system_2", "bounded_rationality", "heuristics_and_biases"],
+      "common_errors": ["assuming awareness eliminates bias", "bias blind spot", "not accounting for in research"],
+      "detection_patterns": ["bias", "systematic error", "heuristic", "irrational"],
+      "epistemic_markers": {
+        "evidence_type": "empirical_psychological",
+        "certainty_level": "well_established"
+      },
+      "reasoning_patterns": ["identify bias type", "assess impact", "design debiasing intervention"],
+      "examples": ["Confirmation bias", "availability heuristic", "anchoring effect", "hindsight bias"],
+      "prerequisites": ["judgment_and_decision_making", "statistics"],
+      "applications": ["research_design", "decision_making", "behavioral_economics", "UX"]
+    },
+    "correlation_vs_causation": {
+      "term": "correlation_vs_causation",
+      "definition": "Statistical relationship (correlation) does not imply one variable causes the other (causation)",
+      "synonyms": ["spurious_correlation", "association_vs_cause"],
+      "related_concepts": ["confounding_variable", "experimental_design", "counterfactual", "causality"],
+      "category": "research_methods",
+      "complexity": "basic",
+      "mental_models": ["causal_graph", "controlled_experiment", "third_variable"],
+      "common_errors": ["inferring causation from correlation", "ignoring confounds", "reverse causation"],
+      "detection_patterns": ["correlation", "causation", "association", "confound"],
+      "epistemic_markers": {
+        "evidence_type": "methodological",
+        "certainty_level": "fundamental_principle"
+      },
+      "reasoning_patterns": ["identify correlation", "check for causation evidence", "identify confounds", "consider alternative explanations"],
+      "examples": ["Ice cream sales and drowning (summer confound)", "correlation ≠ causation"],
+      "prerequisites": ["statistics_basics", "logic"],
+      "applications": ["research_interpretation", "policy_analysis", "critical_thinking"]
+    },
+    "operationalization": {
+      "term": "operationalization",
+      "definition": "Defining abstract concepts in measurable terms for research",
+      "synonyms": ["measurement_definition", "construct_operationalization"],
+      "related_concepts": ["construct_validity", "measurement", "variable_definition", "reliability"],
+      "category": "research_methods",
+      "complexity": "intermediate",
+      "mental_models": ["abstract_to_concrete", "measurement_validity", "construct_mapping"],
+      "common_errors": ["poor construct validity", "confusing concept with measure", "single indicator"],
+      "detection_patterns": ["operationalize", "measure", "define", "indicator"],
+      "epistemic_markers": {
+        "evidence_type": "methodological",
+        "certainty_level": "convention_dependent"
+      },
+      "reasoning_patterns": ["identify abstract concept", "define measurable indicators", "assess validity"],
+      "examples": ["Intelligence → IQ score", "Happiness → self-report scale", "SES → income+education"],
+      "prerequisites": ["research_design", "measurement_theory"],
+      "applications": ["survey_design", "experimental_research", "program_evaluation"]
+    },
+    "external_validity": {
+      "term": "external_validity",
+      "definition": "Extent to which research findings generalize beyond the specific study",
+      "synonyms": ["generalizability", "ecological_validity"],
+      "related_concepts": ["internal_validity", "sampling", "replication", "population"],
+      "category": "research_methods",
+      "complexity": "intermediate",
+      "mental_models": ["generalization_logic", "sample_to_population", "context_dependency"],
+      "common_errors": ["overgeneralizing", "ignoring context limits", "convenience sample generalization"],
+      "detection_patterns": ["generalize", "external validity", "ecological validity"],
+      "epistemic_markers": {
+        "evidence_type": "empirical_scope",
+        "certainty_level": "assessed"
+      },
+      "reasoning_patterns": ["identify target population", "assess sample representativeness", "consider context factors"],
+      "examples": ["College student sample → all adults?", "Lab findings → real world?"],
+      "prerequisites": ["sampling", "research_design"],
+      "applications": ["research_interpretation", "policy_application", "intervention_design"]
+    },
+    "social_construction": {
+      "term": "social_construction",
+      "definition": "Concept or practice that exists because people agree it exists, not from objective reality",
+      "synonyms": ["socially_constructed", "constructed_reality"],
+      "related_concepts": ["symbolic_interactionism", "social_reality", "collective_meaning", "norms"],
+      "category": "sociological_theory",
+      "complexity": "advanced",
+      "mental_models": ["shared_meaning", "reality_construction", "collective_agreement"],
+      "common_errors": ["extreme social constructivism", "denying any objective basis", "conflating with arbitrary"],
+      "detection_patterns": ["socially constructed", "social construction", "collective meaning"],
+      "epistemic_markers": {
+        "evidence_type": "theoretical",
+        "certainty_level": "interpretive"
+      },
+      "reasoning_patterns": ["identify concept", "trace social origins", "examine contingency", "assess consequences"],
+      "examples": ["Money", "race categories", "gender roles", "adolescence"],
+      "prerequisites": ["sociology_basics", "symbolic_interaction"],
+      "applications": ["social_analysis", "critical_theory", "cultural_studies"]
+    },
+    "p_value": {
+      "term": "p_value",
+      "definition": "Probability of obtaining results at least as extreme as observed, assuming null hypothesis is true",
+      "synonyms": ["significance_level", "probability_value"],
+      "related_concepts": ["null_hypothesis", "statistical_significance", "type_I_error", "hypothesis_testing"],
+      "category": "statistics",
+      "complexity": "intermediate",
+      "mental_models": ["null_hypothesis_testing", "evidence_against_null", "probability_threshold"],
+      "common_errors": ["p<0.05 = truth", "p-hacking", "conflating significance with importance"],
+      "detection_patterns": ["p-value", "p<", "statistical significance", "alpha"],
+      "epistemic_markers": {
+        "evidence_type": "statistical",
+        "certainty_level": "probabilistic"
+      },
+      "reasoning_patterns": ["state null hypothesis", "calculate p-value", "compare to alpha", "interpret carefully"],
+      "examples": ["p=0.03 suggests evidence against null", "p=0.06 does not prove null true"],
+      "prerequisites": ["probability", "hypothesis_testing", "null_hypothesis"],
+      "applications": ["research_analysis", "hypothesis_testing", "publication"]
+    },
+    "effect_size": {
+      "term": "effect_size",
+      "definition": "Magnitude of relationship or difference, independent of sample size",
+      "synonyms": ["practical_significance", "strength_of_effect"],
+      "related_concepts": ["statistical_significance", "cohens_d", "r_squared", "practical_importance"],
+      "category": "statistics",
+      "complexity": "intermediate",
+      "mental_models": ["magnitude_matters", "significance_vs_importance", "standardized_difference"],
+      "common_errors": ["ignoring effect size", "conflating with p-value", "no context for interpretation"],
+      "detection_patterns": ["effect size", "Cohen's d", "practical significance", "magnitude"],
+      "epistemic_markers": {
+        "evidence_type": "statistical",
+        "certainty_level": "quantified"
+      },
+      "reasoning_patterns": ["calculate effect size", "interpret magnitude", "contextualize importance"],
+      "examples": ["Cohen's d=0.2 (small)", "d=0.5 (medium)", "d=0.8 (large)", "r²=0.09 (9% variance)"],
+      "prerequisites": ["statistics", "significance_testing"],
+      "applications": ["research_interpretation", "meta_analysis", "power_analysis"]
+    },
+    "ecological_fallacy": {
+      "term": "ecological_fallacy",
+      "definition": "Inferring individual-level relationships from group-level data",
+      "synonyms": ["aggregation_bias", "group_to_individual_inference"],
+      "related_concepts": ["levels_of_analysis", "atomistic_fallacy", "multilevel_modeling"],
+      "category": "research_methods",
+      "complexity": "advanced",
+      "mental_models": ["levels_of_analysis", "composition_fallacy", "aggregation_error"],
+      "common_errors": ["group statistics → individual conclusions", "ignoring within-group variation"],
+      "detection_patterns": ["group level", "aggregate data", "inference", "individual"],
+      "epistemic_markers": {
+        "evidence_type": "logical",
+        "certainty_level": "fallacy"
+      },
+      "reasoning_patterns": ["identify level of data", "match to level of inference", "avoid cross-level fallacy"],
+      "examples": ["Countries with high income have high literacy → individuals with high income are literate (wrong)"],
+      "prerequisites": ["levels_of_analysis", "statistics"],
+      "applications": ["research_design", "policy_analysis", "data_interpretation"]
+    },
+    "replication_crisis": {
+      "term": "replication_crisis",
+      "definition": "Finding that many published research results fail to replicate",
+      "synonyms": ["reproducibility_crisis"],
+      "related_concepts": ["p_hacking", "publication_bias", "open_science", "preregistration"],
+      "category": "metascience",
+      "complexity": "advanced",
+      "mental_models": ["cumulative_science", "verification_requirement", "false_positives"],
+      "common_errors": ["trusting single study", "ignoring replication", "publication bias"],
+      "detection_patterns": ["replication", "reproducibility", "replication crisis"],
+      "epistemic_markers": {
+        "evidence_type": "meta_empirical",
+        "certainty_level": "concerning"
+      },
+      "reasoning_patterns": ["check for replications", "assess robustness", "prefer preregistered studies"],
+      "examples": ["Psychology replications ~40% success", "Need for preregistration", "Open science movement"],
+      "prerequisites": ["research_methods", "philosophy_of_science"],
+      "applications": ["research_evaluation", "evidence_based_practice", "scientific_reform"]
+    },
+    "sampling_bias": {
+      "term": "sampling_bias",
+      "definition": "Systematic error from non-representative sample",
+      "synonyms": ["selection_bias", "non_representative_sample"],
+      "related_concepts": ["random_sampling", "convenience_sample", "external_validity", "generalization"],
+      "category": "research_methods",
+      "complexity": "basic",
+      "mental_models": ["representativeness", "population_parameters", "selection_mechanism"],
+      "common_errors": ["WEIRD samples", "convenience sampling", "volunteer bias"],
+      "detection_patterns": ["sampling bias", "non-representative", "selection bias"],
+      "epistemic_markers": {
+        "evidence_type": "methodological",
+        "certainty_level": "threat_to_validity"
+      },
+      "reasoning_patterns": ["identify target population", "assess sampling method", "evaluate representativeness"],
+      "examples": ["Online surveys (internet users only)", "College students (WEIRD)", "Volunteer bias"],
+      "prerequisites": ["sampling_theory", "populations"],
+      "applications": ["research_design", "survey_methods", "generalization"]
+    },
+    "theory_of_mind": {
+      "term": "theory_of_mind",
+      "definition": "Ability to attribute mental states (beliefs, desires, intentions) to others",
+      "synonyms": ["mentalizing", "mindreading"],
+      "related_concepts": ["perspective_taking", "empathy", "false_belief_task", "social_cognition"],
+      "category": "developmental_psychology",
+      "complexity": "intermediate",
+      "mental_models": ["mental_representation_of_others", "belief_desire_psychology", "intentional_stance"],
+      "common_errors": ["confusing with empathy", "assuming all or nothing", "ignoring development"],
+      "detection_patterns": ["theory of mind", "mental states", "false belief", "perspective taking"],
+      "epistemic_markers": {
+        "evidence_type": "empirical_psychological",
+        "certainty_level": "well_established"
+      },
+      "reasoning_patterns": ["infer others' mental states", "distinguish own from others' beliefs", "predict behavior from beliefs"],
+      "examples": ["Sally-Anne false belief task", "understanding deception", "sarcasm comprehension"],
+      "prerequisites": ["developmental_psychology", "cognitive_psychology"],
+      "applications": ["child_development", "autism_research", "social_cognition", "AI"]
+    },
+    "priming": {
+      "term": "priming",
+      "definition": "Exposure to stimulus influences response to subsequent stimulus",
+      "synonyms": ["psychological_priming", "activation"],
+      "related_concepts": ["implicit_memory", "automatic_processes", "semantic_network", "accessibility"],
+      "category": "cognitive_psychology",
+      "complexity": "intermediate",
+      "mental_models": ["spreading_activation", "concept_accessibility", "automatic_influence"],
+      "common_errors": ["overestimating effect size", "replication issues", "ignoring awareness"],
+      "detection_patterns": ["priming", "prime", "automatic influence", "implicit"],
+      "epistemic_markers": {
+        "evidence_type": "empirical",
+        "certainty_level": "controversial"
+      },
+      "reasoning_patterns": ["present prime", "measure influenced behavior", "control for awareness"],
+      "examples": ["Word association speed", "stereotype activation", "behavior priming"],
+      "prerequisites": ["cognitive_psychology", "memory"],
+      "applications": ["advertising", "persuasion", "research_design"]
+    },
+    "experimental_design": {
+      "term": "experimental_design",
+      "definition": "Structure for testing causal hypotheses through manipulation and control",
+      "synonyms": ["experimental_method", "controlled_experiment"],
+      "related_concepts": ["random_assignment", "control_group", "independent_variable", "dependent_variable"],
+      "category": "research_methods",
+      "complexity": "intermediate",
+      "mental_models": ["causal_inference", "manipulation_and_control", "randomization"],
+      "common_errors": ["no control group", "confounding variables", "demand characteristics"],
+      "detection_patterns": ["experiment", "random assignment", "manipulation", "control"],
+      "epistemic_markers": {
+        "evidence_type": "causal",
+        "certainty_level": "strong_when_well_designed"
+      },
+      "reasoning_patterns": ["identify IV and DV", "random assign", "manipulate IV", "measure DV", "control confounds"],
+      "examples": ["Drug trial (treatment vs placebo)", "Educational intervention", "Psychology experiments"],
+      "prerequisites": ["causation", "variables", "control"],
+      "applications": ["causal_research", "intervention_evaluation", "policy_testing"]
+    },
+    "construct_validity": {
+      "term": "construct_validity",
+      "definition": "Degree to which measurement captures theoretical construct it intends to measure",
+      "synonyms": ["measurement_validity", "conceptual_validity"],
+      "related_concepts": ["operationalization", "convergent_validity", "discriminant_validity", "face_validity"],
+      "category": "measurement",
+      "complexity": "advanced",
+      "mental_models": ["concept_measure_mapping", "validation_process", "theoretical_network"],
+      "common_errors": ["assuming face validity sufficient", "ignoring theory", "single indicator"],
+      "detection_patterns": ["construct validity", "measurement validity", "operationalization"],
+      "epistemic_markers": {
+        "evidence_type": "theoretical_empirical",
+        "certainty_level": "assessed"
+      },
+      "reasoning_patterns": ["define construct theoretically", "develop measures", "test convergent/discriminant validity"],
+      "examples": ["Does IQ test measure intelligence?", "Depression scale validity", "Personality inventory"],
+      "prerequisites": ["measurement_theory", "psychometrics"],
+      "applications": ["scale_development", "research_design", "assessment"]
+    },
+    "social_desirability_bias": {
+      "term": "social_desirability_bias",
+      "definition": "Tendency to answer questions in manner viewed favorably by others",
+      "synonyms": ["response_bias", "impression_management"],
+      "related_concepts": ["self_report", "demand_characteristics", "survey_methods", "validity_threat"],
+      "category": "measurement",
+      "complexity": "basic",
+      "mental_models": ["impression_management", "response_distortion", "self_presentation"],
+      "common_errors": ["ignoring in self-report", "assuming honesty", "not using indirect measures"],
+      "detection_patterns": ["social desirability", "response bias", "self-report"],
+      "epistemic_markers": {
+        "evidence_type": "measurement_artifact",
+        "certainty_level": "systematic_bias"
+      },
+      "reasoning_patterns": ["identify sensitive topics", "use indirect measures", "assess with SD scale", "design to minimize"],
+      "examples": ["Under-reporting drug use", "over-reporting prosocial behavior", "voting intentions"],
+      "prerequisites": ["survey_methods", "self_report"],
+      "applications": ["survey_design", "research_validity", "polling"]
+    }
+  },
+  "reasoning_heuristics": [
+    {
+      "pattern": "Correlation does not imply causation",
+      "context": "Interpreting statistical relationships",
+      "limitations": "Correlation can suggest hypotheses to test",
+      "examples": ["Ice cream and drowning", "Check for third variables"]
+    },
+    {
+      "pattern": "Consider alternative explanations",
+      "context": "Evaluating research findings",
+      "limitations": "Infinite alternatives exist - focus on plausible",
+      "examples": ["Confounds", "reverse causation", "third variables"]
+    },
+    {
+      "pattern": "Beware of your own biases",
+      "context": "Research design and interpretation",
+      "limitations": "Awareness doesn't eliminate bias",
+      "examples": ["Confirmation bias", "expectancy effects", "motivated reasoning"]
+    },
+    {
+      "pattern": "Replicate before believing",
+      "context": "Evaluating evidence strength",
+      "limitations": "Single well-designed study can be informative",
+      "examples": ["Replication crisis", "publication bias", "false positives"]
+    },
+    {
+      "pattern": "Effect size matters more than p-value",
+      "context": "Interpreting statistical results",
+      "limitations": "Both matter - significance and magnitude",
+      "examples": ["Large N can make trivial effects significant", "practical vs statistical significance"]
+    },
+    {
+      "pattern": "Match claims to research design",
+      "context": "Making inferences",
+      "limitations": "Some designs allow stronger inferences",
+      "examples": ["Experiments → causation", "correlational → association only"]
+    },
+    {
+      "pattern": "Check for sampling bias",
+      "context": "Generalizing findings",
+      "limitations": "Perfect representativeness impossible",
+      "examples": ["WEIRD samples", "convenience samples", "volunteer bias"]
+    },
+    {
+      "pattern": "Operationalize clearly",
+      "context": "Defining concepts for measurement",
+      "limitations": "Multiple valid operationalizations possible",
+      "examples": ["What counts as aggression?", "How to measure happiness?"]
+    },
+    {
+      "pattern": "Control for confounds",
+      "context": "Research design",
+      "limitations": "Can't control everything - residual confounding",
+      "examples": ["Random assignment", "matching", "statistical control"]
+    },
+    {
+      "pattern": "Use converging evidence from multiple methods",
+      "context": "Building confidence in findings",
+      "limitations": "Methods can share limitations",
+      "examples": ["Triangulation", "multi-method research", "different operationalizations"]
+    }
+  ],
+  "common_errors": [
+    {
+      "error_type": "inferring_causation_from_correlation",
+      "description": "Concluding X causes Y from correlational data",
+      "symptoms": ["Causal language from non-experimental design"],
+      "causes": ["Misunderstanding methods", "motivated reasoning", "statistical illiteracy"],
+      "prevention": ["Check research design", "consider alternatives", "use causal language only for experiments"],
+      "correction": ["Reframe as association", "acknowledge limitations", "suggest experimental test"]
+    },
+    {
+      "error_type": "ignoring_effect_size",
+      "description": "Focusing only on statistical significance",
+      "symptoms": ["p<0.05 treated as important regardless of magnitude"],
+      "causes": ["Misunderstanding statistics", "publication pressure", "threshold thinking"],
+      "prevention": ["Always report effect sizes", "interpret magnitude", "practical significance"],
+      "correction": ["Calculate and report effect size", "contextualize magnitude"]
+    },
+    {
+      "error_type": "overgeneralizing",
+      "description": "Applying findings beyond appropriate scope",
+      "symptoms": ["WEIRD sample → all humans", "lab → real world"],
+      "causes": ["Ignoring external validity", "convenience", "enthusiasm"],
+      "prevention": ["Check sample characteristics", "assess generalization limits", "replicate in diverse samples"],
+      "correction": ["Qualify claims", "specify limitations", "test boundaries"]
+    },
+    {
+      "error_type": "p_hacking",
+      "description": "Manipulating analysis to achieve p<0.05",
+      "symptoms": ["Multiple unreported tests", "optional stopping", "outcome switching"],
+      "causes": ["Publication pressure", "confirmation bias", "lack of preregistration"],
+      "prevention": ["Preregister", "report all tests", "correct for multiple comparisons"],
+      "correction": ["Preregister replication", "transparency", "registered reports"]
+    },
+    {
+      "error_type": "ignoring_base_rates",
+      "description": "Not considering prior probability",
+      "symptoms": ["Neglecting prevalence", "overweighting anecdotes"],
+      "causes": ["Representativeness heuristic", "availability bias"],
+      "prevention": ["Check base rates", "use Bayesian reasoning", "consider prevalence"],
+      "correction": ["Incorporate base rate", "calculate posterior probability"]
+    },
+    {
+      "error_type": "confirmation_bias_in_research",
+      "description": "Seeking/interpreting evidence that confirms beliefs",
+      "symptoms": ["Cherry-picking studies", "dismissing contradictory evidence"],
+      "causes": ["Motivated reasoning", "attachment to hypothesis"],
+      "prevention": ["Seek disconfirming evidence", "preregister", "adversarial collaboration"],
+      "correction": ["Actively seek counter-evidence", "update beliefs", "reframe"]
+    },
+    {
+      "error_type": "measurement_invalidity",
+      "description": "Measure doesn't capture intended construct",
+      "symptoms": ["Poor construct validity", "confounded measures"],
+      "causes": ["Inadequate operationalization", "rushing", "lack of validation"],
+      "prevention": ["Pilot test", "validate measures", "multiple indicators"],
+      "correction": ["Revise measurement", "validate properly", "use established measures"]
+    },
+    {
+      "error_type": "ecological_fallacy",
+      "description": "Inferring individual from group-level data",
+      "symptoms": ["Group statistics → individual conclusions"],
+      "causes": ["Ignoring levels of analysis", "convenience", "misunderstanding"],
+      "prevention": ["Match data level to inference level", "multilevel analysis"],
+      "correction": ["Clarify inference level", "get individual data", "multilevel model"]
+    }
+  ],
+  "epistemic_standards": {
+    "preferred_evidence": [
+      "Experimental studies with random assignment",
+      "Replicated findings across labs",
+      "Meta-analyses of multiple studies",
+      "Preregistered research",
+      "Large representative samples",
+      "Converging evidence from multiple methods",
+      "Open data and materials"
+    ],
+    "burden_of_proof": "Social science claims require: appropriate research design, adequate sample, valid measurement, statistical support, and replication",
+    "certainty_levels": {
+      "strong": "Replicated experimental findings, meta-analytic support, large effects",
+      "moderate": "Single well-designed study, medium effects, coherent theory",
+      "weak": "Correlational only, small sample, unreplicated, exploratory",
+      "speculative": "Theoretical speculation, pilot data, needs testing"
+    }
+  },
+  "mental_models": [
+    {
+      "model_name": "null_hypothesis_significance_testing",
+      "description": "Statistical framework: assume no effect, calculate probability of data under null",
+      "use_cases": ["Hypothesis testing", "research inference", "statistical analysis"],
+      "limitations": ["P-value misinterpretation", "dichotomous thinking", "ignores effect size"],
+      "related_concepts": ["p_value", "statistical_significance", "hypothesis_testing"]
+    },
+    {
+      "model_name": "causal_graph",
+      "description": "Visual representation of causal relationships between variables",
+      "use_cases": ["Identifying confounds", "planning analysis", "causal inference"],
+      "limitations": ["Assumptions required", "can be complex", "directionality"],
+      "related_concepts": ["causation", "confounding", "mediation", "DAG"]
+    },
+    {
+      "model_name": "system_1_system_2",
+      "description": "Dual process theory: fast intuitive (System 1) vs slow deliberate (System 2) thinking",
+      "use_cases": ["Understanding cognition", "bias explanation", "decision making"],
+      "limitations": ["Oversimplification", "not two distinct systems", "continuous"],
+      "related_concepts": ["cognitive_bias", "heuristics", "automatic_processes"]
+    },
+    {
+      "model_name": "levels_of_analysis",
+      "description": "Different scales of explanation: individual, group, societal, cultural",
+      "use_cases": ["Matching data to inference", "avoiding fallacies", "theory building"],
+      "limitations": ["Interactions across levels", "which level primary?"],
+      "related_concepts": ["ecological_fallacy", "reductionism", "emergence"]
+    },
+    {
+      "model_name": "research_methods_hierarchy",
+      "description": "Strength of causal inference: meta-analysis > RCT > quasi-experiment > correlational",
+      "use_cases": ["Evaluating evidence", "research design", "making inferences"],
+      "limitations": ["Context matters", "well-done correlational > poor RCT"],
+      "related_concepts": ["causal_inference", "internal_validity", "experimental_design"]
+    }
+  ]
+}

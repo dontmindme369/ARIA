@@ -15,7 +15,7 @@ paths:
 
   # Training data and state
   exemplars: ./data/exemplars.txt
-  bandit_state: ~/.aria/bandit_state.json
+  bandit_state: ./.aria_contextual_bandit.json  # LinUCB state in project root
   domain_dictionaries: ./data/domain_dictionaries
 
   # Logs and telemetry

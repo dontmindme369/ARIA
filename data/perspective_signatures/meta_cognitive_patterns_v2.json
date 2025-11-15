@@ -1,0 +1,3112 @@
+{
+  "reasoning_heuristics_by_domain": {
+    "philosophy": [
+      {
+        "pattern": "Question your assumptions before building arguments",
+        "context": "Beginning philosophical analysis",
+        "limitations": "Excessive skepticism can be paralyzing",
+        "examples": [
+          "Socratic method",
+          "Cartesian doubt",
+          "conceptual analysis"
+        ]
+      },
+      {
+        "pattern": "Distinguish conceptual from empirical questions",
+        "context": "Analyzing philosophical problems",
+        "limitations": "Some questions involve both dimensions",
+        "examples": [
+          "Is mathematics discovered or invented?",
+          "What is consciousness?"
+        ]
+      },
+      {
+        "pattern": "Look for counterexamples to test generalizations",
+        "context": "Evaluating philosophical claims",
+        "limitations": "Not all claims are generalizations",
+        "examples": [
+          "Gettier cases",
+          "thought experiments"
+        ]
+      },
+      {
+        "pattern": "Separate normative from descriptive claims",
+        "context": "Ethics and political philosophy",
+        "limitations": "Is-ought distinction has complexities",
+        "examples": [
+          "What people do vs what they should do"
+        ]
+      },
+      {
+        "pattern": "Consider implications and consequences of positions",
+        "context": "Evaluating philosophical theories",
+        "limitations": "Counterintuitive results don't always refute",
+        "examples": [
+          "Repugnant conclusion",
+          "utility monster"
+        ]
+      },
+      {
+        "pattern": "Identify hidden assumptions in arguments",
+        "context": "Critical analysis",
+        "limitations": "Can't question everything simultaneously",
+        "examples": [
+          "Presuppositions",
+          "background assumptions"
+        ]
+      },
+      {
+        "pattern": "Use principle of charity in interpretation",
+        "context": "Reading philosophical texts",
+        "limitations": "Don't attribute positions not held",
+        "examples": [
+          "Interpret arguments in strongest form"
+        ]
+      },
+      {
+        "pattern": "Test logical validity separately from soundness",
+        "context": "Evaluating arguments",
+        "limitations": "Valid arguments can have false conclusions",
+        "examples": [
+          "Valid but unsound arguments"
+        ]
+      },
+      {
+        "pattern": "Recognize limits of thought experiments",
+        "context": "Using intuition pumps",
+        "limitations": "Intuitions can mislead or vary",
+        "examples": [
+          "Trolley problem variations"
+        ]
+      },
+      {
+        "pattern": "Balance theoretical elegance with explanatory power",
+        "context": "Theory choice",
+        "limitations": "Simplicity isn't always truth-conducive",
+        "examples": [
+          "Occam's razor"
+        ]
+      }
+    ],
+    "engineering": [
+      {
+        "pattern": "Always check units throughout calculations",
+        "context": "All engineering calculations",
+        "limitations": "Dimensionless analysis sometimes preferred",
+        "examples": [
+          "Force in N, stress in Pa",
+          "Consistent SI or Imperial"
+        ]
+      },
+      {
+        "pattern": "Apply appropriate factor of safety for uncertainties",
+        "context": "Design calculations",
+        "limitations": "Over-conservative design wastes resources",
+        "examples": [
+          "Static loads: FoS=3",
+          "Fatigue: FoS=10",
+          "Known loads: FoS=1.5"
+        ]
+      },
+      {
+        "pattern": "Identify failure modes before detailed design",
+        "context": "Beginning design process",
+        "limitations": "Some failure modes only apparent in analysis",
+        "examples": [
+          "Yielding",
+          "buckling",
+          "fatigue",
+          "corrosion"
+        ]
+      },
+      {
+        "pattern": "Check for stress concentrations at geometric discontinuities",
+        "context": "Stress analysis",
+        "limitations": "Not all concentrations are critical",
+        "examples": [
+          "Holes",
+          "fillets",
+          "notches",
+          "welds"
+        ]
+      },
+      {
+        "pattern": "Use free body diagrams for force analysis",
+        "context": "Statics and dynamics problems",
+        "limitations": "Complex systems may need computer analysis",
+        "examples": [
+          "Isolate component",
+          "show all forces",
+          "apply equilibrium"
+        ]
+      },
+      {
+        "pattern": "Verify solution makes physical sense",
+        "context": "After calculations",
+        "limitations": "Experience needed for intuition",
+        "examples": [
+          "Positive deflection downward?",
+          "Reasonable magnitude?"
+        ]
+      },
+      {
+        "pattern": "Consider thermal effects in precision applications",
+        "context": "Temperature-varying environments",
+        "limitations": "Negligible for some applications",
+        "examples": [
+          "CTE mismatch",
+          "thermal stress",
+          "expansion joints"
+        ]
+      },
+      {
+        "pattern": "Check boundary conditions match physical reality",
+        "context": "Analysis setup",
+        "limitations": "Ideal BCs are approximations",
+        "examples": [
+          "Fixed vs pinned",
+          "symmetry",
+          "load distribution"
+        ]
+      },
+      {
+        "pattern": "Use dimensionless parameters to scale and generalize",
+        "context": "Fluid dynamics, heat transfer",
+        "limitations": "Not all problems scale simply",
+        "examples": [
+          "Reynolds number",
+          "Mach number",
+          "Biot number"
+        ]
+      },
+      {
+        "pattern": "Iterate between analysis and design",
+        "context": "Design process",
+        "limitations": "Time constraints limit iterations",
+        "examples": [
+          "Size member \u2192 analyze \u2192 resize \u2192 repeat"
+        ]
+      }
+    ],
+    "law": [
+      {
+        "pattern": "Always identify jurisdiction first",
+        "context": "Beginning legal analysis",
+        "limitations": "Uniform laws may apply across jurisdictions",
+        "examples": [
+          "Federal vs state",
+          "which state's law",
+          "choice of law"
+        ]
+      },
+      {
+        "pattern": "Use IRAC structure for legal analysis",
+        "context": "Writing legal analysis",
+        "limitations": "Some contexts need variation (CREAC, etc.)",
+        "examples": [
+          "Issue, Rule, Application, Conclusion"
+        ]
+      },
+      {
+        "pattern": "Distinguish binding from persuasive authority",
+        "context": "Citing precedent",
+        "limitations": "Strong persuasive authority can influence",
+        "examples": [
+          "Supreme Court binds all",
+          "sister state persuasive only"
+        ]
+      },
+      {
+        "pattern": "Check all elements of legal claim or defense",
+        "context": "Analyzing legal issue",
+        "limitations": "Some elements may be undisputed",
+        "examples": [
+          "Negligence: duty, breach, causation, damages"
+        ]
+      },
+      {
+        "pattern": "Consider both sides of legal argument",
+        "context": "Advising clients or writing",
+        "limitations": "Some positions clearly stronger",
+        "examples": [
+          "Opposing interpretation",
+          "counterarguments"
+        ]
+      },
+      {
+        "pattern": "Apply plain meaning first in statutory interpretation",
+        "context": "Interpreting statutes",
+        "limitations": "Ambiguity may require other tools",
+        "examples": [
+          "Read statute",
+          "if clear, apply it"
+        ]
+      },
+      {
+        "pattern": "Identify standard of review on appeal",
+        "context": "Appellate analysis",
+        "limitations": "Mixed standards for different issues",
+        "examples": [
+          "De novo (law)",
+          "clear error (facts)",
+          "abuse of discretion"
+        ]
+      },
+      {
+        "pattern": "Check statute of limitations",
+        "context": "New matter",
+        "limitations": "Tolling rules may apply",
+        "examples": [
+          "Time bar",
+          "discovery rule",
+          "tolling"
+        ]
+      },
+      {
+        "pattern": "Verify standing before merits",
+        "context": "Constitutional or procedural analysis",
+        "limitations": "Standing may be assumed in some contexts",
+        "examples": [
+          "Injury in fact",
+          "causation",
+          "redressability"
+        ]
+      },
+      {
+        "pattern": "Distinguish facts from holdings when reading cases",
+        "context": "Case reading and citation",
+        "limitations": "Broad holdings may extend beyond facts",
+        "examples": [
+          "Ratio decidendi vs obiter dicta"
+        ]
+      }
+    ],
+    "business": [
+      {
+        "pattern": "Focus on unit economics before scaling",
+        "context": "Early stage business decisions",
+        "limitations": "Some businesses need scale for unit economics",
+        "examples": [
+          "Fix CAC/LTV before growth spend",
+          "Contribution margin positive"
+        ]
+      },
+      {
+        "pattern": "LTV should be 3x+ CAC for healthy business",
+        "context": "Evaluating customer acquisition strategy",
+        "limitations": "Varies by industry and stage",
+        "examples": [
+          "LTV:CAC of 3:1 minimum",
+          "SaaS target: 5:1 or higher"
+        ]
+      },
+      {
+        "pattern": "Start fundraising with 6-9 months runway",
+        "context": "Venture-backed startups",
+        "limitations": "Profitable businesses less urgent",
+        "examples": [
+          "Don't wait until 3 months",
+          "Process takes 3-6 months"
+        ]
+      },
+      {
+        "pattern": "Retention is the strongest signal of product-market fit",
+        "context": "Assessing product success",
+        "limitations": "Some products naturally have low retention",
+        "examples": [
+          "Flat retention curve = PMF",
+          "40% rule for disappointment"
+        ]
+      },
+      {
+        "pattern": "Optimize for learning velocity early stage",
+        "context": "Pre-product-market fit",
+        "limitations": "Post-PMF optimize for execution",
+        "examples": [
+          "Fast iteration",
+          "MVP approach",
+          "Validated learning"
+        ]
+      },
+      {
+        "pattern": "Price on value, not cost",
+        "context": "Pricing strategy",
+        "limitations": "Commodity markets price-sensitive",
+        "examples": [
+          "Willingness to pay",
+          "ROI for customer",
+          "Not cost-plus"
+        ]
+      },
+      {
+        "pattern": "Cash is oxygen - monitor burn and runway religiously",
+        "context": "Financial management",
+        "limitations": "Profitable businesses have more flexibility",
+        "examples": [
+          "Weekly cash tracking",
+          "Runway calculations",
+          "Burn rate trends"
+        ]
+      },
+      {
+        "pattern": "Distribution beats product in early markets",
+        "context": "Go-to-market strategy",
+        "limitations": "Terrible product won't work long-term",
+        "examples": [
+          "Better sales beats better product",
+          "Channel is key"
+        ]
+      },
+      {
+        "pattern": "Measure what matters - avoid vanity metrics",
+        "context": "Metrics and KPIs",
+        "limitations": "Some vanity metrics correlate with real value",
+        "examples": [
+          "Revenue not signups",
+          "Retention not downloads"
+        ]
+      },
+      {
+        "pattern": "Do things that don't scale early on",
+        "context": "Early stage tactics",
+        "limitations": "Must have path to scalability eventually",
+        "examples": [
+          "Manual onboarding",
+          "Concierge service",
+          "High-touch"
+        ]
+      }
+    ],
+    "creative_arts": [
+      {
+        "pattern": "Constraints breed creativity",
+        "context": "Creative problem-solving",
+        "limitations": "Too many constraints can stifle",
+        "examples": [
+          "Haiku structure",
+          "limited color palette",
+          "budget constraints"
+        ]
+      },
+      {
+        "pattern": "Kill your darlings",
+        "context": "Editing and refinement",
+        "limitations": "Don't kill everything good",
+        "examples": [
+          "Cut beautiful but irrelevant prose",
+          "remove clever but distracting elements"
+        ]
+      },
+      {
+        "pattern": "Less is more",
+        "context": "Design and composition",
+        "limitations": "Minimalism isn't always appropriate",
+        "examples": [
+          "Remove unnecessary elements",
+          "simplify to essential"
+        ]
+      },
+      {
+        "pattern": "Show don't tell",
+        "context": "Narrative writing",
+        "limitations": "Some things need telling for efficiency",
+        "examples": [
+          "Dramatize rather than explain",
+          "concrete details over abstract"
+        ]
+      },
+      {
+        "pattern": "Make it strange",
+        "context": "Generating creative ideas",
+        "limitations": "Accessibility matters too",
+        "examples": [
+          "Defamiliarize the familiar",
+          "fresh perspective",
+          "unexpected juxtaposition"
+        ]
+      },
+      {
+        "pattern": "Every element must serve a purpose",
+        "context": "Design and writing",
+        "limitations": "Beauty can be purpose",
+        "examples": [
+          "Remove elements that don't contribute",
+          "justify every choice"
+        ]
+      },
+      {
+        "pattern": "Steal like an artist",
+        "context": "Creative influence",
+        "limitations": "Transform don't plagiarize",
+        "examples": [
+          "Study influences",
+          "remix and transform",
+          "combine disparate sources"
+        ]
+      },
+      {
+        "pattern": "Start in media res",
+        "context": "Narrative openings",
+        "limitations": "Reader needs orientation",
+        "examples": [
+          "Begin with action",
+          "hook immediately",
+          "backstory later"
+        ]
+      },
+      {
+        "pattern": "Tension and release",
+        "context": "Pacing and engagement",
+        "limitations": "Needs appropriate rhythm",
+        "examples": [
+          "Build anticipation",
+          "deliver payoff",
+          "vary intensity"
+        ]
+      },
+      {
+        "pattern": "Imitate then innovate",
+        "context": "Skill development",
+        "limitations": "Don't get stuck in imitation",
+        "examples": [
+          "Master conventions first",
+          "understand rules before breaking"
+        ]
+      }
+    ],
+    "social_sciences": [
+      {
+        "pattern": "Correlation does not imply causation",
+        "context": "Interpreting statistical relationships",
+        "limitations": "Correlation can suggest hypotheses to test",
+        "examples": [
+          "Ice cream and drowning",
+          "Check for third variables"
+        ]
+      },
+      {
+        "pattern": "Consider alternative explanations",
+        "context": "Evaluating research findings",
+        "limitations": "Infinite alternatives exist - focus on plausible",
+        "examples": [
+          "Confounds",
+          "reverse causation",
+          "third variables"
+        ]
+      },
+      {
+        "pattern": "Beware of your own biases",
+        "context": "Research design and interpretation",
+        "limitations": "Awareness doesn't eliminate bias",
+        "examples": [
+          "Confirmation bias",
+          "expectancy effects",
+          "motivated reasoning"
+        ]
+      },
+      {
+        "pattern": "Replicate before believing",
+        "context": "Evaluating evidence strength",
+        "limitations": "Single well-designed study can be informative",
+        "examples": [
+          "Replication crisis",
+          "publication bias",
+          "false positives"
+        ]
+      },
+      {
+        "pattern": "Effect size matters more than p-value",
+        "context": "Interpreting statistical results",
+        "limitations": "Both matter - significance and magnitude",
+        "examples": [
+          "Large N can make trivial effects significant",
+          "practical vs statistical significance"
+        ]
+      },
+      {
+        "pattern": "Match claims to research design",
+        "context": "Making inferences",
+        "limitations": "Some designs allow stronger inferences",
+        "examples": [
+          "Experiments \u2192 causation",
+          "correlational \u2192 association only"
+        ]
+      },
+      {
+        "pattern": "Check for sampling bias",
+        "context": "Generalizing findings",
+        "limitations": "Perfect representativeness impossible",
+        "examples": [
+          "WEIRD samples",
+          "convenience samples",
+          "volunteer bias"
+        ]
+      },
+      {
+        "pattern": "Operationalize clearly",
+        "context": "Defining concepts for measurement",
+        "limitations": "Multiple valid operationalizations possible",
+        "examples": [
+          "What counts as aggression?",
+          "How to measure happiness?"
+        ]
+      },
+      {
+        "pattern": "Control for confounds",
+        "context": "Research design",
+        "limitations": "Can't control everything - residual confounding",
+        "examples": [
+          "Random assignment",
+          "matching",
+          "statistical control"
+        ]
+      },
+      {
+        "pattern": "Use converging evidence from multiple methods",
+        "context": "Building confidence in findings",
+        "limitations": "Methods can share limitations",
+        "examples": [
+          "Triangulation",
+          "multi-method research",
+          "different operationalizations"
+        ]
+      }
+    ],
+    "security": [
+      {
+        "pattern": "Always check bounds before write",
+        "context": "Memory operations",
+        "limitations": "Performance overhead in some contexts",
+        "examples": [
+          "Buffer operations",
+          "array access",
+          "string handling"
+        ]
+      },
+      {
+        "pattern": "Assume all input is malicious",
+        "context": "Input validation and sanitization",
+        "limitations": "Can't validate everything perfectly",
+        "examples": [
+          "User input",
+          "network data",
+          "file contents"
+        ]
+      },
+      {
+        "pattern": "Defense in depth - multiple layers",
+        "context": "Security architecture",
+        "limitations": "Complexity and cost",
+        "examples": [
+          "Firewall + IDS + endpoint + app security"
+        ]
+      },
+      {
+        "pattern": "Enumerate thoroughly before exploiting",
+        "context": "Penetration testing and CTF",
+        "limitations": "Time constraints, noise concerns",
+        "examples": [
+          "System enumeration",
+          "network scanning",
+          "file discovery"
+        ]
+      },
+      {
+        "pattern": "Look for information leaks first",
+        "context": "Exploitation with ASLR/PIE",
+        "limitations": "Not always available",
+        "examples": [
+          "Format string leaks",
+          "error messages",
+          "timing side channels"
+        ]
+      },
+      {
+        "pattern": "Never roll your own crypto",
+        "context": "Cryptographic implementation",
+        "limitations": "Research context may require it",
+        "examples": [
+          "Use established libraries",
+          "standard algorithms only"
+        ]
+      },
+      {
+        "pattern": "Chain vulnerabilities for impact",
+        "context": "Exploitation strategy",
+        "limitations": "Each link must work",
+        "examples": [
+          "Info leak + buffer overflow",
+          "SSRF + internal exploit"
+        ]
+      },
+      {
+        "pattern": "Test in safe environment first",
+        "context": "Exploit development",
+        "limitations": "Production may differ",
+        "examples": [
+          "Local VM",
+          "isolated network",
+          "controlled testing"
+        ]
+      },
+      {
+        "pattern": "Fail securely - deny by default",
+        "context": "Secure design",
+        "limitations": "Usability trade-offs",
+        "examples": [
+          "Whitelist over blacklist",
+          "explicit allow vs deny"
+        ]
+      },
+      {
+        "pattern": "Sanitize output context-aware",
+        "context": "XSS prevention",
+        "limitations": "Context complexity",
+        "examples": [
+          "HTML encode for HTML",
+          "JS encode for JS",
+          "URL encode for URL"
+        ]
+      }
+    ],
+    "data_science": [
+      {
+        "pattern": "Always split data before preprocessing",
+        "context": "Preventing data leakage",
+        "limitations": "Some preprocessing must happen before (e.g., missing value detection)",
+        "examples": [
+          "Fit scaler on train only",
+          "encode on train only"
+        ]
+      },
+      {
+        "pattern": "Use cross-validation for model evaluation",
+        "context": "Estimating generalization performance",
+        "limitations": "Computational cost, time series requires special CV",
+        "examples": [
+          "k-fold CV",
+          "stratified CV for imbalanced data"
+        ]
+      },
+      {
+        "pattern": "Start simple, add complexity only if needed",
+        "context": "Model selection",
+        "limitations": "Sometimes complex models needed from start",
+        "examples": [
+          "Linear model first",
+          "add regularization",
+          "try ensemble"
+        ]
+      },
+      {
+        "pattern": "Visualize data before modeling",
+        "context": "Understanding data",
+        "limitations": "High-dimensional data hard to visualize",
+        "examples": [
+          "Distributions",
+          "correlations",
+          "target relationship"
+        ]
+      },
+      {
+        "pattern": "Check for data leakage",
+        "context": "Pipeline validation",
+        "limitations": "Subtle leakage hard to detect",
+        "examples": [
+          "Temporal order",
+          "test in training",
+          "target encoding"
+        ]
+      },
+      {
+        "pattern": "Balance complexity with interpretability",
+        "context": "Model choice",
+        "limitations": "Some domains require interpretability",
+        "examples": [
+          "Medical: prefer interpretable",
+          "ad targeting: black box OK"
+        ]
+      },
+      {
+        "pattern": "Use appropriate metrics for task",
+        "context": "Model evaluation",
+        "limitations": "Multiple metrics often needed",
+        "examples": [
+          "Imbalanced: F1/AUC not accuracy",
+          "regression: MAE vs RMSE"
+        ]
+      },
+      {
+        "pattern": "Feature engineering often beats algorithm choice",
+        "context": "Performance improvement",
+        "limitations": "Deep learning can learn features",
+        "examples": [
+          "Domain features",
+          "interactions",
+          "transformations"
+        ]
+      },
+      {
+        "pattern": "Validate assumptions of statistical tests",
+        "context": "Hypothesis testing",
+        "limitations": "Robustness varies",
+        "examples": [
+          "Normality",
+          "independence",
+          "homoscedasticity"
+        ]
+      },
+      {
+        "pattern": "Ensemble diverse models for best performance",
+        "context": "Maximizing accuracy",
+        "limitations": [
+          "Computational cost",
+          "complexity",
+          "diminishing returns"
+        ],
+        "examples": [
+          "Combine tree + linear + NN",
+          "bagging + boosting"
+        ]
+      }
+    ]
+  },
+  "common_errors_by_domain": {
+    "philosophy": [
+      {
+        "error_type": "logical_fallacy",
+        "description": "Appeal to authority without examining the argument",
+        "symptoms": [
+          "Because X said so",
+          "Everyone believes",
+          "Expert consensus"
+        ],
+        "causes": [
+          "Cognitive shortcuts",
+          "Deference to expertise",
+          "Social proof"
+        ],
+        "prevention": [
+          "Examine arguments on merit",
+          "Consider counter-examples",
+          "Check reasoning"
+        ],
+        "correction": [
+          "Separate claim from claimant",
+          "Evaluate evidence independently"
+        ]
+      },
+      {
+        "error_type": "conceptual_confusion",
+        "description": "Conflating related but distinct concepts",
+        "symptoms": [
+          "Using terms interchangeably",
+          "Missing key distinctions"
+        ],
+        "causes": [
+          "Imprecise language",
+          "Lack of definitions",
+          "Hasty thinking"
+        ],
+        "prevention": [
+          "Define key terms",
+          "Mark distinctions",
+          "Use precise language"
+        ],
+        "correction": [
+          "Clarify concepts",
+          "Distinguish meanings",
+          "Reformulate"
+        ]
+      },
+      {
+        "error_type": "is-ought_fallacy",
+        "description": "Deriving normative claims from descriptive premises",
+        "symptoms": [
+          "People do X, therefore X is right",
+          "Natural = good"
+        ],
+        "causes": [
+          "Conflating facts and values",
+          "Missing normative premises"
+        ],
+        "prevention": [
+          "Distinguish descriptive from normative",
+          "Identify hidden value premises"
+        ],
+        "correction": [
+          "Add explicit normative premise",
+          "Separate is from ought"
+        ]
+      },
+      {
+        "error_type": "begging_the_question",
+        "description": "Assuming what needs to be proven in the premises",
+        "symptoms": [
+          "Circular reasoning",
+          "Premise = conclusion"
+        ],
+        "causes": [
+          "Unnoticed assumptions",
+          "Definitional tricks"
+        ],
+        "prevention": [
+          "Check premise independence",
+          "Look for circularity"
+        ],
+        "correction": [
+          "Provide independent support",
+          "Break the circle"
+        ]
+      },
+      {
+        "error_type": "false_dilemma",
+        "description": "Presenting limited options as if they're the only ones",
+        "symptoms": [
+          "Either X or Y",
+          "Forced binary choice"
+        ],
+        "causes": [
+          "Oversimplification",
+          "Missing middle ground"
+        ],
+        "prevention": [
+          "Look for third options",
+          "Check exhaustiveness"
+        ],
+        "correction": [
+          "Identify other alternatives",
+          "Reject forced choice"
+        ]
+      },
+      {
+        "error_type": "category_mistake",
+        "description": "Applying concepts to wrong category",
+        "symptoms": [
+          "Type errors",
+          "Nonsensical predications"
+        ],
+        "causes": [
+          "Conceptual confusion",
+          "Grammatical misleading"
+        ],
+        "prevention": [
+          "Check category appropriateness",
+          "Analyze logical form"
+        ],
+        "correction": [
+          "Rephrase in correct category",
+          "Clarify type"
+        ]
+      },
+      {
+        "error_type": "equivocation",
+        "description": "Using same word with different meanings",
+        "symptoms": [
+          "Shifting definitions",
+          "Semantic ambiguity"
+        ],
+        "causes": [
+          "Ambiguous terms",
+          "Context shifts"
+        ],
+        "prevention": [
+          "Define terms consistently",
+          "Watch for meaning shifts"
+        ],
+        "correction": [
+          "Disambiguate",
+          "Use distinct terms"
+        ]
+      },
+      {
+        "error_type": "straw_man",
+        "description": "Misrepresenting opponent's position to attack it",
+        "symptoms": [
+          "Weaker version",
+          "Caricature",
+          "Missing nuance"
+        ],
+        "causes": [
+          "Uncharitable reading",
+          "Misunderstanding",
+          "Rhetorical strategy"
+        ],
+        "prevention": [
+          "Use principle of charity",
+          "Steelman instead"
+        ],
+        "correction": [
+          "Address actual position",
+          "Represent fairly"
+        ]
+      }
+    ],
+    "engineering": [
+      {
+        "error_type": "unit_error",
+        "description": "Inconsistent or wrong units in calculations",
+        "symptoms": [
+          "Wrong magnitude answers",
+          "dimensional inconsistency"
+        ],
+        "causes": [
+          "Mixing SI and Imperial",
+          "forgetting conversions",
+          "typos"
+        ],
+        "prevention": [
+          "Consistent unit system",
+          "dimensional analysis",
+          "unit checking tools"
+        ],
+        "correction": [
+          "Verify all units",
+          "redo calculation with correct units"
+        ]
+      },
+      {
+        "error_type": "sign_error",
+        "description": "Wrong sign on forces, moments, or displacements",
+        "symptoms": [
+          "Opposite direction results",
+          "negative when should be positive"
+        ],
+        "causes": [
+          "Convention confusion",
+          "coordinate system errors",
+          "reference direction mistakes"
+        ],
+        "prevention": [
+          "Clear sign conventions",
+          "consistent coordinate systems",
+          "free body diagrams"
+        ],
+        "correction": [
+          "Check reference directions",
+          "verify sign conventions"
+        ]
+      },
+      {
+        "error_type": "boundary_condition_error",
+        "description": "Incorrect or oversimplified boundary conditions",
+        "symptoms": [
+          "Unrealistic results",
+          "wrong deformation pattern",
+          "incorrect failure mode"
+        ],
+        "causes": [
+          "Idealization mismatch",
+          "misunderstanding physics",
+          "software defaults"
+        ],
+        "prevention": [
+          "Validate BCs against reality",
+          "sensitivity analysis",
+          "simple hand calcs"
+        ],
+        "correction": [
+          "Revisit physical problem",
+          "correct BCs",
+          "re-analyze"
+        ]
+      },
+      {
+        "error_type": "ignoring_stress_concentration",
+        "description": "Not accounting for stress concentration factors",
+        "symptoms": [
+          "Premature failure",
+          "underestimated stress"
+        ],
+        "causes": [
+          "Nominal stress calculation only",
+          "geometric features overlooked"
+        ],
+        "prevention": [
+          "Identify discontinuities",
+          "apply K_t factors",
+          "detailed FEA"
+        ],
+        "correction": [
+          "Include stress concentration",
+          "redesign to reduce K_t"
+        ]
+      },
+      {
+        "error_type": "wrong_failure_mode",
+        "description": "Designing against wrong failure mode",
+        "symptoms": [
+          "Failure occurs differently than predicted"
+        ],
+        "causes": [
+          "Incomplete failure analysis",
+          "overlooking slenderness",
+          "ignoring fatigue"
+        ],
+        "prevention": [
+          "Comprehensive failure mode analysis",
+          "check multiple modes"
+        ],
+        "correction": [
+          "Identify actual failure mode",
+          "redesign accordingly"
+        ]
+      },
+      {
+        "error_type": "insufficient_safety_factor",
+        "description": "Factor of safety too low for uncertainties",
+        "symptoms": [
+          "Failures in service",
+          "reliability issues"
+        ],
+        "causes": [
+          "Aggressive design",
+          "underestimating uncertainties",
+          "cost pressure"
+        ],
+        "prevention": [
+          "Follow code requirements",
+          "assess uncertainties",
+          "risk analysis"
+        ],
+        "correction": [
+          "Increase safety factor",
+          "add redundancy"
+        ]
+      },
+      {
+        "error_type": "mesh_too_coarse",
+        "description": "FEA mesh insufficient for accurate results",
+        "symptoms": [
+          "No convergence",
+          "mesh-dependent results",
+          "jagged stress contours"
+        ],
+        "causes": [
+          "Computational limits",
+          "impatience",
+          "lack of refinement"
+        ],
+        "prevention": [
+          "Mesh convergence study",
+          "refine at critical areas"
+        ],
+        "correction": [
+          "Refine mesh",
+          "check convergence"
+        ]
+      },
+      {
+        "error_type": "thermal_effects_ignored",
+        "description": "Not considering thermal expansion or thermal stresses",
+        "symptoms": [
+          "Unexpected deformation",
+          "thermal buckling",
+          "CTE mismatch issues"
+        ],
+        "causes": [
+          "Isothermal assumption",
+          "overlooking temperature range"
+        ],
+        "prevention": [
+          "Consider temperature range",
+          "check CTE",
+          "thermal analysis"
+        ],
+        "correction": [
+          "Include thermal effects",
+          "add expansion joints"
+        ]
+      }
+    ],
+    "law": [
+      {
+        "error_type": "wrong_jurisdiction",
+        "description": "Citing or applying law from wrong jurisdiction",
+        "symptoms": [
+          "Irrelevant authority",
+          "non-binding precedent treated as binding"
+        ],
+        "causes": [
+          "Not checking jurisdiction",
+          "assuming uniform law"
+        ],
+        "prevention": [
+          "Always verify jurisdiction",
+          "check if law is binding"
+        ],
+        "correction": [
+          "Find correct jurisdiction's law",
+          "cite properly"
+        ]
+      },
+      {
+        "error_type": "missing_element",
+        "description": "Failing to address all elements of claim or defense",
+        "symptoms": [
+          "Incomplete analysis",
+          "overlooked element"
+        ],
+        "causes": [
+          "Not identifying all elements",
+          "focusing on disputed elements only"
+        ],
+        "prevention": [
+          "List all elements",
+          "check each one"
+        ],
+        "correction": [
+          "Address missing element",
+          "complete analysis"
+        ]
+      },
+      {
+        "error_type": "confusing_standard_of_proof",
+        "description": "Applying wrong evidentiary standard",
+        "symptoms": [
+          "Using criminal standard in civil case",
+          "vice versa"
+        ],
+        "causes": [
+          "Not identifying case type",
+          "confusion between standards"
+        ],
+        "prevention": [
+          "Identify civil vs criminal",
+          "know standards"
+        ],
+        "correction": [
+          "Apply correct standard",
+          "reassess evidence"
+        ]
+      },
+      {
+        "error_type": "inadequate_authority",
+        "description": "Citing insufficient or non-authoritative sources",
+        "symptoms": [
+          "Weak support",
+          "persuasive only",
+          "secondary sources alone"
+        ],
+        "causes": [
+          "Insufficient research",
+          "preferring easy sources"
+        ],
+        "prevention": [
+          "Find primary authority",
+          "check binding precedent"
+        ],
+        "correction": [
+          "Upgrade authority",
+          "find binding cases"
+        ]
+      },
+      {
+        "error_type": "statute_of_limitations_bar",
+        "description": "Missing time deadline to file",
+        "symptoms": [
+          "Claim time-barred",
+          "motion to dismiss granted"
+        ],
+        "causes": [
+          "Not checking SOL",
+          "miscalculating accrual date"
+        ],
+        "prevention": [
+          "Check SOL immediately",
+          "calendar deadlines",
+          "verify tolling"
+        ],
+        "correction": [
+          "If possible, argue tolling or discovery rule"
+        ]
+      },
+      {
+        "error_type": "improper_hearsay",
+        "description": "Offering hearsay without applicable exception",
+        "symptoms": [
+          "Objection sustained",
+          "evidence excluded"
+        ],
+        "causes": [
+          "Not recognizing hearsay",
+          "no exception available"
+        ],
+        "prevention": [
+          "Check for hearsay",
+          "identify exception",
+          "prepare foundation"
+        ],
+        "correction": [
+          "Find exception or non-hearsay purpose"
+        ]
+      },
+      {
+        "error_type": "failing_to_distinguish",
+        "description": "Not distinguishing adverse precedent",
+        "symptoms": [
+          "Precedent applied against position",
+          "weak argument"
+        ],
+        "causes": [
+          "Not addressing contrary cases",
+          "assuming they don't apply"
+        ],
+        "prevention": [
+          "Identify all relevant cases",
+          "distinguish or overrule"
+        ],
+        "correction": [
+          "Show factual or legal distinction"
+        ]
+      },
+      {
+        "error_type": "procedural_default",
+        "description": "Missing procedural requirement or deadline",
+        "symptoms": [
+          "Motion denied on procedural grounds",
+          "waiver"
+        ],
+        "causes": [
+          "Not knowing rules",
+          "missing deadlines",
+          "improper filing"
+        ],
+        "prevention": [
+          "Know court rules",
+          "calendar all deadlines",
+          "check requirements"
+        ],
+        "correction": [
+          "Move to vacate if grounds exist",
+          "comply going forward"
+        ]
+      }
+    ],
+    "business": [
+      {
+        "error_type": "premature_scaling",
+        "description": "Scaling before achieving product-market fit",
+        "symptoms": [
+          "High burn",
+          "poor unit economics",
+          "low retention"
+        ],
+        "causes": [
+          "Pressure to grow",
+          "missing PMF signals",
+          "vanity metrics"
+        ],
+        "prevention": [
+          "Validate PMF first",
+          "check retention",
+          "test economics"
+        ],
+        "correction": [
+          "Pull back growth spend",
+          "focus on product",
+          "find PMF"
+        ]
+      },
+      {
+        "error_type": "ignoring_unit_economics",
+        "description": "Not tracking profitability per customer or transaction",
+        "symptoms": [
+          "Unprofitable growth",
+          "LTV < CAC",
+          "negative contribution margin"
+        ],
+        "causes": [
+          "Revenue focus only",
+          "not calculating",
+          "hoping for scale"
+        ],
+        "prevention": [
+          "Calculate early",
+          "track over time",
+          "fix before scaling"
+        ],
+        "correction": [
+          "Analyze economics",
+          "improve metrics",
+          "adjust model"
+        ]
+      },
+      {
+        "error_type": "wrong_pricing",
+        "description": "Pricing too low or too high for value delivered",
+        "symptoms": [
+          "Low willingness to pay",
+          "leaving money on table",
+          "wrong customer segment"
+        ],
+        "causes": [
+          "Cost-plus pricing",
+          "no testing",
+          "fear"
+        ],
+        "prevention": [
+          "Value-based pricing",
+          "test with customers",
+          "iterate"
+        ],
+        "correction": [
+          "Reprice",
+          "segment customers",
+          "test tiers"
+        ]
+      },
+      {
+        "error_type": "running_out_of_cash",
+        "description": "Not managing burn rate and runway",
+        "symptoms": [
+          "Missed payroll",
+          "emergency fundraising",
+          "shutdown"
+        ],
+        "causes": [
+          "Not tracking",
+          "overspending",
+          "revenue miss"
+        ],
+        "prevention": [
+          "Track weekly",
+          "maintain buffer",
+          "plan fundraising early"
+        ],
+        "correction": [
+          "Cut costs immediately",
+          "bridge financing",
+          "pivot"
+        ]
+      },
+      {
+        "error_type": "building_without_validation",
+        "description": "Building features or products customers don't want",
+        "symptoms": [
+          "No adoption",
+          "poor retention",
+          "feature bloat"
+        ],
+        "causes": [
+          "Not talking to customers",
+          "inside-out thinking",
+          "HiPPO"
+        ],
+        "prevention": [
+          "Customer development",
+          "MVP testing",
+          "continuous feedback"
+        ],
+        "correction": [
+          "Talk to users",
+          "kill features",
+          "refocus"
+        ]
+      },
+      {
+        "error_type": "ignoring_competition",
+        "description": "Not understanding competitive landscape",
+        "symptoms": [
+          "Surprised by competitors",
+          "losing deals",
+          "no differentiation"
+        ],
+        "causes": [
+          "Heads-down building",
+          "arrogance",
+          "ignorance"
+        ],
+        "prevention": [
+          "Competitive analysis",
+          "market monitoring",
+          "customer feedback"
+        ],
+        "correction": [
+          "Research competitors",
+          "differentiate",
+          "competitive strategy"
+        ]
+      },
+      {
+        "error_type": "no_competitive_moat",
+        "description": "Building business with no defensibility",
+        "symptoms": [
+          "Easy to copy",
+          "price competition",
+          "no retention"
+        ],
+        "causes": [
+          "Not thinking long-term",
+          "me-too product",
+          "no network effects"
+        ],
+        "prevention": [
+          "Identify moat sources",
+          "build defensibility",
+          "network effects"
+        ],
+        "correction": [
+          "Pivot to defensible",
+          "build switching costs",
+          "brand/network"
+        ]
+      },
+      {
+        "error_type": "wrong_channel",
+        "description": "Using customer acquisition channels that don't work",
+        "symptoms": [
+          "High CAC",
+          "low conversion",
+          "wrong customers"
+        ],
+        "causes": [
+          "Assumptions",
+          "not testing",
+          "copying others"
+        ],
+        "prevention": [
+          "Test channels",
+          "measure CAC by channel",
+          "iterate"
+        ],
+        "correction": [
+          "Switch channels",
+          "optimize existing",
+          "multivariate test"
+        ]
+      }
+    ],
+    "creative_arts": [
+      {
+        "error_type": "clich\u00e9",
+        "description": "Using overused expressions or ideas",
+        "symptoms": [
+          "Predictable",
+          "stale",
+          "unoriginal"
+        ],
+        "causes": [
+          "Lazy thinking",
+          "insufficient revision",
+          "weak vocabulary"
+        ],
+        "prevention": [
+          "Fresh perspectives",
+          "specific details",
+          "original comparisons"
+        ],
+        "correction": [
+          "Replace with specific",
+          "find unexpected angle",
+          "revise thoroughly"
+        ]
+      },
+      {
+        "error_type": "inconsistent_style",
+        "description": "Mixing incompatible stylistic elements",
+        "symptoms": [
+          "Jarring transitions",
+          "tonal mismatch",
+          "visual disharmony"
+        ],
+        "causes": [
+          "Lack of planning",
+          "multiple influences",
+          "insufficient revision"
+        ],
+        "prevention": [
+          "Style guide",
+          "mood board",
+          "consistent references"
+        ],
+        "correction": [
+          "Unify style",
+          "remove outliers",
+          "establish coherence"
+        ]
+      },
+      {
+        "error_type": "telling_not_showing",
+        "description": "Explaining rather than dramatizing",
+        "symptoms": [
+          "Abstract language",
+          "exposition dumps",
+          "lack of sensory detail"
+        ],
+        "causes": [
+          "Taking shortcut",
+          "not trusting audience",
+          "inexperience"
+        ],
+        "prevention": [
+          "Concrete details",
+          "action and dialogue",
+          "implication"
+        ],
+        "correction": [
+          "Convert telling to showing",
+          "add sensory details",
+          "dramatize"
+        ]
+      },
+      {
+        "error_type": "poor_contrast",
+        "description": "Insufficient differentiation between elements",
+        "symptoms": [
+          "Low legibility",
+          "weak emphasis",
+          "visual confusion"
+        ],
+        "causes": [
+          "Timid choices",
+          "misunderstanding principles",
+          "technical limitations"
+        ],
+        "prevention": [
+          "Bold differences",
+          "test legibility",
+          "use contrast tools"
+        ],
+        "correction": [
+          "Increase contrast",
+          "clarify hierarchy",
+          "strengthen differences"
+        ]
+      },
+      {
+        "error_type": "no_focal_point",
+        "description": "Failing to establish clear emphasis",
+        "symptoms": [
+          "Viewer/reader doesn't know where to look",
+          "equal weight everywhere"
+        ],
+        "causes": [
+          "Fear of commitment",
+          "wanting to show everything",
+          "poor planning"
+        ],
+        "prevention": [
+          "Identify primary message",
+          "create hierarchy",
+          "guide attention"
+        ],
+        "correction": [
+          "Establish clear focal point",
+          "subordinate secondary elements"
+        ]
+      },
+      {
+        "error_type": "overwrought_prose",
+        "description": "Excessively ornate or complex writing",
+        "symptoms": [
+          "Purple prose",
+          "obscurity",
+          "pretentious"
+        ],
+        "causes": [
+          "Showing off",
+          "insecurity",
+          "misunderstanding style"
+        ],
+        "prevention": [
+          "Clarity first",
+          "appropriate register",
+          "reader focus"
+        ],
+        "correction": [
+          "Simplify",
+          "remove excess",
+          "focus on clarity"
+        ]
+      },
+      {
+        "error_type": "weak_character_motivation",
+        "description": "Characters act without clear reasons",
+        "symptoms": [
+          "Plot-driven behavior",
+          "inconsistency",
+          "unbelievable actions"
+        ],
+        "causes": [
+          "Plot-first thinking",
+          "insufficient development",
+          "rushing"
+        ],
+        "prevention": [
+          "Develop motivation first",
+          "character-driven plot",
+          "psychological realism"
+        ],
+        "correction": [
+          "Establish clear wants/needs",
+          "show internal conflict",
+          "justify actions"
+        ]
+      },
+      {
+        "error_type": "cluttered_design",
+        "description": "Too many elements competing for attention",
+        "symptoms": [
+          "Visual noise",
+          "confusion",
+          "weak hierarchy"
+        ],
+        "causes": [
+          "More is more thinking",
+          "indecision",
+          "client requests"
+        ],
+        "prevention": [
+          "Prioritize",
+          "use whitespace",
+          "clear hierarchy"
+        ],
+        "correction": [
+          "Remove elements",
+          "group related items",
+          "increase spacing"
+        ]
+      }
+    ],
+    "social_sciences": [
+      {
+        "error_type": "inferring_causation_from_correlation",
+        "description": "Concluding X causes Y from correlational data",
+        "symptoms": [
+          "Causal language from non-experimental design"
+        ],
+        "causes": [
+          "Misunderstanding methods",
+          "motivated reasoning",
+          "statistical illiteracy"
+        ],
+        "prevention": [
+          "Check research design",
+          "consider alternatives",
+          "use causal language only for experiments"
+        ],
+        "correction": [
+          "Reframe as association",
+          "acknowledge limitations",
+          "suggest experimental test"
+        ]
+      },
+      {
+        "error_type": "ignoring_effect_size",
+        "description": "Focusing only on statistical significance",
+        "symptoms": [
+          "p<0.05 treated as important regardless of magnitude"
+        ],
+        "causes": [
+          "Misunderstanding statistics",
+          "publication pressure",
+          "threshold thinking"
+        ],
+        "prevention": [
+          "Always report effect sizes",
+          "interpret magnitude",
+          "practical significance"
+        ],
+        "correction": [
+          "Calculate and report effect size",
+          "contextualize magnitude"
+        ]
+      },
+      {
+        "error_type": "overgeneralizing",
+        "description": "Applying findings beyond appropriate scope",
+        "symptoms": [
+          "WEIRD sample \u2192 all humans",
+          "lab \u2192 real world"
+        ],
+        "causes": [
+          "Ignoring external validity",
+          "convenience",
+          "enthusiasm"
+        ],
+        "prevention": [
+          "Check sample characteristics",
+          "assess generalization limits",
+          "replicate in diverse samples"
+        ],
+        "correction": [
+          "Qualify claims",
+          "specify limitations",
+          "test boundaries"
+        ]
+      },
+      {
+        "error_type": "p_hacking",
+        "description": "Manipulating analysis to achieve p<0.05",
+        "symptoms": [
+          "Multiple unreported tests",
+          "optional stopping",
+          "outcome switching"
+        ],
+        "causes": [
+          "Publication pressure",
+          "confirmation bias",
+          "lack of preregistration"
+        ],
+        "prevention": [
+          "Preregister",
+          "report all tests",
+          "correct for multiple comparisons"
+        ],
+        "correction": [
+          "Preregister replication",
+          "transparency",
+          "registered reports"
+        ]
+      },
+      {
+        "error_type": "ignoring_base_rates",
+        "description": "Not considering prior probability",
+        "symptoms": [
+          "Neglecting prevalence",
+          "overweighting anecdotes"
+        ],
+        "causes": [
+          "Representativeness heuristic",
+          "availability bias"
+        ],
+        "prevention": [
+          "Check base rates",
+          "use Bayesian reasoning",
+          "consider prevalence"
+        ],
+        "correction": [
+          "Incorporate base rate",
+          "calculate posterior probability"
+        ]
+      },
+      {
+        "error_type": "confirmation_bias_in_research",
+        "description": "Seeking/interpreting evidence that confirms beliefs",
+        "symptoms": [
+          "Cherry-picking studies",
+          "dismissing contradictory evidence"
+        ],
+        "causes": [
+          "Motivated reasoning",
+          "attachment to hypothesis"
+        ],
+        "prevention": [
+          "Seek disconfirming evidence",
+          "preregister",
+          "adversarial collaboration"
+        ],
+        "correction": [
+          "Actively seek counter-evidence",
+          "update beliefs",
+          "reframe"
+        ]
+      },
+      {
+        "error_type": "measurement_invalidity",
+        "description": "Measure doesn't capture intended construct",
+        "symptoms": [
+          "Poor construct validity",
+          "confounded measures"
+        ],
+        "causes": [
+          "Inadequate operationalization",
+          "rushing",
+          "lack of validation"
+        ],
+        "prevention": [
+          "Pilot test",
+          "validate measures",
+          "multiple indicators"
+        ],
+        "correction": [
+          "Revise measurement",
+          "validate properly",
+          "use established measures"
+        ]
+      },
+      {
+        "error_type": "ecological_fallacy",
+        "description": "Inferring individual from group-level data",
+        "symptoms": [
+          "Group statistics \u2192 individual conclusions"
+        ],
+        "causes": [
+          "Ignoring levels of analysis",
+          "convenience",
+          "misunderstanding"
+        ],
+        "prevention": [
+          "Match data level to inference level",
+          "multilevel analysis"
+        ],
+        "correction": [
+          "Clarify inference level",
+          "get individual data",
+          "multilevel model"
+        ]
+      }
+    ],
+    "security": [
+      {
+        "error_type": "insufficient_input_validation",
+        "description": "Not properly validating or sanitizing untrusted input",
+        "symptoms": [
+          "Injection vulnerabilities",
+          "unexpected behavior",
+          "crashes"
+        ],
+        "causes": [
+          "Trust assumptions",
+          "incomplete validation",
+          "blacklist approach"
+        ],
+        "prevention": [
+          "Whitelist validation",
+          "parameterization",
+          "context-aware encoding"
+        ],
+        "correction": [
+          "Implement proper validation",
+          "use prepared statements",
+          "sanitize outputs"
+        ]
+      },
+      {
+        "error_type": "using_weak_cryptography",
+        "description": "Using outdated or weak cryptographic algorithms or practices",
+        "symptoms": [
+          "Broken encryption",
+          "compromised keys",
+          "predictable output"
+        ],
+        "causes": [
+          "Outdated knowledge",
+          "performance concerns",
+          "custom crypto"
+        ],
+        "prevention": [
+          "Use modern algorithms",
+          "proper key management",
+          "established libraries"
+        ],
+        "correction": [
+          "Upgrade to strong crypto",
+          "rotate keys",
+          "review implementation"
+        ]
+      },
+      {
+        "error_type": "race_condition_exploitation_fail",
+        "description": "Failing to win timing-dependent race conditions",
+        "symptoms": [
+          "Inconsistent exploitation",
+          "low success rate"
+        ],
+        "causes": [
+          "Insufficient attempts",
+          "wrong timing",
+          "CPU scheduling"
+        ],
+        "prevention": [
+          "Automate attempts",
+          "optimize timing",
+          "increase probability"
+        ],
+        "correction": [
+          "Retry logic",
+          "timing optimization",
+          "parallel attempts"
+        ]
+      },
+      {
+        "error_type": "leaving_artifacts",
+        "description": "Leaving forensic evidence during penetration testing",
+        "symptoms": [
+          "Detection",
+          "attribution",
+          "incident response"
+        ],
+        "causes": [
+          "Noisy tools",
+          "insufficient cleanup",
+          "logging"
+        ],
+        "prevention": [
+          "Stealth techniques",
+          "cleanup scripts",
+          "log awareness"
+        ],
+        "correction": [
+          "Remove artifacts",
+          "use evasion",
+          "proper cleanup"
+        ]
+      },
+      {
+        "error_type": "ASLR_bypass_failure",
+        "description": "Unable to bypass ASLR due to lack of information leak",
+        "symptoms": [
+          "Exploitation fails",
+          "wrong addresses",
+          "crashes"
+        ],
+        "causes": [
+          "No info leak",
+          "insufficient leak",
+          "wrong address calculation"
+        ],
+        "prevention": [
+          "Find info leak first",
+          "multiple leak attempts",
+          "verify addresses"
+        ],
+        "correction": [
+          "Identify info leak",
+          "use partial overwrites",
+          "brute force low entropy"
+        ]
+      },
+      {
+        "error_type": "improper_gadget_chaining",
+        "description": "ROP chain fails due to incorrect gadgets or ordering",
+        "symptoms": [
+          "Crash",
+          "wrong behavior",
+          "no shell"
+        ],
+        "causes": [
+          "Wrong addresses",
+          "bad gadgets",
+          "stack misalignment"
+        ],
+        "prevention": [
+          "Verify gadgets",
+          "test chain incrementally",
+          "check alignment"
+        ],
+        "correction": [
+          "Debug with GDB",
+          "fix gadget addresses",
+          "realign stack"
+        ]
+      },
+      {
+        "error_type": "insufficient_enumeration",
+        "description": "Missing attack vectors due to incomplete reconnaissance",
+        "symptoms": [
+          "Missed opportunities",
+          "stuck on challenges",
+          "incomplete assessment"
+        ],
+        "causes": [
+          "Rushing",
+          "tunnel vision",
+          "incomplete methodology"
+        ],
+        "prevention": [
+          "Systematic enumeration",
+          "checklist",
+          "automated scanning"
+        ],
+        "correction": [
+          "Go back to enumeration",
+          "use comprehensive tools",
+          "methodical approach"
+        ]
+      },
+      {
+        "error_type": "noisy_exploitation",
+        "description": "Creating excessive network traffic or system activity",
+        "symptoms": [
+          "Detection",
+          "IDS alerts",
+          "SOC investigation"
+        ],
+        "causes": [
+          "Aggressive scanning",
+          "verbose tools",
+          "repeated attempts"
+        ],
+        "prevention": [
+          "Rate limiting",
+          "stealth options",
+          "targeted approach"
+        ],
+        "correction": [
+          "Reduce noise",
+          "use evasion techniques",
+          "patient approach"
+        ]
+      }
+    ],
+    "data_science": [
+      {
+        "error_type": "data_leakage",
+        "description": "Test information leaking into training",
+        "symptoms": [
+          "Unrealistic performance",
+          "production failure"
+        ],
+        "causes": [
+          "Preprocessing before split",
+          "temporal violation",
+          "target encoding on full data"
+        ],
+        "prevention": [
+          "Split first",
+          "fit on train only",
+          "check temporal order"
+        ],
+        "correction": [
+          "Redesign pipeline",
+          "proper splitting",
+          "validate thoroughly"
+        ]
+      },
+      {
+        "error_type": "using_wrong_metric",
+        "description": "Evaluating with inappropriate metric for task",
+        "symptoms": [
+          "Misleading performance",
+          "poor real-world results"
+        ],
+        "causes": [
+          "Default metrics",
+          "ignoring imbalance",
+          "misunderstanding task"
+        ],
+        "prevention": [
+          "Choose appropriate metric",
+          "consider class distribution",
+          "domain requirements"
+        ],
+        "correction": [
+          "Switch to appropriate metric",
+          "re-evaluate model"
+        ]
+      },
+      {
+        "error_type": "overfitting",
+        "description": "Model too complex, memorizes training data",
+        "symptoms": [
+          "High train accuracy",
+          "low test accuracy",
+          "large gap"
+        ],
+        "causes": [
+          "Too many parameters",
+          "insufficient data",
+          "no regularization"
+        ],
+        "prevention": [
+          "Cross-validation",
+          "regularization",
+          "simpler model",
+          "more data"
+        ],
+        "correction": [
+          "Add regularization",
+          "reduce complexity",
+          "get more data"
+        ]
+      },
+      {
+        "error_type": "ignoring_data_quality",
+        "description": "Not checking for errors, outliers, inconsistencies",
+        "symptoms": [
+          "Poor model performance",
+          "unexpected predictions"
+        ],
+        "causes": [
+          "Skipping EDA",
+          "rushing to modeling",
+          "assuming clean data"
+        ],
+        "prevention": [
+          "Thorough EDA",
+          "data validation",
+          "outlier detection"
+        ],
+        "correction": [
+          "Clean data",
+          "handle outliers",
+          "validate quality"
+        ]
+      },
+      {
+        "error_type": "not_scaling_features",
+        "description": "Different feature scales affecting distance-based algorithms",
+        "symptoms": [
+          "Poor performance",
+          "slow convergence",
+          "dominated features"
+        ],
+        "causes": [
+          "Forgetting preprocessing",
+          "not understanding algorithm"
+        ],
+        "prevention": [
+          "Standard scaling",
+          "min-max scaling",
+          "check algorithm requirements"
+        ],
+        "correction": [
+          "Apply appropriate scaling",
+          "retrain model"
+        ]
+      },
+      {
+        "error_type": "p_hacking",
+        "description": "Multiple testing without correction leading to false discoveries",
+        "symptoms": [
+          "Spurious findings",
+          "replication failure"
+        ],
+        "causes": [
+          "Multiple comparisons",
+          "optional stopping",
+          "selective reporting"
+        ],
+        "prevention": [
+          "Bonferroni correction",
+          "preregistration",
+          "single primary hypothesis"
+        ],
+        "correction": [
+          "Correct for multiple testing",
+          "replicate findings"
+        ]
+      },
+      {
+        "error_type": "insufficient_validation",
+        "description": "Not properly validating model generalization",
+        "symptoms": [
+          "Overly optimistic estimates",
+          "production failures"
+        ],
+        "causes": [
+          "Single train-test split",
+          "no CV",
+          "small test set"
+        ],
+        "prevention": [
+          "Use cross-validation",
+          "hold-out test set",
+          "adequate sample size"
+        ],
+        "correction": [
+          "Proper CV",
+          "independent test set",
+          "validate on new data"
+        ]
+      },
+      {
+        "error_type": "ignoring_class_imbalance",
+        "description": "Not accounting for unequal class distribution",
+        "symptoms": [
+          "High accuracy but useless model",
+          "predicts majority only"
+        ],
+        "causes": [
+          "Using accuracy",
+          "not examining distribution",
+          "default settings"
+        ],
+        "prevention": [
+          "Check class distribution",
+          "use F1/AUC",
+          "adjust class weights/sampling"
+        ],
+        "correction": [
+          "Resample",
+          "adjust weights",
+          "use appropriate metrics"
+        ]
+      }
+    ]
+  },
+  "mental_models_by_domain": {
+    "philosophy": [
+      {
+        "model_name": "justified_true_belief",
+        "description": "Classical analysis of knowledge as justified true belief (JTB)",
+        "use_cases": [
+          "Analyzing knowledge claims",
+          "Epistemology discussions"
+        ],
+        "limitations": [
+          "Gettier problems show JTB is insufficient",
+          "Justification analysis needed"
+        ],
+        "related_concepts": [
+          "epistemology",
+          "justification",
+          "truth",
+          "belief"
+        ]
+      },
+      {
+        "model_name": "socratic_method",
+        "description": "Questioning to expose contradictions and unclear thinking",
+        "use_cases": [
+          "Teaching",
+          "Critical examination",
+          "Revealing assumptions"
+        ],
+        "limitations": [
+          "Can be frustrating",
+          "Doesn't always build positive views"
+        ],
+        "related_concepts": [
+          "critical_thinking",
+          "dialectic",
+          "maieutics"
+        ]
+      },
+      {
+        "model_name": "thought_experiment",
+        "description": "Imagined scenarios to test intuitions and principles",
+        "use_cases": [
+          "Generating counterexamples",
+          "Probing concepts",
+          "Testing theories"
+        ],
+        "limitations": [
+          "Intuitions can vary",
+          "Unclear how far to trust intuitions"
+        ],
+        "related_concepts": [
+          "philosophical_method",
+          "modal_reasoning",
+          "intuition"
+        ]
+      },
+      {
+        "model_name": "dialectical_reasoning",
+        "description": "Thesis-antithesis-synthesis pattern of argument",
+        "use_cases": [
+          "Exploring opposing views",
+          "Building comprehensive theories"
+        ],
+        "limitations": [
+          "Not all disputes resolve dialectically",
+          "Can be forced"
+        ],
+        "related_concepts": [
+          "Hegelian_dialectic",
+          "argumentation",
+          "synthesis"
+        ]
+      },
+      {
+        "model_name": "reflective_equilibrium",
+        "description": "Balancing principles and intuitions through mutual adjustment",
+        "use_cases": [
+          "Ethics",
+          "Justification",
+          "Theory construction"
+        ],
+        "limitations": [
+          "Multiple equilibria possible",
+          "Conservative bias"
+        ],
+        "related_concepts": [
+          "coherentism",
+          "justification",
+          "moral_methodology"
+        ]
+      }
+    ],
+    "engineering": [
+      {
+        "model_name": "free_body_diagram",
+        "description": "Isolate system and show all external forces and moments",
+        "use_cases": [
+          "Statics problems",
+          "dynamics analysis",
+          "force transmission"
+        ],
+        "limitations": [
+          "Internal forces not shown",
+          "simplifies to rigid body"
+        ],
+        "related_concepts": [
+          "equilibrium",
+          "force_balance",
+          "moment_balance"
+        ]
+      },
+      {
+        "model_name": "control_volume",
+        "description": "Define fixed region in space for mass/energy/momentum balance",
+        "use_cases": [
+          "Fluid dynamics",
+          "thermodynamics",
+          "conservation analysis"
+        ],
+        "limitations": [
+          "Choice of CV affects complexity",
+          "moving CV more complex"
+        ],
+        "related_concepts": [
+          "conservation_laws",
+          "flux",
+          "accumulation"
+        ]
+      },
+      {
+        "model_name": "thermal_resistance_network",
+        "description": "Analogy between heat transfer and electrical circuits",
+        "use_cases": [
+          "Heat transfer problems",
+          "composite walls",
+          "circuit boards"
+        ],
+        "limitations": [
+          "Linear problems only",
+          "steady-state typically"
+        ],
+        "related_concepts": [
+          "conduction",
+          "convection",
+          "series_parallel"
+        ]
+      },
+      {
+        "model_name": "stress_strain_curve",
+        "description": "Material behavior under loading: elastic, yield, plastic, failure",
+        "use_cases": [
+          "Material characterization",
+          "failure prediction",
+          "design limits"
+        ],
+        "limitations": [
+          "Uniaxial tension typically",
+          "rate and temperature dependent"
+        ],
+        "related_concepts": [
+          "elastic_region",
+          "plastic_region",
+          "yield_strength",
+          "ultimate_strength"
+        ]
+      },
+      {
+        "model_name": "design_iteration_cycle",
+        "description": "Iterate between design, analysis, and refinement",
+        "use_cases": [
+          "Engineering design process",
+          "optimization"
+        ],
+        "limitations": [
+          "Diminishing returns",
+          "time constraints"
+        ],
+        "related_concepts": [
+          "preliminary_design",
+          "analysis",
+          "refinement",
+          "validation"
+        ]
+      }
+    ],
+    "law": [
+      {
+        "model_name": "IRAC",
+        "description": "Issue, Rule, Application, Conclusion framework for legal analysis",
+        "use_cases": [
+          "Legal writing",
+          "exam answers",
+          "memoranda"
+        ],
+        "limitations": [
+          "May need variation (CREAC)",
+          "not for all documents"
+        ],
+        "related_concepts": [
+          "legal_analysis",
+          "argument_structure"
+        ]
+      },
+      {
+        "model_name": "elements_analysis",
+        "description": "Breaking legal claim or defense into required elements",
+        "use_cases": [
+          "Analyzing claims",
+          "checking defenses",
+          "jury instructions"
+        ],
+        "limitations": [
+          "Elements vary by jurisdiction",
+          "affirmative defenses separate"
+        ],
+        "related_concepts": [
+          "prima_facie_case",
+          "burden_of_proof"
+        ]
+      },
+      {
+        "model_name": "hierarchy_of_authority",
+        "description": "Understanding which courts bind which courts",
+        "use_cases": [
+          "Citing precedent",
+          "predicting outcomes",
+          "jurisdictional analysis"
+        ],
+        "limitations": [
+          "Horizontal vs vertical",
+          "federal vs state complexity"
+        ],
+        "related_concepts": [
+          "binding_precedent",
+          "persuasive_authority"
+        ]
+      },
+      {
+        "model_name": "balancing_test",
+        "description": "Weighing competing interests or factors",
+        "use_cases": [
+          "Constitutional law",
+          "equitable remedies",
+          "discretionary decisions"
+        ],
+        "limitations": [
+          "Subjective factors",
+          "outcome-dependent"
+        ],
+        "related_concepts": [
+          "strict_scrutiny",
+          "intermediate_scrutiny",
+          "rational_basis"
+        ]
+      },
+      {
+        "model_name": "textualism_vs_purposivism",
+        "description": "Competing approaches to statutory interpretation",
+        "use_cases": [
+          "Interpreting statutes",
+          "regulatory analysis"
+        ],
+        "limitations": [
+          "Philosophical differences",
+          "may reach different results"
+        ],
+        "related_concepts": [
+          "plain_meaning",
+          "legislative_intent",
+          "canons"
+        ]
+      }
+    ],
+    "business": [
+      {
+        "model_name": "lean_startup",
+        "description": "Build-measure-learn cycle for rapid iteration",
+        "use_cases": [
+          "Product development",
+          "hypothesis testing",
+          "early stage"
+        ],
+        "limitations": [
+          "Not all businesses can iterate quickly",
+          "some need upfront investment"
+        ],
+        "related_concepts": [
+          "MVP",
+          "validated_learning",
+          "pivot"
+        ]
+      },
+      {
+        "model_name": "unit_economics",
+        "description": "Profitability at single customer or transaction level",
+        "use_cases": [
+          "Business model validation",
+          "pricing",
+          "scaling decisions"
+        ],
+        "limitations": [
+          "Some costs only appear at scale",
+          "fixed costs matter"
+        ],
+        "related_concepts": [
+          "CAC",
+          "LTV",
+          "contribution_margin"
+        ]
+      },
+      {
+        "model_name": "growth_funnel",
+        "description": "Customer journey from awareness to conversion to retention",
+        "use_cases": [
+          "Marketing optimization",
+          "conversion improvement",
+          "growth strategy"
+        ],
+        "limitations": [
+          "Not all businesses have linear funnels",
+          "omnichannel complexity"
+        ],
+        "related_concepts": [
+          "conversion_rate",
+          "retention",
+          "acquisition"
+        ]
+      },
+      {
+        "model_name": "business_model_canvas",
+        "description": "Nine building blocks of business model on one page",
+        "use_cases": [
+          "Business model design",
+          "strategic planning",
+          "pitching"
+        ],
+        "limitations": [
+          "High level only",
+          "not detailed financials"
+        ],
+        "related_concepts": [
+          "value_proposition",
+          "customer_segments",
+          "revenue_streams"
+        ]
+      },
+      {
+        "model_name": "porter_five_forces",
+        "description": "Five competitive forces shaping industry: rivalry, new entrants, substitutes, buyers, suppliers",
+        "use_cases": [
+          "Competitive analysis",
+          "industry attractiveness",
+          "strategy"
+        ],
+        "limitations": [
+          "Static snapshot",
+          "doesn't capture disruption well"
+        ],
+        "related_concepts": [
+          "competitive_advantage",
+          "industry_structure",
+          "barriers_to_entry"
+        ]
+      }
+    ],
+    "creative_arts": [
+      {
+        "model_name": "hero_journey",
+        "description": "Monomyth structure: ordinary world, call to adventure, trials, return transformed",
+        "use_cases": [
+          "Story structure",
+          "character arc",
+          "mythology"
+        ],
+        "limitations": [
+          "Not all stories fit",
+          "can be formulaic"
+        ],
+        "related_concepts": [
+          "narrative_arc",
+          "transformation",
+          "archetypal_patterns"
+        ]
+      },
+      {
+        "model_name": "design_thinking",
+        "description": "Empathize, define, ideate, prototype, test - iterative creative process",
+        "use_cases": [
+          "Problem-solving",
+          "innovation",
+          "user-centered design"
+        ],
+        "limitations": [
+          "Time-intensive",
+          "not for all contexts"
+        ],
+        "related_concepts": [
+          "iteration",
+          "prototyping",
+          "user_focus"
+        ]
+      },
+      {
+        "model_name": "rule_of_thirds",
+        "description": "Divide frame into 3x3 grid, place important elements on intersections",
+        "use_cases": [
+          "Photography",
+          "composition",
+          "visual design"
+        ],
+        "limitations": [
+          "Not universal rule",
+          "sometimes center is better"
+        ],
+        "related_concepts": [
+          "composition",
+          "focal_point",
+          "balance"
+        ]
+      },
+      {
+        "model_name": "divergent_convergent",
+        "description": "Expand possibilities (diverge) then narrow to solution (converge)",
+        "use_cases": [
+          "Brainstorming",
+          "creative process",
+          "problem-solving"
+        ],
+        "limitations": [
+          "Need both phases",
+          "can get stuck in one"
+        ],
+        "related_concepts": [
+          "ideation",
+          "selection",
+          "iteration"
+        ]
+      },
+      {
+        "model_name": "form_follows_function",
+        "description": "Design should primarily reflect purpose and use",
+        "use_cases": [
+          "Product design",
+          "architecture",
+          "interface design"
+        ],
+        "limitations": [
+          "Aesthetics matter too",
+          "sometimes form enables new function"
+        ],
+        "related_concepts": [
+          "functionality",
+          "minimalism",
+          "user_experience"
+        ]
+      }
+    ],
+    "social_sciences": [
+      {
+        "model_name": "null_hypothesis_significance_testing",
+        "description": "Statistical framework: assume no effect, calculate probability of data under null",
+        "use_cases": [
+          "Hypothesis testing",
+          "research inference",
+          "statistical analysis"
+        ],
+        "limitations": [
+          "P-value misinterpretation",
+          "dichotomous thinking",
+          "ignores effect size"
+        ],
+        "related_concepts": [
+          "p_value",
+          "statistical_significance",
+          "hypothesis_testing"
+        ]
+      },
+      {
+        "model_name": "causal_graph",
+        "description": "Visual representation of causal relationships between variables",
+        "use_cases": [
+          "Identifying confounds",
+          "planning analysis",
+          "causal inference"
+        ],
+        "limitations": [
+          "Assumptions required",
+          "can be complex",
+          "directionality"
+        ],
+        "related_concepts": [
+          "causation",
+          "confounding",
+          "mediation",
+          "DAG"
+        ]
+      },
+      {
+        "model_name": "system_1_system_2",
+        "description": "Dual process theory: fast intuitive (System 1) vs slow deliberate (System 2) thinking",
+        "use_cases": [
+          "Understanding cognition",
+          "bias explanation",
+          "decision making"
+        ],
+        "limitations": [
+          "Oversimplification",
+          "not two distinct systems",
+          "continuous"
+        ],
+        "related_concepts": [
+          "cognitive_bias",
+          "heuristics",
+          "automatic_processes"
+        ]
+      },
+      {
+        "model_name": "levels_of_analysis",
+        "description": "Different scales of explanation: individual, group, societal, cultural",
+        "use_cases": [
+          "Matching data to inference",
+          "avoiding fallacies",
+          "theory building"
+        ],
+        "limitations": [
+          "Interactions across levels",
+          "which level primary?"
+        ],
+        "related_concepts": [
+          "ecological_fallacy",
+          "reductionism",
+          "emergence"
+        ]
+      },
+      {
+        "model_name": "research_methods_hierarchy",
+        "description": "Strength of causal inference: meta-analysis > RCT > quasi-experiment > correlational",
+        "use_cases": [
+          "Evaluating evidence",
+          "research design",
+          "making inferences"
+        ],
+        "limitations": [
+          "Context matters",
+          "well-done correlational > poor RCT"
+        ],
+        "related_concepts": [
+          "causal_inference",
+          "internal_validity",
+          "experimental_design"
+        ]
+      }
+    ],
+    "security": [
+      {
+        "model_name": "kill_chain",
+        "description": "Attack phases: reconnaissance, weaponization, delivery, exploitation, installation, C2, actions",
+        "use_cases": [
+          "Attack planning",
+          "defense strategy",
+          "incident response"
+        ],
+        "limitations": [
+          "Linear model",
+          "real attacks more complex"
+        ],
+        "related_concepts": [
+          "attack_lifecycle",
+          "defense_in_depth",
+          "detection"
+        ]
+      },
+      {
+        "model_name": "CIA_triad",
+        "description": "Security goals: Confidentiality, Integrity, Availability",
+        "use_cases": [
+          "Security requirements",
+          "threat modeling",
+          "control design"
+        ],
+        "limitations": [
+          "Incomplete (missing authentication, etc.)",
+          "simplification"
+        ],
+        "related_concepts": [
+          "security_properties",
+          "threat_modeling",
+          "risk"
+        ]
+      },
+      {
+        "model_name": "attack_surface",
+        "description": "Sum of all possible entry points and vulnerabilities",
+        "use_cases": [
+          "Risk assessment",
+          "hardening priorities",
+          "design review"
+        ],
+        "limitations": [
+          "Hard to quantify",
+          "dynamic",
+          "incomplete knowledge"
+        ],
+        "related_concepts": [
+          "threat_modeling",
+          "reduction",
+          "minimization"
+        ]
+      },
+      {
+        "model_name": "trust_boundaries",
+        "description": "Lines where trust level changes between components or zones",
+        "use_cases": [
+          "Architecture review",
+          "input validation points",
+          "security controls"
+        ],
+        "limitations": [
+          "Can be blurred",
+          "multiple boundaries",
+          "complexity"
+        ],
+        "related_concepts": [
+          "threat_modeling",
+          "validation",
+          "authorization"
+        ]
+      },
+      {
+        "model_name": "exploit_primitives",
+        "description": "Building blocks: info leak, arbitrary read, arbitrary write, control flow hijack",
+        "use_cases": [
+          "Exploit development",
+          "vulnerability analysis",
+          "chaining"
+        ],
+        "limitations": [
+          "Context specific",
+          "mitigation dependent"
+        ],
+        "related_concepts": [
+          "exploitation",
+          "primitives",
+          "chaining"
+        ]
+      }
+    ],
+    "data_science": [
+      {
+        "model_name": "train_validation_test",
+        "description": "Three-way data split: train (fit), validation (tune), test (final evaluation)",
+        "use_cases": [
+          "Model development",
+          "hyperparameter tuning",
+          "unbiased evaluation"
+        ],
+        "limitations": [
+          "Reduces effective sample size",
+          "needs enough data"
+        ],
+        "related_concepts": [
+          "cross_validation",
+          "overfitting",
+          "generalization"
+        ]
+      },
+      {
+        "model_name": "bias_variance_tradeoff",
+        "description": "Balance between underfitting (bias) and overfitting (variance)",
+        "use_cases": [
+          "Model selection",
+          "complexity tuning",
+          "regularization"
+        ],
+        "limitations": [
+          "Simplified view",
+          "tradeoff not always strict"
+        ],
+        "related_concepts": [
+          "overfitting",
+          "model_complexity",
+          "regularization"
+        ]
+      },
+      {
+        "model_name": "curse_of_dimensionality",
+        "description": "High-dimensional spaces create sparsity and distance problems",
+        "use_cases": [
+          "Feature selection",
+          "dimensionality reduction",
+          "model choice"
+        ],
+        "limitations": [
+          "Some algorithms handle high-D better",
+          "effective dimensionality matters"
+        ],
+        "related_concepts": [
+          "dimensionality_reduction",
+          "feature_selection",
+          "distance_metrics"
+        ]
+      },
+      {
+        "model_name": "no_free_lunch",
+        "description": "No single algorithm performs best across all problems",
+        "use_cases": [
+          "Model selection",
+          "algorithm comparison",
+          "avoiding dogma"
+        ],
+        "limitations": [
+          "Restricted domains may have best algorithms",
+          "practical differences exist"
+        ],
+        "related_concepts": [
+          "model_selection",
+          "ensemble_methods",
+          "algorithm_choice"
+        ]
+      },
+      {
+        "model_name": "ML_pipeline",
+        "description": "Data \u2192 Preprocessing \u2192 Feature Engineering \u2192 Model \u2192 Evaluation \u2192 Deployment",
+        "use_cases": [
+          "Project structure",
+          "workflow organization",
+          "preventing leakage"
+        ],
+        "limitations": [
+          "Iterative not linear",
+          "feedback loops exist"
+        ],
+        "related_concepts": [
+          "data_pipeline",
+          "workflow",
+          "deployment"
+        ]
+      }
+    ]
+  },
+  "epistemic_standards_by_domain": {
+    "philosophy": {
+      "preferred_evidence": [
+        "Logical arguments with valid inference",
+        "Thought experiments testing intuitions",
+        "Conceptual analysis revealing structure",
+        "Counterexamples to universal claims",
+        "Coherence with other beliefs",
+        "Explanatory power and scope"
+      ],
+      "burden_of_proof": "Logical consistency and conceptual clarity required for philosophical claims",
+      "certainty_levels": {
+        "certain": "Logically proven (e.g., tautologies, valid deductions from certain premises)",
+        "probable": "Well-argued with minimal objections, coherent with background beliefs",
+        "speculative": "Interesting hypothesis requiring further development and defense",
+        "unknown": "Genuinely unsettled philosophical question with competing views"
+      }
+    },
+    "engineering": {
+      "preferred_evidence": [
+        "Experimental measurements with uncertainty quantification",
+        "Validated computational models (FEA, CFD)",
+        "Industry standards and codes (ASME, IEEE, AISC)",
+        "Peer-reviewed research",
+        "Physical laws and first principles",
+        "Material property databases"
+      ],
+      "burden_of_proof": "Engineering claims require: physical consistency, code compliance, factor of safety, and validation",
+      "certainty_levels": {
+        "certain": "Physical laws (conservation, thermodynamics), standardized test data",
+        "high_confidence": "Validated models, handbook formulas, material properties",
+        "probable": "FEA results (mesh converged), empirical correlations within range",
+        "speculative": "Novel designs, untested conditions, extrapolations"
+      }
+    },
+    "law": {
+      "preferred_evidence": [
+        "Binding precedent from controlling court",
+        "Statutory text and legislative history",
+        "Constitutional provisions and interpretations",
+        "Restatements and uniform laws",
+        "Persuasive precedent from respected jurisdictions",
+        "Treatises and legal scholarship"
+      ],
+      "burden_of_proof": "Varies by context: Beyond reasonable doubt (criminal), preponderance (civil), clear and convincing (some civil)",
+      "certainty_levels": {
+        "certain": "Clear statutory text, unambiguous binding precedent, settled law",
+        "probable": "Weight of authority, strong precedent, likely outcome",
+        "uncertain": "Novel issue, conflicting precedent, evolving area",
+        "speculative": "No direct authority, analogy required, policy arguments"
+      }
+    },
+    "business": {
+      "preferred_evidence": [
+        "Financial data and metrics",
+        "Customer behavior data",
+        "Market research and surveys",
+        "Cohort analysis and retention curves",
+        "A/B test results",
+        "Industry benchmarks",
+        "Case studies and precedents"
+      ],
+      "burden_of_proof": "Business decisions require: data support, financial modeling, risk assessment, and consideration of alternatives",
+      "certainty_levels": {
+        "certain": "Measured financial results, historical data",
+        "probable": "Strong leading indicators, validated hypotheses, market data",
+        "speculative": "Projections, untested markets, early signals",
+        "unknown": "Novel business models, emerging markets, insufficient data"
+      }
+    },
+    "creative_arts": {
+      "preferred_evidence": [
+        "Audience response and feedback",
+        "Historical precedent and convention",
+        "Psychological research on perception",
+        "Critical analysis and theory",
+        "Portfolio and body of work",
+        "Peer assessment and critique"
+      ],
+      "burden_of_proof": "Creative work requires: coherence, intentionality, effectiveness for purpose, and audience consideration",
+      "certainty_levels": {
+        "established": "Proven principles (color theory, composition rules, narrative structure)",
+        "conventional": "Widely accepted practices and norms",
+        "experimental": "Novel approaches being tested",
+        "subjective": "Taste, style, aesthetic judgment"
+      }
+    },
+    "social_sciences": {
+      "preferred_evidence": [
+        "Experimental studies with random assignment",
+        "Replicated findings across labs",
+        "Meta-analyses of multiple studies",
+        "Preregistered research",
+        "Large representative samples",
+        "Converging evidence from multiple methods",
+        "Open data and materials"
+      ],
+      "burden_of_proof": "Social science claims require: appropriate research design, adequate sample, valid measurement, statistical support, and replication",
+      "certainty_levels": {
+        "strong": "Replicated experimental findings, meta-analytic support, large effects",
+        "moderate": "Single well-designed study, medium effects, coherent theory",
+        "weak": "Correlational only, small sample, unreplicated, exploratory",
+        "speculative": "Theoretical speculation, pilot data, needs testing"
+      }
+    },
+    "security": {
+      "preferred_evidence": [
+        "Proof-of-concept exploits",
+        "CVE entries and disclosures",
+        "Academic security research",
+        "Bug bounty reports",
+        "CTF writeups and techniques",
+        "Defensive detection rules",
+        "Vulnerability databases"
+      ],
+      "burden_of_proof": "Security claims require: reproducible exploit, technical analysis, responsible disclosure, and defensive mitigation",
+      "certainty_levels": {
+        "proven": "Working exploit, CVE assigned, verified vulnerability",
+        "likely": "Strong indicators, partial exploit, similar vulnerabilities known",
+        "theoretical": "Logical vulnerability, no working exploit, needs testing",
+        "speculative": "Potential attack surface, requires research, unproven"
+      }
+    },
+    "data_science": {
+      "preferred_evidence": [
+        "Cross-validated performance",
+        "Hold-out test set results",
+        "Replicated findings",
+        "Statistical significance with effect sizes",
+        "Ablation studies",
+        "Diverse benchmark datasets",
+        "Open code and reproducible results"
+      ],
+      "burden_of_proof": "Data science claims require: proper validation, appropriate metrics, statistical rigor, reproducibility, and domain sensibility",
+      "certainty_levels": {
+        "strong": "Cross-validated, replicated, large effects, multiple datasets",
+        "moderate": "Single study, adequate validation, reasonable effect size",
+        "weak": "Single split, small dataset, marginal improvement",
+        "speculative": "Preliminary results, no validation, needs further testing"
+      }
+    }
+  }
+}

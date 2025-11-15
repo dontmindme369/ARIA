@@ -1,0 +1,476 @@
+{
+  "domain": "business",
+  "version": "2.0",
+  "last_updated": "2024-11-14T00:00:00Z",
+  "anchor_alignment": "business",
+  "concepts": {
+    "unit_economics": {
+      "term": "unit_economics",
+      "definition": "Revenues and costs associated with a single unit of product or customer",
+      "synonyms": ["per-unit profitability", "unit-level metrics"],
+      "related_concepts": ["CAC", "LTV", "contribution_margin", "break_even", "scalability"],
+      "category": "financial_metrics",
+      "complexity": "intermediate",
+      "mental_models": ["marginal_analysis", "scalability_assessment", "profit_drivers"],
+      "common_errors": ["ignoring fixed costs", "not tracking over time", "wrong unit definition"],
+      "detection_patterns": ["per unit", "unit economics", "customer economics"],
+      "epistemic_markers": {
+        "evidence_type": "financial_data",
+        "certainty_level": "quantified"
+      },
+      "reasoning_patterns": ["calculate revenue per unit", "subtract variable costs", "assess contribution margin"],
+      "examples": ["SaaS: $100 MRR/user - $15 COGS = $85 contribution", "Ecommerce: $50 sale - $30 COGS"],
+      "prerequisites": ["accounting_basics", "contribution_margin"],
+      "applications": ["business_model_validation", "pricing", "scaling_decisions"]
+    },
+    "CAC": {
+      "term": "CAC",
+      "definition": "Customer Acquisition Cost - total sales and marketing spend divided by new customers acquired",
+      "synonyms": ["customer acquisition cost", "cost per acquisition"],
+      "related_concepts": ["LTV", "LTV_CAC_ratio", "payback_period", "marketing_efficiency"],
+      "category": "financial_metrics",
+      "complexity": "basic",
+      "mental_models": ["marketing_efficiency", "customer_value_comparison", "payback_timeline"],
+      "common_errors": ["excluding salaries", "wrong time period", "not segmenting by channel"],
+      "detection_patterns": ["CAC", "acquisition cost", "cost per customer"],
+      "epistemic_markers": {
+        "evidence_type": "financial_calculation",
+        "certainty_level": "measured"
+      },
+      "reasoning_patterns": ["sum all acquisition costs", "divide by new customers", "compare to LTV"],
+      "examples": ["$50k marketing spend / 100 customers = $500 CAC", "Blended vs paid CAC"],
+      "prerequisites": ["marketing_costs", "customer_tracking"],
+      "applications": ["marketing_roi", "channel_optimization", "growth_strategy"]
+    },
+    "LTV": {
+      "term": "LTV",
+      "definition": "Lifetime Value - total revenue expected from customer over entire relationship",
+      "synonyms": ["lifetime value", "CLV", "customer lifetime value"],
+      "related_concepts": ["CAC", "retention", "churn", "ARPU", "cohort_analysis"],
+      "category": "financial_metrics",
+      "complexity": "intermediate",
+      "mental_models": ["customer_lifetime_revenue", "retention_impact", "profitability_per_customer"],
+      "common_errors": ["ignoring churn", "not discounting future value", "wrong time horizon"],
+      "detection_patterns": ["LTV", "lifetime value", "CLV"],
+      "epistemic_markers": {
+        "evidence_type": "projected_calculation",
+        "certainty_level": "estimated"
+      },
+      "reasoning_patterns": ["calculate ARPU", "estimate lifetime", "discount future cash flows"],
+      "examples": ["$100/mo × 24 months × 0.7 margin = $1,680 LTV", "Simple: ARPU / churn rate"],
+      "prerequisites": ["churn_rate", "ARPU", "time_value_of_money"],
+      "applications": ["pricing_decisions", "CAC_budgeting", "customer_segmentation"]
+    },
+    "churn_rate": {
+      "term": "churn_rate",
+      "definition": "Percentage of customers who stop using product/service in given period",
+      "synonyms": ["customer attrition", "customer loss rate"],
+      "related_concepts": ["retention_rate", "cohort_analysis", "LTV", "product_market_fit"],
+      "category": "operational_metrics",
+      "complexity": "basic",
+      "mental_models": ["leaky_bucket", "retention_curve", "cohort_behavior"],
+      "common_errors": ["wrong denominator", "not distinguishing voluntary vs involuntary", "ignoring cohorts"],
+      "detection_patterns": ["churn", "attrition", "retention", "lost customers"],
+      "epistemic_markers": {
+        "evidence_type": "measured",
+        "certainty_level": "calculated"
+      },
+      "reasoning_patterns": ["count lost customers", "divide by starting customers", "annualize if needed"],
+      "examples": ["10 lost / 100 start = 10% monthly churn", "SaaS target: <5% monthly"],
+      "prerequisites": ["customer_tracking", "time_period_definition"],
+      "applications": ["retention_improvement", "LTV_calculation", "product_health"]
+    },
+    "gross_margin": {
+      "term": "gross_margin",
+      "definition": "Revenue minus cost of goods sold, expressed as percentage of revenue",
+      "synonyms": ["gross profit margin"],
+      "related_concepts": ["contribution_margin", "COGS", "operating_margin", "net_margin"],
+      "category": "financial_metrics",
+      "complexity": "basic",
+      "mental_models": ["profitability_layers", "pricing_power", "scalability_indicator"],
+      "common_errors": ["confusing with net margin", "wrong COGS classification", "not comparing to industry"],
+      "detection_patterns": ["gross margin", "gross profit", "COGS"],
+      "epistemic_markers": {
+        "evidence_type": "financial_calculation",
+        "certainty_level": "measured"
+      },
+      "reasoning_patterns": ["calculate (Revenue - COGS) / Revenue", "compare to benchmarks", "assess scalability"],
+      "examples": ["SaaS: typically 70-85%", "Retail: 30-50%", "Manufacturing: 20-40%"],
+      "prerequisites": ["revenue", "COGS_definition"],
+      "applications": ["pricing_strategy", "business_model_assessment", "financial_planning"]
+    },
+    "burn_rate": {
+      "term": "burn_rate",
+      "definition": "Rate at which company spends cash, typically monthly",
+      "synonyms": ["cash burn", "monthly burn"],
+      "related_concepts": ["runway", "cash_flow", "operating_expenses", "funding"],
+      "category": "financial_metrics",
+      "complexity": "basic",
+      "mental_models": ["cash_depletion", "time_to_break_even", "funding_urgency"],
+      "common_errors": ["not including all expenses", "ignoring seasonality", "overly optimistic projections"],
+      "detection_patterns": ["burn rate", "monthly burn", "cash burn"],
+      "epistemic_markers": {
+        "evidence_type": "financial_tracking",
+        "certainty_level": "measured"
+      },
+      "reasoning_patterns": ["sum monthly cash outflows", "subtract from monthly inflows", "calculate runway"],
+      "examples": ["$200k/month revenue - $300k/month costs = $100k burn", "12 months runway at current burn"],
+      "prerequisites": ["cash_flow_statement", "operating_expenses"],
+      "applications": ["fundraising_timing", "expense_management", "survival_planning"]
+    },
+    "product_market_fit": {
+      "term": "product_market_fit",
+      "definition": "Degree to which product satisfies strong market demand",
+      "synonyms": ["PMF", "market fit"],
+      "related_concepts": ["retention", "organic_growth", "NPS", "value_proposition"],
+      "category": "strategic_concepts",
+      "complexity": "intermediate",
+      "mental_models": ["pull_not_push", "retention_curve", "growth_efficiency"],
+      "common_errors": ["premature scaling", "confusing early traction with PMF", "ignoring retention"],
+      "detection_patterns": ["product market fit", "PMF", "strong retention", "organic growth"],
+      "epistemic_markers": {
+        "evidence_type": "qualitative_and_quantitative",
+        "certainty_level": "evaluated"
+      },
+      "reasoning_patterns": ["measure retention", "assess organic growth", "survey users", "check engagement"],
+      "examples": ["40%+ users very disappointed if product gone", "Flat retention curve", "High NPS"],
+      "prerequisites": ["customer_feedback", "usage_metrics"],
+      "applications": ["scaling_decisions", "fundraising", "roadmap_prioritization"]
+    },
+    "pivot": {
+      "term": "pivot",
+      "definition": "Fundamental change to business model or product strategy",
+      "synonyms": ["strategic shift", "course correction"],
+      "related_concepts": ["iteration", "validated_learning", "business_model", "hypothesis_testing"],
+      "category": "strategic_concepts",
+      "complexity": "intermediate",
+      "mental_models": ["hypothesis_invalidated", "strategic_adaptation", "runway_preservation"],
+      "common_errors": ["pivoting too early", "pivoting too late", "not learning from previous iteration"],
+      "detection_patterns": ["pivot", "strategic change", "business model shift"],
+      "epistemic_markers": {
+        "evidence_type": "strategic_decision",
+        "certainty_level": "judgment"
+      },
+      "reasoning_patterns": ["recognize hypothesis failure", "identify new opportunity", "preserve assets", "test quickly"],
+      "examples": ["YouTube: dating site → video sharing", "Slack: gaming → communication", "Twitter: podcasting → microblogging"],
+      "prerequisites": ["validated_learning", "metrics_tracking"],
+      "applications": ["startup_strategy", "product_strategy", "business_model_evolution"]
+    },
+    "runway": {
+      "term": "runway",
+      "definition": "Time until company runs out of cash at current burn rate",
+      "synonyms": ["cash runway", "months of runway"],
+      "related_concepts": ["burn_rate", "cash_balance", "fundraising", "break_even"],
+      "category": "financial_metrics",
+      "complexity": "basic",
+      "mental_models": ["time_constraint", "funding_urgency", "survival_timeline"],
+      "common_errors": ["not accounting for growth", "ignoring funding timeline", "overly optimistic"],
+      "detection_patterns": ["runway", "months left", "cash runway"],
+      "epistemic_markers": {
+        "evidence_type": "financial_calculation",
+        "certainty_level": "projected"
+      },
+      "reasoning_patterns": ["divide cash balance by monthly burn", "add time to close funding", "plan with buffer"],
+      "examples": ["$1.2M cash / $100k burn = 12 months runway", "Start fundraising at 6-9 months"],
+      "prerequisites": ["cash_balance", "burn_rate"],
+      "applications": ["fundraising_timing", "expense_control", "strategic_planning"]
+    },
+    "TAM_SAM_SOM": {
+      "term": "TAM_SAM_SOM",
+      "definition": "Total Addressable Market, Serviceable Available Market, Serviceable Obtainable Market",
+      "synonyms": ["market sizing framework"],
+      "related_concepts": ["market_size", "addressable_market", "market_share", "growth_potential"],
+      "category": "strategic_concepts",
+      "complexity": "intermediate",
+      "mental_models": ["market_funnel", "realistic_targeting", "growth_ceiling"],
+      "common_errors": ["inflated TAM", "unrealistic SOM", "not accounting for competition"],
+      "detection_patterns": ["TAM", "SAM", "SOM", "addressable market"],
+      "epistemic_markers": {
+        "evidence_type": "market_research",
+        "certainty_level": "estimated"
+      },
+      "reasoning_patterns": ["calculate total market", "narrow to serviceable", "estimate realistically obtainable"],
+      "examples": ["TAM: $100B", "SAM: $10B (geographic limit)", "SOM: $100M (5 year realistic)"],
+      "prerequisites": ["market_research", "competitive_analysis"],
+      "applications": ["fundraising_pitch", "strategic_planning", "market_entry"]
+    },
+    "MVP": {
+      "term": "MVP",
+      "definition": "Minimum Viable Product - simplest version that tests core hypothesis",
+      "synonyms": ["minimum viable product", "minimum product"],
+      "related_concepts": ["lean_startup", "validated_learning", "iteration", "hypothesis_testing"],
+      "category": "product_development",
+      "complexity": "basic",
+      "mental_models": ["learning_velocity", "resource_efficiency", "rapid_iteration"],
+      "common_errors": ["too minimal", "too feature-rich", "not testing hypothesis"],
+      "detection_patterns": ["MVP", "minimum viable", "early version"],
+      "epistemic_markers": {
+        "evidence_type": "experimental",
+        "certainty_level": "hypothesis_testing"
+      },
+      "reasoning_patterns": ["identify core hypothesis", "design minimum test", "ship and learn", "iterate"],
+      "examples": ["Landing page + survey", "Concierge service", "Wizard of Oz prototype"],
+      "prerequisites": ["hypothesis", "customer_access"],
+      "applications": ["product_development", "startup_methodology", "innovation"]
+    },
+    "north_star_metric": {
+      "term": "north_star_metric",
+      "definition": "Single metric that best captures core value delivered to customers",
+      "synonyms": ["NSM", "key metric"],
+      "related_concepts": ["OKRs", "KPIs", "value_delivery", "growth_loops"],
+      "category": "operational_metrics",
+      "complexity": "intermediate",
+      "mental_models": ["focus_alignment", "value_proxy", "growth_driver"],
+      "common_errors": ["vanity metric", "too many metrics", "not actionable"],
+      "detection_patterns": ["north star", "key metric", "core metric"],
+      "epistemic_markers": {
+        "evidence_type": "strategic_choice",
+        "certainty_level": "aligned"
+      },
+      "reasoning_patterns": ["identify core value", "find measurable proxy", "align team around it"],
+      "examples": ["Airbnb: nights booked", "Facebook: daily active users", "Slack: messages sent"],
+      "prerequisites": ["value_proposition", "metrics_framework"],
+      "applications": ["team_alignment", "growth_strategy", "performance_tracking"]
+    },
+    "valuation": {
+      "term": "valuation",
+      "definition": "Process of determining company's economic value",
+      "synonyms": ["business valuation", "company value"],
+      "related_concepts": ["DCF", "comparables", "revenue_multiple", "equity_value", "enterprise_value"],
+      "category": "financial_concepts",
+      "complexity": "advanced",
+      "mental_models": ["discounted_cash_flow", "market_multiples", "comparable_companies"],
+      "common_errors": ["wrong discount rate", "unrealistic projections", "ignoring market conditions"],
+      "detection_patterns": ["valuation", "DCF", "multiples", "worth"],
+      "epistemic_markers": {
+        "evidence_type": "financial_modeling",
+        "certainty_level": "estimated"
+      },
+      "reasoning_patterns": ["project cash flows", "discount to present", "or use comparables", "triangulate"],
+      "examples": ["SaaS: 5-10x ARR", "DCF with 15% discount rate", "Comparable M&A"],
+      "prerequisites": ["financial_modeling", "time_value_of_money"],
+      "applications": ["fundraising", "M&A", "financial_planning"]
+    },
+    "go_to_market": {
+      "term": "go_to_market",
+      "definition": "Strategy for launching product and acquiring customers",
+      "synonyms": ["GTM", "market entry strategy", "launch strategy"],
+      "related_concepts": ["customer_acquisition", "channels", "positioning", "pricing", "sales_model"],
+      "category": "strategic_concepts",
+      "complexity": "intermediate",
+      "mental_models": ["channel_strategy", "customer_journey", "market_positioning"],
+      "common_errors": ["wrong channel", "unclear positioning", "no distribution strategy"],
+      "detection_patterns": ["go to market", "GTM", "launch strategy"],
+      "epistemic_markers": {
+        "evidence_type": "strategic_plan",
+        "certainty_level": "tested"
+      },
+      "reasoning_patterns": ["identify target customer", "choose channels", "craft positioning", "design sales process"],
+      "examples": ["PLG: product-led growth", "Enterprise sales", "Channel partnerships"],
+      "prerequisites": ["customer_segmentation", "value_proposition"],
+      "applications": ["product_launch", "market_expansion", "growth_strategy"]
+    },
+    "competitive_advantage": {
+      "term": "competitive_advantage",
+      "definition": "Sustainable edge that allows company to outperform competitors",
+      "synonyms": ["moat", "defensibility", "competitive edge"],
+      "related_concepts": ["network_effects", "switching_costs", "economies_of_scale", "brand", "IP"],
+      "category": "strategic_concepts",
+      "complexity": "advanced",
+      "mental_models": ["Porters_five_forces", "moat_types", "sustainability"],
+      "common_errors": ["confusing temporary with sustainable", "no real moat", "ignoring competition"],
+      "detection_patterns": ["competitive advantage", "moat", "defensibility", "why us"],
+      "epistemic_markers": {
+        "evidence_type": "strategic_analysis",
+        "certainty_level": "evaluated"
+      },
+      "reasoning_patterns": ["identify advantage sources", "assess sustainability", "test against competition"],
+      "examples": ["Network effects (Uber)", "Switching costs (Salesforce)", "Economies of scale (Amazon)"],
+      "prerequisites": ["competitive_analysis", "business_model"],
+      "applications": ["strategy", "fundraising_pitch", "long_term_planning"]
+    }
+  },
+  "reasoning_heuristics": [
+    {
+      "pattern": "Focus on unit economics before scaling",
+      "context": "Early stage business decisions",
+      "limitations": "Some businesses need scale for unit economics",
+      "examples": ["Fix CAC/LTV before growth spend", "Contribution margin positive"]
+    },
+    {
+      "pattern": "LTV should be 3x+ CAC for healthy business",
+      "context": "Evaluating customer acquisition strategy",
+      "limitations": "Varies by industry and stage",
+      "examples": ["LTV:CAC of 3:1 minimum", "SaaS target: 5:1 or higher"]
+    },
+    {
+      "pattern": "Start fundraising with 6-9 months runway",
+      "context": "Venture-backed startups",
+      "limitations": "Profitable businesses less urgent",
+      "examples": ["Don't wait until 3 months", "Process takes 3-6 months"]
+    },
+    {
+      "pattern": "Retention is the strongest signal of product-market fit",
+      "context": "Assessing product success",
+      "limitations": "Some products naturally have low retention",
+      "examples": ["Flat retention curve = PMF", "40% rule for disappointment"]
+    },
+    {
+      "pattern": "Optimize for learning velocity early stage",
+      "context": "Pre-product-market fit",
+      "limitations": "Post-PMF optimize for execution",
+      "examples": ["Fast iteration", "MVP approach", "Validated learning"]
+    },
+    {
+      "pattern": "Price on value, not cost",
+      "context": "Pricing strategy",
+      "limitations": "Commodity markets price-sensitive",
+      "examples": ["Willingness to pay", "ROI for customer", "Not cost-plus"]
+    },
+    {
+      "pattern": "Cash is oxygen - monitor burn and runway religiously",
+      "context": "Financial management",
+      "limitations": "Profitable businesses have more flexibility",
+      "examples": ["Weekly cash tracking", "Runway calculations", "Burn rate trends"]
+    },
+    {
+      "pattern": "Distribution beats product in early markets",
+      "context": "Go-to-market strategy",
+      "limitations": "Terrible product won't work long-term",
+      "examples": ["Better sales beats better product", "Channel is key"]
+    },
+    {
+      "pattern": "Measure what matters - avoid vanity metrics",
+      "context": "Metrics and KPIs",
+      "limitations": "Some vanity metrics correlate with real value",
+      "examples": ["Revenue not signups", "Retention not downloads"]
+    },
+    {
+      "pattern": "Do things that don't scale early on",
+      "context": "Early stage tactics",
+      "limitations": "Must have path to scalability eventually",
+      "examples": ["Manual onboarding", "Concierge service", "High-touch"]
+    }
+  ],
+  "common_errors": [
+    {
+      "error_type": "premature_scaling",
+      "description": "Scaling before achieving product-market fit",
+      "symptoms": ["High burn", "poor unit economics", "low retention"],
+      "causes": ["Pressure to grow", "missing PMF signals", "vanity metrics"],
+      "prevention": ["Validate PMF first", "check retention", "test economics"],
+      "correction": ["Pull back growth spend", "focus on product", "find PMF"]
+    },
+    {
+      "error_type": "ignoring_unit_economics",
+      "description": "Not tracking profitability per customer or transaction",
+      "symptoms": ["Unprofitable growth", "LTV < CAC", "negative contribution margin"],
+      "causes": ["Revenue focus only", "not calculating", "hoping for scale"],
+      "prevention": ["Calculate early", "track over time", "fix before scaling"],
+      "correction": ["Analyze economics", "improve metrics", "adjust model"]
+    },
+    {
+      "error_type": "wrong_pricing",
+      "description": "Pricing too low or too high for value delivered",
+      "symptoms": ["Low willingness to pay", "leaving money on table", "wrong customer segment"],
+      "causes": ["Cost-plus pricing", "no testing", "fear"],
+      "prevention": ["Value-based pricing", "test with customers", "iterate"],
+      "correction": ["Reprice", "segment customers", "test tiers"]
+    },
+    {
+      "error_type": "running_out_of_cash",
+      "description": "Not managing burn rate and runway",
+      "symptoms": ["Missed payroll", "emergency fundraising", "shutdown"],
+      "causes": ["Not tracking", "overspending", "revenue miss"],
+      "prevention": ["Track weekly", "maintain buffer", "plan fundraising early"],
+      "correction": ["Cut costs immediately", "bridge financing", "pivot"]
+    },
+    {
+      "error_type": "building_without_validation",
+      "description": "Building features or products customers don't want",
+      "symptoms": ["No adoption", "poor retention", "feature bloat"],
+      "causes": ["Not talking to customers", "inside-out thinking", "HiPPO"],
+      "prevention": ["Customer development", "MVP testing", "continuous feedback"],
+      "correction": ["Talk to users", "kill features", "refocus"]
+    },
+    {
+      "error_type": "ignoring_competition",
+      "description": "Not understanding competitive landscape",
+      "symptoms": ["Surprised by competitors", "losing deals", "no differentiation"],
+      "causes": ["Heads-down building", "arrogance", "ignorance"],
+      "prevention": ["Competitive analysis", "market monitoring", "customer feedback"],
+      "correction": ["Research competitors", "differentiate", "competitive strategy"]
+    },
+    {
+      "error_type": "no_competitive_moat",
+      "description": "Building business with no defensibility",
+      "symptoms": ["Easy to copy", "price competition", "no retention"],
+      "causes": ["Not thinking long-term", "me-too product", "no network effects"],
+      "prevention": ["Identify moat sources", "build defensibility", "network effects"],
+      "correction": ["Pivot to defensible", "build switching costs", "brand/network"]
+    },
+    {
+      "error_type": "wrong_channel",
+      "description": "Using customer acquisition channels that don't work",
+      "symptoms": ["High CAC", "low conversion", "wrong customers"],
+      "causes": ["Assumptions", "not testing", "copying others"],
+      "prevention": ["Test channels", "measure CAC by channel", "iterate"],
+      "correction": ["Switch channels", "optimize existing", "multivariate test"]
+    }
+  ],
+  "epistemic_standards": {
+    "preferred_evidence": [
+      "Financial data and metrics",
+      "Customer behavior data",
+      "Market research and surveys",
+      "Cohort analysis and retention curves",
+      "A/B test results",
+      "Industry benchmarks",
+      "Case studies and precedents"
+    ],
+    "burden_of_proof": "Business decisions require: data support, financial modeling, risk assessment, and consideration of alternatives",
+    "certainty_levels": {
+      "certain": "Measured financial results, historical data",
+      "probable": "Strong leading indicators, validated hypotheses, market data",
+      "speculative": "Projections, untested markets, early signals",
+      "unknown": "Novel business models, emerging markets, insufficient data"
+    }
+  },
+  "mental_models": [
+    {
+      "model_name": "lean_startup",
+      "description": "Build-measure-learn cycle for rapid iteration",
+      "use_cases": ["Product development", "hypothesis testing", "early stage"],
+      "limitations": ["Not all businesses can iterate quickly", "some need upfront investment"],
+      "related_concepts": ["MVP", "validated_learning", "pivot"]
+    },
+    {
+      "model_name": "unit_economics",
+      "description": "Profitability at single customer or transaction level",
+      "use_cases": ["Business model validation", "pricing", "scaling decisions"],
+      "limitations": ["Some costs only appear at scale", "fixed costs matter"],
+      "related_concepts": ["CAC", "LTV", "contribution_margin"]
+    },
+    {
+      "model_name": "growth_funnel",
+      "description": "Customer journey from awareness to conversion to retention",
+      "use_cases": ["Marketing optimization", "conversion improvement", "growth strategy"],
+      "limitations": ["Not all businesses have linear funnels", "omnichannel complexity"],
+      "related_concepts": ["conversion_rate", "retention", "acquisition"]
+    },
+    {
+      "model_name": "business_model_canvas",
+      "description": "Nine building blocks of business model on one page",
+      "use_cases": ["Business model design", "strategic planning", "pitching"],
+      "limitations": ["High level only", "not detailed financials"],
+      "related_concepts": ["value_proposition", "customer_segments", "revenue_streams"]
+    },
+    {
+      "model_name": "porter_five_forces",
+      "description": "Five competitive forces shaping industry: rivalry, new entrants, substitutes, buyers, suppliers",
+      "use_cases": ["Competitive analysis", "industry attractiveness", "strategy"],
+      "limitations": ["Static snapshot", "doesn't capture disruption well"],
+      "related_concepts": ["competitive_advantage", "industry_structure", "barriers_to_entry"]
+    }
+  ]
+}

@@ -104,7 +104,7 @@ result = aria.query("What is machine learning?")
 
 ## Understanding Presets
 
-ARIA uses **Thompson Sampling** (Bayesian bandit) to automatically select the best preset for each query.
+ARIA uses **LinUCB** (Bayesian bandit) to automatically select the best preset for each query.
 
 ### Preset Overview
 

@@ -1,0 +1,494 @@
+{
+  "domain": "philosophy",
+  "version": "2.0",
+  "last_updated": "2024-11-14T00:00:00Z",
+  "anchor_alignment": "philosophical",
+  "concepts": {
+    "epistemology": {
+      "term": "epistemology",
+      "definition": "The study of knowledge, its nature, sources, limits, and justification",
+      "synonyms": ["theory of knowledge", "epistemic philosophy"],
+      "related_concepts": ["justification", "belief", "truth", "skepticism", "foundationalism", "coherentism"],
+      "category": "core_philosophy",
+      "complexity": "intermediate",
+      "mental_models": ["justified_true_belief", "reliabilism", "internalism_vs_externalism"],
+      "common_errors": ["conflating knowledge with belief", "ignoring justification requirement", "assuming certainty is required"],
+      "detection_patterns": ["how do we know", "what is knowledge", "epistemic justification"],
+      "epistemic_markers": {
+        "evidence_type": "theoretical",
+        "certainty_level": "philosophical_analysis"
+      },
+      "reasoning_patterns": ["analyze truth conditions", "examine justification", "consider skeptical scenarios"],
+      "examples": ["Gettier problems", "Cartesian doubt", "empiricism vs rationalism"],
+      "prerequisites": ["logic", "critical_thinking"],
+      "applications": ["science", "law", "critical_analysis", "research_methodology"]
+    },
+    "metaphysics": {
+      "term": "metaphysics",
+      "definition": "The study of the fundamental nature of reality, existence, and being",
+      "synonyms": ["ontology", "first philosophy"],
+      "related_concepts": ["ontology", "substance", "causation", "identity", "time", "space", "modality"],
+      "category": "core_philosophy",
+      "complexity": "advanced",
+      "mental_models": ["substance_dualism", "materialism", "idealism", "modal_realism"],
+      "common_errors": ["confusing linguistic with metaphysical questions", "reifying abstractions"],
+      "detection_patterns": ["what exists", "nature of reality", "mind-body problem"],
+      "epistemic_markers": {
+        "evidence_type": "theoretical",
+        "certainty_level": "speculative"
+      },
+      "reasoning_patterns": ["thought experiments", "conceptual analysis", "modal reasoning"],
+      "examples": ["Ship of Theseus", "mind-body problem", "free will debate"],
+      "prerequisites": ["logic", "epistemology"],
+      "applications": ["philosophy_of_science", "philosophy_of_mind", "theology"]
+    },
+    "ethics": {
+      "term": "ethics",
+      "definition": "The study of morality, right and wrong conduct, and what makes actions good or bad",
+      "synonyms": ["moral philosophy"],
+      "related_concepts": ["utilitarianism", "deontology", "virtue_ethics", "moral_realism", "moral_relativism"],
+      "category": "practical_philosophy",
+      "complexity": "intermediate",
+      "mental_models": ["consequentialism", "duty_ethics", "character_ethics", "care_ethics"],
+      "common_errors": ["conflating legality with morality", "is-ought fallacy", "moral relativism confusion"],
+      "detection_patterns": ["should", "ought", "right/wrong", "moral obligation"],
+      "epistemic_markers": {
+        "evidence_type": "normative",
+        "certainty_level": "reasoned_judgment"
+      },
+      "reasoning_patterns": ["identify moral principles", "consider consequences", "examine duties", "assess character"],
+      "examples": ["trolley problem", "categorical imperative", "virtue cultivation"],
+      "prerequisites": ["critical_thinking", "logic"],
+      "applications": ["medical_ethics", "business_ethics", "applied_ethics", "policy_making"]
+    },
+    "logic": {
+      "term": "logic",
+      "definition": "The study of valid reasoning, argument structure, and inference",
+      "synonyms": ["formal logic", "reasoning theory"],
+      "related_concepts": ["deduction", "induction", "validity", "soundness", "fallacy", "inference"],
+      "category": "formal_philosophy",
+      "complexity": "basic",
+      "mental_models": ["propositional_logic", "predicate_logic", "modal_logic", "argument_structure"],
+      "common_errors": ["confusing validity with truth", "affirming the consequent", "denying the antecedent"],
+      "detection_patterns": ["if-then", "therefore", "follows that", "entails"],
+      "epistemic_markers": {
+        "evidence_type": "formal_proof",
+        "certainty_level": "certain_within_system"
+      },
+      "reasoning_patterns": ["identify premises and conclusions", "check validity", "assess soundness"],
+      "examples": ["modus ponens", "modus tollens", "syllogisms", "formal proofs"],
+      "prerequisites": ["critical_thinking"],
+      "applications": ["mathematics", "computer_science", "law", "argumentation"]
+    },
+    "phenomenology": {
+      "term": "phenomenology",
+      "definition": "The study of conscious experience from the first-person perspective",
+      "synonyms": ["philosophy of consciousness", "experiential philosophy"],
+      "related_concepts": ["intentionality", "qualia", "consciousness", "lived_experience", "intersubjectivity"],
+      "category": "continental_philosophy",
+      "complexity": "advanced",
+      "mental_models": ["intentional_structure", "horizon_of_experience", "lifeworld"],
+      "common_errors": ["confusing phenomenology with introspection", "ignoring intersubjective dimension"],
+      "detection_patterns": ["lived experience", "consciousness", "intentionality", "being-in-the-world"],
+      "epistemic_markers": {
+        "evidence_type": "experiential",
+        "certainty_level": "descriptive_insight"
+      },
+      "reasoning_patterns": ["bracket assumptions", "describe experience", "identify essential structures"],
+      "examples": ["Husserl's epoché", "Heidegger's dasein", "Merleau-Ponty's embodiment"],
+      "prerequisites": ["epistemology", "metaphysics"],
+      "applications": ["cognitive_science", "psychology", "human-computer_interaction"]
+    },
+    "aesthetics": {
+      "term": "aesthetics",
+      "definition": "The study of beauty, art, taste, and the nature of aesthetic experience",
+      "synonyms": ["philosophy of art", "philosophy of beauty"],
+      "related_concepts": ["beauty", "sublime", "taste", "artistic_value", "aesthetic_judgment"],
+      "category": "value_theory",
+      "complexity": "intermediate",
+      "mental_models": ["formalism", "expressivism", "institutional_theory", "aesthetic_attitude"],
+      "common_errors": ["confusing personal preference with aesthetic judgment", "assuming art requires beauty"],
+      "detection_patterns": ["beauty", "artistic merit", "aesthetic value", "what is art"],
+      "epistemic_markers": {
+        "evidence_type": "critical_analysis",
+        "certainty_level": "interpretive_judgment"
+      },
+      "reasoning_patterns": ["analyze formal properties", "interpret meaning", "assess coherence"],
+      "examples": ["Kant's aesthetic judgment", "Hume on taste", "Danto's artworld"],
+      "prerequisites": ["ethics", "metaphysics"],
+      "applications": ["art_criticism", "design", "literature", "music_theory"]
+    },
+    "political_philosophy": {
+      "term": "political_philosophy",
+      "definition": "The study of government, justice, rights, law, and the enforcement of legal codes",
+      "synonyms": ["political theory"],
+      "related_concepts": ["justice", "liberty", "authority", "legitimacy", "rights", "democracy"],
+      "category": "practical_philosophy",
+      "complexity": "intermediate",
+      "mental_models": ["social_contract", "liberalism", "communitarianism", "libertarianism"],
+      "common_errors": ["conflating descriptive and normative claims", "ignoring feasibility constraints"],
+      "detection_patterns": ["justice", "rights", "legitimate authority", "social contract"],
+      "epistemic_markers": {
+        "evidence_type": "normative_and_empirical",
+        "certainty_level": "reasoned_judgment"
+      },
+      "reasoning_patterns": ["identify principles of justice", "balance liberty and equality", "assess legitimacy"],
+      "examples": ["Rawls' veil of ignorance", "Nozick's entitlement theory", "Mill's harm principle"],
+      "prerequisites": ["ethics", "logic"],
+      "applications": ["policy_analysis", "law", "governance", "public_administration"]
+    },
+    "philosophy_of_mind": {
+      "term": "philosophy_of_mind",
+      "definition": "The study of the nature of mind, mental properties, consciousness, and their relationship to the body",
+      "synonyms": ["philosophy of psychology"],
+      "related_concepts": ["consciousness", "qualia", "intentionality", "mind-body_problem", "functionalism"],
+      "category": "specialized_philosophy",
+      "complexity": "advanced",
+      "mental_models": ["dualism", "materialism", "functionalism", "eliminativism", "property_dualism"],
+      "common_errors": ["category mistakes", "conflating correlation with identity", "ignoring explanatory gap"],
+      "detection_patterns": ["mind-body", "consciousness", "mental states", "qualia"],
+      "epistemic_markers": {
+        "evidence_type": "theoretical_and_empirical",
+        "certainty_level": "uncertain"
+      },
+      "reasoning_patterns": ["thought experiments", "conceptual analysis", "empirical constraint"],
+      "examples": ["Chinese room", "zombie argument", "Mary's room"],
+      "prerequisites": ["metaphysics", "epistemology"],
+      "applications": ["cognitive_science", "AI", "neuroscience", "psychology"]
+    },
+    "philosophy_of_science": {
+      "term": "philosophy_of_science",
+      "definition": "The study of the foundations, methods, and implications of science",
+      "synonyms": ["scientific philosophy"],
+      "related_concepts": ["scientific_method", "theory", "explanation", "confirmation", "falsification"],
+      "category": "specialized_philosophy",
+      "complexity": "intermediate",
+      "mental_models": ["hypothetico-deductive", "Bayesian_confirmation", "inference_to_best_explanation"],
+      "common_errors": ["naive falsificationism", "ignoring theory-ladenness", "conflating science with scientism"],
+      "detection_patterns": ["scientific method", "explanation", "causation", "laws of nature"],
+      "epistemic_markers": {
+        "evidence_type": "empirical_and_theoretical",
+        "certainty_level": "probable"
+      },
+      "reasoning_patterns": ["analyze explanatory structure", "assess empirical adequacy", "evaluate theory choice"],
+      "examples": ["Popper's falsification", "Kuhn's paradigms", "underdetermination"],
+      "prerequisites": ["epistemology", "logic"],
+      "applications": ["scientific_practice", "research_methodology", "science_policy"]
+    },
+    "existentialism": {
+      "term": "existentialism",
+      "definition": "Philosophy emphasizing individual existence, freedom, choice, and subjective experience",
+      "synonyms": ["existential philosophy"],
+      "related_concepts": ["authenticity", "absurd", "freedom", "bad_faith", "anxiety", "being"],
+      "category": "continental_philosophy",
+      "complexity": "advanced",
+      "mental_models": ["existence_precedes_essence", "radical_freedom", "authentic_existence"],
+      "common_errors": ["equating existentialism with nihilism", "ignoring intersubjective dimension"],
+      "detection_patterns": ["authenticity", "freedom", "existence", "absurd", "meaning"],
+      "epistemic_markers": {
+        "evidence_type": "existential_insight",
+        "certainty_level": "lived_truth"
+      },
+      "reasoning_patterns": ["confront anxiety", "choose authentically", "create meaning"],
+      "examples": ["Sartre's bad faith", "Camus' absurd", "Kierkegaard's leap of faith"],
+      "prerequisites": ["phenomenology", "ethics"],
+      "applications": ["psychology", "literature", "personal_development"]
+    },
+    "skepticism": {
+      "term": "skepticism",
+      "definition": "The philosophical position questioning whether knowledge is possible",
+      "synonyms": ["philosophical doubt", "epistemic skepticism"],
+      "related_concepts": ["doubt", "certainty", "justification", "foundationalism", "problem_of_induction"],
+      "category": "epistemology",
+      "complexity": "intermediate",
+      "mental_models": ["cartesian_doubt", "humean_skepticism", "pyrrhonian_skepticism"],
+      "common_errors": ["conflating skepticism with denial", "self-refuting skepticism"],
+      "detection_patterns": ["how can we be certain", "possibility of error", "skeptical scenario"],
+      "epistemic_markers": {
+        "evidence_type": "theoretical",
+        "certainty_level": "questioning"
+      },
+      "reasoning_patterns": ["identify assumptions", "consider alternatives", "demand justification"],
+      "examples": ["brain in vat", "evil demon", "problem of other minds"],
+      "prerequisites": ["epistemology", "logic"],
+      "applications": ["critical_thinking", "scientific_method", "philosophy_of_science"]
+    },
+    "utilitarianism": {
+      "term": "utilitarianism",
+      "definition": "Ethical theory that the right action maximizes overall happiness or well-being",
+      "synonyms": ["consequentialism", "utility principle"],
+      "related_concepts": ["consequentialism", "hedonism", "utility", "greatest_happiness", "act_vs_rule"],
+      "category": "ethics",
+      "complexity": "intermediate",
+      "mental_models": ["utility_calculation", "hedonic_calculus", "preference_satisfaction"],
+      "common_errors": ["ignoring distribution", "demandingness objection", "repugnant conclusion"],
+      "detection_patterns": ["greatest happiness", "maximize utility", "consequences"],
+      "epistemic_markers": {
+        "evidence_type": "normative_calculation",
+        "certainty_level": "reasoned_judgment"
+      },
+      "reasoning_patterns": ["identify consequences", "calculate utility", "maximize overall good"],
+      "examples": ["trolley problem", "organ transplant case", "policy cost-benefit"],
+      "prerequisites": ["ethics", "logic"],
+      "applications": ["public_policy", "economics", "medical_ethics"]
+    },
+    "deontology": {
+      "term": "deontology",
+      "definition": "Ethical theory that actions are right or wrong based on rules and duties, not consequences",
+      "synonyms": ["duty ethics", "Kantian ethics"],
+      "related_concepts": ["categorical_imperative", "duty", "rights", "dignity", "universalizability"],
+      "category": "ethics",
+      "complexity": "intermediate",
+      "mental_models": ["categorical_imperative", "kingdom_of_ends", "respect_for_persons"],
+      "common_errors": ["conflicting duties", "rigidity objection", "ignoring consequences entirely"],
+      "detection_patterns": ["duty", "categorical imperative", "moral law", "rights"],
+      "epistemic_markers": {
+        "evidence_type": "rational_principle",
+        "certainty_level": "a_priori_judgment"
+      },
+      "reasoning_patterns": ["identify duties", "universalize maxim", "respect persons as ends"],
+      "examples": ["lying promise", "perfect/imperfect duties", "respect for autonomy"],
+      "prerequisites": ["ethics", "logic"],
+      "applications": ["medical_ethics", "human_rights", "professional_ethics"]
+    },
+    "virtue_ethics": {
+      "term": "virtue_ethics",
+      "definition": "Ethical theory focusing on character and virtues rather than rules or consequences",
+      "synonyms": ["character ethics", "aretaic ethics"],
+      "related_concepts": ["virtue", "character", "eudaimonia", "practical_wisdom", "golden_mean"],
+      "category": "ethics",
+      "complexity": "intermediate",
+      "mental_models": ["virtue_cultivation", "practical_wisdom", "eudaimonia"],
+      "common_errors": ["circularity objection", "cultural relativism", "action guidance problem"],
+      "detection_patterns": ["virtue", "character", "flourishing", "practical wisdom"],
+      "epistemic_markers": {
+        "evidence_type": "practical_wisdom",
+        "certainty_level": "phronetic_judgment"
+      },
+      "reasoning_patterns": ["identify virtues", "cultivate character", "exercise practical wisdom"],
+      "examples": ["Aristotelian virtues", "golden mean", "eudaimonia"],
+      "prerequisites": ["ethics", "philosophy_of_mind"],
+      "applications": ["education", "character_development", "professional_ethics"]
+    },
+    "rationalism": {
+      "term": "rationalism",
+      "definition": "Epistemological view that reason is the primary source of knowledge",
+      "synonyms": ["rational epistemology"],
+      "related_concepts": ["a_priori_knowledge", "innate_ideas", "deduction", "necessity"],
+      "category": "epistemology",
+      "complexity": "intermediate",
+      "mental_models": ["innate_knowledge", "rational_insight", "clear_and_distinct_ideas"],
+      "common_errors": ["ignoring empirical constraint", "overconfidence in reason", "neglecting limits"],
+      "detection_patterns": ["a priori", "innate", "reason alone", "deduction"],
+      "epistemic_markers": {
+        "evidence_type": "rational",
+        "certainty_level": "certain"
+      },
+      "reasoning_patterns": ["deductive inference", "conceptual analysis", "rational intuition"],
+      "examples": ["Descartes' cogito", "Leibniz' principle of sufficient reason", "mathematical knowledge"],
+      "prerequisites": ["epistemology", "logic"],
+      "applications": ["mathematics", "philosophy", "theoretical_reasoning"]
+    },
+    "empiricism": {
+      "term": "empiricism",
+      "definition": "Epistemological view that experience is the primary source of knowledge",
+      "synonyms": ["empirical epistemology"],
+      "related_concepts": ["sense_experience", "a_posteriori_knowledge", "induction", "observation"],
+      "category": "epistemology",
+      "complexity": "intermediate",
+      "mental_models": ["tabula_rasa", "sensory_foundation", "inductive_generalization"],
+      "common_errors": ["ignoring theory-ladenness", "problem of induction", "underdetermination"],
+      "detection_patterns": ["experience", "observation", "a posteriori", "induction"],
+      "epistemic_markers": {
+        "evidence_type": "empirical",
+        "certainty_level": "probable"
+      },
+      "reasoning_patterns": ["observe patterns", "inductive generalization", "test predictions"],
+      "examples": ["Hume's empiricism", "Locke's blank slate", "scientific method"],
+      "prerequisites": ["epistemology", "philosophy_of_science"],
+      "applications": ["science", "experimental_method", "evidence-based_practice"]
+    }
+  },
+  "reasoning_heuristics": [
+    {
+      "pattern": "Question your assumptions before building arguments",
+      "context": "Beginning philosophical analysis",
+      "limitations": "Excessive skepticism can be paralyzing",
+      "examples": ["Socratic method", "Cartesian doubt", "conceptual analysis"]
+    },
+    {
+      "pattern": "Distinguish conceptual from empirical questions",
+      "context": "Analyzing philosophical problems",
+      "limitations": "Some questions involve both dimensions",
+      "examples": ["Is mathematics discovered or invented?", "What is consciousness?"]
+    },
+    {
+      "pattern": "Look for counterexamples to test generalizations",
+      "context": "Evaluating philosophical claims",
+      "limitations": "Not all claims are generalizations",
+      "examples": ["Gettier cases", "thought experiments"]
+    },
+    {
+      "pattern": "Separate normative from descriptive claims",
+      "context": "Ethics and political philosophy",
+      "limitations": "Is-ought distinction has complexities",
+      "examples": ["What people do vs what they should do"]
+    },
+    {
+      "pattern": "Consider implications and consequences of positions",
+      "context": "Evaluating philosophical theories",
+      "limitations": "Counterintuitive results don't always refute",
+      "examples": ["Repugnant conclusion", "utility monster"]
+    },
+    {
+      "pattern": "Identify hidden assumptions in arguments",
+      "context": "Critical analysis",
+      "limitations": "Can't question everything simultaneously",
+      "examples": ["Presuppositions", "background assumptions"]
+    },
+    {
+      "pattern": "Use principle of charity in interpretation",
+      "context": "Reading philosophical texts",
+      "limitations": "Don't attribute positions not held",
+      "examples": ["Interpret arguments in strongest form"]
+    },
+    {
+      "pattern": "Test logical validity separately from soundness",
+      "context": "Evaluating arguments",
+      "limitations": "Valid arguments can have false conclusions",
+      "examples": ["Valid but unsound arguments"]
+    },
+    {
+      "pattern": "Recognize limits of thought experiments",
+      "context": "Using intuition pumps",
+      "limitations": "Intuitions can mislead or vary",
+      "examples": ["Trolley problem variations"]
+    },
+    {
+      "pattern": "Balance theoretical elegance with explanatory power",
+      "context": "Theory choice",
+      "limitations": "Simplicity isn't always truth-conducive",
+      "examples": ["Occam's razor"]
+    }
+  ],
+  "common_errors": [
+    {
+      "error_type": "logical_fallacy",
+      "description": "Appeal to authority without examining the argument",
+      "symptoms": ["Because X said so", "Everyone believes", "Expert consensus"],
+      "causes": ["Cognitive shortcuts", "Deference to expertise", "Social proof"],
+      "prevention": ["Examine arguments on merit", "Consider counter-examples", "Check reasoning"],
+      "correction": ["Separate claim from claimant", "Evaluate evidence independently"]
+    },
+    {
+      "error_type": "conceptual_confusion",
+      "description": "Conflating related but distinct concepts",
+      "symptoms": ["Using terms interchangeably", "Missing key distinctions"],
+      "causes": ["Imprecise language", "Lack of definitions", "Hasty thinking"],
+      "prevention": ["Define key terms", "Mark distinctions", "Use precise language"],
+      "correction": ["Clarify concepts", "Distinguish meanings", "Reformulate"]
+    },
+    {
+      "error_type": "is-ought_fallacy",
+      "description": "Deriving normative claims from descriptive premises",
+      "symptoms": ["People do X, therefore X is right", "Natural = good"],
+      "causes": ["Conflating facts and values", "Missing normative premises"],
+      "prevention": ["Distinguish descriptive from normative", "Identify hidden value premises"],
+      "correction": ["Add explicit normative premise", "Separate is from ought"]
+    },
+    {
+      "error_type": "begging_the_question",
+      "description": "Assuming what needs to be proven in the premises",
+      "symptoms": ["Circular reasoning", "Premise = conclusion"],
+      "causes": ["Unnoticed assumptions", "Definitional tricks"],
+      "prevention": ["Check premise independence", "Look for circularity"],
+      "correction": ["Provide independent support", "Break the circle"]
+    },
+    {
+      "error_type": "false_dilemma",
+      "description": "Presenting limited options as if they're the only ones",
+      "symptoms": ["Either X or Y", "Forced binary choice"],
+      "causes": ["Oversimplification", "Missing middle ground"],
+      "prevention": ["Look for third options", "Check exhaustiveness"],
+      "correction": ["Identify other alternatives", "Reject forced choice"]
+    },
+    {
+      "error_type": "category_mistake",
+      "description": "Applying concepts to wrong category",
+      "symptoms": ["Type errors", "Nonsensical predications"],
+      "causes": ["Conceptual confusion", "Grammatical misleading"],
+      "prevention": ["Check category appropriateness", "Analyze logical form"],
+      "correction": ["Rephrase in correct category", "Clarify type"]
+    },
+    {
+      "error_type": "equivocation",
+      "description": "Using same word with different meanings",
+      "symptoms": ["Shifting definitions", "Semantic ambiguity"],
+      "causes": ["Ambiguous terms", "Context shifts"],
+      "prevention": ["Define terms consistently", "Watch for meaning shifts"],
+      "correction": ["Disambiguate", "Use distinct terms"]
+    },
+    {
+      "error_type": "straw_man",
+      "description": "Misrepresenting opponent's position to attack it",
+      "symptoms": ["Weaker version", "Caricature", "Missing nuance"],
+      "causes": ["Uncharitable reading", "Misunderstanding", "Rhetorical strategy"],
+      "prevention": ["Use principle of charity", "Steelman instead"],
+      "correction": ["Address actual position", "Represent fairly"]
+    }
+  ],
+  "epistemic_standards": {
+    "preferred_evidence": [
+      "Logical arguments with valid inference",
+      "Thought experiments testing intuitions",
+      "Conceptual analysis revealing structure",
+      "Counterexamples to universal claims",
+      "Coherence with other beliefs",
+      "Explanatory power and scope"
+    ],
+    "burden_of_proof": "Logical consistency and conceptual clarity required for philosophical claims",
+    "certainty_levels": {
+      "certain": "Logically proven (e.g., tautologies, valid deductions from certain premises)",
+      "probable": "Well-argued with minimal objections, coherent with background beliefs",
+      "speculative": "Interesting hypothesis requiring further development and defense",
+      "unknown": "Genuinely unsettled philosophical question with competing views"
+    }
+  },
+  "mental_models": [
+    {
+      "model_name": "justified_true_belief",
+      "description": "Classical analysis of knowledge as justified true belief (JTB)",
+      "use_cases": ["Analyzing knowledge claims", "Epistemology discussions"],
+      "limitations": ["Gettier problems show JTB is insufficient", "Justification analysis needed"],
+      "related_concepts": ["epistemology", "justification", "truth", "belief"]
+    },
+    {
+      "model_name": "socratic_method",
+      "description": "Questioning to expose contradictions and unclear thinking",
+      "use_cases": ["Teaching", "Critical examination", "Revealing assumptions"],
+      "limitations": ["Can be frustrating", "Doesn't always build positive views"],
+      "related_concepts": ["critical_thinking", "dialectic", "maieutics"]
+    },
+    {
+      "model_name": "thought_experiment",
+      "description": "Imagined scenarios to test intuitions and principles",
+      "use_cases": ["Generating counterexamples", "Probing concepts", "Testing theories"],
+      "limitations": ["Intuitions can vary", "Unclear how far to trust intuitions"],
+      "related_concepts": ["philosophical_method", "modal_reasoning", "intuition"]
+    },
+    {
+      "model_name": "dialectical_reasoning",
+      "description": "Thesis-antithesis-synthesis pattern of argument",
+      "use_cases": ["Exploring opposing views", "Building comprehensive theories"],
+      "limitations": ["Not all disputes resolve dialectically", "Can be forced"],
+      "related_concepts": ["Hegelian_dialectic", "argumentation", "synthesis"]
+    },
+    {
+      "model_name": "reflective_equilibrium",
+      "description": "Balancing principles and intuitions through mutual adjustment",
+      "use_cases": ["Ethics", "Justification", "Theory construction"],
+      "limitations": ["Multiple equilibria possible", "Conservative bias"],
+      "related_concepts": ["coherentism", "justification", "moral_methodology"]
+    }
+  ]
+}

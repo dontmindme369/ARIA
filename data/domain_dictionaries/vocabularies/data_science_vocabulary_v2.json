@@ -1,0 +1,476 @@
+{
+  "domain": "data_science",
+  "version": "2.0",
+  "last_updated": "2024-11-14T00:00:00Z",
+  "anchor_alignment": "analytical_mathematics_science",
+  "concepts": {
+    "overfitting": {
+      "term": "overfitting",
+      "definition": "Model learns training data too well including noise, failing to generalize to new data",
+      "synonyms": ["overtraining", "high variance"],
+      "related_concepts": ["bias_variance_tradeoff", "regularization", "cross_validation", "generalization"],
+      "category": "model_evaluation",
+      "complexity": "intermediate",
+      "mental_models": ["memorization_vs_learning", "complexity_penalty", "generalization_gap"],
+      "common_errors": ["using_training_accuracy_only", "insufficient_validation", "model_too_complex"],
+      "detection_patterns": ["high_train_low_test", "excessive_parameters", "perfect_training_fit"],
+      "epistemic_markers": {
+        "evidence_type": "empirical",
+        "certainty_level": "measured"
+      },
+      "reasoning_patterns": ["check train vs test performance", "apply regularization", "reduce complexity", "increase data"],
+      "examples": ["Decision tree too deep", "neural net with too many parameters", "polynomial degree too high"],
+      "prerequisites": ["train_test_split", "model_evaluation", "bias_variance"],
+      "applications": ["model_selection", "regularization", "hyperparameter_tuning"]
+    },
+    "bias_variance_tradeoff": {
+      "term": "bias_variance_tradeoff",
+      "definition": "Balance between model's ability to fit training data (bias) and generalize to new data (variance)",
+      "synonyms": ["bias-variance dilemma"],
+      "related_concepts": ["overfitting", "underfitting", "model_complexity", "regularization"],
+      "category": "machine_learning_theory",
+      "complexity": "advanced",
+      "mental_models": ["complexity_spectrum", "sweet_spot", "error_decomposition"],
+      "common_errors": ["ignoring tradeoff", "only_reducing_bias", "only_reducing_variance"],
+      "detection_patterns": ["MSE decomposition", "learning curves", "complexity analysis"],
+      "epistemic_markers": {
+        "evidence_type": "theoretical_and_empirical",
+        "certainty_level": "fundamental_principle"
+      },
+      "reasoning_patterns": ["identify bias vs variance problem", "adjust model complexity", "tune regularization"],
+      "examples": ["Linear model (high bias)", "deep tree (high variance)", "optimal complexity in between"],
+      "prerequisites": ["supervised_learning", "model_evaluation"],
+      "applications": ["model_selection", "ensemble_methods", "regularization"]
+    },
+    "feature_engineering": {
+      "term": "feature_engineering",
+      "definition": "Creating new features or transforming existing ones to improve model performance",
+      "synonyms": ["feature_construction", "feature_extraction"],
+      "related_concepts": ["feature_selection", "dimensionality_reduction", "domain_knowledge", "representation"],
+      "category": "data_preparation",
+      "complexity": "intermediate",
+      "mental_models": ["domain_to_features", "representation_learning", "feature_space"],
+      "common_errors": ["ignoring_domain_knowledge", "too_many_features", "data_leakage"],
+      "detection_patterns": ["new_derived_features", "transformations", "interactions"],
+      "epistemic_markers": {
+        "evidence_type": "empirical_and_domain",
+        "certainty_level": "validated"
+      },
+      "reasoning_patterns": ["understand domain", "generate candidate features", "test importance", "iterate"],
+      "examples": ["Date → day_of_week", "text → TF-IDF", "polynomial features", "domain_specific_ratios"],
+      "prerequisites": ["domain_knowledge", "data_understanding", "ML_basics"],
+      "applications": ["model_improvement", "representation_learning", "domain_adaptation"]
+    },
+    "cross_validation": {
+      "term": "cross_validation",
+      "definition": "Model evaluation technique partitioning data into train/test folds multiple times",
+      "synonyms": ["CV", "k-fold validation"],
+      "related_concepts": ["train_test_split", "stratification", "time_series_CV", "nested_CV"],
+      "category": "model_evaluation",
+      "complexity": "basic",
+      "mental_models": ["multiple_evaluations", "averaged_performance", "robust_estimation"],
+      "common_errors": ["data_leakage", "not_stratifying", "wrong_CV_for_time_series"],
+      "detection_patterns": ["k-fold", "fold", "cross-validation"],
+      "epistemic_markers": {
+        "evidence_type": "empirical_validation",
+        "certainty_level": "standard_practice"
+      },
+      "reasoning_patterns": ["split into k folds", "train on k-1, test on 1", "repeat for all folds", "average results"],
+      "examples": ["5-fold CV", "10-fold CV", "stratified k-fold", "leave-one-out"],
+      "prerequisites": ["train_test_split", "evaluation_metrics"],
+      "applications": ["model_evaluation", "hyperparameter_tuning", "model_selection"]
+    },
+    "dimensionality_reduction": {
+      "term": "dimensionality_reduction",
+      "definition": "Reducing number of features while preserving important information",
+      "synonyms": ["dimension reduction", "feature reduction"],
+      "related_concepts": ["PCA", "t-SNE", "UMAP", "feature_selection", "curse_of_dimensionality"],
+      "category": "unsupervised_learning",
+      "complexity": "advanced",
+      "mental_models": ["information_compression", "variance_preservation", "manifold_learning"],
+      "common_errors": ["losing_critical_features", "not_scaling_first", "wrong_method_for_task"],
+      "detection_patterns": ["PCA", "dimensionality", "feature reduction"],
+      "epistemic_markers": {
+        "evidence_type": "mathematical_and_empirical",
+        "certainty_level": "technique_dependent"
+      },
+      "reasoning_patterns": ["assess dimensionality", "choose method", "apply reduction", "evaluate preservation"],
+      "examples": ["PCA for visualization", "t-SNE for clusters", "autoencoder compression"],
+      "prerequisites": ["linear_algebra", "statistics", "ML_basics"],
+      "applications": ["visualization", "preprocessing", "noise_reduction", "computation_reduction"]
+    },
+    "ensemble_methods": {
+      "term": "ensemble_methods",
+      "definition": "Combining multiple models to improve predictions beyond individual models",
+      "synonyms": ["model_ensembling", "ensemble_learning"],
+      "related_concepts": ["bagging", "boosting", "stacking", "random_forest", "gradient_boosting"],
+      "category": "machine_learning_techniques",
+      "complexity": "advanced",
+      "mental_models": ["wisdom_of_crowds", "error_averaging", "complementary_models"],
+      "common_errors": ["correlated_models", "overfitting_ensemble", "computational_cost"],
+      "detection_patterns": ["ensemble", "bagging", "boosting", "voting"],
+      "epistemic_markers": {
+        "evidence_type": "empirical",
+        "certainty_level": "proven_effective"
+      },
+      "reasoning_patterns": ["train diverse models", "combine predictions", "evaluate ensemble", "tune weights"],
+      "examples": ["Random Forest", "XGBoost", "voting classifier", "stacking"],
+      "prerequisites": ["base_models", "model_evaluation"],
+      "applications": ["improving_accuracy", "robustness", "competitions", "production"]
+    },
+    "gradient_descent": {
+      "term": "gradient_descent",
+      "definition": "Optimization algorithm iteratively moving toward minimum by following negative gradient",
+      "synonyms": ["gradient optimization"],
+      "related_concepts": ["learning_rate", "momentum", "Adam", "SGD", "backpropagation"],
+      "category": "optimization",
+      "complexity": "advanced",
+      "mental_models": ["hill_descent", "iterative_improvement", "loss_landscape"],
+      "common_errors": ["wrong_learning_rate", "local_minima", "vanishing_gradients"],
+      "detection_patterns": ["gradient", "learning_rate", "optimization", "descent"],
+      "epistemic_markers": {
+        "evidence_type": "mathematical",
+        "certainty_level": "foundational"
+      },
+      "reasoning_patterns": ["compute gradient", "update parameters", "iterate until convergence", "adjust learning rate"],
+      "examples": ["SGD", "mini-batch gradient descent", "Adam optimizer", "momentum"],
+      "prerequisites": ["calculus", "linear_algebra", "optimization"],
+      "applications": ["neural_networks", "logistic_regression", "any_differentiable_model"]
+    },
+    "confusion_matrix": {
+      "term": "confusion_matrix",
+      "definition": "Table showing classification model's predictions vs actual labels",
+      "synonyms": ["error matrix"],
+      "related_concepts": ["precision", "recall", "F1", "accuracy", "true_positive", "false_positive"],
+      "category": "model_evaluation",
+      "complexity": "basic",
+      "mental_models": ["error_types", "classification_outcomes", "metric_derivation"],
+      "common_errors": ["ignoring_class_imbalance", "using_accuracy_only", "confusing_precision_recall"],
+      "detection_patterns": ["confusion matrix", "TP", "FP", "TN", "FN"],
+      "epistemic_markers": {
+        "evidence_type": "empirical",
+        "certainty_level": "measured"
+      },
+      "reasoning_patterns": ["construct matrix", "calculate metrics", "identify error types", "improve model"],
+      "examples": ["Binary classification", "multi-class confusion matrix", "precision-recall from confusion matrix"],
+      "prerequisites": ["classification", "evaluation_metrics"],
+      "applications": ["model_evaluation", "error_analysis", "metric_calculation"]
+    },
+    "data_leakage": {
+      "term": "data_leakage",
+      "definition": "Training data contains information about test data, leading to overly optimistic performance",
+      "synonyms": ["leakage", "target_leakage"],
+      "related_concepts": ["train_test_contamination", "temporal_leakage", "feature_leakage"],
+      "category": "data_preparation",
+      "complexity": "intermediate",
+      "mental_models": ["temporal_order", "information_flow", "contamination"],
+      "common_errors": ["scaling_before_split", "target_encoding_on_full_data", "future_information"],
+      "detection_patterns": ["unrealistic_performance", "perfect_predictions", "time_order_violation"],
+      "epistemic_markers": {
+        "evidence_type": "methodological",
+        "certainty_level": "critical_error"
+      },
+      "reasoning_patterns": ["identify information flow", "check temporal order", "validate split", "reproduce findings"],
+      "examples": ["Scaling before split", "using future data in time series", "test set in training"],
+      "prerequisites": ["train_test_split", "data_pipeline"],
+      "applications": ["data_validation", "pipeline_design", "error_prevention"]
+    },
+    "imbalanced_data": {
+      "term": "imbalanced_data",
+      "definition": "Dataset where classes are not represented equally",
+      "synonyms": ["class_imbalance", "skewed_classes"],
+      "related_concepts": ["SMOTE", "undersampling", "oversampling", "class_weights", "stratification"],
+      "category": "data_challenges",
+      "complexity": "intermediate",
+      "mental_models": ["minority_majority", "sampling_strategies", "metric_choice"],
+      "common_errors": ["using_accuracy", "ignoring_imbalance", "naive_sampling"],
+      "detection_patterns": ["class distribution", "minority class", "imbalance ratio"],
+      "epistemic_markers": {
+        "evidence_type": "empirical",
+        "certainty_level": "measured"
+      },
+      "reasoning_patterns": ["assess imbalance", "choose strategy", "adjust metrics", "validate approach"],
+      "examples": ["Fraud detection (1% fraud)", "medical diagnosis (rare disease)", "anomaly detection"],
+      "prerequisites": ["classification", "sampling"],
+      "applications": ["classification", "anomaly_detection", "medical_diagnosis"]
+    },
+    "regularization": {
+      "term": "regularization",
+      "definition": "Technique adding penalty term to loss function to prevent overfitting",
+      "synonyms": ["penalization", "shrinkage"],
+      "related_concepts": ["L1_regularization", "L2_regularization", "ridge", "lasso", "elastic_net"],
+      "category": "model_improvement",
+      "complexity": "intermediate",
+      "mental_models": ["complexity_penalty", "weight_shrinkage", "feature_selection"],
+      "common_errors": ["wrong_lambda", "not_scaling_features", "regularizing_bias"],
+      "detection_patterns": ["L1", "L2", "lambda", "alpha", "regularization"],
+      "epistemic_markers": {
+        "evidence_type": "mathematical_and_empirical",
+        "certainty_level": "proven_technique"
+      },
+      "reasoning_patterns": ["identify overfitting", "choose regularization type", "tune strength", "evaluate"],
+      "examples": ["Ridge regression (L2)", "Lasso (L1)", "Elastic Net (L1+L2)", "dropout in neural nets"],
+      "prerequisites": ["overfitting", "optimization"],
+      "applications": ["preventing_overfitting", "feature_selection", "model_simplification"]
+    },
+    "A_B_testing": {
+      "term": "A_B_testing",
+      "definition": "Experimental design comparing two versions to determine which performs better",
+      "synonyms": ["split testing", "bucket testing"],
+      "related_concepts": ["randomized_experiment", "statistical_significance", "sample_size", "hypothesis_testing"],
+      "category": "experimental_design",
+      "complexity": "intermediate",
+      "mental_models": ["controlled_experiment", "statistical_comparison", "causal_inference"],
+      "common_errors": ["insufficient_sample_size", "early_stopping", "multiple_testing"],
+      "detection_patterns": ["A/B test", "treatment/control", "variant"],
+      "epistemic_markers": {
+        "evidence_type": "experimental",
+        "certainty_level": "causal_when_well_designed"
+      },
+      "reasoning_patterns": ["define hypothesis", "randomize assignment", "collect data", "statistical test", "decide"],
+      "examples": ["Website button color", "email subject lines", "algorithm versions"],
+      "prerequisites": ["hypothesis_testing", "randomization", "statistics"],
+      "applications": ["product_optimization", "marketing", "algorithm_comparison"]
+    },
+    "time_series_analysis": {
+      "term": "time_series_analysis",
+      "definition": "Analyzing data points ordered in time to identify patterns and forecast",
+      "synonyms": ["temporal_analysis", "time_series"],
+      "related_concepts": ["trend", "seasonality", "ARIMA", "autocorrelation", "stationarity"],
+      "category": "specialized_techniques",
+      "complexity": "advanced",
+      "mental_models": ["temporal_dependence", "decomposition", "forecasting"],
+      "common_errors": ["ignoring_autocorrelation", "non_stationarity", "data_leakage_in_CV"],
+      "detection_patterns": ["time series", "temporal", "forecast", "lag"],
+      "epistemic_markers": {
+        "evidence_type": "temporal_statistical",
+        "certainty_level": "model_dependent"
+      },
+      "reasoning_patterns": ["check stationarity", "decompose components", "model selection", "forecast", "validate"],
+      "examples": ["Stock prices", "weather forecasting", "demand prediction", "ARIMA modeling"],
+      "prerequisites": ["statistics", "autocorrelation", "stationarity"],
+      "applications": ["forecasting", "anomaly_detection", "trend_analysis"]
+    },
+    "clustering": {
+      "term": "clustering",
+      "definition": "Grouping data points into clusters based on similarity",
+      "synonyms": ["cluster_analysis", "unsupervised_grouping"],
+      "related_concepts": ["k-means", "hierarchical_clustering", "DBSCAN", "silhouette_score", "distance_metric"],
+      "category": "unsupervised_learning",
+      "complexity": "intermediate",
+      "mental_models": ["similarity_grouping", "centroid_based", "density_based"],
+      "common_errors": ["wrong_k", "not_scaling", "assuming_spherical_clusters"],
+      "detection_patterns": ["cluster", "k-means", "grouping", "unsupervised"],
+      "epistemic_markers": {
+        "evidence_type": "algorithmic",
+        "certainty_level": "method_dependent"
+      },
+      "reasoning_patterns": ["choose algorithm", "determine k", "apply clustering", "evaluate quality", "interpret"],
+      "examples": ["Customer segmentation", "image compression", "anomaly detection", "document grouping"],
+      "prerequisites": ["distance_metrics", "unsupervised_learning"],
+      "applications": ["segmentation", "compression", "preprocessing", "exploration"]
+    },
+    "neural_network": {
+      "term": "neural_network",
+      "definition": "Computational model inspired by biological neurons, learning through backpropagation",
+      "synonyms": ["artificial_neural_network", "ANN", "deep_learning"],
+      "related_concepts": ["layers", "activation_function", "backpropagation", "weights", "deep_learning"],
+      "category": "machine_learning_models",
+      "complexity": "advanced",
+      "mental_models": ["layered_transformation", "universal_approximator", "representation_learning"],
+      "common_errors": ["wrong_architecture", "vanishing_gradients", "overfitting"],
+      "detection_patterns": ["neural network", "deep learning", "layers", "neurons"],
+      "epistemic_markers": {
+        "evidence_type": "empirical",
+        "certainty_level": "proven_effective"
+      },
+      "reasoning_patterns": ["design architecture", "initialize weights", "train with backprop", "tune hyperparameters"],
+      "examples": ["Feedforward NN", "CNN for images", "RNN for sequences", "Transformer"],
+      "prerequisites": ["calculus", "linear_algebra", "gradient_descent"],
+      "applications": ["computer_vision", "NLP", "speech_recognition", "games"]
+    }
+  },
+  "reasoning_heuristics": [
+    {
+      "pattern": "Always split data before preprocessing",
+      "context": "Preventing data leakage",
+      "limitations": "Some preprocessing must happen before (e.g., missing value detection)",
+      "examples": ["Fit scaler on train only", "encode on train only"]
+    },
+    {
+      "pattern": "Use cross-validation for model evaluation",
+      "context": "Estimating generalization performance",
+      "limitations": "Computational cost, time series requires special CV",
+      "examples": ["k-fold CV", "stratified CV for imbalanced data"]
+    },
+    {
+      "pattern": "Start simple, add complexity only if needed",
+      "context": "Model selection",
+      "limitations": "Sometimes complex models needed from start",
+      "examples": ["Linear model first", "add regularization", "try ensemble"]
+    },
+    {
+      "pattern": "Visualize data before modeling",
+      "context": "Understanding data",
+      "limitations": "High-dimensional data hard to visualize",
+      "examples": ["Distributions", "correlations", "target relationship"]
+    },
+    {
+      "pattern": "Check for data leakage",
+      "context": "Pipeline validation",
+      "limitations": "Subtle leakage hard to detect",
+      "examples": ["Temporal order", "test in training", "target encoding"]
+    },
+    {
+      "pattern": "Balance complexity with interpretability",
+      "context": "Model choice",
+      "limitations": "Some domains require interpretability",
+      "examples": ["Medical: prefer interpretable", "ad targeting: black box OK"]
+    },
+    {
+      "pattern": "Use appropriate metrics for task",
+      "context": "Model evaluation",
+      "limitations": "Multiple metrics often needed",
+      "examples": ["Imbalanced: F1/AUC not accuracy", "regression: MAE vs RMSE"]
+    },
+    {
+      "pattern": "Feature engineering often beats algorithm choice",
+      "context": "Performance improvement",
+      "limitations": "Deep learning can learn features",
+      "examples": ["Domain features", "interactions", "transformations"]
+    },
+    {
+      "pattern": "Validate assumptions of statistical tests",
+      "context": "Hypothesis testing",
+      "limitations": "Robustness varies",
+      "examples": ["Normality", "independence", "homoscedasticity"]
+    },
+    {
+      "pattern": "Ensemble diverse models for best performance",
+      "context": "Maximizing accuracy",
+      "limitations": ["Computational cost", "complexity", "diminishing returns"],
+      "examples": ["Combine tree + linear + NN", "bagging + boosting"]
+    }
+  ],
+  "common_errors": [
+    {
+      "error_type": "data_leakage",
+      "description": "Test information leaking into training",
+      "symptoms": ["Unrealistic performance", "production failure"],
+      "causes": ["Preprocessing before split", "temporal violation", "target encoding on full data"],
+      "prevention": ["Split first", "fit on train only", "check temporal order"],
+      "correction": ["Redesign pipeline", "proper splitting", "validate thoroughly"]
+    },
+    {
+      "error_type": "using_wrong_metric",
+      "description": "Evaluating with inappropriate metric for task",
+      "symptoms": ["Misleading performance", "poor real-world results"],
+      "causes": ["Default metrics", "ignoring imbalance", "misunderstanding task"],
+      "prevention": ["Choose appropriate metric", "consider class distribution", "domain requirements"],
+      "correction": ["Switch to appropriate metric", "re-evaluate model"]
+    },
+    {
+      "error_type": "overfitting",
+      "description": "Model too complex, memorizes training data",
+      "symptoms": ["High train accuracy", "low test accuracy", "large gap"],
+      "causes": ["Too many parameters", "insufficient data", "no regularization"],
+      "prevention": ["Cross-validation", "regularization", "simpler model", "more data"],
+      "correction": ["Add regularization", "reduce complexity", "get more data"]
+    },
+    {
+      "error_type": "ignoring_data_quality",
+      "description": "Not checking for errors, outliers, inconsistencies",
+      "symptoms": ["Poor model performance", "unexpected predictions"],
+      "causes": ["Skipping EDA", "rushing to modeling", "assuming clean data"],
+      "prevention": ["Thorough EDA", "data validation", "outlier detection"],
+      "correction": ["Clean data", "handle outliers", "validate quality"]
+    },
+    {
+      "error_type": "not_scaling_features",
+      "description": "Different feature scales affecting distance-based algorithms",
+      "symptoms": ["Poor performance", "slow convergence", "dominated features"],
+      "causes": ["Forgetting preprocessing", "not understanding algorithm"],
+      "prevention": ["Standard scaling", "min-max scaling", "check algorithm requirements"],
+      "correction": ["Apply appropriate scaling", "retrain model"]
+    },
+    {
+      "error_type": "p_hacking",
+      "description": "Multiple testing without correction leading to false discoveries",
+      "symptoms": ["Spurious findings", "replication failure"],
+      "causes": ["Multiple comparisons", "optional stopping", "selective reporting"],
+      "prevention": ["Bonferroni correction", "preregistration", "single primary hypothesis"],
+      "correction": ["Correct for multiple testing", "replicate findings"]
+    },
+    {
+      "error_type": "insufficient_validation",
+      "description": "Not properly validating model generalization",
+      "symptoms": ["Overly optimistic estimates", "production failures"],
+      "causes": ["Single train-test split", "no CV", "small test set"],
+      "prevention": ["Use cross-validation", "hold-out test set", "adequate sample size"],
+      "correction": ["Proper CV", "independent test set", "validate on new data"]
+    },
+    {
+      "error_type": "ignoring_class_imbalance",
+      "description": "Not accounting for unequal class distribution",
+      "symptoms": ["High accuracy but useless model", "predicts majority only"],
+      "causes": ["Using accuracy", "not examining distribution", "default settings"],
+      "prevention": ["Check class distribution", "use F1/AUC", "adjust class weights/sampling"],
+      "correction": ["Resample", "adjust weights", "use appropriate metrics"]
+    }
+  ],
+  "epistemic_standards": {
+    "preferred_evidence": [
+      "Cross-validated performance",
+      "Hold-out test set results",
+      "Replicated findings",
+      "Statistical significance with effect sizes",
+      "Ablation studies",
+      "Diverse benchmark datasets",
+      "Open code and reproducible results"
+    ],
+    "burden_of_proof": "Data science claims require: proper validation, appropriate metrics, statistical rigor, reproducibility, and domain sensibility",
+    "certainty_levels": {
+      "strong": "Cross-validated, replicated, large effects, multiple datasets",
+      "moderate": "Single study, adequate validation, reasonable effect size",
+      "weak": "Single split, small dataset, marginal improvement",
+      "speculative": "Preliminary results, no validation, needs further testing"
+    }
+  },
+  "mental_models": [
+    {
+      "model_name": "train_validation_test",
+      "description": "Three-way data split: train (fit), validation (tune), test (final evaluation)",
+      "use_cases": ["Model development", "hyperparameter tuning", "unbiased evaluation"],
+      "limitations": ["Reduces effective sample size", "needs enough data"],
+      "related_concepts": ["cross_validation", "overfitting", "generalization"]
+    },
+    {
+      "model_name": "bias_variance_tradeoff",
+      "description": "Balance between underfitting (bias) and overfitting (variance)",
+      "use_cases": ["Model selection", "complexity tuning", "regularization"],
+      "limitations": ["Simplified view", "tradeoff not always strict"],
+      "related_concepts": ["overfitting", "model_complexity", "regularization"]
+    },
+    {
+      "model_name": "curse_of_dimensionality",
+      "description": "High-dimensional spaces create sparsity and distance problems",
+      "use_cases": ["Feature selection", "dimensionality reduction", "model choice"],
+      "limitations": ["Some algorithms handle high-D better", "effective dimensionality matters"],
+      "related_concepts": ["dimensionality_reduction", "feature_selection", "distance_metrics"]
+    },
+    {
+      "model_name": "no_free_lunch",
+      "description": "No single algorithm performs best across all problems",
+      "use_cases": ["Model selection", "algorithm comparison", "avoiding dogma"],
+      "limitations": ["Restricted domains may have best algorithms", "practical differences exist"],
+      "related_concepts": ["model_selection", "ensemble_methods", "algorithm_choice"]
+    },
+    {
+      "model_name": "ML_pipeline",
+      "description": "Data → Preprocessing → Feature Engineering → Model → Evaluation → Deployment",
+      "use_cases": ["Project structure", "workflow organization", "preventing leakage"],
+      "limitations": ["Iterative not linear", "feedback loops exist"],
+      "related_concepts": ["data_pipeline", "workflow", "deployment"]
+    }
+  ]
+}

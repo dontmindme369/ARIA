@@ -20,12 +20,17 @@ if str(PROJECT_ROOT / "src") not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
 # Core imports
-from utils.config_loader import load_config, get_config_value
-from utils.paths import get_project_root, ensure_dir
+from utils.config_loader import load_config, get_config_value  # type: ignore[import]
+from utils.paths import get_project_root, ensure_dir  # type: ignore[import]
 
 # Import ARIA core (will be ported next)
-try:
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
     from core.aria_core import ARIA
+
+try:
+    from core.aria_core import ARIA  # type: ignore[no-redef]
     ARIA_CORE_AVAILABLE = True
 except ImportError as e:
     print(f"[ARIA] ERROR: Core ARIA class not available: {e}", file=sys.stderr)
@@ -134,7 +139,7 @@ Examples:
 
     # Get output directory (from args or config)
     if args.output:
-        from utils.paths import expand_path
+        from utils.paths import expand_path  # type: ignore[import]
         output_dir = expand_path(args.output)
     else:
         output_dir = config['paths']['output_dir']
@@ -171,8 +176,8 @@ Examples:
         print("[ARIA] Running query...")
         result = aria.query(
             query,
-            with_anchor=args.with_anchor,
-            preset_override=args.preset,
+            with_anchor=args.with_anchor,  # type: ignore[call-arg]
+            preset_override=args.preset,  # type: ignore[call-arg]
         )
 
         # Print results

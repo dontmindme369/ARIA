@@ -1,0 +1,4208 @@
+{
+  "philosophy": {
+    "domain": "philosophy",
+    "nodes": [
+      {
+        "id": "epistemology",
+        "term": "epistemology",
+        "category": "core_philosophy",
+        "complexity": "intermediate",
+        "definition": "The study of knowledge, its nature, sources, limits, and justification..."
+      },
+      {
+        "id": "metaphysics",
+        "term": "metaphysics",
+        "category": "core_philosophy",
+        "complexity": "advanced",
+        "definition": "The study of the fundamental nature of reality, existence, and being..."
+      },
+      {
+        "id": "ethics",
+        "term": "ethics",
+        "category": "practical_philosophy",
+        "complexity": "intermediate",
+        "definition": "The study of morality, right and wrong conduct, and what makes actions good or bad..."
+      },
+      {
+        "id": "logic",
+        "term": "logic",
+        "category": "formal_philosophy",
+        "complexity": "basic",
+        "definition": "The study of valid reasoning, argument structure, and inference..."
+      },
+      {
+        "id": "phenomenology",
+        "term": "phenomenology",
+        "category": "continental_philosophy",
+        "complexity": "advanced",
+        "definition": "The study of conscious experience from the first-person perspective..."
+      },
+      {
+        "id": "aesthetics",
+        "term": "aesthetics",
+        "category": "value_theory",
+        "complexity": "intermediate",
+        "definition": "The study of beauty, art, taste, and the nature of aesthetic experience..."
+      },
+      {
+        "id": "political_philosophy",
+        "term": "political_philosophy",
+        "category": "practical_philosophy",
+        "complexity": "intermediate",
+        "definition": "The study of government, justice, rights, law, and the enforcement of legal codes..."
+      },
+      {
+        "id": "philosophy_of_mind",
+        "term": "philosophy_of_mind",
+        "category": "specialized_philosophy",
+        "complexity": "advanced",
+        "definition": "The study of the nature of mind, mental properties, consciousness, and their relationship to the bod..."
+      },
+      {
+        "id": "philosophy_of_science",
+        "term": "philosophy_of_science",
+        "category": "specialized_philosophy",
+        "complexity": "intermediate",
+        "definition": "The study of the foundations, methods, and implications of science..."
+      },
+      {
+        "id": "existentialism",
+        "term": "existentialism",
+        "category": "continental_philosophy",
+        "complexity": "advanced",
+        "definition": "Philosophy emphasizing individual existence, freedom, choice, and subjective experience..."
+      },
+      {
+        "id": "skepticism",
+        "term": "skepticism",
+        "category": "epistemology",
+        "complexity": "intermediate",
+        "definition": "The philosophical position questioning whether knowledge is possible..."
+      },
+      {
+        "id": "utilitarianism",
+        "term": "utilitarianism",
+        "category": "ethics",
+        "complexity": "intermediate",
+        "definition": "Ethical theory that the right action maximizes overall happiness or well-being..."
+      },
+      {
+        "id": "deontology",
+        "term": "deontology",
+        "category": "ethics",
+        "complexity": "intermediate",
+        "definition": "Ethical theory that actions are right or wrong based on rules and duties, not consequences..."
+      },
+      {
+        "id": "virtue_ethics",
+        "term": "virtue_ethics",
+        "category": "ethics",
+        "complexity": "intermediate",
+        "definition": "Ethical theory focusing on character and virtues rather than rules or consequences..."
+      },
+      {
+        "id": "rationalism",
+        "term": "rationalism",
+        "category": "epistemology",
+        "complexity": "intermediate",
+        "definition": "Epistemological view that reason is the primary source of knowledge..."
+      },
+      {
+        "id": "empiricism",
+        "term": "empiricism",
+        "category": "epistemology",
+        "complexity": "intermediate",
+        "definition": "Epistemological view that experience is the primary source of knowledge..."
+      }
+    ],
+    "edges": [
+      {
+        "source": "epistemology",
+        "target": "justification",
+        "weight": 1
+      },
+      {
+        "source": "belief",
+        "target": "epistemology",
+        "weight": 1
+      },
+      {
+        "source": "epistemology",
+        "target": "truth",
+        "weight": 1
+      },
+      {
+        "source": "epistemology",
+        "target": "skepticism",
+        "weight": 1
+      },
+      {
+        "source": "epistemology",
+        "target": "foundationalism",
+        "weight": 1
+      },
+      {
+        "source": "coherentism",
+        "target": "epistemology",
+        "weight": 1
+      },
+      {
+        "source": "metaphysics",
+        "target": "ontology",
+        "weight": 1
+      },
+      {
+        "source": "metaphysics",
+        "target": "substance",
+        "weight": 1
+      },
+      {
+        "source": "causation",
+        "target": "metaphysics",
+        "weight": 1
+      },
+      {
+        "source": "identity",
+        "target": "metaphysics",
+        "weight": 1
+      },
+      {
+        "source": "metaphysics",
+        "target": "time",
+        "weight": 1
+      },
+      {
+        "source": "metaphysics",
+        "target": "space",
+        "weight": 1
+      },
+      {
+        "source": "metaphysics",
+        "target": "modality",
+        "weight": 1
+      },
+      {
+        "source": "ethics",
+        "target": "utilitarianism",
+        "weight": 1
+      },
+      {
+        "source": "deontology",
+        "target": "ethics",
+        "weight": 1
+      },
+      {
+        "source": "ethics",
+        "target": "virtue_ethics",
+        "weight": 1
+      },
+      {
+        "source": "ethics",
+        "target": "moral_realism",
+        "weight": 1
+      },
+      {
+        "source": "ethics",
+        "target": "moral_relativism",
+        "weight": 1
+      },
+      {
+        "source": "deduction",
+        "target": "logic",
+        "weight": 1
+      },
+      {
+        "source": "induction",
+        "target": "logic",
+        "weight": 1
+      },
+      {
+        "source": "logic",
+        "target": "validity",
+        "weight": 1
+      },
+      {
+        "source": "logic",
+        "target": "soundness",
+        "weight": 1
+      },
+      {
+        "source": "fallacy",
+        "target": "logic",
+        "weight": 1
+      },
+      {
+        "source": "inference",
+        "target": "logic",
+        "weight": 1
+      },
+      {
+        "source": "intentionality",
+        "target": "phenomenology",
+        "weight": 1
+      },
+      {
+        "source": "phenomenology",
+        "target": "qualia",
+        "weight": 1
+      },
+      {
+        "source": "consciousness",
+        "target": "phenomenology",
+        "weight": 1
+      },
+      {
+        "source": "lived_experience",
+        "target": "phenomenology",
+        "weight": 1
+      },
+      {
+        "source": "intersubjectivity",
+        "target": "phenomenology",
+        "weight": 1
+      },
+      {
+        "source": "aesthetics",
+        "target": "beauty",
+        "weight": 1
+      },
+      {
+        "source": "aesthetics",
+        "target": "sublime",
+        "weight": 1
+      },
+      {
+        "source": "aesthetics",
+        "target": "taste",
+        "weight": 1
+      },
+      {
+        "source": "aesthetics",
+        "target": "artistic_value",
+        "weight": 1
+      },
+      {
+        "source": "aesthetic_judgment",
+        "target": "aesthetics",
+        "weight": 1
+      },
+      {
+        "source": "justice",
+        "target": "political_philosophy",
+        "weight": 1
+      },
+      {
+        "source": "liberty",
+        "target": "political_philosophy",
+        "weight": 1
+      },
+      {
+        "source": "authority",
+        "target": "political_philosophy",
+        "weight": 1
+      },
+      {
+        "source": "legitimacy",
+        "target": "political_philosophy",
+        "weight": 1
+      },
+      {
+        "source": "political_philosophy",
+        "target": "rights",
+        "weight": 1
+      },
+      {
+        "source": "democracy",
+        "target": "political_philosophy",
+        "weight": 1
+      },
+      {
+        "source": "consciousness",
+        "target": "philosophy_of_mind",
+        "weight": 1
+      },
+      {
+        "source": "philosophy_of_mind",
+        "target": "qualia",
+        "weight": 1
+      },
+      {
+        "source": "intentionality",
+        "target": "philosophy_of_mind",
+        "weight": 1
+      },
+      {
+        "source": "mind-body_problem",
+        "target": "philosophy_of_mind",
+        "weight": 1
+      },
+      {
+        "source": "functionalism",
+        "target": "philosophy_of_mind",
+        "weight": 1
+      },
+      {
+        "source": "philosophy_of_science",
+        "target": "scientific_method",
+        "weight": 1
+      },
+      {
+        "source": "philosophy_of_science",
+        "target": "theory",
+        "weight": 1
+      },
+      {
+        "source": "explanation",
+        "target": "philosophy_of_science",
+        "weight": 1
+      },
+      {
+        "source": "confirmation",
+        "target": "philosophy_of_science",
+        "weight": 1
+      },
+      {
+        "source": "falsification",
+        "target": "philosophy_of_science",
+        "weight": 1
+      },
+      {
+        "source": "authenticity",
+        "target": "existentialism",
+        "weight": 1
+      },
+      {
+        "source": "absurd",
+        "target": "existentialism",
+        "weight": 1
+      },
+      {
+        "source": "existentialism",
+        "target": "freedom",
+        "weight": 1
+      },
+      {
+        "source": "bad_faith",
+        "target": "existentialism",
+        "weight": 1
+      },
+      {
+        "source": "anxiety",
+        "target": "existentialism",
+        "weight": 1
+      },
+      {
+        "source": "being",
+        "target": "existentialism",
+        "weight": 1
+      },
+      {
+        "source": "doubt",
+        "target": "skepticism",
+        "weight": 1
+      },
+      {
+        "source": "certainty",
+        "target": "skepticism",
+        "weight": 1
+      },
+      {
+        "source": "justification",
+        "target": "skepticism",
+        "weight": 1
+      },
+      {
+        "source": "foundationalism",
+        "target": "skepticism",
+        "weight": 1
+      },
+      {
+        "source": "problem_of_induction",
+        "target": "skepticism",
+        "weight": 1
+      },
+      {
+        "source": "consequentialism",
+        "target": "utilitarianism",
+        "weight": 1
+      },
+      {
+        "source": "hedonism",
+        "target": "utilitarianism",
+        "weight": 1
+      },
+      {
+        "source": "utilitarianism",
+        "target": "utility",
+        "weight": 1
+      },
+      {
+        "source": "greatest_happiness",
+        "target": "utilitarianism",
+        "weight": 1
+      },
+      {
+        "source": "act_vs_rule",
+        "target": "utilitarianism",
+        "weight": 1
+      },
+      {
+        "source": "categorical_imperative",
+        "target": "deontology",
+        "weight": 1
+      },
+      {
+        "source": "deontology",
+        "target": "duty",
+        "weight": 1
+      },
+      {
+        "source": "deontology",
+        "target": "rights",
+        "weight": 1
+      },
+      {
+        "source": "deontology",
+        "target": "dignity",
+        "weight": 1
+      },
+      {
+        "source": "deontology",
+        "target": "universalizability",
+        "weight": 1
+      },
+      {
+        "source": "virtue",
+        "target": "virtue_ethics",
+        "weight": 1
+      },
+      {
+        "source": "character",
+        "target": "virtue_ethics",
+        "weight": 1
+      },
+      {
+        "source": "eudaimonia",
+        "target": "virtue_ethics",
+        "weight": 1
+      },
+      {
+        "source": "practical_wisdom",
+        "target": "virtue_ethics",
+        "weight": 1
+      },
+      {
+        "source": "golden_mean",
+        "target": "virtue_ethics",
+        "weight": 1
+      },
+      {
+        "source": "a_priori_knowledge",
+        "target": "rationalism",
+        "weight": 1
+      },
+      {
+        "source": "innate_ideas",
+        "target": "rationalism",
+        "weight": 1
+      },
+      {
+        "source": "deduction",
+        "target": "rationalism",
+        "weight": 1
+      },
+      {
+        "source": "necessity",
+        "target": "rationalism",
+        "weight": 1
+      },
+      {
+        "source": "empiricism",
+        "target": "sense_experience",
+        "weight": 1
+      },
+      {
+        "source": "a_posteriori_knowledge",
+        "target": "empiricism",
+        "weight": 1
+      },
+      {
+        "source": "empiricism",
+        "target": "induction",
+        "weight": 1
+      },
+      {
+        "source": "empiricism",
+        "target": "observation",
+        "weight": 1
+      }
+    ],
+    "metrics": {
+      "total_nodes": 16,
+      "total_edges": 84,
+      "avg_degree": 5.5,
+      "max_degree": 7,
+      "min_degree": 4,
+      "central_concepts": [
+        {
+          "id": "metaphysics",
+          "degree": 7
+        },
+        {
+          "id": "epistemology",
+          "degree": 6
+        },
+        {
+          "id": "logic",
+          "degree": 6
+        },
+        {
+          "id": "political_philosophy",
+          "degree": 6
+        },
+        {
+          "id": "existentialism",
+          "degree": 6
+        }
+      ],
+      "peripheral_concepts": [
+        {
+          "id": "rationalism",
+          "degree": 4
+        },
+        {
+          "id": "empiricism",
+          "degree": 4
+        },
+        {
+          "id": "ethics",
+          "degree": 5
+        },
+        {
+          "id": "phenomenology",
+          "degree": 5
+        },
+        {
+          "id": "aesthetics",
+          "degree": 5
+        }
+      ],
+      "category_distribution": {
+        "core_philosophy": 2,
+        "practical_philosophy": 2,
+        "formal_philosophy": 1,
+        "continental_philosophy": 2,
+        "value_theory": 1,
+        "specialized_philosophy": 2,
+        "epistemology": 3,
+        "ethics": 3
+      },
+      "complexity_distribution": {
+        "intermediate": 11,
+        "advanced": 4,
+        "basic": 1
+      },
+      "density": 0.7
+    }
+  },
+  "engineering": {
+    "domain": "engineering",
+    "nodes": [
+      {
+        "id": "factor_of_safety",
+        "term": "factor_of_safety",
+        "category": "design_principles",
+        "complexity": "basic",
+        "definition": "Ratio of a structure's ultimate strength to its expected working load, accounting for uncertainties..."
+      },
+      {
+        "id": "stress",
+        "term": "stress",
+        "category": "mechanics",
+        "complexity": "basic",
+        "definition": "Internal force per unit area within a material arising from external loads..."
+      },
+      {
+        "id": "strain",
+        "term": "strain",
+        "category": "mechanics",
+        "complexity": "basic",
+        "definition": "Deformation of a material relative to its original dimensions..."
+      },
+      {
+        "id": "youngs_modulus",
+        "term": "youngs_modulus",
+        "category": "material_properties",
+        "complexity": "intermediate",
+        "definition": "Material stiffness parameter relating stress to strain in elastic region..."
+      },
+      {
+        "id": "yield_strength",
+        "term": "yield_strength",
+        "category": "material_properties",
+        "complexity": "intermediate",
+        "definition": "Stress level at which a material begins permanent plastic deformation..."
+      },
+      {
+        "id": "fatigue",
+        "term": "fatigue",
+        "category": "failure_modes",
+        "complexity": "advanced",
+        "definition": "Progressive structural damage under repeated cyclic loading..."
+      },
+      {
+        "id": "buckling",
+        "term": "buckling",
+        "category": "failure_modes",
+        "complexity": "advanced",
+        "definition": "Sudden lateral deformation of a slender structure under compressive load..."
+      },
+      {
+        "id": "thermal_expansion",
+        "term": "thermal_expansion",
+        "category": "thermal",
+        "complexity": "basic",
+        "definition": "Change in dimensions of a material due to temperature change..."
+      },
+      {
+        "id": "heat_transfer",
+        "term": "heat_transfer",
+        "category": "thermal",
+        "complexity": "intermediate",
+        "definition": "Movement of thermal energy between objects or within objects..."
+      },
+      {
+        "id": "fluid_dynamics",
+        "term": "fluid_dynamics",
+        "category": "fluids",
+        "complexity": "advanced",
+        "definition": "Study of fluid motion and forces in fluids..."
+      },
+      {
+        "id": "control_system",
+        "term": "control_system",
+        "category": "systems",
+        "complexity": "advanced",
+        "definition": "System that manages, commands, directs or regulates behavior of other systems..."
+      },
+      {
+        "id": "circuit_analysis",
+        "term": "circuit_analysis",
+        "category": "electrical",
+        "complexity": "intermediate",
+        "definition": "Determination of voltages and currents in electrical circuits..."
+      },
+      {
+        "id": "signal_processing",
+        "term": "signal_processing",
+        "category": "electrical",
+        "complexity": "advanced",
+        "definition": "Analysis, interpretation, and manipulation of signals..."
+      },
+      {
+        "id": "thermodynamics",
+        "term": "thermodynamics",
+        "category": "thermal",
+        "complexity": "advanced",
+        "definition": "Study of energy, heat, work, and their interconversion..."
+      },
+      {
+        "id": "materials_selection",
+        "term": "materials_selection",
+        "category": "design_process",
+        "complexity": "intermediate",
+        "definition": "Process of choosing appropriate material for engineering application..."
+      },
+      {
+        "id": "finite_element_analysis",
+        "term": "finite_element_analysis",
+        "category": "analysis_methods",
+        "complexity": "advanced",
+        "definition": "Numerical method for solving complex engineering problems by discretization..."
+      }
+    ],
+    "edges": [
+      {
+        "source": "factor_of_safety",
+        "target": "stress",
+        "weight": 2
+      },
+      {
+        "source": "factor_of_safety",
+        "target": "strain",
+        "weight": 1
+      },
+      {
+        "source": "factor_of_safety",
+        "target": "failure_mode",
+        "weight": 1
+      },
+      {
+        "source": "design_criteria",
+        "target": "factor_of_safety",
+        "weight": 1
+      },
+      {
+        "source": "factor_of_safety",
+        "target": "reliability",
+        "weight": 1
+      },
+      {
+        "source": "strain",
+        "target": "stress",
+        "weight": 2
+      },
+      {
+        "source": "stress",
+        "target": "youngs_modulus",
+        "weight": 2
+      },
+      {
+        "source": "stress",
+        "target": "yield_strength",
+        "weight": 1
+      },
+      {
+        "source": "stress",
+        "target": "ultimate_strength",
+        "weight": 1
+      },
+      {
+        "source": "strain",
+        "target": "youngs_modulus",
+        "weight": 2
+      },
+      {
+        "source": "poissons_ratio",
+        "target": "strain",
+        "weight": 1
+      },
+      {
+        "source": "elastic_limit",
+        "target": "strain",
+        "weight": 1
+      },
+      {
+        "source": "hookes_law",
+        "target": "youngs_modulus",
+        "weight": 1
+      },
+      {
+        "source": "stiffness",
+        "target": "youngs_modulus",
+        "weight": 1
+      },
+      {
+        "source": "compliance",
+        "target": "youngs_modulus",
+        "weight": 1
+      },
+      {
+        "source": "plastic_deformation",
+        "target": "yield_strength",
+        "weight": 1
+      },
+      {
+        "source": "ultimate_strength",
+        "target": "yield_strength",
+        "weight": 1
+      },
+      {
+        "source": "ductility",
+        "target": "yield_strength",
+        "weight": 1
+      },
+      {
+        "source": "necking",
+        "target": "yield_strength",
+        "weight": 1
+      },
+      {
+        "source": "fatigue",
+        "target": "stress_cycles",
+        "weight": 1
+      },
+      {
+        "source": "SN_curve",
+        "target": "fatigue",
+        "weight": 1
+      },
+      {
+        "source": "crack_propagation",
+        "target": "fatigue",
+        "weight": 1
+      },
+      {
+        "source": "endurance_limit",
+        "target": "fatigue",
+        "weight": 1
+      },
+      {
+        "source": "fatigue",
+        "target": "mean_stress",
+        "weight": 1
+      },
+      {
+        "source": "buckling",
+        "target": "critical_load",
+        "weight": 1
+      },
+      {
+        "source": "buckling",
+        "target": "euler_buckling",
+        "weight": 1
+      },
+      {
+        "source": "buckling",
+        "target": "slenderness_ratio",
+        "weight": 1
+      },
+      {
+        "source": "buckling",
+        "target": "effective_length",
+        "weight": 1
+      },
+      {
+        "source": "coefficient_of_thermal_expansion",
+        "target": "thermal_expansion",
+        "weight": 1
+      },
+      {
+        "source": "thermal_expansion",
+        "target": "thermal_stress",
+        "weight": 1
+      },
+      {
+        "source": "bimetallic_strip",
+        "target": "thermal_expansion",
+        "weight": 1
+      },
+      {
+        "source": "conduction",
+        "target": "heat_transfer",
+        "weight": 1
+      },
+      {
+        "source": "convection",
+        "target": "heat_transfer",
+        "weight": 1
+      },
+      {
+        "source": "heat_transfer",
+        "target": "radiation",
+        "weight": 1
+      },
+      {
+        "source": "heat_transfer",
+        "target": "thermal_conductivity",
+        "weight": 1
+      },
+      {
+        "source": "heat_flux",
+        "target": "heat_transfer",
+        "weight": 1
+      },
+      {
+        "source": "fluid_dynamics",
+        "target": "reynolds_number",
+        "weight": 1
+      },
+      {
+        "source": "bernoulli_equation",
+        "target": "fluid_dynamics",
+        "weight": 1
+      },
+      {
+        "source": "fluid_dynamics",
+        "target": "viscosity",
+        "weight": 1
+      },
+      {
+        "source": "fluid_dynamics",
+        "target": "turbulence",
+        "weight": 1
+      },
+      {
+        "source": "drag",
+        "target": "fluid_dynamics",
+        "weight": 1
+      },
+      {
+        "source": "control_system",
+        "target": "feedback",
+        "weight": 1
+      },
+      {
+        "source": "control_system",
+        "target": "transfer_function",
+        "weight": 1
+      },
+      {
+        "source": "control_system",
+        "target": "stability",
+        "weight": 1
+      },
+      {
+        "source": "PID_controller",
+        "target": "control_system",
+        "weight": 1
+      },
+      {
+        "source": "control_system",
+        "target": "gain",
+        "weight": 1
+      },
+      {
+        "source": "circuit_analysis",
+        "target": "kirchhoffs_laws",
+        "weight": 1
+      },
+      {
+        "source": "circuit_analysis",
+        "target": "ohms_law",
+        "weight": 1
+      },
+      {
+        "source": "circuit_analysis",
+        "target": "impedance",
+        "weight": 1
+      },
+      {
+        "source": "circuit_analysis",
+        "target": "nodal_analysis",
+        "weight": 1
+      },
+      {
+        "source": "circuit_analysis",
+        "target": "mesh_analysis",
+        "weight": 1
+      },
+      {
+        "source": "fourier_transform",
+        "target": "signal_processing",
+        "weight": 1
+      },
+      {
+        "source": "filtering",
+        "target": "signal_processing",
+        "weight": 1
+      },
+      {
+        "source": "sampling",
+        "target": "signal_processing",
+        "weight": 1
+      },
+      {
+        "source": "frequency_domain",
+        "target": "signal_processing",
+        "weight": 1
+      },
+      {
+        "source": "convolution",
+        "target": "signal_processing",
+        "weight": 1
+      },
+      {
+        "source": "first_law",
+        "target": "thermodynamics",
+        "weight": 1
+      },
+      {
+        "source": "second_law",
+        "target": "thermodynamics",
+        "weight": 1
+      },
+      {
+        "source": "entropy",
+        "target": "thermodynamics",
+        "weight": 1
+      },
+      {
+        "source": "enthalpy",
+        "target": "thermodynamics",
+        "weight": 1
+      },
+      {
+        "source": "efficiency",
+        "target": "thermodynamics",
+        "weight": 1
+      },
+      {
+        "source": "materials_selection",
+        "target": "properties",
+        "weight": 1
+      },
+      {
+        "source": "cost",
+        "target": "materials_selection",
+        "weight": 1
+      },
+      {
+        "source": "materials_selection",
+        "target": "performance_index",
+        "weight": 1
+      },
+      {
+        "source": "ashby_charts",
+        "target": "materials_selection",
+        "weight": 1
+      },
+      {
+        "source": "constraints",
+        "target": "materials_selection",
+        "weight": 1
+      },
+      {
+        "source": "finite_element_analysis",
+        "target": "mesh",
+        "weight": 1
+      },
+      {
+        "source": "element",
+        "target": "finite_element_analysis",
+        "weight": 1
+      },
+      {
+        "source": "finite_element_analysis",
+        "target": "node",
+        "weight": 1
+      },
+      {
+        "source": "boundary_conditions",
+        "target": "finite_element_analysis",
+        "weight": 1
+      },
+      {
+        "source": "convergence",
+        "target": "finite_element_analysis",
+        "weight": 1
+      }
+    ],
+    "metrics": {
+      "total_nodes": 16,
+      "total_edges": 71,
+      "avg_degree": 4.8125,
+      "max_degree": 5,
+      "min_degree": 3,
+      "central_concepts": [
+        {
+          "id": "factor_of_safety",
+          "degree": 5
+        },
+        {
+          "id": "stress",
+          "degree": 5
+        },
+        {
+          "id": "strain",
+          "degree": 5
+        },
+        {
+          "id": "youngs_modulus",
+          "degree": 5
+        },
+        {
+          "id": "yield_strength",
+          "degree": 5
+        }
+      ],
+      "peripheral_concepts": [
+        {
+          "id": "thermal_expansion",
+          "degree": 3
+        },
+        {
+          "id": "buckling",
+          "degree": 4
+        },
+        {
+          "id": "factor_of_safety",
+          "degree": 5
+        },
+        {
+          "id": "stress",
+          "degree": 5
+        },
+        {
+          "id": "strain",
+          "degree": 5
+        }
+      ],
+      "category_distribution": {
+        "design_principles": 1,
+        "mechanics": 2,
+        "material_properties": 2,
+        "failure_modes": 2,
+        "thermal": 3,
+        "fluids": 1,
+        "systems": 1,
+        "electrical": 2,
+        "design_process": 1,
+        "analysis_methods": 1
+      },
+      "complexity_distribution": {
+        "basic": 4,
+        "intermediate": 5,
+        "advanced": 7
+      },
+      "density": 0.5916666666666667
+    }
+  },
+  "law": {
+    "domain": "law",
+    "nodes": [
+      {
+        "id": "IRAC",
+        "term": "IRAC",
+        "category": "legal_method",
+        "complexity": "basic",
+        "definition": "Legal analysis framework: Issue, Rule, Application, Conclusion..."
+      },
+      {
+        "id": "precedent",
+        "term": "precedent",
+        "category": "legal_doctrine",
+        "complexity": "basic",
+        "definition": "Prior court decision that establishes principle or rule for future cases..."
+      },
+      {
+        "id": "jurisdiction",
+        "term": "jurisdiction",
+        "category": "civil_procedure",
+        "complexity": "intermediate",
+        "definition": "Legal authority of a court to hear and decide a case..."
+      },
+      {
+        "id": "burden_of_proof",
+        "term": "burden_of_proof",
+        "category": "evidence",
+        "complexity": "intermediate",
+        "definition": "Party's obligation to prove allegations or defenses..."
+      },
+      {
+        "id": "contract",
+        "term": "contract",
+        "category": "contract_law",
+        "complexity": "basic",
+        "definition": "Legally enforceable agreement between parties..."
+      },
+      {
+        "id": "tort",
+        "term": "tort",
+        "category": "tort_law",
+        "complexity": "basic",
+        "definition": "Civil wrong causing harm for which law provides remedy..."
+      },
+      {
+        "id": "negligence",
+        "term": "negligence",
+        "category": "tort_law",
+        "complexity": "intermediate",
+        "definition": "Failure to exercise reasonable care causing harm..."
+      },
+      {
+        "id": "strict_liability",
+        "term": "strict_liability",
+        "category": "tort_law",
+        "complexity": "advanced",
+        "definition": "Liability without fault for certain activities or defective products..."
+      },
+      {
+        "id": "constitutional_law",
+        "term": "constitutional_law",
+        "category": "constitutional_law",
+        "complexity": "advanced",
+        "definition": "Body of law derived from constitution interpreting governmental powers and rights..."
+      },
+      {
+        "id": "statutory_interpretation",
+        "term": "statutory_interpretation",
+        "category": "legal_method",
+        "complexity": "advanced",
+        "definition": "Process of determining meaning and application of legislation..."
+      },
+      {
+        "id": "criminal_law",
+        "term": "criminal_law",
+        "category": "criminal_law",
+        "complexity": "intermediate",
+        "definition": "Body of law defining crimes and punishments..."
+      },
+      {
+        "id": "evidence",
+        "term": "evidence",
+        "category": "evidence_law",
+        "complexity": "advanced",
+        "definition": "Information presented to prove or disprove facts at trial..."
+      },
+      {
+        "id": "remedy",
+        "term": "remedy",
+        "category": "remedies",
+        "complexity": "intermediate",
+        "definition": "Legal or equitable relief granted by court..."
+      },
+      {
+        "id": "mens_rea",
+        "term": "mens_rea",
+        "category": "criminal_law",
+        "complexity": "intermediate",
+        "definition": "Mental state or intent required for criminal liability..."
+      },
+      {
+        "id": "hearsay",
+        "term": "hearsay",
+        "category": "evidence_law",
+        "complexity": "advanced",
+        "definition": "Out-of-court statement offered to prove truth of matter asserted..."
+      }
+    ],
+    "edges": [
+      {
+        "source": "IRAC",
+        "target": "legal_analysis",
+        "weight": 1
+      },
+      {
+        "source": "IRAC",
+        "target": "case_brief",
+        "weight": 1
+      },
+      {
+        "source": "IRAC",
+        "target": "argument_structure",
+        "weight": 1
+      },
+      {
+        "source": "IRAC",
+        "target": "precedent",
+        "weight": 1
+      },
+      {
+        "source": "binding_authority",
+        "target": "precedent",
+        "weight": 1
+      },
+      {
+        "source": "persuasive_authority",
+        "target": "precedent",
+        "weight": 1
+      },
+      {
+        "source": "distinguishing",
+        "target": "precedent",
+        "weight": 1
+      },
+      {
+        "source": "overruling",
+        "target": "precedent",
+        "weight": 1
+      },
+      {
+        "source": "jurisdiction",
+        "target": "subject_matter_jurisdiction",
+        "weight": 1
+      },
+      {
+        "source": "jurisdiction",
+        "target": "personal_jurisdiction",
+        "weight": 1
+      },
+      {
+        "source": "jurisdiction",
+        "target": "venue",
+        "weight": 1
+      },
+      {
+        "source": "jurisdiction",
+        "target": "standing",
+        "weight": 1
+      },
+      {
+        "source": "burden_of_proof",
+        "target": "standard_of_proof",
+        "weight": 1
+      },
+      {
+        "source": "burden_of_proof",
+        "target": "prima_facie_case",
+        "weight": 1
+      },
+      {
+        "source": "burden_of_proof",
+        "target": "shifting_burden",
+        "weight": 1
+      },
+      {
+        "source": "burden_of_proof",
+        "target": "preponderance",
+        "weight": 1
+      },
+      {
+        "source": "contract",
+        "target": "offer",
+        "weight": 1
+      },
+      {
+        "source": "acceptance",
+        "target": "contract",
+        "weight": 1
+      },
+      {
+        "source": "consideration",
+        "target": "contract",
+        "weight": 1
+      },
+      {
+        "source": "breach",
+        "target": "contract",
+        "weight": 1
+      },
+      {
+        "source": "contract",
+        "target": "damages",
+        "weight": 1
+      },
+      {
+        "source": "negligence",
+        "target": "tort",
+        "weight": 1
+      },
+      {
+        "source": "intentional_tort",
+        "target": "tort",
+        "weight": 1
+      },
+      {
+        "source": "strict_liability",
+        "target": "tort",
+        "weight": 1
+      },
+      {
+        "source": "damages",
+        "target": "tort",
+        "weight": 1
+      },
+      {
+        "source": "duty",
+        "target": "tort",
+        "weight": 1
+      },
+      {
+        "source": "duty",
+        "target": "negligence",
+        "weight": 1
+      },
+      {
+        "source": "breach",
+        "target": "negligence",
+        "weight": 1
+      },
+      {
+        "source": "causation",
+        "target": "negligence",
+        "weight": 1
+      },
+      {
+        "source": "damages",
+        "target": "negligence",
+        "weight": 1
+      },
+      {
+        "source": "negligence",
+        "target": "reasonable_person",
+        "weight": 1
+      },
+      {
+        "source": "product_liability",
+        "target": "strict_liability",
+        "weight": 1
+      },
+      {
+        "source": "abnormally_dangerous_activity",
+        "target": "strict_liability",
+        "weight": 1
+      },
+      {
+        "source": "defect",
+        "target": "strict_liability",
+        "weight": 1
+      },
+      {
+        "source": "causation",
+        "target": "strict_liability",
+        "weight": 1
+      },
+      {
+        "source": "constitutional_law",
+        "target": "due_process",
+        "weight": 1
+      },
+      {
+        "source": "constitutional_law",
+        "target": "equal_protection",
+        "weight": 1
+      },
+      {
+        "source": "constitutional_law",
+        "target": "federalism",
+        "weight": 1
+      },
+      {
+        "source": "constitutional_law",
+        "target": "separation_of_powers",
+        "weight": 1
+      },
+      {
+        "source": "constitutional_law",
+        "target": "judicial_review",
+        "weight": 1
+      },
+      {
+        "source": "plain_meaning",
+        "target": "statutory_interpretation",
+        "weight": 1
+      },
+      {
+        "source": "legislative_intent",
+        "target": "statutory_interpretation",
+        "weight": 1
+      },
+      {
+        "source": "canons_of_construction",
+        "target": "statutory_interpretation",
+        "weight": 1
+      },
+      {
+        "source": "ambiguity",
+        "target": "statutory_interpretation",
+        "weight": 1
+      },
+      {
+        "source": "criminal_law",
+        "target": "mens_rea",
+        "weight": 1
+      },
+      {
+        "source": "actus_reus",
+        "target": "criminal_law",
+        "weight": 1
+      },
+      {
+        "source": "criminal_law",
+        "target": "defenses",
+        "weight": 1
+      },
+      {
+        "source": "constitutional_protections",
+        "target": "criminal_law",
+        "weight": 1
+      },
+      {
+        "source": "evidence",
+        "target": "relevance",
+        "weight": 1
+      },
+      {
+        "source": "evidence",
+        "target": "hearsay",
+        "weight": 1
+      },
+      {
+        "source": "authentication",
+        "target": "evidence",
+        "weight": 1
+      },
+      {
+        "source": "evidence",
+        "target": "privilege",
+        "weight": 1
+      },
+      {
+        "source": "admissibility",
+        "target": "evidence",
+        "weight": 1
+      },
+      {
+        "source": "damages",
+        "target": "remedy",
+        "weight": 1
+      },
+      {
+        "source": "injunction",
+        "target": "remedy",
+        "weight": 1
+      },
+      {
+        "source": "remedy",
+        "target": "specific_performance",
+        "weight": 1
+      },
+      {
+        "source": "remedy",
+        "target": "restitution",
+        "weight": 1
+      },
+      {
+        "source": "declaratory_judgment",
+        "target": "remedy",
+        "weight": 1
+      },
+      {
+        "source": "intent",
+        "target": "mens_rea",
+        "weight": 1
+      },
+      {
+        "source": "knowledge",
+        "target": "mens_rea",
+        "weight": 1
+      },
+      {
+        "source": "mens_rea",
+        "target": "recklessness",
+        "weight": 1
+      },
+      {
+        "source": "mens_rea",
+        "target": "negligence",
+        "weight": 1
+      },
+      {
+        "source": "mens_rea",
+        "target": "strict_liability",
+        "weight": 1
+      },
+      {
+        "source": "declarant",
+        "target": "hearsay",
+        "weight": 1
+      },
+      {
+        "source": "hearsay",
+        "target": "out_of_court",
+        "weight": 1
+      },
+      {
+        "source": "exceptions",
+        "target": "hearsay",
+        "weight": 1
+      },
+      {
+        "source": "confrontation_clause",
+        "target": "hearsay",
+        "weight": 1
+      }
+    ],
+    "metrics": {
+      "total_nodes": 15,
+      "total_edges": 67,
+      "avg_degree": 4.933333333333334,
+      "max_degree": 7,
+      "min_degree": 4,
+      "central_concepts": [
+        {
+          "id": "negligence",
+          "degree": 7
+        },
+        {
+          "id": "strict_liability",
+          "degree": 6
+        },
+        {
+          "id": "mens_rea",
+          "degree": 6
+        },
+        {
+          "id": "precedent",
+          "degree": 5
+        },
+        {
+          "id": "contract",
+          "degree": 5
+        }
+      ],
+      "peripheral_concepts": [
+        {
+          "id": "IRAC",
+          "degree": 4
+        },
+        {
+          "id": "jurisdiction",
+          "degree": 4
+        },
+        {
+          "id": "burden_of_proof",
+          "degree": 4
+        },
+        {
+          "id": "statutory_interpretation",
+          "degree": 4
+        },
+        {
+          "id": "criminal_law",
+          "degree": 4
+        }
+      ],
+      "category_distribution": {
+        "legal_method": 2,
+        "legal_doctrine": 1,
+        "civil_procedure": 1,
+        "evidence": 1,
+        "contract_law": 1,
+        "tort_law": 3,
+        "constitutional_law": 1,
+        "criminal_law": 2,
+        "evidence_law": 2,
+        "remedies": 1
+      },
+      "complexity_distribution": {
+        "basic": 4,
+        "intermediate": 6,
+        "advanced": 5
+      },
+      "density": 0.638095238095238
+    }
+  },
+  "business": {
+    "domain": "business",
+    "nodes": [
+      {
+        "id": "unit_economics",
+        "term": "unit_economics",
+        "category": "financial_metrics",
+        "complexity": "intermediate",
+        "definition": "Revenues and costs associated with a single unit of product or customer..."
+      },
+      {
+        "id": "CAC",
+        "term": "CAC",
+        "category": "financial_metrics",
+        "complexity": "basic",
+        "definition": "Customer Acquisition Cost - total sales and marketing spend divided by new customers acquired..."
+      },
+      {
+        "id": "LTV",
+        "term": "LTV",
+        "category": "financial_metrics",
+        "complexity": "intermediate",
+        "definition": "Lifetime Value - total revenue expected from customer over entire relationship..."
+      },
+      {
+        "id": "churn_rate",
+        "term": "churn_rate",
+        "category": "operational_metrics",
+        "complexity": "basic",
+        "definition": "Percentage of customers who stop using product/service in given period..."
+      },
+      {
+        "id": "gross_margin",
+        "term": "gross_margin",
+        "category": "financial_metrics",
+        "complexity": "basic",
+        "definition": "Revenue minus cost of goods sold, expressed as percentage of revenue..."
+      },
+      {
+        "id": "burn_rate",
+        "term": "burn_rate",
+        "category": "financial_metrics",
+        "complexity": "basic",
+        "definition": "Rate at which company spends cash, typically monthly..."
+      },
+      {
+        "id": "product_market_fit",
+        "term": "product_market_fit",
+        "category": "strategic_concepts",
+        "complexity": "intermediate",
+        "definition": "Degree to which product satisfies strong market demand..."
+      },
+      {
+        "id": "pivot",
+        "term": "pivot",
+        "category": "strategic_concepts",
+        "complexity": "intermediate",
+        "definition": "Fundamental change to business model or product strategy..."
+      },
+      {
+        "id": "runway",
+        "term": "runway",
+        "category": "financial_metrics",
+        "complexity": "basic",
+        "definition": "Time until company runs out of cash at current burn rate..."
+      },
+      {
+        "id": "TAM_SAM_SOM",
+        "term": "TAM_SAM_SOM",
+        "category": "strategic_concepts",
+        "complexity": "intermediate",
+        "definition": "Total Addressable Market, Serviceable Available Market, Serviceable Obtainable Market..."
+      },
+      {
+        "id": "MVP",
+        "term": "MVP",
+        "category": "product_development",
+        "complexity": "basic",
+        "definition": "Minimum Viable Product - simplest version that tests core hypothesis..."
+      },
+      {
+        "id": "north_star_metric",
+        "term": "north_star_metric",
+        "category": "operational_metrics",
+        "complexity": "intermediate",
+        "definition": "Single metric that best captures core value delivered to customers..."
+      },
+      {
+        "id": "valuation",
+        "term": "valuation",
+        "category": "financial_concepts",
+        "complexity": "advanced",
+        "definition": "Process of determining company's economic value..."
+      },
+      {
+        "id": "go_to_market",
+        "term": "go_to_market",
+        "category": "strategic_concepts",
+        "complexity": "intermediate",
+        "definition": "Strategy for launching product and acquiring customers..."
+      },
+      {
+        "id": "competitive_advantage",
+        "term": "competitive_advantage",
+        "category": "strategic_concepts",
+        "complexity": "advanced",
+        "definition": "Sustainable edge that allows company to outperform competitors..."
+      }
+    ],
+    "edges": [
+      {
+        "source": "CAC",
+        "target": "unit_economics",
+        "weight": 1
+      },
+      {
+        "source": "LTV",
+        "target": "unit_economics",
+        "weight": 1
+      },
+      {
+        "source": "contribution_margin",
+        "target": "unit_economics",
+        "weight": 1
+      },
+      {
+        "source": "break_even",
+        "target": "unit_economics",
+        "weight": 1
+      },
+      {
+        "source": "scalability",
+        "target": "unit_economics",
+        "weight": 1
+      },
+      {
+        "source": "CAC",
+        "target": "LTV",
+        "weight": 2
+      },
+      {
+        "source": "CAC",
+        "target": "LTV_CAC_ratio",
+        "weight": 1
+      },
+      {
+        "source": "CAC",
+        "target": "payback_period",
+        "weight": 1
+      },
+      {
+        "source": "CAC",
+        "target": "marketing_efficiency",
+        "weight": 1
+      },
+      {
+        "source": "LTV",
+        "target": "retention",
+        "weight": 1
+      },
+      {
+        "source": "LTV",
+        "target": "churn",
+        "weight": 1
+      },
+      {
+        "source": "ARPU",
+        "target": "LTV",
+        "weight": 1
+      },
+      {
+        "source": "LTV",
+        "target": "cohort_analysis",
+        "weight": 1
+      },
+      {
+        "source": "churn_rate",
+        "target": "retention_rate",
+        "weight": 1
+      },
+      {
+        "source": "churn_rate",
+        "target": "cohort_analysis",
+        "weight": 1
+      },
+      {
+        "source": "LTV",
+        "target": "churn_rate",
+        "weight": 1
+      },
+      {
+        "source": "churn_rate",
+        "target": "product_market_fit",
+        "weight": 1
+      },
+      {
+        "source": "contribution_margin",
+        "target": "gross_margin",
+        "weight": 1
+      },
+      {
+        "source": "COGS",
+        "target": "gross_margin",
+        "weight": 1
+      },
+      {
+        "source": "gross_margin",
+        "target": "operating_margin",
+        "weight": 1
+      },
+      {
+        "source": "gross_margin",
+        "target": "net_margin",
+        "weight": 1
+      },
+      {
+        "source": "burn_rate",
+        "target": "runway",
+        "weight": 2
+      },
+      {
+        "source": "burn_rate",
+        "target": "cash_flow",
+        "weight": 1
+      },
+      {
+        "source": "burn_rate",
+        "target": "operating_expenses",
+        "weight": 1
+      },
+      {
+        "source": "burn_rate",
+        "target": "funding",
+        "weight": 1
+      },
+      {
+        "source": "product_market_fit",
+        "target": "retention",
+        "weight": 1
+      },
+      {
+        "source": "organic_growth",
+        "target": "product_market_fit",
+        "weight": 1
+      },
+      {
+        "source": "NPS",
+        "target": "product_market_fit",
+        "weight": 1
+      },
+      {
+        "source": "product_market_fit",
+        "target": "value_proposition",
+        "weight": 1
+      },
+      {
+        "source": "iteration",
+        "target": "pivot",
+        "weight": 1
+      },
+      {
+        "source": "pivot",
+        "target": "validated_learning",
+        "weight": 1
+      },
+      {
+        "source": "business_model",
+        "target": "pivot",
+        "weight": 1
+      },
+      {
+        "source": "hypothesis_testing",
+        "target": "pivot",
+        "weight": 1
+      },
+      {
+        "source": "cash_balance",
+        "target": "runway",
+        "weight": 1
+      },
+      {
+        "source": "fundraising",
+        "target": "runway",
+        "weight": 1
+      },
+      {
+        "source": "break_even",
+        "target": "runway",
+        "weight": 1
+      },
+      {
+        "source": "TAM_SAM_SOM",
+        "target": "market_size",
+        "weight": 1
+      },
+      {
+        "source": "TAM_SAM_SOM",
+        "target": "addressable_market",
+        "weight": 1
+      },
+      {
+        "source": "TAM_SAM_SOM",
+        "target": "market_share",
+        "weight": 1
+      },
+      {
+        "source": "TAM_SAM_SOM",
+        "target": "growth_potential",
+        "weight": 1
+      },
+      {
+        "source": "MVP",
+        "target": "lean_startup",
+        "weight": 1
+      },
+      {
+        "source": "MVP",
+        "target": "validated_learning",
+        "weight": 1
+      },
+      {
+        "source": "MVP",
+        "target": "iteration",
+        "weight": 1
+      },
+      {
+        "source": "MVP",
+        "target": "hypothesis_testing",
+        "weight": 1
+      },
+      {
+        "source": "OKRs",
+        "target": "north_star_metric",
+        "weight": 1
+      },
+      {
+        "source": "KPIs",
+        "target": "north_star_metric",
+        "weight": 1
+      },
+      {
+        "source": "north_star_metric",
+        "target": "value_delivery",
+        "weight": 1
+      },
+      {
+        "source": "growth_loops",
+        "target": "north_star_metric",
+        "weight": 1
+      },
+      {
+        "source": "DCF",
+        "target": "valuation",
+        "weight": 1
+      },
+      {
+        "source": "comparables",
+        "target": "valuation",
+        "weight": 1
+      },
+      {
+        "source": "revenue_multiple",
+        "target": "valuation",
+        "weight": 1
+      },
+      {
+        "source": "equity_value",
+        "target": "valuation",
+        "weight": 1
+      },
+      {
+        "source": "enterprise_value",
+        "target": "valuation",
+        "weight": 1
+      },
+      {
+        "source": "customer_acquisition",
+        "target": "go_to_market",
+        "weight": 1
+      },
+      {
+        "source": "channels",
+        "target": "go_to_market",
+        "weight": 1
+      },
+      {
+        "source": "go_to_market",
+        "target": "positioning",
+        "weight": 1
+      },
+      {
+        "source": "go_to_market",
+        "target": "pricing",
+        "weight": 1
+      },
+      {
+        "source": "go_to_market",
+        "target": "sales_model",
+        "weight": 1
+      },
+      {
+        "source": "competitive_advantage",
+        "target": "network_effects",
+        "weight": 1
+      },
+      {
+        "source": "competitive_advantage",
+        "target": "switching_costs",
+        "weight": 1
+      },
+      {
+        "source": "competitive_advantage",
+        "target": "economies_of_scale",
+        "weight": 1
+      },
+      {
+        "source": "brand",
+        "target": "competitive_advantage",
+        "weight": 1
+      },
+      {
+        "source": "IP",
+        "target": "competitive_advantage",
+        "weight": 1
+      }
+    ],
+    "metrics": {
+      "total_nodes": 15,
+      "total_edges": 63,
+      "avg_degree": 4.6,
+      "max_degree": 7,
+      "min_degree": 4,
+      "central_concepts": [
+        {
+          "id": "LTV",
+          "degree": 7
+        },
+        {
+          "id": "unit_economics",
+          "degree": 5
+        },
+        {
+          "id": "CAC",
+          "degree": 5
+        },
+        {
+          "id": "product_market_fit",
+          "degree": 5
+        },
+        {
+          "id": "valuation",
+          "degree": 5
+        }
+      ],
+      "peripheral_concepts": [
+        {
+          "id": "churn_rate",
+          "degree": 4
+        },
+        {
+          "id": "gross_margin",
+          "degree": 4
+        },
+        {
+          "id": "burn_rate",
+          "degree": 4
+        },
+        {
+          "id": "pivot",
+          "degree": 4
+        },
+        {
+          "id": "runway",
+          "degree": 4
+        }
+      ],
+      "category_distribution": {
+        "financial_metrics": 6,
+        "operational_metrics": 2,
+        "strategic_concepts": 5,
+        "product_development": 1,
+        "financial_concepts": 1
+      },
+      "complexity_distribution": {
+        "intermediate": 7,
+        "basic": 6,
+        "advanced": 2
+      },
+      "density": 0.6
+    }
+  },
+  "creative_arts": {
+    "domain": "creative_arts",
+    "nodes": [
+      {
+        "id": "composition",
+        "term": "composition",
+        "category": "fundamental_principles",
+        "complexity": "basic",
+        "definition": "Arrangement of elements within a work to create coherent whole..."
+      },
+      {
+        "id": "narrative_arc",
+        "term": "narrative_arc",
+        "category": "storytelling",
+        "complexity": "intermediate",
+        "definition": "Structure of story from exposition through rising action, climax, falling action, to resolution..."
+      },
+      {
+        "id": "color_theory",
+        "term": "color_theory",
+        "category": "visual_fundamentals",
+        "complexity": "intermediate",
+        "definition": "Principles governing use and combination of colors..."
+      },
+      {
+        "id": "typography",
+        "term": "typography",
+        "category": "visual_communication",
+        "complexity": "intermediate",
+        "definition": "Art and technique of arranging type to make written language legible and appealing..."
+      },
+      {
+        "id": "character_development",
+        "term": "character_development",
+        "category": "storytelling",
+        "complexity": "advanced",
+        "definition": "Process of creating complex, believable characters with depth and growth..."
+      },
+      {
+        "id": "voice",
+        "term": "voice",
+        "category": "writing_craft",
+        "complexity": "advanced",
+        "definition": "Distinctive style and personality in writing..."
+      },
+      {
+        "id": "visual_hierarchy",
+        "term": "visual_hierarchy",
+        "category": "design_principles",
+        "complexity": "intermediate",
+        "definition": "Arrangement of elements to guide viewer's eye and emphasize importance..."
+      },
+      {
+        "id": "rhythm",
+        "term": "rhythm",
+        "category": "fundamental_principles",
+        "complexity": "intermediate",
+        "definition": "Pattern of regular or irregular pulses in time or space..."
+      },
+      {
+        "id": "tension_and_release",
+        "term": "tension_and_release",
+        "category": "storytelling",
+        "complexity": "advanced",
+        "definition": "Building anticipation or discomfort followed by resolution or satisfaction..."
+      },
+      {
+        "id": "show_dont_tell",
+        "term": "show_dont_tell",
+        "category": "writing_craft",
+        "complexity": "intermediate",
+        "definition": "Reveal character and story through action and sensory details rather than exposition..."
+      },
+      {
+        "id": "contrast",
+        "term": "contrast",
+        "category": "fundamental_principles",
+        "complexity": "basic",
+        "definition": "Juxtaposition of differing elements to create visual or conceptual interest..."
+      },
+      {
+        "id": "metaphor",
+        "term": "metaphor",
+        "category": "literary_devices",
+        "complexity": "intermediate",
+        "definition": "Figure of speech comparing two unlike things by stating one is the other..."
+      },
+      {
+        "id": "gestalt_principles",
+        "term": "gestalt_principles",
+        "category": "perceptual_psychology",
+        "complexity": "intermediate",
+        "definition": "Psychological principles describing how humans perceive patterns and wholes..."
+      },
+      {
+        "id": "point_of_view",
+        "term": "point_of_view",
+        "category": "storytelling",
+        "complexity": "intermediate",
+        "definition": "Narrative perspective from which story is told..."
+      },
+      {
+        "id": "whitespace",
+        "term": "whitespace",
+        "category": "design_principles",
+        "complexity": "basic",
+        "definition": "Empty space in design that gives elements room to breathe..."
+      }
+    ],
+    "edges": [
+      {
+        "source": "balance",
+        "target": "composition",
+        "weight": 1
+      },
+      {
+        "source": "composition",
+        "target": "harmony",
+        "weight": 1
+      },
+      {
+        "source": "composition",
+        "target": "contrast",
+        "weight": 1
+      },
+      {
+        "source": "composition",
+        "target": "focal_point",
+        "weight": 1
+      },
+      {
+        "source": "composition",
+        "target": "unity",
+        "weight": 1
+      },
+      {
+        "source": "narrative_arc",
+        "target": "three_act_structure",
+        "weight": 1
+      },
+      {
+        "source": "heros_journey",
+        "target": "narrative_arc",
+        "weight": 1
+      },
+      {
+        "source": "conflict",
+        "target": "narrative_arc",
+        "weight": 1
+      },
+      {
+        "source": "narrative_arc",
+        "target": "resolution",
+        "weight": 1
+      },
+      {
+        "source": "narrative_arc",
+        "target": "pacing",
+        "weight": 1
+      },
+      {
+        "source": "color_theory",
+        "target": "hue",
+        "weight": 1
+      },
+      {
+        "source": "color_theory",
+        "target": "saturation",
+        "weight": 1
+      },
+      {
+        "source": "color_theory",
+        "target": "value",
+        "weight": 1
+      },
+      {
+        "source": "color_theory",
+        "target": "complementary_colors",
+        "weight": 1
+      },
+      {
+        "source": "color_theory",
+        "target": "color_wheel",
+        "weight": 1
+      },
+      {
+        "source": "typeface",
+        "target": "typography",
+        "weight": 1
+      },
+      {
+        "source": "font",
+        "target": "typography",
+        "weight": 1
+      },
+      {
+        "source": "kerning",
+        "target": "typography",
+        "weight": 1
+      },
+      {
+        "source": "leading",
+        "target": "typography",
+        "weight": 1
+      },
+      {
+        "source": "hierarchy",
+        "target": "typography",
+        "weight": 1
+      },
+      {
+        "source": "readability",
+        "target": "typography",
+        "weight": 1
+      },
+      {
+        "source": "character_development",
+        "target": "motivation",
+        "weight": 1
+      },
+      {
+        "source": "backstory",
+        "target": "character_development",
+        "weight": 1
+      },
+      {
+        "source": "arc",
+        "target": "character_development",
+        "weight": 1
+      },
+      {
+        "source": "agency",
+        "target": "character_development",
+        "weight": 1
+      },
+      {
+        "source": "character_development",
+        "target": "consistency",
+        "weight": 1
+      },
+      {
+        "source": "tone",
+        "target": "voice",
+        "weight": 1
+      },
+      {
+        "source": "diction",
+        "target": "voice",
+        "weight": 1
+      },
+      {
+        "source": "syntax",
+        "target": "voice",
+        "weight": 1
+      },
+      {
+        "source": "personality",
+        "target": "voice",
+        "weight": 1
+      },
+      {
+        "source": "consistency",
+        "target": "voice",
+        "weight": 1
+      },
+      {
+        "source": "contrast",
+        "target": "visual_hierarchy",
+        "weight": 1
+      },
+      {
+        "source": "scale",
+        "target": "visual_hierarchy",
+        "weight": 1
+      },
+      {
+        "source": "color",
+        "target": "visual_hierarchy",
+        "weight": 1
+      },
+      {
+        "source": "position",
+        "target": "visual_hierarchy",
+        "weight": 1
+      },
+      {
+        "source": "visual_hierarchy",
+        "target": "whitespace",
+        "weight": 2
+      },
+      {
+        "source": "repetition",
+        "target": "rhythm",
+        "weight": 1
+      },
+      {
+        "source": "rhythm",
+        "target": "variation",
+        "weight": 1
+      },
+      {
+        "source": "pacing",
+        "target": "rhythm",
+        "weight": 1
+      },
+      {
+        "source": "rhythm",
+        "target": "tempo",
+        "weight": 1
+      },
+      {
+        "source": "beat",
+        "target": "rhythm",
+        "weight": 1
+      },
+      {
+        "source": "conflict",
+        "target": "tension_and_release",
+        "weight": 1
+      },
+      {
+        "source": "resolution",
+        "target": "tension_and_release",
+        "weight": 1
+      },
+      {
+        "source": "catharsis",
+        "target": "tension_and_release",
+        "weight": 1
+      },
+      {
+        "source": "pacing",
+        "target": "tension_and_release",
+        "weight": 1
+      },
+      {
+        "source": "climax",
+        "target": "tension_and_release",
+        "weight": 1
+      },
+      {
+        "source": "sensory_detail",
+        "target": "show_dont_tell",
+        "weight": 1
+      },
+      {
+        "source": "action",
+        "target": "show_dont_tell",
+        "weight": 1
+      },
+      {
+        "source": "dialogue",
+        "target": "show_dont_tell",
+        "weight": 1
+      },
+      {
+        "source": "implication",
+        "target": "show_dont_tell",
+        "weight": 1
+      },
+      {
+        "source": "show_dont_tell",
+        "target": "subtext",
+        "weight": 1
+      },
+      {
+        "source": "complement",
+        "target": "contrast",
+        "weight": 1
+      },
+      {
+        "source": "contrast",
+        "target": "tension",
+        "weight": 1
+      },
+      {
+        "source": "contrast",
+        "target": "emphasis",
+        "weight": 1
+      },
+      {
+        "source": "contrast",
+        "target": "variety",
+        "weight": 1
+      },
+      {
+        "source": "metaphor",
+        "target": "simile",
+        "weight": 1
+      },
+      {
+        "source": "analogy",
+        "target": "metaphor",
+        "weight": 1
+      },
+      {
+        "source": "metaphor",
+        "target": "symbol",
+        "weight": 1
+      },
+      {
+        "source": "imagery",
+        "target": "metaphor",
+        "weight": 1
+      },
+      {
+        "source": "meaning_transfer",
+        "target": "metaphor",
+        "weight": 1
+      },
+      {
+        "source": "gestalt_principles",
+        "target": "proximity",
+        "weight": 1
+      },
+      {
+        "source": "gestalt_principles",
+        "target": "similarity",
+        "weight": 1
+      },
+      {
+        "source": "closure",
+        "target": "gestalt_principles",
+        "weight": 1
+      },
+      {
+        "source": "continuity",
+        "target": "gestalt_principles",
+        "weight": 1
+      },
+      {
+        "source": "figure_ground",
+        "target": "gestalt_principles",
+        "weight": 1
+      },
+      {
+        "source": "first_person",
+        "target": "point_of_view",
+        "weight": 1
+      },
+      {
+        "source": "point_of_view",
+        "target": "third_person",
+        "weight": 1
+      },
+      {
+        "source": "omniscient",
+        "target": "point_of_view",
+        "weight": 1
+      },
+      {
+        "source": "limited",
+        "target": "point_of_view",
+        "weight": 1
+      },
+      {
+        "source": "narrator",
+        "target": "point_of_view",
+        "weight": 1
+      },
+      {
+        "source": "balance",
+        "target": "whitespace",
+        "weight": 1
+      },
+      {
+        "source": "composition",
+        "target": "whitespace",
+        "weight": 1
+      },
+      {
+        "source": "minimalism",
+        "target": "whitespace",
+        "weight": 1
+      }
+    ],
+    "metrics": {
+      "total_nodes": 15,
+      "total_edges": 73,
+      "avg_degree": 5.133333333333334,
+      "max_degree": 6,
+      "min_degree": 4,
+      "central_concepts": [
+        {
+          "id": "composition",
+          "degree": 6
+        },
+        {
+          "id": "typography",
+          "degree": 6
+        },
+        {
+          "id": "contrast",
+          "degree": 6
+        },
+        {
+          "id": "narrative_arc",
+          "degree": 5
+        },
+        {
+          "id": "color_theory",
+          "degree": 5
+        }
+      ],
+      "peripheral_concepts": [
+        {
+          "id": "whitespace",
+          "degree": 4
+        },
+        {
+          "id": "narrative_arc",
+          "degree": 5
+        },
+        {
+          "id": "color_theory",
+          "degree": 5
+        },
+        {
+          "id": "character_development",
+          "degree": 5
+        },
+        {
+          "id": "voice",
+          "degree": 5
+        }
+      ],
+      "category_distribution": {
+        "fundamental_principles": 3,
+        "storytelling": 4,
+        "visual_fundamentals": 1,
+        "visual_communication": 1,
+        "writing_craft": 2,
+        "design_principles": 2,
+        "literary_devices": 1,
+        "perceptual_psychology": 1
+      },
+      "complexity_distribution": {
+        "basic": 3,
+        "intermediate": 9,
+        "advanced": 3
+      },
+      "density": 0.6952380952380952
+    }
+  },
+  "social_sciences": {
+    "domain": "social_sciences",
+    "nodes": [
+      {
+        "id": "cognitive_bias",
+        "term": "cognitive_bias",
+        "category": "cognitive_psychology",
+        "complexity": "intermediate",
+        "definition": "Systematic pattern of deviation from rationality in judgment..."
+      },
+      {
+        "id": "correlation_vs_causation",
+        "term": "correlation_vs_causation",
+        "category": "research_methods",
+        "complexity": "basic",
+        "definition": "Statistical relationship (correlation) does not imply one variable causes the other (causation)..."
+      },
+      {
+        "id": "operationalization",
+        "term": "operationalization",
+        "category": "research_methods",
+        "complexity": "intermediate",
+        "definition": "Defining abstract concepts in measurable terms for research..."
+      },
+      {
+        "id": "external_validity",
+        "term": "external_validity",
+        "category": "research_methods",
+        "complexity": "intermediate",
+        "definition": "Extent to which research findings generalize beyond the specific study..."
+      },
+      {
+        "id": "social_construction",
+        "term": "social_construction",
+        "category": "sociological_theory",
+        "complexity": "advanced",
+        "definition": "Concept or practice that exists because people agree it exists, not from objective reality..."
+      },
+      {
+        "id": "p_value",
+        "term": "p_value",
+        "category": "statistics",
+        "complexity": "intermediate",
+        "definition": "Probability of obtaining results at least as extreme as observed, assuming null hypothesis is true..."
+      },
+      {
+        "id": "effect_size",
+        "term": "effect_size",
+        "category": "statistics",
+        "complexity": "intermediate",
+        "definition": "Magnitude of relationship or difference, independent of sample size..."
+      },
+      {
+        "id": "ecological_fallacy",
+        "term": "ecological_fallacy",
+        "category": "research_methods",
+        "complexity": "advanced",
+        "definition": "Inferring individual-level relationships from group-level data..."
+      },
+      {
+        "id": "replication_crisis",
+        "term": "replication_crisis",
+        "category": "metascience",
+        "complexity": "advanced",
+        "definition": "Finding that many published research results fail to replicate..."
+      },
+      {
+        "id": "sampling_bias",
+        "term": "sampling_bias",
+        "category": "research_methods",
+        "complexity": "basic",
+        "definition": "Systematic error from non-representative sample..."
+      },
+      {
+        "id": "theory_of_mind",
+        "term": "theory_of_mind",
+        "category": "developmental_psychology",
+        "complexity": "intermediate",
+        "definition": "Ability to attribute mental states (beliefs, desires, intentions) to others..."
+      },
+      {
+        "id": "priming",
+        "term": "priming",
+        "category": "cognitive_psychology",
+        "complexity": "intermediate",
+        "definition": "Exposure to stimulus influences response to subsequent stimulus..."
+      },
+      {
+        "id": "experimental_design",
+        "term": "experimental_design",
+        "category": "research_methods",
+        "complexity": "intermediate",
+        "definition": "Structure for testing causal hypotheses through manipulation and control..."
+      },
+      {
+        "id": "construct_validity",
+        "term": "construct_validity",
+        "category": "measurement",
+        "complexity": "advanced",
+        "definition": "Degree to which measurement captures theoretical construct it intends to measure..."
+      },
+      {
+        "id": "social_desirability_bias",
+        "term": "social_desirability_bias",
+        "category": "measurement",
+        "complexity": "basic",
+        "definition": "Tendency to answer questions in manner viewed favorably by others..."
+      }
+    ],
+    "edges": [
+      {
+        "source": "cognitive_bias",
+        "target": "confirmation_bias",
+        "weight": 1
+      },
+      {
+        "source": "availability_heuristic",
+        "target": "cognitive_bias",
+        "weight": 1
+      },
+      {
+        "source": "anchoring",
+        "target": "cognitive_bias",
+        "weight": 1
+      },
+      {
+        "source": "cognitive_bias",
+        "target": "dunning_kruger",
+        "weight": 1
+      },
+      {
+        "source": "confounding_variable",
+        "target": "correlation_vs_causation",
+        "weight": 1
+      },
+      {
+        "source": "correlation_vs_causation",
+        "target": "experimental_design",
+        "weight": 1
+      },
+      {
+        "source": "correlation_vs_causation",
+        "target": "counterfactual",
+        "weight": 1
+      },
+      {
+        "source": "causality",
+        "target": "correlation_vs_causation",
+        "weight": 1
+      },
+      {
+        "source": "construct_validity",
+        "target": "operationalization",
+        "weight": 2
+      },
+      {
+        "source": "measurement",
+        "target": "operationalization",
+        "weight": 1
+      },
+      {
+        "source": "operationalization",
+        "target": "variable_definition",
+        "weight": 1
+      },
+      {
+        "source": "operationalization",
+        "target": "reliability",
+        "weight": 1
+      },
+      {
+        "source": "external_validity",
+        "target": "internal_validity",
+        "weight": 1
+      },
+      {
+        "source": "external_validity",
+        "target": "sampling",
+        "weight": 1
+      },
+      {
+        "source": "external_validity",
+        "target": "replication",
+        "weight": 1
+      },
+      {
+        "source": "external_validity",
+        "target": "population",
+        "weight": 1
+      },
+      {
+        "source": "social_construction",
+        "target": "symbolic_interactionism",
+        "weight": 1
+      },
+      {
+        "source": "social_construction",
+        "target": "social_reality",
+        "weight": 1
+      },
+      {
+        "source": "collective_meaning",
+        "target": "social_construction",
+        "weight": 1
+      },
+      {
+        "source": "norms",
+        "target": "social_construction",
+        "weight": 1
+      },
+      {
+        "source": "null_hypothesis",
+        "target": "p_value",
+        "weight": 1
+      },
+      {
+        "source": "p_value",
+        "target": "statistical_significance",
+        "weight": 1
+      },
+      {
+        "source": "p_value",
+        "target": "type_I_error",
+        "weight": 1
+      },
+      {
+        "source": "hypothesis_testing",
+        "target": "p_value",
+        "weight": 1
+      },
+      {
+        "source": "effect_size",
+        "target": "statistical_significance",
+        "weight": 1
+      },
+      {
+        "source": "cohens_d",
+        "target": "effect_size",
+        "weight": 1
+      },
+      {
+        "source": "effect_size",
+        "target": "r_squared",
+        "weight": 1
+      },
+      {
+        "source": "effect_size",
+        "target": "practical_importance",
+        "weight": 1
+      },
+      {
+        "source": "ecological_fallacy",
+        "target": "levels_of_analysis",
+        "weight": 1
+      },
+      {
+        "source": "atomistic_fallacy",
+        "target": "ecological_fallacy",
+        "weight": 1
+      },
+      {
+        "source": "ecological_fallacy",
+        "target": "multilevel_modeling",
+        "weight": 1
+      },
+      {
+        "source": "p_hacking",
+        "target": "replication_crisis",
+        "weight": 1
+      },
+      {
+        "source": "publication_bias",
+        "target": "replication_crisis",
+        "weight": 1
+      },
+      {
+        "source": "open_science",
+        "target": "replication_crisis",
+        "weight": 1
+      },
+      {
+        "source": "preregistration",
+        "target": "replication_crisis",
+        "weight": 1
+      },
+      {
+        "source": "random_sampling",
+        "target": "sampling_bias",
+        "weight": 1
+      },
+      {
+        "source": "convenience_sample",
+        "target": "sampling_bias",
+        "weight": 1
+      },
+      {
+        "source": "external_validity",
+        "target": "sampling_bias",
+        "weight": 1
+      },
+      {
+        "source": "generalization",
+        "target": "sampling_bias",
+        "weight": 1
+      },
+      {
+        "source": "perspective_taking",
+        "target": "theory_of_mind",
+        "weight": 1
+      },
+      {
+        "source": "empathy",
+        "target": "theory_of_mind",
+        "weight": 1
+      },
+      {
+        "source": "false_belief_task",
+        "target": "theory_of_mind",
+        "weight": 1
+      },
+      {
+        "source": "social_cognition",
+        "target": "theory_of_mind",
+        "weight": 1
+      },
+      {
+        "source": "implicit_memory",
+        "target": "priming",
+        "weight": 1
+      },
+      {
+        "source": "automatic_processes",
+        "target": "priming",
+        "weight": 1
+      },
+      {
+        "source": "priming",
+        "target": "semantic_network",
+        "weight": 1
+      },
+      {
+        "source": "accessibility",
+        "target": "priming",
+        "weight": 1
+      },
+      {
+        "source": "experimental_design",
+        "target": "random_assignment",
+        "weight": 1
+      },
+      {
+        "source": "control_group",
+        "target": "experimental_design",
+        "weight": 1
+      },
+      {
+        "source": "experimental_design",
+        "target": "independent_variable",
+        "weight": 1
+      },
+      {
+        "source": "dependent_variable",
+        "target": "experimental_design",
+        "weight": 1
+      },
+      {
+        "source": "construct_validity",
+        "target": "convergent_validity",
+        "weight": 1
+      },
+      {
+        "source": "construct_validity",
+        "target": "discriminant_validity",
+        "weight": 1
+      },
+      {
+        "source": "construct_validity",
+        "target": "face_validity",
+        "weight": 1
+      },
+      {
+        "source": "self_report",
+        "target": "social_desirability_bias",
+        "weight": 1
+      },
+      {
+        "source": "demand_characteristics",
+        "target": "social_desirability_bias",
+        "weight": 1
+      },
+      {
+        "source": "social_desirability_bias",
+        "target": "survey_methods",
+        "weight": 1
+      },
+      {
+        "source": "social_desirability_bias",
+        "target": "validity_threat",
+        "weight": 1
+      }
+    ],
+    "metrics": {
+      "total_nodes": 15,
+      "total_edges": 58,
+      "avg_degree": 4.066666666666666,
+      "max_degree": 5,
+      "min_degree": 3,
+      "central_concepts": [
+        {
+          "id": "external_validity",
+          "degree": 5
+        },
+        {
+          "id": "experimental_design",
+          "degree": 5
+        },
+        {
+          "id": "cognitive_bias",
+          "degree": 4
+        },
+        {
+          "id": "correlation_vs_causation",
+          "degree": 4
+        },
+        {
+          "id": "operationalization",
+          "degree": 4
+        }
+      ],
+      "peripheral_concepts": [
+        {
+          "id": "ecological_fallacy",
+          "degree": 3
+        },
+        {
+          "id": "cognitive_bias",
+          "degree": 4
+        },
+        {
+          "id": "correlation_vs_causation",
+          "degree": 4
+        },
+        {
+          "id": "operationalization",
+          "degree": 4
+        },
+        {
+          "id": "social_construction",
+          "degree": 4
+        }
+      ],
+      "category_distribution": {
+        "cognitive_psychology": 2,
+        "research_methods": 6,
+        "sociological_theory": 1,
+        "statistics": 2,
+        "metascience": 1,
+        "developmental_psychology": 1,
+        "measurement": 2
+      },
+      "complexity_distribution": {
+        "intermediate": 8,
+        "basic": 3,
+        "advanced": 4
+      },
+      "density": 0.5523809523809524
+    }
+  },
+  "security": {
+    "domain": "security",
+    "nodes": [
+      {
+        "id": "buffer_overflow",
+        "term": "buffer_overflow",
+        "category": "memory_vulnerabilities",
+        "complexity": "intermediate",
+        "definition": "Memory safety violation where data exceeds buffer boundary, overwriting adjacent memory..."
+      },
+      {
+        "id": "SQL_injection",
+        "term": "SQL_injection",
+        "category": "web_vulnerabilities",
+        "complexity": "basic",
+        "definition": "Code injection where attacker inserts malicious SQL into application queries..."
+      },
+      {
+        "id": "XSS",
+        "term": "XSS",
+        "category": "web_vulnerabilities",
+        "complexity": "basic",
+        "definition": "Cross-Site Scripting - injecting malicious scripts into trusted websites..."
+      },
+      {
+        "id": "ROP",
+        "term": "ROP",
+        "category": "exploitation_techniques",
+        "complexity": "advanced",
+        "definition": "Return-Oriented Programming - chaining existing code gadgets to bypass DEP/NX..."
+      },
+      {
+        "id": "privilege_escalation",
+        "term": "privilege_escalation",
+        "category": "post_exploitation",
+        "complexity": "intermediate",
+        "definition": "Gaining higher permissions than initially granted..."
+      },
+      {
+        "id": "cryptography",
+        "term": "cryptography",
+        "category": "cryptographic_foundations",
+        "complexity": "advanced",
+        "definition": "Practice of secure communication through encoding and decoding..."
+      },
+      {
+        "id": "reverse_engineering",
+        "term": "reverse_engineering",
+        "category": "analysis_techniques",
+        "complexity": "advanced",
+        "definition": "Analyzing compiled code to understand functionality and find vulnerabilities..."
+      },
+      {
+        "id": "ASLR",
+        "term": "ASLR",
+        "category": "memory_protections",
+        "complexity": "intermediate",
+        "definition": "Address Space Layout Randomization - randomizing memory addresses to hinder exploitation..."
+      },
+      {
+        "id": "format_string",
+        "term": "format_string",
+        "category": "memory_vulnerabilities",
+        "complexity": "advanced",
+        "definition": "Vulnerability where untrusted input is used as format string, allowing read/write primitives..."
+      },
+      {
+        "id": "race_condition",
+        "term": "race_condition",
+        "category": "logic_vulnerabilities",
+        "complexity": "advanced",
+        "definition": "Timing-dependent bug where outcome depends on sequence/timing of uncontrollable events..."
+      },
+      {
+        "id": "fuzzing",
+        "term": "fuzzing",
+        "category": "vulnerability_discovery",
+        "complexity": "intermediate",
+        "definition": "Automated testing technique feeding malformed/unexpected inputs to find bugs..."
+      },
+      {
+        "id": "SSRF",
+        "term": "SSRF",
+        "category": "web_vulnerabilities",
+        "complexity": "intermediate",
+        "definition": "Server-Side Request Forgery - forcing server to make unintended requests..."
+      },
+      {
+        "id": "deserialization",
+        "term": "deserialization",
+        "category": "logic_vulnerabilities",
+        "complexity": "advanced",
+        "definition": "Converting serialized data back to objects - vulnerable when untrusted data deserialized..."
+      },
+      {
+        "id": "lateral_movement",
+        "term": "lateral_movement",
+        "category": "post_exploitation",
+        "complexity": "advanced",
+        "definition": "Moving through network after initial compromise to reach target systems..."
+      },
+      {
+        "id": "steganography",
+        "term": "steganography",
+        "category": "covert_techniques",
+        "complexity": "intermediate",
+        "definition": "Hiding information within other non-secret data..."
+      }
+    ],
+    "edges": [
+      {
+        "source": "buffer_overflow",
+        "target": "stack_smashing",
+        "weight": 1
+      },
+      {
+        "source": "buffer_overflow",
+        "target": "heap_overflow",
+        "weight": 1
+      },
+      {
+        "source": "ROP",
+        "target": "buffer_overflow",
+        "weight": 2
+      },
+      {
+        "source": "buffer_overflow",
+        "target": "shellcode",
+        "weight": 1
+      },
+      {
+        "source": "buffer_overflow",
+        "target": "canary",
+        "weight": 1
+      },
+      {
+        "source": "SQL_injection",
+        "target": "code_injection",
+        "weight": 1
+      },
+      {
+        "source": "SQL_injection",
+        "target": "parameterized_queries",
+        "weight": 1
+      },
+      {
+        "source": "ORM",
+        "target": "SQL_injection",
+        "weight": 1
+      },
+      {
+        "source": "SQL_injection",
+        "target": "input_validation",
+        "weight": 1
+      },
+      {
+        "source": "XSS",
+        "target": "reflected_XSS",
+        "weight": 1
+      },
+      {
+        "source": "XSS",
+        "target": "stored_XSS",
+        "weight": 1
+      },
+      {
+        "source": "DOM_XSS",
+        "target": "XSS",
+        "weight": 1
+      },
+      {
+        "source": "CSP",
+        "target": "XSS",
+        "weight": 1
+      },
+      {
+        "source": "XSS",
+        "target": "sanitization",
+        "weight": 1
+      },
+      {
+        "source": "DEP",
+        "target": "ROP",
+        "weight": 1
+      },
+      {
+        "source": "NX",
+        "target": "ROP",
+        "weight": 1
+      },
+      {
+        "source": "ASLR",
+        "target": "ROP",
+        "weight": 1
+      },
+      {
+        "source": "ROP",
+        "target": "gadget",
+        "weight": 1
+      },
+      {
+        "source": "ROP",
+        "target": "shellcode",
+        "weight": 1
+      },
+      {
+        "source": "lateral_movement",
+        "target": "privilege_escalation",
+        "weight": 2
+      },
+      {
+        "source": "SUID",
+        "target": "privilege_escalation",
+        "weight": 1
+      },
+      {
+        "source": "kernel_exploit",
+        "target": "privilege_escalation",
+        "weight": 1
+      },
+      {
+        "source": "privilege_escalation",
+        "target": "sudo_misconfig",
+        "weight": 1
+      },
+      {
+        "source": "cryptography",
+        "target": "encryption",
+        "weight": 1
+      },
+      {
+        "source": "cryptography",
+        "target": "hashing",
+        "weight": 1
+      },
+      {
+        "source": "PKI",
+        "target": "cryptography",
+        "weight": 1
+      },
+      {
+        "source": "cryptography",
+        "target": "symmetric_crypto",
+        "weight": 1
+      },
+      {
+        "source": "asymmetric_crypto",
+        "target": "cryptography",
+        "weight": 1
+      },
+      {
+        "source": "disassembly",
+        "target": "reverse_engineering",
+        "weight": 1
+      },
+      {
+        "source": "decompilation",
+        "target": "reverse_engineering",
+        "weight": 1
+      },
+      {
+        "source": "debugging",
+        "target": "reverse_engineering",
+        "weight": 1
+      },
+      {
+        "source": "reverse_engineering",
+        "target": "static_analysis",
+        "weight": 1
+      },
+      {
+        "source": "dynamic_analysis",
+        "target": "reverse_engineering",
+        "weight": 1
+      },
+      {
+        "source": "ASLR",
+        "target": "DEP",
+        "weight": 1
+      },
+      {
+        "source": "ASLR",
+        "target": "NX",
+        "weight": 1
+      },
+      {
+        "source": "ASLR",
+        "target": "PIE",
+        "weight": 1
+      },
+      {
+        "source": "ASLR",
+        "target": "information_leak",
+        "weight": 1
+      },
+      {
+        "source": "ASLR",
+        "target": "bypass_techniques",
+        "weight": 1
+      },
+      {
+        "source": "format_string",
+        "target": "printf",
+        "weight": 1
+      },
+      {
+        "source": "arbitrary_read",
+        "target": "format_string",
+        "weight": 1
+      },
+      {
+        "source": "arbitrary_write",
+        "target": "format_string",
+        "weight": 1
+      },
+      {
+        "source": "format_string",
+        "target": "stack_leak",
+        "weight": 1
+      },
+      {
+        "source": "concurrency",
+        "target": "race_condition",
+        "weight": 1
+      },
+      {
+        "source": "race_condition",
+        "target": "synchronization",
+        "weight": 1
+      },
+      {
+        "source": "atomicity",
+        "target": "race_condition",
+        "weight": 1
+      },
+      {
+        "source": "race_condition",
+        "target": "symbolic_links",
+        "weight": 1
+      },
+      {
+        "source": "AFL",
+        "target": "fuzzing",
+        "weight": 1
+      },
+      {
+        "source": "fuzzing",
+        "target": "libFuzzer",
+        "weight": 1
+      },
+      {
+        "source": "coverage_guided",
+        "target": "fuzzing",
+        "weight": 1
+      },
+      {
+        "source": "fuzzing",
+        "target": "mutation",
+        "weight": 1
+      },
+      {
+        "source": "fuzzing",
+        "target": "generation",
+        "weight": 1
+      },
+      {
+        "source": "CSRF",
+        "target": "SSRF",
+        "weight": 1
+      },
+      {
+        "source": "SSRF",
+        "target": "URL_validation",
+        "weight": 1
+      },
+      {
+        "source": "SSRF",
+        "target": "network_segmentation",
+        "weight": 1
+      },
+      {
+        "source": "SSRF",
+        "target": "cloud_metadata",
+        "weight": 1
+      },
+      {
+        "source": "deserialization",
+        "target": "serialization",
+        "weight": 1
+      },
+      {
+        "source": "RCE",
+        "target": "deserialization",
+        "weight": 1
+      },
+      {
+        "source": "deserialization",
+        "target": "object_injection",
+        "weight": 1
+      },
+      {
+        "source": "deserialization",
+        "target": "pickle",
+        "weight": 1
+      },
+      {
+        "source": "Java_deserialization",
+        "target": "deserialization",
+        "weight": 1
+      },
+      {
+        "source": "credential_dumping",
+        "target": "lateral_movement",
+        "weight": 1
+      },
+      {
+        "source": "lateral_movement",
+        "target": "pass_the_hash",
+        "weight": 1
+      },
+      {
+        "source": "lateral_movement",
+        "target": "tunneling",
+        "weight": 1
+      },
+      {
+        "source": "LSB",
+        "target": "steganography",
+        "weight": 1
+      },
+      {
+        "source": "covert_channels",
+        "target": "steganography",
+        "weight": 1
+      },
+      {
+        "source": "steganography",
+        "target": "watermarking",
+        "weight": 1
+      },
+      {
+        "source": "encoding",
+        "target": "steganography",
+        "weight": 1
+      }
+    ],
+    "metrics": {
+      "total_nodes": 15,
+      "total_edges": 67,
+      "avg_degree": 4.666666666666667,
+      "max_degree": 6,
+      "min_degree": 4,
+      "central_concepts": [
+        {
+          "id": "ROP",
+          "degree": 6
+        },
+        {
+          "id": "ASLR",
+          "degree": 6
+        },
+        {
+          "id": "buffer_overflow",
+          "degree": 5
+        },
+        {
+          "id": "XSS",
+          "degree": 5
+        },
+        {
+          "id": "cryptography",
+          "degree": 5
+        }
+      ],
+      "peripheral_concepts": [
+        {
+          "id": "SQL_injection",
+          "degree": 4
+        },
+        {
+          "id": "privilege_escalation",
+          "degree": 4
+        },
+        {
+          "id": "format_string",
+          "degree": 4
+        },
+        {
+          "id": "race_condition",
+          "degree": 4
+        },
+        {
+          "id": "SSRF",
+          "degree": 4
+        }
+      ],
+      "category_distribution": {
+        "memory_vulnerabilities": 2,
+        "web_vulnerabilities": 3,
+        "exploitation_techniques": 1,
+        "post_exploitation": 2,
+        "cryptographic_foundations": 1,
+        "analysis_techniques": 1,
+        "memory_protections": 1,
+        "logic_vulnerabilities": 2,
+        "vulnerability_discovery": 1,
+        "covert_techniques": 1
+      },
+      "complexity_distribution": {
+        "intermediate": 6,
+        "basic": 2,
+        "advanced": 7
+      },
+      "density": 0.638095238095238
+    }
+  },
+  "data_science": {
+    "domain": "data_science",
+    "nodes": [
+      {
+        "id": "overfitting",
+        "term": "overfitting",
+        "category": "model_evaluation",
+        "complexity": "intermediate",
+        "definition": "Model learns training data too well including noise, failing to generalize to new data..."
+      },
+      {
+        "id": "bias_variance_tradeoff",
+        "term": "bias_variance_tradeoff",
+        "category": "machine_learning_theory",
+        "complexity": "advanced",
+        "definition": "Balance between model's ability to fit training data (bias) and generalize to new data (variance)..."
+      },
+      {
+        "id": "feature_engineering",
+        "term": "feature_engineering",
+        "category": "data_preparation",
+        "complexity": "intermediate",
+        "definition": "Creating new features or transforming existing ones to improve model performance..."
+      },
+      {
+        "id": "cross_validation",
+        "term": "cross_validation",
+        "category": "model_evaluation",
+        "complexity": "basic",
+        "definition": "Model evaluation technique partitioning data into train/test folds multiple times..."
+      },
+      {
+        "id": "dimensionality_reduction",
+        "term": "dimensionality_reduction",
+        "category": "unsupervised_learning",
+        "complexity": "advanced",
+        "definition": "Reducing number of features while preserving important information..."
+      },
+      {
+        "id": "ensemble_methods",
+        "term": "ensemble_methods",
+        "category": "machine_learning_techniques",
+        "complexity": "advanced",
+        "definition": "Combining multiple models to improve predictions beyond individual models..."
+      },
+      {
+        "id": "gradient_descent",
+        "term": "gradient_descent",
+        "category": "optimization",
+        "complexity": "advanced",
+        "definition": "Optimization algorithm iteratively moving toward minimum by following negative gradient..."
+      },
+      {
+        "id": "confusion_matrix",
+        "term": "confusion_matrix",
+        "category": "model_evaluation",
+        "complexity": "basic",
+        "definition": "Table showing classification model's predictions vs actual labels..."
+      },
+      {
+        "id": "data_leakage",
+        "term": "data_leakage",
+        "category": "data_preparation",
+        "complexity": "intermediate",
+        "definition": "Training data contains information about test data, leading to overly optimistic performance..."
+      },
+      {
+        "id": "imbalanced_data",
+        "term": "imbalanced_data",
+        "category": "data_challenges",
+        "complexity": "intermediate",
+        "definition": "Dataset where classes are not represented equally..."
+      },
+      {
+        "id": "regularization",
+        "term": "regularization",
+        "category": "model_improvement",
+        "complexity": "intermediate",
+        "definition": "Technique adding penalty term to loss function to prevent overfitting..."
+      },
+      {
+        "id": "A_B_testing",
+        "term": "A_B_testing",
+        "category": "experimental_design",
+        "complexity": "intermediate",
+        "definition": "Experimental design comparing two versions to determine which performs better..."
+      },
+      {
+        "id": "time_series_analysis",
+        "term": "time_series_analysis",
+        "category": "specialized_techniques",
+        "complexity": "advanced",
+        "definition": "Analyzing data points ordered in time to identify patterns and forecast..."
+      },
+      {
+        "id": "clustering",
+        "term": "clustering",
+        "category": "unsupervised_learning",
+        "complexity": "intermediate",
+        "definition": "Grouping data points into clusters based on similarity..."
+      },
+      {
+        "id": "neural_network",
+        "term": "neural_network",
+        "category": "machine_learning_models",
+        "complexity": "advanced",
+        "definition": "Computational model inspired by biological neurons, learning through backpropagation..."
+      }
+    ],
+    "edges": [
+      {
+        "source": "bias_variance_tradeoff",
+        "target": "overfitting",
+        "weight": 2
+      },
+      {
+        "source": "overfitting",
+        "target": "regularization",
+        "weight": 1
+      },
+      {
+        "source": "cross_validation",
+        "target": "overfitting",
+        "weight": 1
+      },
+      {
+        "source": "generalization",
+        "target": "overfitting",
+        "weight": 1
+      },
+      {
+        "source": "bias_variance_tradeoff",
+        "target": "underfitting",
+        "weight": 1
+      },
+      {
+        "source": "bias_variance_tradeoff",
+        "target": "model_complexity",
+        "weight": 1
+      },
+      {
+        "source": "bias_variance_tradeoff",
+        "target": "regularization",
+        "weight": 1
+      },
+      {
+        "source": "feature_engineering",
+        "target": "feature_selection",
+        "weight": 1
+      },
+      {
+        "source": "dimensionality_reduction",
+        "target": "feature_engineering",
+        "weight": 1
+      },
+      {
+        "source": "domain_knowledge",
+        "target": "feature_engineering",
+        "weight": 1
+      },
+      {
+        "source": "feature_engineering",
+        "target": "representation",
+        "weight": 1
+      },
+      {
+        "source": "cross_validation",
+        "target": "train_test_split",
+        "weight": 1
+      },
+      {
+        "source": "cross_validation",
+        "target": "stratification",
+        "weight": 1
+      },
+      {
+        "source": "cross_validation",
+        "target": "time_series_CV",
+        "weight": 1
+      },
+      {
+        "source": "cross_validation",
+        "target": "nested_CV",
+        "weight": 1
+      },
+      {
+        "source": "PCA",
+        "target": "dimensionality_reduction",
+        "weight": 1
+      },
+      {
+        "source": "dimensionality_reduction",
+        "target": "t-SNE",
+        "weight": 1
+      },
+      {
+        "source": "UMAP",
+        "target": "dimensionality_reduction",
+        "weight": 1
+      },
+      {
+        "source": "dimensionality_reduction",
+        "target": "feature_selection",
+        "weight": 1
+      },
+      {
+        "source": "curse_of_dimensionality",
+        "target": "dimensionality_reduction",
+        "weight": 1
+      },
+      {
+        "source": "bagging",
+        "target": "ensemble_methods",
+        "weight": 1
+      },
+      {
+        "source": "boosting",
+        "target": "ensemble_methods",
+        "weight": 1
+      },
+      {
+        "source": "ensemble_methods",
+        "target": "stacking",
+        "weight": 1
+      },
+      {
+        "source": "ensemble_methods",
+        "target": "random_forest",
+        "weight": 1
+      },
+      {
+        "source": "ensemble_methods",
+        "target": "gradient_boosting",
+        "weight": 1
+      },
+      {
+        "source": "gradient_descent",
+        "target": "learning_rate",
+        "weight": 1
+      },
+      {
+        "source": "gradient_descent",
+        "target": "momentum",
+        "weight": 1
+      },
+      {
+        "source": "Adam",
+        "target": "gradient_descent",
+        "weight": 1
+      },
+      {
+        "source": "SGD",
+        "target": "gradient_descent",
+        "weight": 1
+      },
+      {
+        "source": "backpropagation",
+        "target": "gradient_descent",
+        "weight": 1
+      },
+      {
+        "source": "confusion_matrix",
+        "target": "precision",
+        "weight": 1
+      },
+      {
+        "source": "confusion_matrix",
+        "target": "recall",
+        "weight": 1
+      },
+      {
+        "source": "F1",
+        "target": "confusion_matrix",
+        "weight": 1
+      },
+      {
+        "source": "accuracy",
+        "target": "confusion_matrix",
+        "weight": 1
+      },
+      {
+        "source": "confusion_matrix",
+        "target": "true_positive",
+        "weight": 1
+      },
+      {
+        "source": "confusion_matrix",
+        "target": "false_positive",
+        "weight": 1
+      },
+      {
+        "source": "data_leakage",
+        "target": "train_test_contamination",
+        "weight": 1
+      },
+      {
+        "source": "data_leakage",
+        "target": "temporal_leakage",
+        "weight": 1
+      },
+      {
+        "source": "data_leakage",
+        "target": "feature_leakage",
+        "weight": 1
+      },
+      {
+        "source": "SMOTE",
+        "target": "imbalanced_data",
+        "weight": 1
+      },
+      {
+        "source": "imbalanced_data",
+        "target": "undersampling",
+        "weight": 1
+      },
+      {
+        "source": "imbalanced_data",
+        "target": "oversampling",
+        "weight": 1
+      },
+      {
+        "source": "class_weights",
+        "target": "imbalanced_data",
+        "weight": 1
+      },
+      {
+        "source": "imbalanced_data",
+        "target": "stratification",
+        "weight": 1
+      },
+      {
+        "source": "L1_regularization",
+        "target": "regularization",
+        "weight": 1
+      },
+      {
+        "source": "L2_regularization",
+        "target": "regularization",
+        "weight": 1
+      },
+      {
+        "source": "regularization",
+        "target": "ridge",
+        "weight": 1
+      },
+      {
+        "source": "lasso",
+        "target": "regularization",
+        "weight": 1
+      },
+      {
+        "source": "elastic_net",
+        "target": "regularization",
+        "weight": 1
+      },
+      {
+        "source": "A_B_testing",
+        "target": "randomized_experiment",
+        "weight": 1
+      },
+      {
+        "source": "A_B_testing",
+        "target": "statistical_significance",
+        "weight": 1
+      },
+      {
+        "source": "A_B_testing",
+        "target": "sample_size",
+        "weight": 1
+      },
+      {
+        "source": "A_B_testing",
+        "target": "hypothesis_testing",
+        "weight": 1
+      },
+      {
+        "source": "time_series_analysis",
+        "target": "trend",
+        "weight": 1
+      },
+      {
+        "source": "seasonality",
+        "target": "time_series_analysis",
+        "weight": 1
+      },
+      {
+        "source": "ARIMA",
+        "target": "time_series_analysis",
+        "weight": 1
+      },
+      {
+        "source": "autocorrelation",
+        "target": "time_series_analysis",
+        "weight": 1
+      },
+      {
+        "source": "stationarity",
+        "target": "time_series_analysis",
+        "weight": 1
+      },
+      {
+        "source": "clustering",
+        "target": "k-means",
+        "weight": 1
+      },
+      {
+        "source": "clustering",
+        "target": "hierarchical_clustering",
+        "weight": 1
+      },
+      {
+        "source": "DBSCAN",
+        "target": "clustering",
+        "weight": 1
+      },
+      {
+        "source": "clustering",
+        "target": "silhouette_score",
+        "weight": 1
+      },
+      {
+        "source": "clustering",
+        "target": "distance_metric",
+        "weight": 1
+      },
+      {
+        "source": "layers",
+        "target": "neural_network",
+        "weight": 1
+      },
+      {
+        "source": "activation_function",
+        "target": "neural_network",
+        "weight": 1
+      },
+      {
+        "source": "backpropagation",
+        "target": "neural_network",
+        "weight": 1
+      },
+      {
+        "source": "neural_network",
+        "target": "weights",
+        "weight": 1
+      },
+      {
+        "source": "deep_learning",
+        "target": "neural_network",
+        "weight": 1
+      }
+    ],
+    "metrics": {
+      "total_nodes": 15,
+      "total_edges": 68,
+      "avg_degree": 4.866666666666666,
+      "max_degree": 7,
+      "min_degree": 3,
+      "central_concepts": [
+        {
+          "id": "regularization",
+          "degree": 7
+        },
+        {
+          "id": "dimensionality_reduction",
+          "degree": 6
+        },
+        {
+          "id": "confusion_matrix",
+          "degree": 6
+        },
+        {
+          "id": "cross_validation",
+          "degree": 5
+        },
+        {
+          "id": "ensemble_methods",
+          "degree": 5
+        }
+      ],
+      "peripheral_concepts": [
+        {
+          "id": "data_leakage",
+          "degree": 3
+        },
+        {
+          "id": "overfitting",
+          "degree": 4
+        },
+        {
+          "id": "bias_variance_tradeoff",
+          "degree": 4
+        },
+        {
+          "id": "feature_engineering",
+          "degree": 4
+        },
+        {
+          "id": "A_B_testing",
+          "degree": 4
+        }
+      ],
+      "category_distribution": {
+        "model_evaluation": 3,
+        "machine_learning_theory": 1,
+        "data_preparation": 2,
+        "unsupervised_learning": 2,
+        "machine_learning_techniques": 1,
+        "optimization": 1,
+        "data_challenges": 1,
+        "model_improvement": 1,
+        "experimental_design": 1,
+        "specialized_techniques": 1,
+        "machine_learning_models": 1
+      },
+      "complexity_distribution": {
+        "intermediate": 7,
+        "advanced": 6,
+        "basic": 2
+      },
+      "density": 0.6476190476190476
+    }
+  }
+}

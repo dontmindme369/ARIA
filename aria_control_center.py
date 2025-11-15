@@ -54,18 +54,18 @@ class Config:
 
         # Teacher ARIA
         self.aria_packs = self.root / "aria_packs"
-        self.datasets = self.root.parent / "datasets"
+        self.datasets = self.root / "datasets"
 
         # Student ARIA
-        self.corpus_dir = self.root.parent / "training_data" / "conversation_corpus"
+        self.corpus_dir = self.root / "training_corpus" / "conversation_corpus"
         self.lmstudio_conversations = Path.home() / ".lmstudio" / "conversations"
 
         # State
-        self.bandit_state = Path.home() / ".aria" / "bandit_state.json"
-        self.watcher_state = self.root.parent / "var" / "watcher_state.json"
+        self.bandit_state = self.root / ".aria_contextual_bandit.json"
+        self.watcher_state = self.root / "var" / "watcher_state.json"
 
         # Telemetry
-        self.telemetry = self.root.parent / "var" / "telemetry"
+        self.telemetry = self.root / "var" / "telemetry"
 
     def create_dirs(self):
         """Create required directories"""
@@ -165,7 +165,7 @@ class StudentARIA:
             print(color("✓ Watcher already running", C.YELLOW))
             return True
 
-        watcher_script = self.config.root / "conversation_watcher.py"
+        watcher_script = self.config.root / "src" / "monitoring" / "conversation_watcher.py"
 
         if not watcher_script.exists():
             print(color(f"✗ Watcher script not found: {watcher_script}", C.RED))
@@ -376,7 +376,8 @@ class ControlCenter:
         print(color("🔥 FLYWHEEL TEST", C.BOLD + C.YELLOW))
         print(color("─" * 68, C.DIM))
 
-        test_script = self.config.root.parent / "aria_systems_test_and_analysis" / "stress_tests" / "test_real_data_flywheel.py"
+        # Test suite is in aria root
+        test_script = self.config.root / "aria_systems_test_and_analysis" / "stress_tests" / "test_real_data_flywheel.py"
 
         if not test_script.exists():
             print(color(f"✗ Test script not found: {test_script}", C.RED))

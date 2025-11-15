@@ -11,7 +11,7 @@ Frequently Asked Questions about ARIA.
 ARIA (Adaptive Resonant Intelligent Architecture) is a self-learning retrieval system that combines:
 - **Hybrid search** (BM25 + semantic embeddings)
 - **Quaternion exploration** (4D geometric semantic space navigation)
-- **Thompson Sampling** (adaptive strategy selection)
+- **LinUCB** (adaptive strategy selection)
 - **Perspective detection** (8-way query classification)
 
 It's designed to retrieve relevant context from your knowledge base for use with LLMs.
@@ -20,7 +20,7 @@ It's designed to retrieve relevant context from your knowledge base for use with
 
 **Unique Features**:
 1. **Quaternion Semantic Exploration** - Rotates embeddings in semantic space for broader coverage
-2. **Thompson Sampling** - Learns which retrieval strategies work best for different queries
+2. **LinUCB** - Learns which retrieval strategies work best for different queries
 3. **Perspective-Aware** - Adjusts retrieval based on query intent (educational vs diagnostic vs research, etc.)
 4. **Student/Teacher Architecture** - Learns from all your LLM conversations, not just explicit queries
 
@@ -133,7 +133,7 @@ result = aria.query("How does gradient descent work?")
 
 **Don't choose - let the bandit learn!**
 
-After 20+ queries, Thompson Sampling will automatically select the best preset for each query type.
+After 20+ queries, LinUCB will automatically select the best preset for each query type.
 
 **Manual override** (testing only):
 ```bash
@@ -227,9 +227,9 @@ Query: "debug authentication error"
 
 See [QUATERNIONS.md](QUATERNIONS.md) for deep dive.
 
-### What is Thompson Sampling?
+### What is LinUCB?
 
-**Thompson Sampling** is a Bayesian algorithm for the multi-armed bandit problem.
+**LinUCB** is a Bayesian algorithm for the multi-armed bandit problem.
 
 **In ARIA**:
 - **Arms**: 4 presets (fast, balanced, deep, diverse)
@@ -565,7 +565,7 @@ python3 tests/comprehensive_test_suite.py
 
 **Adaptive Resonant Intelligent Architecture**
 
-- **Adaptive**: Thompson Sampling learns optimal strategies
+- **Adaptive**: LinUCB learns optimal strategies
 - **Resonant**: Quaternion rotations explore semantic "resonances"
 - **Intelligent**: Perspective detection, bandit learning
 - **Architecture**: Unified Teacher/Student system design

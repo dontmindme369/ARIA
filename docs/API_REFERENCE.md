@@ -16,7 +16,7 @@ from core.aria_core import ARIA
 aria = ARIA(
     index_roots: List[str],
     out_root: str,
-    state_path: str = "~/.aria/bandit_state.json",
+    state_path: str = ".aria_contextual_bandit.json",
     enforce_session: bool = False
 )
 ```
@@ -27,7 +27,7 @@ aria = ARIA(
 |-----------|------|----------|---------|-------------|
 | `index_roots` | `List[str]` | Yes | - | Paths to knowledge base directories |
 | `out_root` | `str` | Yes | - | Output directory for packs |
-| `state_path` | `str` | No | `~/.aria/bandit_state.json` | Bandit state file path |
+| `state_path` | `str` | No | `.aria_contextual_bandit.json` | LinUCB bandit state file path |
 | `enforce_session` | `bool` | No | `False` | Require session management |
 
 #### Methods
@@ -161,7 +161,7 @@ filtered = apply_postfilter(
 
 ## Intelligence API
 
-### Bandit (Thompson Sampling)
+### Bandit (LinUCB Contextual Bandit)
 
 **Location**: `src/intelligence/bandit_context.py`
 
@@ -169,7 +169,7 @@ filtered = apply_postfilter(
 from intelligence.bandit_context import BanditState
 
 # Initialize
-state = BanditState(state_path="~/.aria/bandit_state.json")
+state = BanditState(state_path=".aria_contextual_bandit.json")
 
 # Get available presets
 presets = state.presets
@@ -524,7 +524,7 @@ import json
 aria = ARIA(
     index_roots=["./datasets"],
     out_root="./aria_packs",
-    state_path="~/.aria/bandit_state.json"
+    state_path=".aria_contextual_bandit.json"
 )
 
 detector = PerspectiveOrientationDetector(
@@ -554,7 +554,7 @@ for i, item in enumerate(pack['items'][:3], 1):
     print(f"   {item['content'][:200]}...")
 
 # Check bandit state
-state = BanditState(state_path="~/.aria/bandit_state.json")
+state = BanditState(state_path=".aria_contextual_bandit.json")
 for preset in state.presets:
     print(f"\n{preset.name}: α={preset.alpha:.1f}, β={preset.beta:.1f}, "
           f"pulls={preset.pulls}, avg_reward={preset.avg_reward:.3f}")

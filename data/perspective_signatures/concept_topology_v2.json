@@ -1,0 +1,824 @@
+{
+  "philosophy": {
+    "epistemology": [
+      "justification",
+      "belief",
+      "truth",
+      "skepticism",
+      "foundationalism",
+      "coherentism"
+    ],
+    "metaphysics": [
+      "ontology",
+      "substance",
+      "causation",
+      "identity",
+      "time",
+      "space",
+      "modality"
+    ],
+    "ethics": [
+      "utilitarianism",
+      "deontology",
+      "virtue_ethics",
+      "moral_realism",
+      "moral_relativism"
+    ],
+    "logic": [
+      "deduction",
+      "induction",
+      "validity",
+      "soundness",
+      "fallacy",
+      "inference"
+    ],
+    "phenomenology": [
+      "intentionality",
+      "qualia",
+      "consciousness",
+      "lived_experience",
+      "intersubjectivity"
+    ],
+    "aesthetics": [
+      "beauty",
+      "sublime",
+      "taste",
+      "artistic_value",
+      "aesthetic_judgment"
+    ],
+    "political_philosophy": [
+      "justice",
+      "liberty",
+      "authority",
+      "legitimacy",
+      "rights",
+      "democracy"
+    ],
+    "philosophy_of_mind": [
+      "consciousness",
+      "qualia",
+      "intentionality",
+      "mind-body_problem",
+      "functionalism"
+    ],
+    "philosophy_of_science": [
+      "scientific_method",
+      "theory",
+      "explanation",
+      "confirmation",
+      "falsification"
+    ],
+    "existentialism": [
+      "authenticity",
+      "absurd",
+      "freedom",
+      "bad_faith",
+      "anxiety",
+      "being"
+    ],
+    "skepticism": [
+      "doubt",
+      "certainty",
+      "justification",
+      "foundationalism",
+      "problem_of_induction"
+    ],
+    "utilitarianism": [
+      "consequentialism",
+      "hedonism",
+      "utility",
+      "greatest_happiness",
+      "act_vs_rule"
+    ],
+    "deontology": [
+      "categorical_imperative",
+      "duty",
+      "rights",
+      "dignity",
+      "universalizability"
+    ],
+    "virtue_ethics": [
+      "virtue",
+      "character",
+      "eudaimonia",
+      "practical_wisdom",
+      "golden_mean"
+    ],
+    "rationalism": [
+      "a_priori_knowledge",
+      "innate_ideas",
+      "deduction",
+      "necessity"
+    ],
+    "empiricism": [
+      "sense_experience",
+      "a_posteriori_knowledge",
+      "induction",
+      "observation"
+    ]
+  },
+  "engineering": {
+    "factor_of_safety": [
+      "stress",
+      "strain",
+      "failure_mode",
+      "design_criteria",
+      "reliability"
+    ],
+    "stress": [
+      "strain",
+      "youngs_modulus",
+      "yield_strength",
+      "ultimate_strength",
+      "factor_of_safety"
+    ],
+    "strain": [
+      "stress",
+      "youngs_modulus",
+      "poissons_ratio",
+      "elastic_limit"
+    ],
+    "youngs_modulus": [
+      "stress",
+      "strain",
+      "hookes_law",
+      "stiffness",
+      "compliance"
+    ],
+    "yield_strength": [
+      "plastic_deformation",
+      "ultimate_strength",
+      "ductility",
+      "necking"
+    ],
+    "fatigue": [
+      "stress_cycles",
+      "SN_curve",
+      "crack_propagation",
+      "endurance_limit",
+      "mean_stress"
+    ],
+    "buckling": [
+      "critical_load",
+      "euler_buckling",
+      "slenderness_ratio",
+      "effective_length"
+    ],
+    "thermal_expansion": [
+      "coefficient_of_thermal_expansion",
+      "thermal_stress",
+      "bimetallic_strip"
+    ],
+    "heat_transfer": [
+      "conduction",
+      "convection",
+      "radiation",
+      "thermal_conductivity",
+      "heat_flux"
+    ],
+    "fluid_dynamics": [
+      "reynolds_number",
+      "bernoulli_equation",
+      "viscosity",
+      "turbulence",
+      "drag"
+    ],
+    "control_system": [
+      "feedback",
+      "transfer_function",
+      "stability",
+      "PID_controller",
+      "gain"
+    ],
+    "circuit_analysis": [
+      "kirchhoffs_laws",
+      "ohms_law",
+      "impedance",
+      "nodal_analysis",
+      "mesh_analysis"
+    ],
+    "signal_processing": [
+      "fourier_transform",
+      "filtering",
+      "sampling",
+      "frequency_domain",
+      "convolution"
+    ],
+    "thermodynamics": [
+      "first_law",
+      "second_law",
+      "entropy",
+      "enthalpy",
+      "efficiency"
+    ],
+    "materials_selection": [
+      "properties",
+      "cost",
+      "performance_index",
+      "ashby_charts",
+      "constraints"
+    ],
+    "finite_element_analysis": [
+      "mesh",
+      "element",
+      "node",
+      "boundary_conditions",
+      "convergence"
+    ]
+  },
+  "law": {
+    "IRAC": [
+      "legal_analysis",
+      "case_brief",
+      "argument_structure",
+      "precedent"
+    ],
+    "precedent": [
+      "binding_authority",
+      "persuasive_authority",
+      "distinguishing",
+      "overruling"
+    ],
+    "jurisdiction": [
+      "subject_matter_jurisdiction",
+      "personal_jurisdiction",
+      "venue",
+      "standing"
+    ],
+    "burden_of_proof": [
+      "standard_of_proof",
+      "prima_facie_case",
+      "shifting_burden",
+      "preponderance"
+    ],
+    "contract": [
+      "offer",
+      "acceptance",
+      "consideration",
+      "breach",
+      "damages"
+    ],
+    "tort": [
+      "negligence",
+      "intentional_tort",
+      "strict_liability",
+      "damages",
+      "duty"
+    ],
+    "negligence": [
+      "duty",
+      "breach",
+      "causation",
+      "damages",
+      "reasonable_person"
+    ],
+    "strict_liability": [
+      "product_liability",
+      "abnormally_dangerous_activity",
+      "defect",
+      "causation"
+    ],
+    "constitutional_law": [
+      "due_process",
+      "equal_protection",
+      "federalism",
+      "separation_of_powers",
+      "judicial_review"
+    ],
+    "statutory_interpretation": [
+      "plain_meaning",
+      "legislative_intent",
+      "canons_of_construction",
+      "ambiguity"
+    ],
+    "criminal_law": [
+      "mens_rea",
+      "actus_reus",
+      "defenses",
+      "constitutional_protections"
+    ],
+    "evidence": [
+      "relevance",
+      "hearsay",
+      "authentication",
+      "privilege",
+      "admissibility"
+    ],
+    "remedy": [
+      "damages",
+      "injunction",
+      "specific_performance",
+      "restitution",
+      "declaratory_judgment"
+    ],
+    "mens_rea": [
+      "intent",
+      "knowledge",
+      "recklessness",
+      "negligence",
+      "strict_liability"
+    ],
+    "hearsay": [
+      "declarant",
+      "out_of_court",
+      "exceptions",
+      "confrontation_clause"
+    ]
+  },
+  "business": {
+    "unit_economics": [
+      "CAC",
+      "LTV",
+      "contribution_margin",
+      "break_even",
+      "scalability"
+    ],
+    "CAC": [
+      "LTV",
+      "LTV_CAC_ratio",
+      "payback_period",
+      "marketing_efficiency"
+    ],
+    "LTV": [
+      "CAC",
+      "retention",
+      "churn",
+      "ARPU",
+      "cohort_analysis"
+    ],
+    "churn_rate": [
+      "retention_rate",
+      "cohort_analysis",
+      "LTV",
+      "product_market_fit"
+    ],
+    "gross_margin": [
+      "contribution_margin",
+      "COGS",
+      "operating_margin",
+      "net_margin"
+    ],
+    "burn_rate": [
+      "runway",
+      "cash_flow",
+      "operating_expenses",
+      "funding"
+    ],
+    "product_market_fit": [
+      "retention",
+      "organic_growth",
+      "NPS",
+      "value_proposition"
+    ],
+    "pivot": [
+      "iteration",
+      "validated_learning",
+      "business_model",
+      "hypothesis_testing"
+    ],
+    "runway": [
+      "burn_rate",
+      "cash_balance",
+      "fundraising",
+      "break_even"
+    ],
+    "TAM_SAM_SOM": [
+      "market_size",
+      "addressable_market",
+      "market_share",
+      "growth_potential"
+    ],
+    "MVP": [
+      "lean_startup",
+      "validated_learning",
+      "iteration",
+      "hypothesis_testing"
+    ],
+    "north_star_metric": [
+      "OKRs",
+      "KPIs",
+      "value_delivery",
+      "growth_loops"
+    ],
+    "valuation": [
+      "DCF",
+      "comparables",
+      "revenue_multiple",
+      "equity_value",
+      "enterprise_value"
+    ],
+    "go_to_market": [
+      "customer_acquisition",
+      "channels",
+      "positioning",
+      "pricing",
+      "sales_model"
+    ],
+    "competitive_advantage": [
+      "network_effects",
+      "switching_costs",
+      "economies_of_scale",
+      "brand",
+      "IP"
+    ]
+  },
+  "creative_arts": {
+    "composition": [
+      "balance",
+      "harmony",
+      "contrast",
+      "focal_point",
+      "unity"
+    ],
+    "narrative_arc": [
+      "three_act_structure",
+      "heros_journey",
+      "conflict",
+      "resolution",
+      "pacing"
+    ],
+    "color_theory": [
+      "hue",
+      "saturation",
+      "value",
+      "complementary_colors",
+      "color_wheel"
+    ],
+    "typography": [
+      "typeface",
+      "font",
+      "kerning",
+      "leading",
+      "hierarchy",
+      "readability"
+    ],
+    "character_development": [
+      "motivation",
+      "backstory",
+      "arc",
+      "agency",
+      "consistency"
+    ],
+    "voice": [
+      "tone",
+      "diction",
+      "syntax",
+      "personality",
+      "consistency"
+    ],
+    "visual_hierarchy": [
+      "contrast",
+      "scale",
+      "color",
+      "position",
+      "whitespace"
+    ],
+    "rhythm": [
+      "repetition",
+      "variation",
+      "pacing",
+      "tempo",
+      "beat"
+    ],
+    "tension_and_release": [
+      "conflict",
+      "resolution",
+      "catharsis",
+      "pacing",
+      "climax"
+    ],
+    "show_dont_tell": [
+      "sensory_detail",
+      "action",
+      "dialogue",
+      "implication",
+      "subtext"
+    ],
+    "contrast": [
+      "complement",
+      "tension",
+      "emphasis",
+      "variety"
+    ],
+    "metaphor": [
+      "simile",
+      "analogy",
+      "symbol",
+      "imagery",
+      "meaning_transfer"
+    ],
+    "gestalt_principles": [
+      "proximity",
+      "similarity",
+      "closure",
+      "continuity",
+      "figure_ground"
+    ],
+    "point_of_view": [
+      "first_person",
+      "third_person",
+      "omniscient",
+      "limited",
+      "narrator"
+    ],
+    "whitespace": [
+      "balance",
+      "composition",
+      "visual_hierarchy",
+      "minimalism"
+    ]
+  },
+  "social_sciences": {
+    "cognitive_bias": [
+      "confirmation_bias",
+      "availability_heuristic",
+      "anchoring",
+      "dunning_kruger"
+    ],
+    "correlation_vs_causation": [
+      "confounding_variable",
+      "experimental_design",
+      "counterfactual",
+      "causality"
+    ],
+    "operationalization": [
+      "construct_validity",
+      "measurement",
+      "variable_definition",
+      "reliability"
+    ],
+    "external_validity": [
+      "internal_validity",
+      "sampling",
+      "replication",
+      "population"
+    ],
+    "social_construction": [
+      "symbolic_interactionism",
+      "social_reality",
+      "collective_meaning",
+      "norms"
+    ],
+    "p_value": [
+      "null_hypothesis",
+      "statistical_significance",
+      "type_I_error",
+      "hypothesis_testing"
+    ],
+    "effect_size": [
+      "statistical_significance",
+      "cohens_d",
+      "r_squared",
+      "practical_importance"
+    ],
+    "ecological_fallacy": [
+      "levels_of_analysis",
+      "atomistic_fallacy",
+      "multilevel_modeling"
+    ],
+    "replication_crisis": [
+      "p_hacking",
+      "publication_bias",
+      "open_science",
+      "preregistration"
+    ],
+    "sampling_bias": [
+      "random_sampling",
+      "convenience_sample",
+      "external_validity",
+      "generalization"
+    ],
+    "theory_of_mind": [
+      "perspective_taking",
+      "empathy",
+      "false_belief_task",
+      "social_cognition"
+    ],
+    "priming": [
+      "implicit_memory",
+      "automatic_processes",
+      "semantic_network",
+      "accessibility"
+    ],
+    "experimental_design": [
+      "random_assignment",
+      "control_group",
+      "independent_variable",
+      "dependent_variable"
+    ],
+    "construct_validity": [
+      "operationalization",
+      "convergent_validity",
+      "discriminant_validity",
+      "face_validity"
+    ],
+    "social_desirability_bias": [
+      "self_report",
+      "demand_characteristics",
+      "survey_methods",
+      "validity_threat"
+    ]
+  },
+  "security": {
+    "buffer_overflow": [
+      "stack_smashing",
+      "heap_overflow",
+      "ROP",
+      "shellcode",
+      "canary"
+    ],
+    "SQL_injection": [
+      "code_injection",
+      "parameterized_queries",
+      "ORM",
+      "input_validation"
+    ],
+    "XSS": [
+      "reflected_XSS",
+      "stored_XSS",
+      "DOM_XSS",
+      "CSP",
+      "sanitization"
+    ],
+    "ROP": [
+      "buffer_overflow",
+      "DEP",
+      "NX",
+      "ASLR",
+      "gadget",
+      "shellcode"
+    ],
+    "privilege_escalation": [
+      "lateral_movement",
+      "SUID",
+      "kernel_exploit",
+      "sudo_misconfig"
+    ],
+    "cryptography": [
+      "encryption",
+      "hashing",
+      "PKI",
+      "symmetric_crypto",
+      "asymmetric_crypto"
+    ],
+    "reverse_engineering": [
+      "disassembly",
+      "decompilation",
+      "debugging",
+      "static_analysis",
+      "dynamic_analysis"
+    ],
+    "ASLR": [
+      "DEP",
+      "NX",
+      "PIE",
+      "information_leak",
+      "bypass_techniques"
+    ],
+    "format_string": [
+      "printf",
+      "arbitrary_read",
+      "arbitrary_write",
+      "stack_leak"
+    ],
+    "race_condition": [
+      "concurrency",
+      "synchronization",
+      "atomicity",
+      "symbolic_links"
+    ],
+    "fuzzing": [
+      "AFL",
+      "libFuzzer",
+      "coverage_guided",
+      "mutation",
+      "generation"
+    ],
+    "SSRF": [
+      "CSRF",
+      "URL_validation",
+      "network_segmentation",
+      "cloud_metadata"
+    ],
+    "deserialization": [
+      "serialization",
+      "RCE",
+      "object_injection",
+      "pickle",
+      "Java_deserialization"
+    ],
+    "lateral_movement": [
+      "privilege_escalation",
+      "credential_dumping",
+      "pass_the_hash",
+      "tunneling"
+    ],
+    "steganography": [
+      "LSB",
+      "covert_channels",
+      "watermarking",
+      "encoding"
+    ]
+  },
+  "data_science": {
+    "overfitting": [
+      "bias_variance_tradeoff",
+      "regularization",
+      "cross_validation",
+      "generalization"
+    ],
+    "bias_variance_tradeoff": [
+      "overfitting",
+      "underfitting",
+      "model_complexity",
+      "regularization"
+    ],
+    "feature_engineering": [
+      "feature_selection",
+      "dimensionality_reduction",
+      "domain_knowledge",
+      "representation"
+    ],
+    "cross_validation": [
+      "train_test_split",
+      "stratification",
+      "time_series_CV",
+      "nested_CV"
+    ],
+    "dimensionality_reduction": [
+      "PCA",
+      "t-SNE",
+      "UMAP",
+      "feature_selection",
+      "curse_of_dimensionality"
+    ],
+    "ensemble_methods": [
+      "bagging",
+      "boosting",
+      "stacking",
+      "random_forest",
+      "gradient_boosting"
+    ],
+    "gradient_descent": [
+      "learning_rate",
+      "momentum",
+      "Adam",
+      "SGD",
+      "backpropagation"
+    ],
+    "confusion_matrix": [
+      "precision",
+      "recall",
+      "F1",
+      "accuracy",
+      "true_positive",
+      "false_positive"
+    ],
+    "data_leakage": [
+      "train_test_contamination",
+      "temporal_leakage",
+      "feature_leakage"
+    ],
+    "imbalanced_data": [
+      "SMOTE",
+      "undersampling",
+      "oversampling",
+      "class_weights",
+      "stratification"
+    ],
+    "regularization": [
+      "L1_regularization",
+      "L2_regularization",
+      "ridge",
+      "lasso",
+      "elastic_net"
+    ],
+    "A_B_testing": [
+      "randomized_experiment",
+      "statistical_significance",
+      "sample_size",
+      "hypothesis_testing"
+    ],
+    "time_series_analysis": [
+      "trend",
+      "seasonality",
+      "ARIMA",
+      "autocorrelation",
+      "stationarity"
+    ],
+    "clustering": [
+      "k-means",
+      "hierarchical_clustering",
+      "DBSCAN",
+      "silhouette_score",
+      "distance_metric"
+    ],
+    "neural_network": [
+      "layers",
+      "activation_function",
+      "backpropagation",
+      "weights",
+      "deep_learning"
+    ]
+  }
+}

@@ -383,9 +383,10 @@ def demo():
     """Demonstrate perspective orientation detection"""
     from pathlib import Path
 
-    # Find signatures relative to this file
-    module_dir = Path(__file__).parent.parent.parent
-    signatures_path = module_dir / "data" / "domain_dictionaries" / "perspective_signatures_v2.json"
+    # Find signatures relative to project root (aria/)
+    # This file is in src/perspective/, so go up 2 levels to reach aria/
+    project_root = Path(__file__).parent.parent.parent
+    signatures_path = project_root / "data" / "domain_dictionaries" / "perspective_signatures_v2.json"
 
     print("="*80)
     print("PERSPECTIVE ORIENTATION DETECTOR - DEMO")

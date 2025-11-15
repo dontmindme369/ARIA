@@ -1,0 +1,82 @@
+{
+  "version": "2.0",
+  "description": "Index of enhanced semantic network vocabularies for ARIA perspective detection",
+  "last_updated": "2024-11-14T00:00:00Z",
+  "vocabularies": {
+    "philosophy": {
+      "file": "vocabularies/philosophy_vocabulary_v2.json",
+      "domain": "philosophy",
+      "anchor_alignment": "philosophical",
+      "concepts_count": 16,
+      "subdomains": ["epistemology", "metaphysics", "ethics", "logic", "phenomenology", "political_philosophy", "philosophy_of_mind", "philosophy_of_science", "existentialism", "pragmatism", "aesthetics", "social_philosophy", "philosophy_of_language", "ontology", "axiology", "hermeneutics"]
+    },
+    "engineering": {
+      "file": "vocabularies/engineering_vocabulary_v2.json",
+      "domain": "engineering",
+      "anchor_alignment": "engineering",
+      "concepts_count": 16,
+      "subdomains": ["systems_engineering", "design_patterns", "requirements_engineering", "testing", "optimization", "reliability", "quality_assurance", "project_management", "risk_management", "configuration_management", "continuous_integration", "automation", "prototyping", "validation", "verification"]
+    },
+    "law": {
+      "file": "vocabularies/law_vocabulary_v2.json",
+      "domain": "law",
+      "anchor_alignment": "law",
+      "concepts_count": 14,
+      "subdomains": ["contract_law", "tort_law", "criminal_law", "constitutional_law", "evidence", "procedure", "jurisdiction", "precedent", "statutory_interpretation", "legal_reasoning", "equity", "remedies", "legal_ethics", "jurisprudence"]
+    },
+    "business": {
+      "file": "vocabularies/business_vocabulary_v2.json",
+      "domain": "business",
+      "anchor_alignment": "business",
+      "concepts_count": 15,
+      "subdomains": ["strategy", "finance", "marketing", "operations", "management", "accounting", "economics", "entrepreneurship", "organizational_behavior", "supply_chain", "human_resources", "business_analytics", "competitive_advantage", "value_proposition", "stakeholder_management"]
+    },
+    "creative_arts": {
+      "file": "vocabularies/creative_arts_vocabulary_v2.json",
+      "domain": "creative_arts",
+      "anchor_alignment": "creative",
+      "concepts_count": 15,
+      "subdomains": ["narrative_structure", "composition", "aesthetics", "style", "genre", "medium", "technique", "creative_process", "interpretation", "criticism", "symbolism", "theme", "motif", "voice", "form"]
+    },
+    "social_sciences": {
+      "file": "vocabularies/social_sciences_vocabulary_v2.json",
+      "domain": "social_sciences",
+      "anchor_alignment": "analytical",
+      "concepts_count": 15,
+      "subdomains": ["methodology", "theory", "empirical_research", "qualitative_analysis", "quantitative_analysis", "social_structures", "cultural_analysis", "institutional_analysis", "behavior", "cognition", "identity", "power_dynamics", "social_change", "collective_action", "norms"]
+    },
+    "security": {
+      "file": "vocabularies/security_vocabulary_v2.json",
+      "domain": "security",
+      "anchor_alignment": "technical",
+      "concepts_count": 15,
+      "subdomains": ["cryptography", "network_security", "application_security", "vulnerability", "exploitation", "defense", "incident_response", "threat_modeling", "attack_vectors", "access_control", "authentication", "authorization", "auditing", "penetration_testing", "secure_coding"]
+    },
+    "data_science": {
+      "file": "vocabularies/data_science_vocabulary_v2.json",
+      "domain": "data_science",
+      "anchor_alignment": "analytical",
+      "concepts_count": 15,
+      "subdomains": ["statistical_inference", "machine_learning", "data_mining", "feature_engineering", "model_evaluation", "data_visualization", "exploratory_analysis", "predictive_modeling", "classification", "regression", "clustering", "dimensionality_reduction", "ensemble_methods", "deep_learning", "data_preprocessing"]
+    }
+  },
+  "coverage": {
+    "total_vocabularies": 8,
+    "total_concepts": 121,
+    "total_words_approx": 43200,
+    "anchor_frameworks_supported": [
+      "philosophical",
+      "engineering",
+      "law",
+      "business",
+      "creative",
+      "analytical",
+      "technical"
+    ]
+  },
+  "notes": {
+    "format": "All v2 vocabularies follow the Enhanced Semantic Network Schema v2.0",
+    "schema": "See SEMANTIC_NETWORK_SCHEMA.md for complete format specification",
+    "backward_compatibility": "Use vocabulary_utils.py to extract terms in legacy format"
+  }
+}

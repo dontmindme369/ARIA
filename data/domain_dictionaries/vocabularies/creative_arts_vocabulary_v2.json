@@ -1,0 +1,475 @@
+{
+  "domain": "creative_arts",
+  "version": "2.0",
+  "last_updated": "2024-11-14T00:00:00Z",
+  "anchor_alignment": "creative",
+  "concepts": {
+    "composition": {
+      "term": "composition",
+      "definition": "Arrangement of elements within a work to create coherent whole",
+      "synonyms": ["arrangement", "structure", "organization"],
+      "related_concepts": ["balance", "harmony", "contrast", "focal_point", "unity"],
+      "category": "fundamental_principles",
+      "complexity": "basic",
+      "mental_models": ["visual_hierarchy", "rule_of_thirds", "golden_ratio"],
+      "common_errors": ["cluttered layout", "no focal point", "poor balance"],
+      "detection_patterns": ["composition", "layout", "arrangement", "structure"],
+      "epistemic_markers": {
+        "evidence_type": "aesthetic_judgment",
+        "certainty_level": "evaluated"
+      },
+      "reasoning_patterns": ["identify elements", "assess arrangement", "check balance", "evaluate unity"],
+      "examples": ["rule of thirds photography", "golden ratio painting", "typographic hierarchy"],
+      "prerequisites": ["visual_perception", "design_elements"],
+      "applications": ["visual_design", "photography", "painting", "page_layout"]
+    },
+    "narrative_arc": {
+      "term": "narrative_arc",
+      "definition": "Structure of story from exposition through rising action, climax, falling action, to resolution",
+      "synonyms": ["story structure", "plot arc", "dramatic arc"],
+      "related_concepts": ["three_act_structure", "heros_journey", "conflict", "resolution", "pacing"],
+      "category": "storytelling",
+      "complexity": "intermediate",
+      "mental_models": ["rising_tension", "catharsis", "transformation"],
+      "common_errors": ["no conflict", "deus ex machina", "sagging middle"],
+      "detection_patterns": ["story arc", "plot structure", "narrative flow"],
+      "epistemic_markers": {
+        "evidence_type": "narrative_analysis",
+        "certainty_level": "structural_framework"
+      },
+      "reasoning_patterns": ["establish setup", "build tension", "deliver climax", "resolve conflict"],
+      "examples": ["three-act structure", "hero's journey", "Freytag's pyramid"],
+      "prerequisites": ["storytelling_basics", "conflict"],
+      "applications": ["fiction_writing", "screenwriting", "game_narratives"]
+    },
+    "color_theory": {
+      "term": "color_theory",
+      "definition": "Principles governing use and combination of colors",
+      "synonyms": ["color harmony", "chromatics"],
+      "related_concepts": ["hue", "saturation", "value", "complementary_colors", "color_wheel"],
+      "category": "visual_fundamentals",
+      "complexity": "intermediate",
+      "mental_models": ["color_wheel", "complementary_pairs", "analogous_harmony"],
+      "common_errors": ["muddy colors", "poor contrast", "ignoring context"],
+      "detection_patterns": ["color theory", "color harmony", "palette"],
+      "epistemic_markers": {
+        "evidence_type": "perceptual_and_theoretical",
+        "certainty_level": "principled"
+      },
+      "reasoning_patterns": ["choose base color", "apply harmony rules", "consider context", "test contrast"],
+      "examples": ["complementary: blue/orange", "analogous: blue/green/cyan", "triadic schemes"],
+      "prerequisites": ["color_perception", "visual_design"],
+      "applications": ["graphic_design", "painting", "UI_design", "branding"]
+    },
+    "typography": {
+      "term": "typography",
+      "definition": "Art and technique of arranging type to make written language legible and appealing",
+      "synonyms": ["type design", "lettering"],
+      "related_concepts": ["typeface", "font", "kerning", "leading", "hierarchy", "readability"],
+      "category": "visual_communication",
+      "complexity": "intermediate",
+      "mental_models": ["hierarchy", "spacing", "alignment", "contrast"],
+      "common_errors": ["too many fonts", "poor readability", "weak hierarchy"],
+      "detection_patterns": ["typography", "typeface", "font choice", "legibility"],
+      "epistemic_markers": {
+        "evidence_type": "design_principles",
+        "certainty_level": "conventional"
+      },
+      "reasoning_patterns": ["establish hierarchy", "choose appropriate typeface", "optimize spacing", "ensure readability"],
+      "examples": ["serif for body text", "sans-serif for headings", "kerning pairs"],
+      "prerequisites": ["visual_communication", "design_principles"],
+      "applications": ["graphic_design", "web_design", "print_design", "branding"]
+    },
+    "character_development": {
+      "term": "character_development",
+      "definition": "Process of creating complex, believable characters with depth and growth",
+      "synonyms": ["characterization", "character arc"],
+      "related_concepts": ["motivation", "backstory", "arc", "agency", "consistency"],
+      "category": "storytelling",
+      "complexity": "advanced",
+      "mental_models": ["want_vs_need", "internal_external_conflict", "transformation"],
+      "common_errors": ["flat characters", "inconsistent behavior", "no arc"],
+      "detection_patterns": ["character development", "character arc", "motivation"],
+      "epistemic_markers": {
+        "evidence_type": "narrative_craft",
+        "certainty_level": "evaluated"
+      },
+      "reasoning_patterns": ["define want and need", "create backstory", "show growth", "maintain consistency"],
+      "examples": ["protagonist learns humility", "villain has sympathetic motive", "supporting character provides contrast"],
+      "prerequisites": ["storytelling", "psychology"],
+      "applications": ["fiction", "screenwriting", "games", "roleplay"]
+    },
+    "voice": {
+      "term": "voice",
+      "definition": "Distinctive style and personality in writing",
+      "synonyms": ["authorial voice", "narrative voice", "style"],
+      "related_concepts": ["tone", "diction", "syntax", "personality", "consistency"],
+      "category": "writing_craft",
+      "complexity": "advanced",
+      "mental_models": ["author_personality", "narrative_perspective", "stylistic_choices"],
+      "common_errors": ["inconsistent voice", "generic voice", "voice vs character confusion"],
+      "detection_patterns": ["voice", "writing style", "narrative voice"],
+      "epistemic_markers": {
+        "evidence_type": "stylistic_analysis",
+        "certainty_level": "subjective"
+      },
+      "reasoning_patterns": ["identify distinctive elements", "maintain consistency", "match to purpose"],
+      "examples": ["Hemingway's sparse prose", "Faulkner's stream of consciousness", "Austen's irony"],
+      "prerequisites": ["writing_fundamentals", "self_awareness"],
+      "applications": ["creative_writing", "blogging", "journalism", "brand_writing"]
+    },
+    "visual_hierarchy": {
+      "term": "visual_hierarchy",
+      "definition": "Arrangement of elements to guide viewer's eye and emphasize importance",
+      "synonyms": ["visual priority", "emphasis structure"],
+      "related_concepts": ["contrast", "scale", "color", "position", "whitespace"],
+      "category": "design_principles",
+      "complexity": "intermediate",
+      "mental_models": ["eye_path", "importance_levels", "focal_points"],
+      "common_errors": ["everything emphasized equally", "buried important info", "chaotic flow"],
+      "detection_patterns": ["hierarchy", "visual flow", "emphasis"],
+      "epistemic_markers": {
+        "evidence_type": "perceptual_psychology",
+        "certainty_level": "principled"
+      },
+      "reasoning_patterns": ["identify primary message", "create levels of emphasis", "guide eye movement"],
+      "examples": ["large headlines", "contrasting call-to-action", "strategic whitespace"],
+      "prerequisites": ["visual_perception", "composition"],
+      "applications": ["UI_design", "graphic_design", "web_design", "advertising"]
+    },
+    "rhythm": {
+      "term": "rhythm",
+      "definition": "Pattern of regular or irregular pulses in time or space",
+      "synonyms": ["cadence", "flow", "pattern"],
+      "related_concepts": ["repetition", "variation", "pacing", "tempo", "beat"],
+      "category": "fundamental_principles",
+      "complexity": "intermediate",
+      "mental_models": ["regular_pulse", "syncopation", "pattern_variation"],
+      "common_errors": ["monotonous rhythm", "chaotic timing", "no variation"],
+      "detection_patterns": ["rhythm", "cadence", "flow", "pacing"],
+      "epistemic_markers": {
+        "evidence_type": "temporal_perceptual",
+        "certainty_level": "experienced"
+      },
+      "reasoning_patterns": ["establish base pattern", "introduce variation", "maintain flow"],
+      "examples": ["musical meter", "poetic rhythm", "visual rhythm in design"],
+      "prerequisites": ["temporal_awareness", "pattern_recognition"],
+      "applications": ["music", "poetry", "dance", "visual_design"]
+    },
+    "tension_and_release": {
+      "term": "tension_and_release",
+      "definition": "Building anticipation or discomfort followed by resolution or satisfaction",
+      "synonyms": ["conflict_resolution", "suspense_payoff"],
+      "related_concepts": ["conflict", "resolution", "catharsis", "pacing", "climax"],
+      "category": "storytelling",
+      "complexity": "advanced",
+      "mental_models": ["rising_action", "climax_pattern", "emotional_arc"],
+      "common_errors": ["no tension", "tension without release", "premature release"],
+      "detection_patterns": ["tension", "conflict", "release", "resolution"],
+      "epistemic_markers": {
+        "evidence_type": "emotional_response",
+        "certainty_level": "experiential"
+      },
+      "reasoning_patterns": ["build anticipation", "delay gratification", "deliver payoff", "reset"],
+      "examples": ["musical dissonance to consonance", "story conflict to resolution", "visual imbalance to balance"],
+      "prerequisites": ["narrative_structure", "audience_psychology"],
+      "applications": ["storytelling", "music", "game_design", "UX"]
+    },
+    "show_dont_tell": {
+      "term": "show_dont_tell",
+      "definition": "Reveal character and story through action and sensory details rather than exposition",
+      "synonyms": ["dramatization", "concrete_detail"],
+      "related_concepts": ["sensory_detail", "action", "dialogue", "implication", "subtext"],
+      "category": "writing_craft",
+      "complexity": "intermediate",
+      "mental_models": ["reader_inference", "concrete_experience", "indirect_revelation"],
+      "common_errors": ["excessive exposition", "telling emotions", "abstract description"],
+      "detection_patterns": ["show don't tell", "dramatize", "concrete details"],
+      "epistemic_markers": {
+        "evidence_type": "craft_principle",
+        "certainty_level": "conventional_wisdom"
+      },
+      "reasoning_patterns": ["identify telling", "convert to showing", "use sensory details", "trust reader"],
+      "examples": ["She clenched her fists (not: She was angry)", "His hands trembled (not: He was nervous)"],
+      "prerequisites": ["writing_basics", "sensory_awareness"],
+      "applications": ["fiction_writing", "screenwriting", "memoir"]
+    },
+    "contrast": {
+      "term": "contrast",
+      "definition": "Juxtaposition of differing elements to create visual or conceptual interest",
+      "synonyms": ["opposition", "juxtaposition", "difference"],
+      "related_concepts": ["complement", "tension", "emphasis", "variety"],
+      "category": "fundamental_principles",
+      "complexity": "basic",
+      "mental_models": ["light_dark", "large_small", "rough_smooth"],
+      "common_errors": ["insufficient contrast", "random contrast", "contrast without purpose"],
+      "detection_patterns": ["contrast", "juxtaposition", "difference"],
+      "epistemic_markers": {
+        "evidence_type": "perceptual",
+        "certainty_level": "principled"
+      },
+      "reasoning_patterns": ["identify key element", "create opposite or difference", "ensure purpose"],
+      "examples": ["light/dark in photography", "large/small type", "loud/soft in music"],
+      "prerequisites": ["visual_perception", "design_elements"],
+      "applications": ["all_creative_fields"]
+    },
+    "metaphor": {
+      "term": "metaphor",
+      "definition": "Figure of speech comparing two unlike things by stating one is the other",
+      "synonyms": ["figurative_comparison", "symbolic_expression"],
+      "related_concepts": ["simile", "analogy", "symbol", "imagery", "meaning_transfer"],
+      "category": "literary_devices",
+      "complexity": "intermediate",
+      "mental_models": ["conceptual_mapping", "meaning_transfer", "imaginative_connection"],
+      "common_errors": ["mixed metaphors", "cliché metaphors", "unclear vehicle"],
+      "detection_patterns": ["metaphor", "is", "figurative language"],
+      "epistemic_markers": {
+        "evidence_type": "rhetorical",
+        "certainty_level": "interpretive"
+      },
+      "reasoning_patterns": ["identify tenor and vehicle", "map properties", "assess clarity"],
+      "examples": ["Time is money", "Life is a journey", "Love is a battlefield"],
+      "prerequisites": ["language_understanding", "abstract_thinking"],
+      "applications": ["poetry", "prose", "rhetoric", "communication"]
+    },
+    "gestalt_principles": {
+      "term": "gestalt_principles",
+      "definition": "Psychological principles describing how humans perceive patterns and wholes",
+      "synonyms": ["perceptual_organization", "visual_grouping"],
+      "related_concepts": ["proximity", "similarity", "closure", "continuity", "figure_ground"],
+      "category": "perceptual_psychology",
+      "complexity": "intermediate",
+      "mental_models": ["whole_greater_than_parts", "perceptual_grouping", "pattern_completion"],
+      "common_errors": ["violating grouping", "ambiguous figure-ground", "broken continuity"],
+      "detection_patterns": ["gestalt", "proximity", "similarity", "closure"],
+      "epistemic_markers": {
+        "evidence_type": "psychological_research",
+        "certainty_level": "empirically_validated"
+      },
+      "reasoning_patterns": ["apply grouping principles", "create clear figure-ground", "use continuity"],
+      "examples": ["proximity: group related items", "similarity: use consistent styling", "closure: suggest completion"],
+      "prerequisites": ["visual_perception", "design_principles"],
+      "applications": ["graphic_design", "UI_design", "visual_communication"]
+    },
+    "point_of_view": {
+      "term": "point_of_view",
+      "definition": "Narrative perspective from which story is told",
+      "synonyms": ["POV", "narrative_perspective", "viewpoint"],
+      "related_concepts": ["first_person", "third_person", "omniscient", "limited", "narrator"],
+      "category": "storytelling",
+      "complexity": "intermediate",
+      "mental_models": ["narrative_distance", "knowledge_limitation", "perspective_filter"],
+      "common_errors": ["head-hopping", "inconsistent POV", "wrong POV for story"],
+      "detection_patterns": ["point of view", "POV", "perspective", "narrator"],
+      "epistemic_markers": {
+        "evidence_type": "narrative_technique",
+        "certainty_level": "conventional"
+      },
+      "reasoning_patterns": ["choose appropriate POV", "maintain consistency", "respect limitations"],
+      "examples": ["first person (I saw)", "third limited (She saw)", "omniscient (Everyone thought)"],
+      "prerequisites": ["narrative_structure", "character"],
+      "applications": ["fiction", "memoir", "journalism"]
+    },
+    "whitespace": {
+      "term": "whitespace",
+      "definition": "Empty space in design that gives elements room to breathe",
+      "synonyms": ["negative space", "empty space", "breathing room"],
+      "related_concepts": ["balance", "composition", "visual_hierarchy", "minimalism"],
+      "category": "design_principles",
+      "complexity": "basic",
+      "mental_models": ["active_emptiness", "visual_rest", "emphasis_through_space"],
+      "common_errors": ["filling every space", "unintentional emptiness", "poor proportion"],
+      "detection_patterns": ["whitespace", "negative space", "breathing room"],
+      "epistemic_markers": {
+        "evidence_type": "design_principle",
+        "certainty_level": "conventional"
+      },
+      "reasoning_patterns": ["use space intentionally", "create visual rest", "emphasize through isolation"],
+      "examples": ["margins", "padding", "minimalist design", "strategic emptiness"],
+      "prerequisites": ["composition", "visual_hierarchy"],
+      "applications": ["graphic_design", "web_design", "typography", "UI"]
+    }
+  },
+  "reasoning_heuristics": [
+    {
+      "pattern": "Constraints breed creativity",
+      "context": "Creative problem-solving",
+      "limitations": "Too many constraints can stifle",
+      "examples": ["Haiku structure", "limited color palette", "budget constraints"]
+    },
+    {
+      "pattern": "Kill your darlings",
+      "context": "Editing and refinement",
+      "limitations": "Don't kill everything good",
+      "examples": ["Cut beautiful but irrelevant prose", "remove clever but distracting elements"]
+    },
+    {
+      "pattern": "Less is more",
+      "context": "Design and composition",
+      "limitations": "Minimalism isn't always appropriate",
+      "examples": ["Remove unnecessary elements", "simplify to essential"]
+    },
+    {
+      "pattern": "Show don't tell",
+      "context": "Narrative writing",
+      "limitations": "Some things need telling for efficiency",
+      "examples": ["Dramatize rather than explain", "concrete details over abstract"]
+    },
+    {
+      "pattern": "Make it strange",
+      "context": "Generating creative ideas",
+      "limitations": "Accessibility matters too",
+      "examples": ["Defamiliarize the familiar", "fresh perspective", "unexpected juxtaposition"]
+    },
+    {
+      "pattern": "Every element must serve a purpose",
+      "context": "Design and writing",
+      "limitations": "Beauty can be purpose",
+      "examples": ["Remove elements that don't contribute", "justify every choice"]
+    },
+    {
+      "pattern": "Steal like an artist",
+      "context": "Creative influence",
+      "limitations": "Transform don't plagiarize",
+      "examples": ["Study influences", "remix and transform", "combine disparate sources"]
+    },
+    {
+      "pattern": "Start in media res",
+      "context": "Narrative openings",
+      "limitations": "Reader needs orientation",
+      "examples": ["Begin with action", "hook immediately", "backstory later"]
+    },
+    {
+      "pattern": "Tension and release",
+      "context": "Pacing and engagement",
+      "limitations": "Needs appropriate rhythm",
+      "examples": ["Build anticipation", "deliver payoff", "vary intensity"]
+    },
+    {
+      "pattern": "Imitate then innovate",
+      "context": "Skill development",
+      "limitations": "Don't get stuck in imitation",
+      "examples": ["Master conventions first", "understand rules before breaking"]
+    }
+  ],
+  "common_errors": [
+    {
+      "error_type": "cliché",
+      "description": "Using overused expressions or ideas",
+      "symptoms": ["Predictable", "stale", "unoriginal"],
+      "causes": ["Lazy thinking", "insufficient revision", "weak vocabulary"],
+      "prevention": ["Fresh perspectives", "specific details", "original comparisons"],
+      "correction": ["Replace with specific", "find unexpected angle", "revise thoroughly"]
+    },
+    {
+      "error_type": "inconsistent_style",
+      "description": "Mixing incompatible stylistic elements",
+      "symptoms": ["Jarring transitions", "tonal mismatch", "visual disharmony"],
+      "causes": ["Lack of planning", "multiple influences", "insufficient revision"],
+      "prevention": ["Style guide", "mood board", "consistent references"],
+      "correction": ["Unify style", "remove outliers", "establish coherence"]
+    },
+    {
+      "error_type": "telling_not_showing",
+      "description": "Explaining rather than dramatizing",
+      "symptoms": ["Abstract language", "exposition dumps", "lack of sensory detail"],
+      "causes": ["Taking shortcut", "not trusting audience", "inexperience"],
+      "prevention": ["Concrete details", "action and dialogue", "implication"],
+      "correction": ["Convert telling to showing", "add sensory details", "dramatize"]
+    },
+    {
+      "error_type": "poor_contrast",
+      "description": "Insufficient differentiation between elements",
+      "symptoms": ["Low legibility", "weak emphasis", "visual confusion"],
+      "causes": ["Timid choices", "misunderstanding principles", "technical limitations"],
+      "prevention": ["Bold differences", "test legibility", "use contrast tools"],
+      "correction": ["Increase contrast", "clarify hierarchy", "strengthen differences"]
+    },
+    {
+      "error_type": "no_focal_point",
+      "description": "Failing to establish clear emphasis",
+      "symptoms": ["Viewer/reader doesn't know where to look", "equal weight everywhere"],
+      "causes": ["Fear of commitment", "wanting to show everything", "poor planning"],
+      "prevention": ["Identify primary message", "create hierarchy", "guide attention"],
+      "correction": ["Establish clear focal point", "subordinate secondary elements"]
+    },
+    {
+      "error_type": "overwrought_prose",
+      "description": "Excessively ornate or complex writing",
+      "symptoms": ["Purple prose", "obscurity", "pretentious"],
+      "causes": ["Showing off", "insecurity", "misunderstanding style"],
+      "prevention": ["Clarity first", "appropriate register", "reader focus"],
+      "correction": ["Simplify", "remove excess", "focus on clarity"]
+    },
+    {
+      "error_type": "weak_character_motivation",
+      "description": "Characters act without clear reasons",
+      "symptoms": ["Plot-driven behavior", "inconsistency", "unbelievable actions"],
+      "causes": ["Plot-first thinking", "insufficient development", "rushing"],
+      "prevention": ["Develop motivation first", "character-driven plot", "psychological realism"],
+      "correction": ["Establish clear wants/needs", "show internal conflict", "justify actions"]
+    },
+    {
+      "error_type": "cluttered_design",
+      "description": "Too many elements competing for attention",
+      "symptoms": ["Visual noise", "confusion", "weak hierarchy"],
+      "causes": ["More is more thinking", "indecision", "client requests"],
+      "prevention": ["Prioritize", "use whitespace", "clear hierarchy"],
+      "correction": ["Remove elements", "group related items", "increase spacing"]
+    }
+  ],
+  "epistemic_standards": {
+    "preferred_evidence": [
+      "Audience response and feedback",
+      "Historical precedent and convention",
+      "Psychological research on perception",
+      "Critical analysis and theory",
+      "Portfolio and body of work",
+      "Peer assessment and critique"
+    ],
+    "burden_of_proof": "Creative work requires: coherence, intentionality, effectiveness for purpose, and audience consideration",
+    "certainty_levels": {
+      "established": "Proven principles (color theory, composition rules, narrative structure)",
+      "conventional": "Widely accepted practices and norms",
+      "experimental": "Novel approaches being tested",
+      "subjective": "Taste, style, aesthetic judgment"
+    }
+  },
+  "mental_models": [
+    {
+      "model_name": "hero_journey",
+      "description": "Monomyth structure: ordinary world, call to adventure, trials, return transformed",
+      "use_cases": ["Story structure", "character arc", "mythology"],
+      "limitations": ["Not all stories fit", "can be formulaic"],
+      "related_concepts": ["narrative_arc", "transformation", "archetypal_patterns"]
+    },
+    {
+      "model_name": "design_thinking",
+      "description": "Empathize, define, ideate, prototype, test - iterative creative process",
+      "use_cases": ["Problem-solving", "innovation", "user-centered design"],
+      "limitations": ["Time-intensive", "not for all contexts"],
+      "related_concepts": ["iteration", "prototyping", "user_focus"]
+    },
+    {
+      "model_name": "rule_of_thirds",
+      "description": "Divide frame into 3x3 grid, place important elements on intersections",
+      "use_cases": ["Photography", "composition", "visual design"],
+      "limitations": ["Not universal rule", "sometimes center is better"],
+      "related_concepts": ["composition", "focal_point", "balance"]
+    },
+    {
+      "model_name": "divergent_convergent",
+      "description": "Expand possibilities (diverge) then narrow to solution (converge)",
+      "use_cases": ["Brainstorming", "creative process", "problem-solving"],
+      "limitations": ["Need both phases", "can get stuck in one"],
+      "related_concepts": ["ideation", "selection", "iteration"]
+    },
+    {
+      "model_name": "form_follows_function",
+      "description": "Design should primarily reflect purpose and use",
+      "use_cases": ["Product design", "architecture", "interface design"],
+      "limitations": ["Aesthetics matter too", "sometimes form enables new function"],
+      "related_concepts": ["functionality", "minimalism", "user_experience"]
+    }
+  ]
+}

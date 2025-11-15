@@ -233,13 +233,10 @@ class SessionManager:
         if p1.exists():
             return p1
 
-        # 2. Parent security dir (for shared identity)
-        p2 = PROJECT_ROOT.parent / "security" / ".rag_identity.json"
+        # 2. User home .aria dir
+        p2 = Path.home() / ".aria" / "identity.json"
         if p2.exists():
             return p2
-
-        # 3. User home .aria dir
-        p3 = Path.home() / ".aria" / "identity.json"
 
         return p1  # Default to project security dir
 
@@ -470,7 +467,8 @@ class ARIA:
             if state_cfg:
                 self.state_path = str(state_cfg)
             else:
-                self.state_path = str(Path.home() / ".aria" / "bandit_state.json")
+                # Store in current working directory for portability
+                self.state_path = str(Path.cwd() / ".aria_contextual_bandit.json")
 
         # Exemplars
         if exemplars_path:
@@ -581,14 +579,16 @@ class ARIA:
         pack_path: Path,
         perspective_analysis: Dict[str, Any],
         user_profile: Dict[str, Any],
-        preset_name: str = "unknown"
+        preset_name: str = "unknown",
+        anchor_mode: Optional[str] = None,
+        anchor_alignment: float = 0.0
     ) -> None:
         """
         Enrich pack JSON with perspective metadata after retrieval (NEW)
 
         Adds:
         - perspective_analysis (primary, confidence, weights, orientation_vector)
-        - anchor_selected (preset name)
+        - anchor_selected (anchor mode name if with_anchor=True)
         - anchor_perspective_alignment score
 
         Args:
@@ -596,6 +596,8 @@ class ARIA:
             perspective_analysis: Dict from _detect_perspective()
             user_profile: Dict from _load_user_profile()
             preset_name: Name of selected preset/anchor
+            anchor_mode: Selected anchor mode (e.g., "technical", "code")
+            anchor_alignment: Anchor-perspective alignment score (0-1)
         """
         try:
             from perspective.pack_enricher import enrich_pack_with_perspective
@@ -603,39 +605,46 @@ class ARIA:
             primary = perspective_analysis.get("primary", "mixed")
             confidence = perspective_analysis.get("confidence", 0.0)
 
-            # Compute anchor-perspective alignment (ENHANCED)
-            # Check if preset name semantically aligns with detected perspective
-            preset_lower = preset_name.lower()
-            primary_lower = primary.lower()
-
-            # Direct match: preset contains perspective keyword
-            if primary_lower in preset_lower:
-                anchor_perspective_alignment = 0.9 + (confidence * 0.1)
-            # Semantic matches (educational ↔ tutorial, diagnostic ↔ debug, etc.)
-            elif any(pair in [(primary_lower, preset_lower), (preset_lower, primary_lower)]
-                     for pair in [
-                         ("educational", "tutorial"), ("educational", "teaching"),
-                         ("diagnostic", "debug"), ("diagnostic", "troubleshoot"),
-                         ("security", "audit"), ("security", "vulnerability"),
-                         ("implementation", "code"), ("implementation", "build"),
-                         ("research", "analysis"), ("research", "investigation"),
-                         ("theoretical", "math"), ("theoretical", "concept"),
-                         ("practical", "hands-on"), ("practical", "applied"),
-                         ("reference", "docs"), ("reference", "documentation")
-                     ]):
-                anchor_perspective_alignment = 0.8 + (confidence * 0.2)
-            # Moderate confidence: use confidence as base
-            elif confidence > 0.5:
-                anchor_perspective_alignment = 0.5 + (confidence * 0.3)
+            # Use provided anchor alignment if available, otherwise compute from preset
+            if anchor_mode and anchor_alignment > 0:
+                # Anchor mode was selected, use its alignment score
+                final_anchor_name = anchor_mode
+                final_alignment = anchor_alignment
             else:
-                anchor_perspective_alignment = 0.5  # Neutral default
+                # No anchor mode, compute alignment from preset name
+                preset_lower = preset_name.lower()
+                primary_lower = primary.lower()
+
+                # Direct match: preset contains perspective keyword
+                if primary_lower in preset_lower:
+                    final_alignment = 0.9 + (confidence * 0.1)
+                # Semantic matches (educational ↔ tutorial, diagnostic ↔ debug, etc.)
+                elif any(pair in [(primary_lower, preset_lower), (preset_lower, primary_lower)]
+                         for pair in [
+                             ("educational", "tutorial"), ("educational", "teaching"),
+                             ("diagnostic", "debug"), ("diagnostic", "troubleshoot"),
+                             ("security", "audit"), ("security", "vulnerability"),
+                             ("implementation", "code"), ("implementation", "build"),
+                             ("research", "analysis"), ("research", "investigation"),
+                             ("theoretical", "math"), ("theoretical", "concept"),
+                             ("practical", "hands-on"), ("practical", "applied"),
+                             ("reference", "docs"), ("reference", "documentation")
+                         ]):
+                    final_alignment = 0.8 + (confidence * 0.2)
+                # Moderate confidence: use confidence as base
+                elif confidence > 0.5:
+                    final_alignment = 0.5 + (confidence * 0.3)
+                else:
+                    final_alignment = 0.5  # Neutral default
+
+                final_anchor_name = preset_name
 
             # Enrich the pack
             success = enrich_pack_with_perspective(
                 pack_path=pack_path,
                 perspective_analysis=perspective_analysis,
-                anchor_selected=preset_name,
-                anchor_perspective_alignment=anchor_perspective_alignment
+                anchor_selected=final_anchor_name,
+                anchor_perspective_alignment=final_alignment
             )
 
             if not success:
@@ -751,6 +760,36 @@ class ARIA:
         # Load user profile (NEW)
         user_profile = self._load_user_profile()
 
+        # Select anchor mode (NEW - anchor integration)
+        anchor_mode = None
+        anchor_alignment = 0.0
+        anchor_template = None
+
+        if with_anchor:
+            try:
+                from anchors.anchor_selector import AnchorSelector
+
+                # Lazy-load anchor selector
+                if not hasattr(self, '_anchor_selector'):
+                    self._anchor_selector = AnchorSelector()
+
+                # Select anchor mode based on query
+                anchor_mode = self._anchor_selector.select_mode(query_text)
+
+                # Calculate alignment based on perspective
+                if perspective_analysis:
+                    # Simple alignment: check if perspective matches anchor mode
+                    anchor_alignment = 0.8 if perspective_analysis.get('mode') == anchor_mode else 0.5
+                else:
+                    anchor_alignment = 0.5
+
+                print(f"[ARIA] Anchor selected: {anchor_mode} (alignment: {anchor_alignment:.2f})")
+
+            except Exception as e:
+                print(f"[ARIA] Anchor selection failed: {e}", file=sys.stderr)
+                anchor_mode = "casual"  # Fallback to casual
+                anchor_alignment = 0.0
+
         # Find scripts
         v7_script = _which_script(CANDIDATE_V7)
         post_script = _which_script(CANDIDATE_POST)
@@ -805,7 +844,9 @@ class ARIA:
             pack_path=pack_path,
             perspective_analysis=perspective_analysis,
             user_profile=user_profile,
-            preset_name=preset.name  # Pass selected preset/anchor
+            preset_name=preset.name,
+            anchor_mode=anchor_mode,
+            anchor_alignment=anchor_alignment
         )
 
         # Postfilter
@@ -930,11 +971,25 @@ class ARIA:
                 preset_name=preset.name,
                 reward=reward,
                 state_path=self.state_path,
+                features=feats,  # Pass features for LinUCB learning
             )
         except Exception as e:
             print(f"[ARIA] Bandit update failed: {e}", file=sys.stderr)
 
-        # Save metadata
+        # Save metadata (including query features for LinUCB)
+        # Convert any numpy arrays in feats dict to lists for JSON serialization
+        def _serialize_feats(f: Dict[str, Any]) -> Dict[str, Any]:
+            """Convert numpy arrays to lists for JSON serialization"""
+            result = {}
+            for k, v in f.items():
+                if hasattr(v, 'tolist'):  # numpy array
+                    result[k] = v.tolist()
+                elif isinstance(v, (list, tuple)):
+                    result[k] = [x.tolist() if hasattr(x, 'tolist') else x for x in v]
+                else:
+                    result[k] = v
+            return result
+
         (run_dir / "run.meta.json").write_text(
             json.dumps({
                 "query": query_text,
@@ -942,6 +997,7 @@ class ARIA:
                 "flags": flags_dict,
                 "reward": reward,
                 "phase": phase,
+                "query_features": _serialize_feats(feats),
             }, indent=2),
             encoding="utf-8",
         )
@@ -949,7 +1005,7 @@ class ARIA:
             self.telemetry_line(run_metrics) + "\n", encoding="utf-8"
         )
 
-        return {
+        result = {
             "preset": preset.name,
             "reason": reason,
             "flags": flags,
@@ -966,6 +1022,30 @@ class ARIA:
             "run_dir": str(run_dir),
         }
 
+        # Add anchor information if available (NEW)
+        if anchor_mode:
+            result["anchor"] = {
+                "mode": anchor_mode,
+                "alignment": anchor_alignment,
+                "template": anchor_template,  # Full template text for LLM
+                "template_length": len(anchor_template) if anchor_template else 0,
+            }
+
+            # Also save anchor template to run directory for reference
+            if anchor_template:
+                anchor_file = run_dir / f"anchor_{anchor_mode}.md"
+                anchor_file.write_text(anchor_template, encoding="utf-8")
+                result["anchor"]["template_file"] = str(anchor_file)
+
+        # Add perspective information to result (NEW)
+        result["perspective"] = {
+            "primary": perspective_analysis.get("primary", "mixed"),
+            "confidence": perspective_analysis.get("confidence", 0.0),
+            "weights": perspective_analysis.get("weights", {}),
+        }
+
+        return result
+
 # ─────────────────────────────────────────────────────────────────────────────
 # CLI
 # ─────────────────────────────────────────────────────────────────────────────
@@ -978,6 +1058,7 @@ def main():
     ap.add_argument("--exemplars", default=None, help="Exemplars file")
     ap.add_argument("--no-session", action="store_true", help="Disable session enforcement")
     ap.add_argument("--preset", default=None, help="Manual preset override")
+    ap.add_argument("--with-anchor", action="store_true", help="Enable 16-anchor reasoning system")
     args = ap.parse_args()
 
     # Parse index roots
@@ -992,7 +1073,11 @@ def main():
         exemplars_path=args.exemplars,
         enforce_session=not args.no_session,
     )
-    res = aria.query(" ".join(args.query), preset_override=args.preset)
+    res = aria.query(
+        " ".join(args.query),
+        with_anchor=getattr(args, 'with_anchor', False),
+        preset_override=args.preset
+    )
     print(json.dumps(res, ensure_ascii=False, indent=2))
 
 if __name__ == "__main__":

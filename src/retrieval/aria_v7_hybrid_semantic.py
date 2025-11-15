@@ -14,7 +14,7 @@ from __future__ import annotations
 
 import sys
 from pathlib import Path
-from typing import List, Dict, Tuple, Optional
+from typing import List, Dict, Tuple, Optional, TYPE_CHECKING, Any
 import subprocess
 import json
 import numpy as np
@@ -24,11 +24,20 @@ SCRIPT_DIR = Path(__file__).parent
 ARIA_ROOT = SCRIPT_DIR.parent.parent
 sys.path.insert(0, str(ARIA_ROOT / "src"))
 
+# Type checking imports
+if TYPE_CHECKING:
+    from intelligence.aria_exploration import QuaternionExplorer as QuaternionExplorerType  # type: ignore[attr-defined]
+    from sentence_transformers import SentenceTransformer as SentenceTransformerType
+else:
+    QuaternionExplorerType = Any
+    SentenceTransformerType = Any
+
 try:
-    from intelligence.aria_exploration import QuaternionExplorer
+    from intelligence.aria_exploration import QuaternionExplorer  # type: ignore[attr-defined]
     HAVE_QUATERNION = True
 except ImportError:
     HAVE_QUATERNION = False
+    QuaternionExplorer = None  # type: ignore[misc,assignment]
     print("[ARIA] Warning: Quaternion exploration not available", file=sys.stderr)
 
 # Try to import sentence-transformers for embeddings
@@ -37,6 +46,7 @@ try:
     HAVE_EMBEDDINGS = True
 except ImportError:
     HAVE_EMBEDDINGS = False
+    SentenceTransformer = None  # type: ignore[misc,assignment]
 
 
 class HybridRetriever:
@@ -63,7 +73,7 @@ class HybridRetriever:
 
         # Load embedding model if available
         self.encoder = None
-        if self.use_semantic:
+        if self.use_semantic and SentenceTransformer is not None:
             try:
                 self.encoder = SentenceTransformer(model_name)
                 print(f"[ARIA] Loaded embedding model: {model_name}", file=sys.stderr)
@@ -73,7 +83,7 @@ class HybridRetriever:
 
         # Initialize quaternion explorer
         self.explorer = None
-        if self.use_quaternion and HAVE_QUATERNION:
+        if self.use_quaternion and HAVE_QUATERNION and QuaternionExplorer is not None:
             self.explorer = QuaternionExplorer(embedding_dim=384)  # MiniLM dimension
             print("[ARIA] Quaternion exploration enabled", file=sys.stderr)
 

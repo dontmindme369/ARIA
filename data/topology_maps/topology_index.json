@@ -1,0 +1,71 @@
+{
+  "version": "2.0",
+  "description": "Latent topology maps from Enhanced Semantic Network v2.0",
+  "domains_analyzed": [
+    "philosophy",
+    "engineering",
+    "law",
+    "business",
+    "creative_arts",
+    "social_sciences",
+    "security",
+    "data_science"
+  ],
+  "total_domains": 8,
+  "files": [
+    "concept_networks.json",
+    "concept_communities.json",
+    "prerequisite_chains.json",
+    "semantic_similarities.json"
+  ],
+  "summary": {
+    "philosophy": {
+      "nodes": 16,
+      "edges": 84,
+      "communities": 12,
+      "max_prereq_depth": 4
+    },
+    "engineering": {
+      "nodes": 16,
+      "edges": 71,
+      "communities": 12,
+      "max_prereq_depth": 1
+    },
+    "law": {
+      "nodes": 15,
+      "edges": 67,
+      "communities": 10,
+      "max_prereq_depth": 1
+    },
+    "business": {
+      "nodes": 15,
+      "edges": 63,
+      "communities": 11,
+      "max_prereq_depth": 1
+    },
+    "creative_arts": {
+      "nodes": 15,
+      "edges": 73,
+      "communities": 13,
+      "max_prereq_depth": 2
+    },
+    "social_sciences": {
+      "nodes": 15,
+      "edges": 58,
+      "communities": 13,
+      "max_prereq_depth": 0
+    },
+    "security": {
+      "nodes": 15,
+      "edges": 67,
+      "communities": 12,
+      "max_prereq_depth": 1
+    },
+    "data_science": {
+      "nodes": 15,
+      "edges": 68,
+      "communities": 11,
+      "max_prereq_depth": 1
+    }
+  }
+}

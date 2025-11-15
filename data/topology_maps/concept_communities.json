@@ -1,0 +1,806 @@
+{
+  "philosophy": {
+    "community_1": [
+      "epistemology",
+      "justification",
+      "belief",
+      "truth",
+      "skepticism",
+      "doubt",
+      "certainty",
+      "foundationalism",
+      "problem_of_induction",
+      "coherentism"
+    ],
+    "community_2": [
+      "metaphysics",
+      "ontology",
+      "substance",
+      "causation",
+      "identity",
+      "time",
+      "space",
+      "modality"
+    ],
+    "community_3": [
+      "ethics",
+      "utilitarianism",
+      "consequentialism",
+      "hedonism",
+      "utility",
+      "greatest_happiness",
+      "act_vs_rule",
+      "deontology",
+      "categorical_imperative",
+      "duty",
+      "rights",
+      "dignity",
+      "universalizability",
+      "virtue_ethics",
+      "virtue",
+      "character",
+      "eudaimonia",
+      "practical_wisdom",
+      "golden_mean",
+      "moral_realism",
+      "moral_relativism"
+    ],
+    "community_4": [
+      "logic",
+      "deduction",
+      "induction",
+      "validity",
+      "soundness",
+      "fallacy",
+      "inference"
+    ],
+    "community_5": [
+      "phenomenology",
+      "intentionality",
+      "qualia",
+      "consciousness",
+      "lived_experience",
+      "intersubjectivity"
+    ],
+    "community_6": [
+      "aesthetics",
+      "beauty",
+      "sublime",
+      "taste",
+      "artistic_value",
+      "aesthetic_judgment"
+    ],
+    "community_7": [
+      "political_philosophy",
+      "justice",
+      "liberty",
+      "authority",
+      "legitimacy",
+      "democracy"
+    ],
+    "community_8": [
+      "philosophy_of_mind",
+      "mind-body_problem",
+      "functionalism"
+    ],
+    "community_9": [
+      "philosophy_of_science",
+      "scientific_method",
+      "theory",
+      "explanation",
+      "confirmation",
+      "falsification"
+    ],
+    "community_10": [
+      "existentialism",
+      "authenticity",
+      "absurd",
+      "freedom",
+      "bad_faith",
+      "anxiety",
+      "being"
+    ],
+    "community_11": [
+      "rationalism",
+      "a_priori_knowledge",
+      "innate_ideas",
+      "necessity"
+    ],
+    "community_12": [
+      "empiricism",
+      "sense_experience",
+      "a_posteriori_knowledge",
+      "observation"
+    ]
+  },
+  "engineering": {
+    "community_1": [
+      "factor_of_safety",
+      "stress",
+      "strain",
+      "youngs_modulus",
+      "hookes_law",
+      "stiffness",
+      "compliance",
+      "poissons_ratio",
+      "elastic_limit",
+      "yield_strength",
+      "plastic_deformation",
+      "ultimate_strength",
+      "ductility",
+      "necking",
+      "failure_mode",
+      "design_criteria",
+      "reliability"
+    ],
+    "community_2": [
+      "fatigue",
+      "stress_cycles",
+      "SN_curve",
+      "crack_propagation",
+      "endurance_limit",
+      "mean_stress"
+    ],
+    "community_3": [
+      "buckling",
+      "critical_load",
+      "euler_buckling",
+      "slenderness_ratio",
+      "effective_length"
+    ],
+    "community_4": [
+      "thermal_expansion",
+      "coefficient_of_thermal_expansion",
+      "thermal_stress",
+      "bimetallic_strip"
+    ],
+    "community_5": [
+      "heat_transfer",
+      "conduction",
+      "convection",
+      "radiation",
+      "thermal_conductivity",
+      "heat_flux"
+    ],
+    "community_6": [
+      "fluid_dynamics",
+      "reynolds_number",
+      "bernoulli_equation",
+      "viscosity",
+      "turbulence",
+      "drag"
+    ],
+    "community_7": [
+      "control_system",
+      "feedback",
+      "transfer_function",
+      "stability",
+      "PID_controller",
+      "gain"
+    ],
+    "community_8": [
+      "circuit_analysis",
+      "kirchhoffs_laws",
+      "ohms_law",
+      "impedance",
+      "nodal_analysis",
+      "mesh_analysis"
+    ],
+    "community_9": [
+      "signal_processing",
+      "fourier_transform",
+      "filtering",
+      "sampling",
+      "frequency_domain",
+      "convolution"
+    ],
+    "community_10": [
+      "thermodynamics",
+      "first_law",
+      "second_law",
+      "entropy",
+      "enthalpy",
+      "efficiency"
+    ],
+    "community_11": [
+      "materials_selection",
+      "properties",
+      "cost",
+      "performance_index",
+      "ashby_charts",
+      "constraints"
+    ],
+    "community_12": [
+      "finite_element_analysis",
+      "mesh",
+      "element",
+      "node",
+      "boundary_conditions",
+      "convergence"
+    ]
+  },
+  "law": {
+    "community_1": [
+      "IRAC",
+      "legal_analysis",
+      "case_brief",
+      "argument_structure",
+      "precedent",
+      "binding_authority",
+      "persuasive_authority",
+      "distinguishing",
+      "overruling"
+    ],
+    "community_2": [
+      "jurisdiction",
+      "subject_matter_jurisdiction",
+      "personal_jurisdiction",
+      "venue",
+      "standing"
+    ],
+    "community_3": [
+      "burden_of_proof",
+      "standard_of_proof",
+      "prima_facie_case",
+      "shifting_burden",
+      "preponderance"
+    ],
+    "community_4": [
+      "contract",
+      "offer",
+      "acceptance",
+      "consideration",
+      "breach",
+      "damages"
+    ],
+    "community_5": [
+      "tort",
+      "negligence",
+      "duty",
+      "causation",
+      "reasonable_person",
+      "intentional_tort",
+      "strict_liability",
+      "product_liability",
+      "abnormally_dangerous_activity",
+      "defect"
+    ],
+    "community_6": [
+      "constitutional_law",
+      "due_process",
+      "equal_protection",
+      "federalism",
+      "separation_of_powers",
+      "judicial_review"
+    ],
+    "community_7": [
+      "statutory_interpretation",
+      "plain_meaning",
+      "legislative_intent",
+      "canons_of_construction",
+      "ambiguity"
+    ],
+    "community_8": [
+      "criminal_law",
+      "mens_rea",
+      "intent",
+      "knowledge",
+      "recklessness",
+      "actus_reus",
+      "defenses",
+      "constitutional_protections"
+    ],
+    "community_9": [
+      "evidence",
+      "relevance",
+      "hearsay",
+      "declarant",
+      "out_of_court",
+      "exceptions",
+      "confrontation_clause",
+      "authentication",
+      "privilege",
+      "admissibility"
+    ],
+    "community_10": [
+      "remedy",
+      "injunction",
+      "specific_performance",
+      "restitution",
+      "declaratory_judgment"
+    ]
+  },
+  "business": {
+    "community_1": [
+      "unit_economics",
+      "CAC",
+      "LTV",
+      "retention",
+      "churn",
+      "ARPU",
+      "cohort_analysis",
+      "LTV_CAC_ratio",
+      "payback_period",
+      "marketing_efficiency",
+      "contribution_margin",
+      "break_even",
+      "scalability"
+    ],
+    "community_2": [
+      "churn_rate",
+      "retention_rate",
+      "product_market_fit",
+      "organic_growth",
+      "NPS",
+      "value_proposition"
+    ],
+    "community_3": [
+      "gross_margin",
+      "COGS",
+      "operating_margin",
+      "net_margin"
+    ],
+    "community_4": [
+      "burn_rate",
+      "runway",
+      "cash_balance",
+      "fundraising",
+      "cash_flow",
+      "operating_expenses",
+      "funding"
+    ],
+    "community_5": [
+      "pivot",
+      "iteration",
+      "validated_learning",
+      "business_model",
+      "hypothesis_testing"
+    ],
+    "community_6": [
+      "TAM_SAM_SOM",
+      "market_size",
+      "addressable_market",
+      "market_share",
+      "growth_potential"
+    ],
+    "community_7": [
+      "MVP",
+      "lean_startup"
+    ],
+    "community_8": [
+      "north_star_metric",
+      "OKRs",
+      "KPIs",
+      "value_delivery",
+      "growth_loops"
+    ],
+    "community_9": [
+      "valuation",
+      "DCF",
+      "comparables",
+      "revenue_multiple",
+      "equity_value",
+      "enterprise_value"
+    ],
+    "community_10": [
+      "go_to_market",
+      "customer_acquisition",
+      "channels",
+      "positioning",
+      "pricing",
+      "sales_model"
+    ],
+    "community_11": [
+      "competitive_advantage",
+      "network_effects",
+      "switching_costs",
+      "economies_of_scale",
+      "brand",
+      "IP"
+    ]
+  },
+  "creative_arts": {
+    "community_1": [
+      "composition",
+      "balance",
+      "harmony",
+      "contrast",
+      "complement",
+      "tension",
+      "emphasis",
+      "variety",
+      "focal_point",
+      "unity"
+    ],
+    "community_2": [
+      "narrative_arc",
+      "three_act_structure",
+      "heros_journey",
+      "conflict",
+      "resolution",
+      "pacing"
+    ],
+    "community_3": [
+      "color_theory",
+      "hue",
+      "saturation",
+      "value",
+      "complementary_colors",
+      "color_wheel"
+    ],
+    "community_4": [
+      "typography",
+      "typeface",
+      "font",
+      "kerning",
+      "leading",
+      "hierarchy",
+      "readability"
+    ],
+    "community_5": [
+      "character_development",
+      "motivation",
+      "backstory",
+      "arc",
+      "agency",
+      "consistency"
+    ],
+    "community_6": [
+      "voice",
+      "tone",
+      "diction",
+      "syntax",
+      "personality"
+    ],
+    "community_7": [
+      "visual_hierarchy",
+      "scale",
+      "color",
+      "position",
+      "whitespace",
+      "minimalism"
+    ],
+    "community_8": [
+      "rhythm",
+      "repetition",
+      "variation",
+      "tempo",
+      "beat"
+    ],
+    "community_9": [
+      "tension_and_release",
+      "catharsis",
+      "climax"
+    ],
+    "community_10": [
+      "show_dont_tell",
+      "sensory_detail",
+      "action",
+      "dialogue",
+      "implication",
+      "subtext"
+    ],
+    "community_11": [
+      "metaphor",
+      "simile",
+      "analogy",
+      "symbol",
+      "imagery",
+      "meaning_transfer"
+    ],
+    "community_12": [
+      "gestalt_principles",
+      "proximity",
+      "similarity",
+      "closure",
+      "continuity",
+      "figure_ground"
+    ],
+    "community_13": [
+      "point_of_view",
+      "first_person",
+      "third_person",
+      "omniscient",
+      "limited",
+      "narrator"
+    ]
+  },
+  "social_sciences": {
+    "community_1": [
+      "cognitive_bias",
+      "confirmation_bias",
+      "availability_heuristic",
+      "anchoring",
+      "dunning_kruger"
+    ],
+    "community_2": [
+      "correlation_vs_causation",
+      "confounding_variable",
+      "experimental_design",
+      "random_assignment",
+      "control_group",
+      "independent_variable",
+      "dependent_variable",
+      "counterfactual",
+      "causality"
+    ],
+    "community_3": [
+      "operationalization",
+      "construct_validity",
+      "convergent_validity",
+      "discriminant_validity",
+      "face_validity",
+      "measurement",
+      "variable_definition",
+      "reliability"
+    ],
+    "community_4": [
+      "external_validity",
+      "internal_validity",
+      "sampling",
+      "replication",
+      "population"
+    ],
+    "community_5": [
+      "social_construction",
+      "symbolic_interactionism",
+      "social_reality",
+      "collective_meaning",
+      "norms"
+    ],
+    "community_6": [
+      "p_value",
+      "null_hypothesis",
+      "statistical_significance",
+      "type_I_error",
+      "hypothesis_testing"
+    ],
+    "community_7": [
+      "effect_size",
+      "cohens_d",
+      "r_squared",
+      "practical_importance"
+    ],
+    "community_8": [
+      "ecological_fallacy",
+      "levels_of_analysis",
+      "atomistic_fallacy",
+      "multilevel_modeling"
+    ],
+    "community_9": [
+      "replication_crisis",
+      "p_hacking",
+      "publication_bias",
+      "open_science",
+      "preregistration"
+    ],
+    "community_10": [
+      "sampling_bias",
+      "random_sampling",
+      "convenience_sample",
+      "generalization"
+    ],
+    "community_11": [
+      "theory_of_mind",
+      "perspective_taking",
+      "empathy",
+      "false_belief_task",
+      "social_cognition"
+    ],
+    "community_12": [
+      "priming",
+      "implicit_memory",
+      "automatic_processes",
+      "semantic_network",
+      "accessibility"
+    ],
+    "community_13": [
+      "social_desirability_bias",
+      "self_report",
+      "demand_characteristics",
+      "survey_methods",
+      "validity_threat"
+    ]
+  },
+  "security": {
+    "community_1": [
+      "buffer_overflow",
+      "stack_smashing",
+      "heap_overflow",
+      "ROP",
+      "DEP",
+      "NX",
+      "ASLR",
+      "PIE",
+      "information_leak",
+      "bypass_techniques",
+      "gadget",
+      "shellcode",
+      "canary"
+    ],
+    "community_2": [
+      "SQL_injection",
+      "code_injection",
+      "parameterized_queries",
+      "ORM",
+      "input_validation"
+    ],
+    "community_3": [
+      "XSS",
+      "reflected_XSS",
+      "stored_XSS",
+      "DOM_XSS",
+      "CSP",
+      "sanitization"
+    ],
+    "community_4": [
+      "privilege_escalation",
+      "lateral_movement",
+      "credential_dumping",
+      "pass_the_hash",
+      "tunneling",
+      "SUID",
+      "kernel_exploit",
+      "sudo_misconfig"
+    ],
+    "community_5": [
+      "cryptography",
+      "encryption",
+      "hashing",
+      "PKI",
+      "symmetric_crypto",
+      "asymmetric_crypto"
+    ],
+    "community_6": [
+      "reverse_engineering",
+      "disassembly",
+      "decompilation",
+      "debugging",
+      "static_analysis",
+      "dynamic_analysis"
+    ],
+    "community_7": [
+      "format_string",
+      "printf",
+      "arbitrary_read",
+      "arbitrary_write",
+      "stack_leak"
+    ],
+    "community_8": [
+      "race_condition",
+      "concurrency",
+      "synchronization",
+      "atomicity",
+      "symbolic_links"
+    ],
+    "community_9": [
+      "fuzzing",
+      "AFL",
+      "libFuzzer",
+      "coverage_guided",
+      "mutation",
+      "generation"
+    ],
+    "community_10": [
+      "SSRF",
+      "CSRF",
+      "URL_validation",
+      "network_segmentation",
+      "cloud_metadata"
+    ],
+    "community_11": [
+      "deserialization",
+      "serialization",
+      "RCE",
+      "object_injection",
+      "pickle",
+      "Java_deserialization"
+    ],
+    "community_12": [
+      "steganography",
+      "LSB",
+      "covert_channels",
+      "watermarking",
+      "encoding"
+    ]
+  },
+  "data_science": {
+    "community_1": [
+      "overfitting",
+      "bias_variance_tradeoff",
+      "underfitting",
+      "model_complexity",
+      "regularization",
+      "L1_regularization",
+      "L2_regularization",
+      "ridge",
+      "lasso",
+      "elastic_net",
+      "cross_validation",
+      "train_test_split",
+      "stratification",
+      "time_series_CV",
+      "nested_CV",
+      "generalization"
+    ],
+    "community_2": [
+      "feature_engineering",
+      "feature_selection",
+      "dimensionality_reduction",
+      "PCA",
+      "t-SNE",
+      "UMAP",
+      "curse_of_dimensionality",
+      "domain_knowledge",
+      "representation"
+    ],
+    "community_3": [
+      "ensemble_methods",
+      "bagging",
+      "boosting",
+      "stacking",
+      "random_forest",
+      "gradient_boosting"
+    ],
+    "community_4": [
+      "gradient_descent",
+      "learning_rate",
+      "momentum",
+      "Adam",
+      "SGD",
+      "backpropagation"
+    ],
+    "community_5": [
+      "confusion_matrix",
+      "precision",
+      "recall",
+      "F1",
+      "accuracy",
+      "true_positive",
+      "false_positive"
+    ],
+    "community_6": [
+      "data_leakage",
+      "train_test_contamination",
+      "temporal_leakage",
+      "feature_leakage"
+    ],
+    "community_7": [
+      "imbalanced_data",
+      "SMOTE",
+      "undersampling",
+      "oversampling",
+      "class_weights"
+    ],
+    "community_8": [
+      "A_B_testing",
+      "randomized_experiment",
+      "statistical_significance",
+      "sample_size",
+      "hypothesis_testing"
+    ],
+    "community_9": [
+      "time_series_analysis",
+      "trend",
+      "seasonality",
+      "ARIMA",
+      "autocorrelation",
+      "stationarity"
+    ],
+    "community_10": [
+      "clustering",
+      "k-means",
+      "hierarchical_clustering",
+      "DBSCAN",
+      "silhouette_score",
+      "distance_metric"
+    ],
+    "community_11": [
+      "neural_network",
+      "layers",
+      "activation_function",
+      "weights",
+      "deep_learning"
+    ]
+  }
+}

@@ -6,7 +6,7 @@ ARIA (Adaptive Resonant Intelligent Architecture) is a self-learning retrieval s
 - **Teacher ARIA**: Query-driven knowledge retrieval
 - **Student ARIA**: Conversation corpus learning
 - **Quaternion Mathematics**: 4D semantic space exploration
-- **Thompson Sampling**: Adaptive preset selection
+- **LinUCB**: Adaptive preset selection
 - **Perspective Detection**: Query context understanding
 
 ---
@@ -32,7 +32,7 @@ ARIA (Adaptive Resonant Intelligent Architecture) is a self-learning retrieval s
         │                 │               │
     ┌───▼─────────────────▼───────────────▼─────┐
     │           Intelligence Layer               │
-    │  • Bandit (Thompson Sampling)              │
+    │  • Bandit (LinUCB)              │
     │  • Quaternion Exploration                  │
     │  • Perspective Detection                   │
     │  • Anchor Reasoning                        │
@@ -99,7 +99,7 @@ Final Pack
 **Components**:
 
 #### Bandit Context (`bandit_context.py`)
-- **Thompson Sampling** - Bayesian multi-armed bandit
+- **LinUCB** - Bayesian multi-armed bandit
 - **Preset Selection** - Dynamic strategy selection
 - **Reward Learning** - Multi-objective optimization
 
@@ -222,7 +222,7 @@ angle = base_angle * confidence * user_adjustment
    └─> Perspective Detection
 
 2. Bandit Preset Selection
-   ├─> Thompson Sampling
+   ├─> LinUCB
    ├─> Query Features → Preset Mapping
    └─> Selected Preset (fast/balanced/deep/diverse)
 
@@ -326,7 +326,7 @@ for i in range(N):
 - No clustering or gaps
 - φ is irrational → no resonance
 
-### Thompson Sampling
+### LinUCB
 
 **Beta Distribution**:
 ```
@@ -364,7 +364,7 @@ reward = compound_reward(query_result)
 paths:              # File locations
 retrieval:          # Search parameters
 postfilter:         # Quality/diversity filters
-bandit:             # Thompson Sampling settings
+bandit:             # LinUCB settings
 context:            # LLM context limits
 perspective:        # 8-perspective detection
 anchors:            # 16-anchor reasoning
@@ -395,13 +395,13 @@ monitoring:         # Telemetry
 
 **Preset Selection**:
 - First 20 queries: Random exploration
-- After 20: Thompson Sampling exploitation
+- After 20: LinUCB exploitation
 
 ---
 
 ## State Management
 
-**Bandit State**: `~/.aria/bandit_state.json`
+**Bandit State**: `.aria_contextual_bandit.json` (project root)
 ```json
 {
   "total_pulls": 45,

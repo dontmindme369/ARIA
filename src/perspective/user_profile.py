@@ -10,10 +10,11 @@ from collections import Counter
 from typing import Dict, List
 import statistics
 
-# Find ARIA root relative to this file (aria/src/perspective)
-ARIA_ROOT = Path(__file__).parent.parent.parent
+# Find project root (aria/) relative to this file (src/perspective/)
+# Go up 2 levels: src/perspective/ -> src/ -> aria/
+PROJECT_ROOT = Path(__file__).parent.parent.parent
 CONVERSATIONS_DIR = Path.home() / '.lmstudio' / 'conversations'
-OUTPUT_FILE = ARIA_ROOT.parent / 'var' / 'user_profile.json'
+OUTPUT_FILE = PROJECT_ROOT / 'var' / 'user_profile.json'
 
 # Technical depth indicators
 TECHNICAL_INDICATORS = {

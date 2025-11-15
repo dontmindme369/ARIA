@@ -1,0 +1,494 @@
+{
+  "domain": "engineering",
+  "version": "2.0",
+  "last_updated": "2024-11-14T00:00:00Z",
+  "anchor_alignment": "engineering",
+  "concepts": {
+    "factor_of_safety": {
+      "term": "factor_of_safety",
+      "definition": "Ratio of a structure's ultimate strength to its expected working load, accounting for uncertainties",
+      "synonyms": ["safety factor", "FoS", "design margin"],
+      "related_concepts": ["stress", "strain", "failure_mode", "design_criteria", "reliability"],
+      "category": "design_principles",
+      "complexity": "basic",
+      "mental_models": ["margin_for_error", "conservative_design", "uncertainty_buffer"],
+      "common_errors": ["too_low_increases_failure_risk", "too_high_wastes_material", "ignoring_degradation"],
+      "detection_patterns": ["safety margin", "design factor", "load capacity"],
+      "epistemic_markers": {
+        "evidence_type": "empirical_and_code",
+        "certainty_level": "standardized"
+      },
+      "reasoning_patterns": ["assess uncertainties", "apply code requirements", "balance safety and economy"],
+      "examples": ["FoS=3 for static loads", "FoS=10 for fatigue", "aerospace typically 1.4-1.5"],
+      "prerequisites": ["stress_analysis", "material_properties"],
+      "applications": ["structural_design", "mechanical_design", "pressure_vessels", "safety_critical_systems"]
+    },
+    "stress": {
+      "term": "stress",
+      "definition": "Internal force per unit area within a material arising from external loads",
+      "synonyms": ["normal stress", "shear stress", "internal force density"],
+      "related_concepts": ["strain", "youngs_modulus", "yield_strength", "ultimate_strength", "factor_of_safety"],
+      "category": "mechanics",
+      "complexity": "basic",
+      "mental_models": ["force_distribution", "material_response", "failure_prediction"],
+      "common_errors": ["confusing stress with strain", "ignoring stress concentrations", "wrong units"],
+      "detection_patterns": ["force per area", "Pa", "psi", "MPa"],
+      "epistemic_markers": {
+        "evidence_type": "theoretical_and_measured",
+        "certainty_level": "well_established"
+      },
+      "reasoning_patterns": ["calculate from load and area", "compare to material limits", "check multiaxial state"],
+      "examples": ["σ = F/A", "bending stress", "torsional shear stress"],
+      "prerequisites": ["force", "area", "basic_mechanics"],
+      "applications": ["structural_analysis", "material_selection", "failure_prediction"]
+    },
+    "strain": {
+      "term": "strain",
+      "definition": "Deformation of a material relative to its original dimensions",
+      "synonyms": ["deformation", "elongation ratio"],
+      "related_concepts": ["stress", "youngs_modulus", "poissons_ratio", "elastic_limit"],
+      "category": "mechanics",
+      "complexity": "basic",
+      "mental_models": ["geometric_deformation", "material_response", "hookes_law"],
+      "common_errors": ["confusing strain with stress", "ignoring large deformation", "wrong reference configuration"],
+      "detection_patterns": ["ΔL/L", "dimensionless", "percent elongation"],
+      "epistemic_markers": {
+        "evidence_type": "measured",
+        "certainty_level": "directly_observable"
+      },
+      "reasoning_patterns": ["measure deformation", "relate to stress via modulus", "check elastic vs plastic"],
+      "examples": ["ε = ΔL/L₀", "tensile strain", "shear strain"],
+      "prerequisites": ["deformation", "geometry"],
+      "applications": ["material_testing", "structural_analysis", "manufacturing"]
+    },
+    "youngs_modulus": {
+      "term": "youngs_modulus",
+      "definition": "Material stiffness parameter relating stress to strain in elastic region",
+      "synonyms": ["elastic modulus", "E", "tensile modulus"],
+      "related_concepts": ["stress", "strain", "hookes_law", "stiffness", "compliance"],
+      "category": "material_properties",
+      "complexity": "intermediate",
+      "mental_models": ["material_stiffness", "force_deformation_relationship", "atomic_bonding"],
+      "common_errors": ["using modulus outside elastic region", "confusing with strength", "temperature_dependence"],
+      "detection_patterns": ["E =", "GPa", "modulus", "stiffness"],
+      "epistemic_markers": {
+        "evidence_type": "measured",
+        "certainty_level": "material_specific"
+      },
+      "reasoning_patterns": ["E = σ/ε in elastic region", "higher E = stiffer", "use for deflection calculations"],
+      "examples": ["Steel: 200 GPa", "Aluminum: 70 GPa", "Concrete: 25-50 GPa"],
+      "prerequisites": ["stress", "strain", "hookes_law"],
+      "applications": ["deflection_analysis", "material_selection", "vibration_analysis"]
+    },
+    "yield_strength": {
+      "term": "yield_strength",
+      "definition": "Stress level at which a material begins permanent plastic deformation",
+      "synonyms": ["yield stress", "elastic limit", "σ_y"],
+      "related_concepts": ["plastic_deformation", "ultimate_strength", "ductility", "necking"],
+      "category": "material_properties",
+      "complexity": "intermediate",
+      "mental_models": ["elastic_plastic_transition", "dislocation_motion", "design_limit"],
+      "common_errors": ["confusing with ultimate strength", "ignoring strain hardening", "not accounting for loading rate"],
+      "detection_patterns": ["yield point", "0.2% offset", "permanent deformation"],
+      "epistemic_markers": {
+        "evidence_type": "measured",
+        "certainty_level": "material_and_condition_dependent"
+      },
+      "reasoning_patterns": ["compare working stress to yield", "apply safety factor", "check for yielding"],
+      "examples": ["Mild steel: 250 MPa", "Aluminum 6061-T6: 275 MPa", "Titanium: 880 MPa"],
+      "prerequisites": ["stress", "plastic_deformation"],
+      "applications": ["design_criteria", "material_selection", "failure_prevention"]
+    },
+    "fatigue": {
+      "term": "fatigue",
+      "definition": "Progressive structural damage under repeated cyclic loading",
+      "synonyms": ["cyclic loading failure", "metal fatigue"],
+      "related_concepts": ["stress_cycles", "SN_curve", "crack_propagation", "endurance_limit", "mean_stress"],
+      "category": "failure_modes",
+      "complexity": "advanced",
+      "mental_models": ["cumulative_damage", "crack_initiation_and_growth", "life_prediction"],
+      "common_errors": ["ignoring cyclic loads", "not considering stress concentration", "underestimating damage"],
+      "detection_patterns": ["cyclic loading", "number of cycles", "S-N curve", "fatigue life"],
+      "epistemic_markers": {
+        "evidence_type": "empirical",
+        "certainty_level": "probabilistic"
+      },
+      "reasoning_patterns": ["identify cyclic loads", "use S-N curves", "apply Miner's rule for cumulative damage"],
+      "examples": ["aircraft structures", "rotating machinery", "bridges under traffic"],
+      "prerequisites": ["stress_analysis", "material_properties", "loading_history"],
+      "applications": ["life_prediction", "inspection_scheduling", "design_for_durability"]
+    },
+    "buckling": {
+      "term": "buckling",
+      "definition": "Sudden lateral deformation of a slender structure under compressive load",
+      "synonyms": ["elastic instability", "column failure"],
+      "related_concepts": ["critical_load", "euler_buckling", "slenderness_ratio", "effective_length"],
+      "category": "failure_modes",
+      "complexity": "advanced",
+      "mental_models": ["instability", "geometric_nonlinearity", "bifurcation"],
+      "common_errors": ["using yield strength for slender columns", "wrong effective length", "ignoring imperfections"],
+      "detection_patterns": ["slender", "compression", "critical load", "Euler"],
+      "epistemic_markers": {
+        "evidence_type": "theoretical_and_empirical",
+        "certainty_level": "well_established"
+      },
+      "reasoning_patterns": ["check slenderness ratio", "calculate critical load", "compare to applied load"],
+      "examples": ["P_cr = π²EI/(KL)²", "column buckling", "shell buckling"],
+      "prerequisites": ["beam_theory", "stress_analysis", "material_properties"],
+      "applications": ["column_design", "shell_structures", "stability_analysis"]
+    },
+    "thermal_expansion": {
+      "term": "thermal_expansion",
+      "definition": "Change in dimensions of a material due to temperature change",
+      "synonyms": ["thermal strain", "CTE effects"],
+      "related_concepts": ["coefficient_of_thermal_expansion", "thermal_stress", "bimetallic_strip"],
+      "category": "thermal",
+      "complexity": "basic",
+      "mental_models": ["atomic_vibration", "constraint_induces_stress", "differential_expansion"],
+      "common_errors": ["ignoring thermal effects", "wrong CTE value", "not allowing for expansion"],
+      "detection_patterns": ["ΔL = αLΔT", "thermal stress", "expansion joint"],
+      "epistemic_markers": {
+        "evidence_type": "measured",
+        "certainty_level": "material_specific"
+      },
+      "reasoning_patterns": ["calculate expansion from CTE", "assess if constrained", "design expansion joints"],
+      "examples": ["Steel: α = 12×10⁻⁶/°C", "Concrete: α = 10×10⁻⁶/°C", "bridge expansion joints"],
+      "prerequisites": ["material_properties", "temperature"],
+      "applications": ["piping_systems", "bridges", "precision_mechanisms"]
+    },
+    "heat_transfer": {
+      "term": "heat_transfer",
+      "definition": "Movement of thermal energy between objects or within objects",
+      "synonyms": ["thermal energy transfer"],
+      "related_concepts": ["conduction", "convection", "radiation", "thermal_conductivity", "heat_flux"],
+      "category": "thermal",
+      "complexity": "intermediate",
+      "mental_models": ["energy_flow", "temperature_gradient", "resistance_network"],
+      "common_errors": ["confusing heat with temperature", "wrong boundary conditions", "ignoring radiation"],
+      "detection_patterns": ["q = ", "W", "heat flux", "thermal resistance"],
+      "epistemic_markers": {
+        "evidence_type": "theoretical_and_measured",
+        "certainty_level": "well_established"
+      },
+      "reasoning_patterns": ["identify mode (conduction/convection/radiation)", "apply Fourier/Newton/Stefan-Boltzmann", "solve for temperature or heat rate"],
+      "examples": ["q = kA(dT/dx)", "q = hA(T_s - T_∞)", "electronics cooling"],
+      "prerequisites": ["thermodynamics", "material_properties"],
+      "applications": ["HVAC", "electronics_cooling", "heat_exchangers", "insulation"]
+    },
+    "fluid_dynamics": {
+      "term": "fluid_dynamics",
+      "definition": "Study of fluid motion and forces in fluids",
+      "synonyms": ["fluid mechanics", "hydrodynamics", "aerodynamics"],
+      "related_concepts": ["reynolds_number", "bernoulli_equation", "viscosity", "turbulence", "drag"],
+      "category": "fluids",
+      "complexity": "advanced",
+      "mental_models": ["continuum", "control_volume", "streamlines", "boundary_layer"],
+      "common_errors": ["ignoring viscosity", "wrong flow regime", "neglecting compressibility"],
+      "detection_patterns": ["flow", "velocity", "pressure", "Reynolds number"],
+      "epistemic_markers": {
+        "evidence_type": "theoretical_and_experimental",
+        "certainty_level": "regime_dependent"
+      },
+      "reasoning_patterns": ["classify flow regime", "apply conservation laws", "use dimensionless numbers"],
+      "examples": ["pipe flow", "airfoil", "pump design"],
+      "prerequisites": ["calculus", "conservation_laws", "material_properties"],
+      "applications": ["aerodynamics", "hydraulics", "HVAC", "turbomachinery"]
+    },
+    "control_system": {
+      "term": "control_system",
+      "definition": "System that manages, commands, directs or regulates behavior of other systems",
+      "synonyms": ["feedback control", "closed-loop system"],
+      "related_concepts": ["feedback", "transfer_function", "stability", "PID_controller", "gain"],
+      "category": "systems",
+      "complexity": "advanced",
+      "mental_models": ["feedback_loop", "error_correction", "stability_margins"],
+      "common_errors": ["wrong sign in feedback", "insufficient stability margin", "actuator_saturation"],
+      "detection_patterns": ["controller", "feedback", "setpoint", "error signal"],
+      "epistemic_markers": {
+        "evidence_type": "theoretical_and_tested",
+        "certainty_level": "model_dependent"
+      },
+      "reasoning_patterns": ["identify plant and controller", "analyze stability", "tune parameters"],
+      "examples": ["cruise control", "temperature control", "robotic manipulator"],
+      "prerequisites": ["differential_equations", "transfer_functions", "laplace_transform"],
+      "applications": ["automation", "robotics", "aerospace", "process_control"]
+    },
+    "circuit_analysis": {
+      "term": "circuit_analysis",
+      "definition": "Determination of voltages and currents in electrical circuits",
+      "synonyms": ["network analysis"],
+      "related_concepts": ["kirchhoffs_laws", "ohms_law", "impedance", "nodal_analysis", "mesh_analysis"],
+      "category": "electrical",
+      "complexity": "intermediate",
+      "mental_models": ["KVL_KCL", "equivalent_circuits", "superposition"],
+      "common_errors": ["sign errors", "wrong reference direction", "forgetting dependent sources"],
+      "detection_patterns": ["KVL", "KCL", "node voltage", "mesh current"],
+      "epistemic_markers": {
+        "evidence_type": "theoretical",
+        "certainty_level": "exact_within_model"
+      },
+      "reasoning_patterns": ["apply Kirchhoff's laws", "solve linear equations", "check solution"],
+      "examples": ["resistor networks", "RC circuits", "RLC resonance"],
+      "prerequisites": ["ohms_law", "basic_algebra"],
+      "applications": ["circuit_design", "power_systems", "electronics"]
+    },
+    "signal_processing": {
+      "term": "signal_processing",
+      "definition": "Analysis, interpretation, and manipulation of signals",
+      "synonyms": ["DSP", "signal analysis"],
+      "related_concepts": ["fourier_transform", "filtering", "sampling", "frequency_domain", "convolution"],
+      "category": "electrical",
+      "complexity": "advanced",
+      "mental_models": ["time_frequency_duality", "filtering", "sampling_theorem"],
+      "common_errors": ["aliasing", "insufficient_sampling_rate", "non-causal_filter"],
+      "detection_patterns": ["FFT", "filter", "frequency", "spectrum"],
+      "epistemic_markers": {
+        "evidence_type": "theoretical_and_measured",
+        "certainty_level": "well_established"
+      },
+      "reasoning_patterns": ["transform to frequency domain", "apply filter", "transform back"],
+      "examples": ["audio processing", "image filtering", "communications"],
+      "prerequisites": ["fourier_analysis", "complex_numbers", "linear_systems"],
+      "applications": ["communications", "audio", "radar", "biomedical"]
+    },
+    "thermodynamics": {
+      "term": "thermodynamics",
+      "definition": "Study of energy, heat, work, and their interconversion",
+      "synonyms": ["thermal science", "energy science"],
+      "related_concepts": ["first_law", "second_law", "entropy", "enthalpy", "efficiency"],
+      "category": "thermal",
+      "complexity": "advanced",
+      "mental_models": ["energy_conservation", "entropy_increase", "reversibility"],
+      "common_errors": ["violating second law", "confusing heat and temperature", "impossible efficiency"],
+      "detection_patterns": ["heat", "work", "entropy", "cycle", "efficiency"],
+      "epistemic_markers": {
+        "evidence_type": "theoretical_and_empirical",
+        "certainty_level": "fundamental_laws"
+      },
+      "reasoning_patterns": ["apply first law (energy balance)", "check second law (entropy)", "calculate efficiency"],
+      "examples": ["Carnot cycle", "heat engines", "refrigeration"],
+      "prerequisites": ["energy", "temperature", "pressure"],
+      "applications": ["power_generation", "HVAC", "engines", "refrigeration"]
+    },
+    "materials_selection": {
+      "term": "materials_selection",
+      "definition": "Process of choosing appropriate material for engineering application",
+      "synonyms": ["material choice", "material optimization"],
+      "related_concepts": ["properties", "cost", "performance_index", "ashby_charts", "constraints"],
+      "category": "design_process",
+      "complexity": "intermediate",
+      "mental_models": ["multi-objective_optimization", "property_charts", "constraint_satisfaction"],
+      "common_errors": ["single_property_focus", "ignoring_cost", "manufacturability_neglect"],
+      "detection_patterns": ["material properties", "performance index", "material chart"],
+      "epistemic_markers": {
+        "evidence_type": "empirical_and_analytical",
+        "certainty_level": "application_specific"
+      },
+      "reasoning_patterns": ["define requirements", "identify constraints", "rank candidates", "trade-off analysis"],
+      "examples": ["beam design (E/ρ)", "pressure vessel (σ_y/ρ)", "spring (σ_y²/E)"],
+      "prerequisites": ["material_properties", "design_requirements"],
+      "applications": ["product_design", "structural_engineering", "manufacturing"]
+    },
+    "finite_element_analysis": {
+      "term": "finite_element_analysis",
+      "definition": "Numerical method for solving complex engineering problems by discretization",
+      "synonyms": ["FEA", "FEM", "finite element method"],
+      "related_concepts": ["mesh", "element", "node", "boundary_conditions", "convergence"],
+      "category": "analysis_methods",
+      "complexity": "advanced",
+      "mental_models": ["discretization", "weak_formulation", "mesh_refinement"],
+      "common_errors": ["coarse_mesh", "bad_element_quality", "wrong_boundary_conditions", "not_checking_convergence"],
+      "detection_patterns": ["mesh", "element", "node", "FEA", "simulation"],
+      "epistemic_markers": {
+        "evidence_type": "numerical",
+        "certainty_level": "approximation"
+      },
+      "reasoning_patterns": ["create geometry", "mesh", "apply BCs and loads", "solve", "check convergence"],
+      "examples": ["stress analysis", "heat transfer", "fluid flow", "vibration"],
+      "prerequisites": ["mechanics", "numerical_methods", "boundary_value_problems"],
+      "applications": ["structural_analysis", "thermal_analysis", "CFD", "multiphysics"]
+    }
+  },
+  "reasoning_heuristics": [
+    {
+      "pattern": "Always check units throughout calculations",
+      "context": "All engineering calculations",
+      "limitations": "Dimensionless analysis sometimes preferred",
+      "examples": ["Force in N, stress in Pa", "Consistent SI or Imperial"]
+    },
+    {
+      "pattern": "Apply appropriate factor of safety for uncertainties",
+      "context": "Design calculations",
+      "limitations": "Over-conservative design wastes resources",
+      "examples": ["Static loads: FoS=3", "Fatigue: FoS=10", "Known loads: FoS=1.5"]
+    },
+    {
+      "pattern": "Identify failure modes before detailed design",
+      "context": "Beginning design process",
+      "limitations": "Some failure modes only apparent in analysis",
+      "examples": ["Yielding", "buckling", "fatigue", "corrosion"]
+    },
+    {
+      "pattern": "Check for stress concentrations at geometric discontinuities",
+      "context": "Stress analysis",
+      "limitations": "Not all concentrations are critical",
+      "examples": ["Holes", "fillets", "notches", "welds"]
+    },
+    {
+      "pattern": "Use free body diagrams for force analysis",
+      "context": "Statics and dynamics problems",
+      "limitations": "Complex systems may need computer analysis",
+      "examples": ["Isolate component", "show all forces", "apply equilibrium"]
+    },
+    {
+      "pattern": "Verify solution makes physical sense",
+      "context": "After calculations",
+      "limitations": "Experience needed for intuition",
+      "examples": ["Positive deflection downward?", "Reasonable magnitude?"]
+    },
+    {
+      "pattern": "Consider thermal effects in precision applications",
+      "context": "Temperature-varying environments",
+      "limitations": "Negligible for some applications",
+      "examples": ["CTE mismatch", "thermal stress", "expansion joints"]
+    },
+    {
+      "pattern": "Check boundary conditions match physical reality",
+      "context": "Analysis setup",
+      "limitations": "Ideal BCs are approximations",
+      "examples": ["Fixed vs pinned", "symmetry", "load distribution"]
+    },
+    {
+      "pattern": "Use dimensionless parameters to scale and generalize",
+      "context": "Fluid dynamics, heat transfer",
+      "limitations": "Not all problems scale simply",
+      "examples": ["Reynolds number", "Mach number", "Biot number"]
+    },
+    {
+      "pattern": "Iterate between analysis and design",
+      "context": "Design process",
+      "limitations": "Time constraints limit iterations",
+      "examples": ["Size member → analyze → resize → repeat"]
+    }
+  ],
+  "common_errors": [
+    {
+      "error_type": "unit_error",
+      "description": "Inconsistent or wrong units in calculations",
+      "symptoms": ["Wrong magnitude answers", "dimensional inconsistency"],
+      "causes": ["Mixing SI and Imperial", "forgetting conversions", "typos"],
+      "prevention": ["Consistent unit system", "dimensional analysis", "unit checking tools"],
+      "correction": ["Verify all units", "redo calculation with correct units"]
+    },
+    {
+      "error_type": "sign_error",
+      "description": "Wrong sign on forces, moments, or displacements",
+      "symptoms": ["Opposite direction results", "negative when should be positive"],
+      "causes": ["Convention confusion", "coordinate system errors", "reference direction mistakes"],
+      "prevention": ["Clear sign conventions", "consistent coordinate systems", "free body diagrams"],
+      "correction": ["Check reference directions", "verify sign conventions"]
+    },
+    {
+      "error_type": "boundary_condition_error",
+      "description": "Incorrect or oversimplified boundary conditions",
+      "symptoms": ["Unrealistic results", "wrong deformation pattern", "incorrect failure mode"],
+      "causes": ["Idealization mismatch", "misunderstanding physics", "software defaults"],
+      "prevention": ["Validate BCs against reality", "sensitivity analysis", "simple hand calcs"],
+      "correction": ["Revisit physical problem", "correct BCs", "re-analyze"]
+    },
+    {
+      "error_type": "ignoring_stress_concentration",
+      "description": "Not accounting for stress concentration factors",
+      "symptoms": ["Premature failure", "underestimated stress"],
+      "causes": ["Nominal stress calculation only", "geometric features overlooked"],
+      "prevention": ["Identify discontinuities", "apply K_t factors", "detailed FEA"],
+      "correction": ["Include stress concentration", "redesign to reduce K_t"]
+    },
+    {
+      "error_type": "wrong_failure_mode",
+      "description": "Designing against wrong failure mode",
+      "symptoms": ["Failure occurs differently than predicted"],
+      "causes": ["Incomplete failure analysis", "overlooking slenderness", "ignoring fatigue"],
+      "prevention": ["Comprehensive failure mode analysis", "check multiple modes"],
+      "correction": ["Identify actual failure mode", "redesign accordingly"]
+    },
+    {
+      "error_type": "insufficient_safety_factor",
+      "description": "Factor of safety too low for uncertainties",
+      "symptoms": ["Failures in service", "reliability issues"],
+      "causes": ["Aggressive design", "underestimating uncertainties", "cost pressure"],
+      "prevention": ["Follow code requirements", "assess uncertainties", "risk analysis"],
+      "correction": ["Increase safety factor", "add redundancy"]
+    },
+    {
+      "error_type": "mesh_too_coarse",
+      "description": "FEA mesh insufficient for accurate results",
+      "symptoms": ["No convergence", "mesh-dependent results", "jagged stress contours"],
+      "causes": ["Computational limits", "impatience", "lack of refinement"],
+      "prevention": ["Mesh convergence study", "refine at critical areas"],
+      "correction": ["Refine mesh", "check convergence"]
+    },
+    {
+      "error_type": "thermal_effects_ignored",
+      "description": "Not considering thermal expansion or thermal stresses",
+      "symptoms": ["Unexpected deformation", "thermal buckling", "CTE mismatch issues"],
+      "causes": ["Isothermal assumption", "overlooking temperature range"],
+      "prevention": ["Consider temperature range", "check CTE", "thermal analysis"],
+      "correction": ["Include thermal effects", "add expansion joints"]
+    }
+  ],
+  "epistemic_standards": {
+    "preferred_evidence": [
+      "Experimental measurements with uncertainty quantification",
+      "Validated computational models (FEA, CFD)",
+      "Industry standards and codes (ASME, IEEE, AISC)",
+      "Peer-reviewed research",
+      "Physical laws and first principles",
+      "Material property databases"
+    ],
+    "burden_of_proof": "Engineering claims require: physical consistency, code compliance, factor of safety, and validation",
+    "certainty_levels": {
+      "certain": "Physical laws (conservation, thermodynamics), standardized test data",
+      "high_confidence": "Validated models, handbook formulas, material properties",
+      "probable": "FEA results (mesh converged), empirical correlations within range",
+      "speculative": "Novel designs, untested conditions, extrapolations"
+    }
+  },
+  "mental_models": [
+    {
+      "model_name": "free_body_diagram",
+      "description": "Isolate system and show all external forces and moments",
+      "use_cases": ["Statics problems", "dynamics analysis", "force transmission"],
+      "limitations": ["Internal forces not shown", "simplifies to rigid body"],
+      "related_concepts": ["equilibrium", "force_balance", "moment_balance"]
+    },
+    {
+      "model_name": "control_volume",
+      "description": "Define fixed region in space for mass/energy/momentum balance",
+      "use_cases": ["Fluid dynamics", "thermodynamics", "conservation analysis"],
+      "limitations": ["Choice of CV affects complexity", "moving CV more complex"],
+      "related_concepts": ["conservation_laws", "flux", "accumulation"]
+    },
+    {
+      "model_name": "thermal_resistance_network",
+      "description": "Analogy between heat transfer and electrical circuits",
+      "use_cases": ["Heat transfer problems", "composite walls", "circuit boards"],
+      "limitations": ["Linear problems only", "steady-state typically"],
+      "related_concepts": ["conduction", "convection", "series_parallel"]
+    },
+    {
+      "model_name": "stress_strain_curve",
+      "description": "Material behavior under loading: elastic, yield, plastic, failure",
+      "use_cases": ["Material characterization", "failure prediction", "design limits"],
+      "limitations": ["Uniaxial tension typically", "rate and temperature dependent"],
+      "related_concepts": ["elastic_region", "plastic_region", "yield_strength", "ultimate_strength"]
+    },
+    {
+      "model_name": "design_iteration_cycle",
+      "description": "Iterate between design, analysis, and refinement",
+      "use_cases": ["Engineering design process", "optimization"],
+      "limitations": ["Diminishing returns", "time constraints"],
+      "related_concepts": ["preliminary_design", "analysis", "refinement", "validation"]
+    }
+  ]
+}

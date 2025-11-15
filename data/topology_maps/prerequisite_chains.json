@@ -1,0 +1,348 @@
+{
+  "philosophy": {
+    "entry_points": [],
+    "max_depth": 4,
+    "concepts_by_depth": {
+      "1": [
+        "epistemology",
+        "ethics"
+      ],
+      "2": [
+        "metaphysics",
+        "political_philosophy",
+        "philosophy_of_science",
+        "skepticism",
+        "utilitarianism",
+        "deontology",
+        "rationalism"
+      ],
+      "0": [
+        "logic"
+      ],
+      "3": [
+        "phenomenology",
+        "aesthetics",
+        "philosophy_of_mind",
+        "empiricism"
+      ],
+      "4": [
+        "existentialism",
+        "virtue_ethics"
+      ]
+    },
+    "concept_depths": {
+      "epistemology": 1,
+      "metaphysics": 2,
+      "ethics": 1,
+      "logic": 0,
+      "phenomenology": 3,
+      "aesthetics": 3,
+      "political_philosophy": 2,
+      "philosophy_of_mind": 3,
+      "philosophy_of_science": 2,
+      "existentialism": 4,
+      "skepticism": 2,
+      "utilitarianism": 2,
+      "deontology": 2,
+      "virtue_ethics": 4,
+      "rationalism": 2,
+      "empiricism": 3
+    }
+  },
+  "engineering": {
+    "entry_points": [],
+    "max_depth": 1,
+    "concepts_by_depth": {
+      "0": [
+        "factor_of_safety",
+        "stress",
+        "strain",
+        "fatigue",
+        "buckling",
+        "thermal_expansion",
+        "fluid_dynamics",
+        "control_system",
+        "circuit_analysis",
+        "signal_processing",
+        "thermodynamics",
+        "materials_selection",
+        "finite_element_analysis"
+      ],
+      "1": [
+        "youngs_modulus",
+        "yield_strength",
+        "heat_transfer"
+      ]
+    },
+    "concept_depths": {
+      "factor_of_safety": 0,
+      "stress": 0,
+      "strain": 0,
+      "youngs_modulus": 1,
+      "yield_strength": 1,
+      "fatigue": 0,
+      "buckling": 0,
+      "thermal_expansion": 0,
+      "heat_transfer": 1,
+      "fluid_dynamics": 0,
+      "control_system": 0,
+      "circuit_analysis": 0,
+      "signal_processing": 0,
+      "thermodynamics": 0,
+      "materials_selection": 0,
+      "finite_element_analysis": 0
+    }
+  },
+  "law": {
+    "entry_points": [],
+    "max_depth": 1,
+    "concepts_by_depth": {
+      "0": [
+        "IRAC",
+        "precedent",
+        "burden_of_proof",
+        "contract",
+        "tort",
+        "negligence",
+        "strict_liability",
+        "constitutional_law",
+        "statutory_interpretation",
+        "criminal_law",
+        "evidence",
+        "remedy",
+        "mens_rea",
+        "hearsay"
+      ],
+      "1": [
+        "jurisdiction"
+      ]
+    },
+    "concept_depths": {
+      "IRAC": 0,
+      "precedent": 0,
+      "jurisdiction": 1,
+      "burden_of_proof": 0,
+      "contract": 0,
+      "tort": 0,
+      "negligence": 0,
+      "strict_liability": 0,
+      "constitutional_law": 0,
+      "statutory_interpretation": 0,
+      "criminal_law": 0,
+      "evidence": 0,
+      "remedy": 0,
+      "mens_rea": 0,
+      "hearsay": 0
+    }
+  },
+  "business": {
+    "entry_points": [],
+    "max_depth": 1,
+    "concepts_by_depth": {
+      "0": [
+        "unit_economics",
+        "CAC",
+        "churn_rate",
+        "gross_margin",
+        "burn_rate",
+        "product_market_fit",
+        "pivot",
+        "TAM_SAM_SOM",
+        "MVP",
+        "north_star_metric",
+        "valuation",
+        "go_to_market",
+        "competitive_advantage"
+      ],
+      "1": [
+        "LTV",
+        "runway"
+      ]
+    },
+    "concept_depths": {
+      "unit_economics": 0,
+      "CAC": 0,
+      "LTV": 1,
+      "churn_rate": 0,
+      "gross_margin": 0,
+      "burn_rate": 0,
+      "product_market_fit": 0,
+      "pivot": 0,
+      "runway": 1,
+      "TAM_SAM_SOM": 0,
+      "MVP": 0,
+      "north_star_metric": 0,
+      "valuation": 0,
+      "go_to_market": 0,
+      "competitive_advantage": 0
+    }
+  },
+  "creative_arts": {
+    "entry_points": [],
+    "max_depth": 2,
+    "concepts_by_depth": {
+      "0": [
+        "composition",
+        "narrative_arc",
+        "color_theory",
+        "typography",
+        "character_development",
+        "voice",
+        "rhythm",
+        "tension_and_release",
+        "show_dont_tell",
+        "contrast",
+        "metaphor",
+        "gestalt_principles",
+        "point_of_view"
+      ],
+      "1": [
+        "visual_hierarchy"
+      ],
+      "2": [
+        "whitespace"
+      ]
+    },
+    "concept_depths": {
+      "composition": 0,
+      "narrative_arc": 0,
+      "color_theory": 0,
+      "typography": 0,
+      "character_development": 0,
+      "voice": 0,
+      "visual_hierarchy": 1,
+      "rhythm": 0,
+      "tension_and_release": 0,
+      "show_dont_tell": 0,
+      "contrast": 0,
+      "metaphor": 0,
+      "gestalt_principles": 0,
+      "point_of_view": 0,
+      "whitespace": 2
+    }
+  },
+  "social_sciences": {
+    "entry_points": [],
+    "max_depth": 0,
+    "concepts_by_depth": {
+      "0": [
+        "cognitive_bias",
+        "correlation_vs_causation",
+        "operationalization",
+        "external_validity",
+        "social_construction",
+        "p_value",
+        "effect_size",
+        "ecological_fallacy",
+        "replication_crisis",
+        "sampling_bias",
+        "theory_of_mind",
+        "priming",
+        "experimental_design",
+        "construct_validity",
+        "social_desirability_bias"
+      ]
+    },
+    "concept_depths": {
+      "cognitive_bias": 0,
+      "correlation_vs_causation": 0,
+      "operationalization": 0,
+      "external_validity": 0,
+      "social_construction": 0,
+      "p_value": 0,
+      "effect_size": 0,
+      "ecological_fallacy": 0,
+      "replication_crisis": 0,
+      "sampling_bias": 0,
+      "theory_of_mind": 0,
+      "priming": 0,
+      "experimental_design": 0,
+      "construct_validity": 0,
+      "social_desirability_bias": 0
+    }
+  },
+  "security": {
+    "entry_points": [],
+    "max_depth": 1,
+    "concepts_by_depth": {
+      "0": [
+        "buffer_overflow",
+        "SQL_injection",
+        "XSS",
+        "privilege_escalation",
+        "cryptography",
+        "reverse_engineering",
+        "ASLR",
+        "format_string",
+        "race_condition",
+        "fuzzing",
+        "SSRF",
+        "deserialization",
+        "lateral_movement",
+        "steganography"
+      ],
+      "1": [
+        "ROP"
+      ]
+    },
+    "concept_depths": {
+      "buffer_overflow": 0,
+      "SQL_injection": 0,
+      "XSS": 0,
+      "ROP": 1,
+      "privilege_escalation": 0,
+      "cryptography": 0,
+      "reverse_engineering": 0,
+      "ASLR": 0,
+      "format_string": 0,
+      "race_condition": 0,
+      "fuzzing": 0,
+      "SSRF": 0,
+      "deserialization": 0,
+      "lateral_movement": 0,
+      "steganography": 0
+    }
+  },
+  "data_science": {
+    "entry_points": [],
+    "max_depth": 1,
+    "concepts_by_depth": {
+      "0": [
+        "overfitting",
+        "bias_variance_tradeoff",
+        "feature_engineering",
+        "cross_validation",
+        "dimensionality_reduction",
+        "ensemble_methods",
+        "gradient_descent",
+        "confusion_matrix",
+        "data_leakage",
+        "imbalanced_data",
+        "A_B_testing",
+        "time_series_analysis",
+        "clustering"
+      ],
+      "1": [
+        "regularization",
+        "neural_network"
+      ]
+    },
+    "concept_depths": {
+      "overfitting": 0,
+      "bias_variance_tradeoff": 0,
+      "feature_engineering": 0,
+      "cross_validation": 0,
+      "dimensionality_reduction": 0,
+      "ensemble_methods": 0,
+      "gradient_descent": 0,
+      "confusion_matrix": 0,
+      "data_leakage": 0,
+      "imbalanced_data": 0,
+      "regularization": 1,
+      "A_B_testing": 0,
+      "time_series_analysis": 0,
+      "clustering": 0,
+      "neural_network": 1
+    }
+  }
+}

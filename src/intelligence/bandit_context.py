@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """
-bandit_context.py - Multi-armed bandit for preset selection
-# Configuration
-# Set these paths in config.yaml or as environment variables
-DATA_DIR = os.getenv('ARIA_DATA_DIR', './data')
-CACHE_DIR = os.getenv('ARIA_CACHE_DIR', './cache')
-OUTPUT_DIR = os.getenv('ARIA_OUTPUT_DIR', './output')
+bandit_context.py - LinUCB-Based Multi-Armed Bandit (NEW IMPLEMENTATION)
 
+Replaces Thompson Sampling with LinUCB for better context-aware learning.
 
+Key improvements:
+1. Uses query features directly in learning (not just filtering)
+2. Generalizes across similar query types
+3. Faster convergence and better adaptation
+4. Interpretable feature weights
 
-Implements Thompson Sampling with context features for adaptive preset selection
+Maintains backward-compatible API with Thompson implementation.
 """
 
 import json
@@ -18,10 +19,15 @@ import random
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-from .presets import Preset
+from utils.presets import Preset
+from intelligence.contextual_bandit import (
+    ContextualBandit,
+    DEFAULT_ARMS,
+    ARM_TO_PRESET_ARGS
+)
 
 
-# Default presets for retrieval strategies
+# Default presets for retrieval strategies (same as Thompson version)
 DEFAULT_PRESETS = [
     {"name": "fast", "args": {"top_k": 40, "sem_limit": 64, "rotations": 1, "max_per_file": 8}},
     {"name": "balanced", "args": {"top_k": 64, "sem_limit": 128, "rotations": 2, "max_per_file": 6}},
@@ -29,44 +35,60 @@ DEFAULT_PRESETS = [
     {"name": "diverse", "args": {"top_k": 80, "sem_limit": 128, "rotations": 2, "max_per_file": 4}},
 ]
 
+# EPSILON-GREEDY: 10% random exploration
+EPSILON = 0.10
+
+
+# ============================================================================
+# LinUCB Wrapper - Maintains Thompson API Compatibility
+# ============================================================================
 
 class BanditState:
-    """Thompson Sampling bandit state"""
-    
+    """
+    Wrapper around ContextualBandit to maintain Thompson API compatibility.
+
+    This class exists ONLY for backward compatibility. It delegates all
+    operations to the ContextualBandit (LinUCB) implementation.
+    """
+
     def __init__(self, presets: Optional[List[Dict[str, Any]]] = None):
+        """Initialize LinUCB bandit with presets"""
         self.presets = [Preset(p['name'], p['args']) for p in (presets or DEFAULT_PRESETS)]
-        
-        # Thompson Sampling: track alpha (successes) and beta (failures)
-        self.alpha = {p.name: 1.0 for p in self.presets}  # Prior: 1 success
-        self.beta = {p.name: 1.0 for p in self.presets}   # Prior: 1 failure
-        
-        # Track selections and rewards
+
+        # Create LinUCB bandit with preset names as arms
+        arm_names = [p.name for p in self.presets]
+        self.bandit = ContextualBandit(
+            arms=arm_names,
+            feature_dim=10,
+            alpha=1.0,  # Moderate exploration
+            state_path=None  # Will be set in select_preset
+        )
+
+        # Track for compatibility
         self.selections = {p.name: 0 for p in self.presets}
-        self.total_reward = {p.name: 0.0 for p in self.presets}
-        
-        # Phase tracking (exploration vs exploitation)
         self.total_pulls = 0
         self.phase = "exploration"  # or "exploitation"
-    
+
     def to_dict(self) -> Dict[str, Any]:
-        """Serialize state"""
+        """
+        Serialize state (for compatibility - not used with LinUCB)
+
+        LinUCB saves its own state automatically, but we provide this
+        for API compatibility.
+        """
         return {
-            'alpha': self.alpha,
-            'beta': self.beta,
             'selections': self.selections,
-            'total_reward': self.total_reward,
             'total_pulls': self.total_pulls,
-            'phase': self.phase
+            'phase': self.phase,
+            'algorithm': 'LinUCB',
+            'note': 'State managed by ContextualBandit, saved to separate file'
         }
-    
+
     @classmethod
     def from_dict(cls, data: Dict[str, Any], presets: Optional[List[Dict[str, Any]]] = None) -> 'BanditState':
-        """Deserialize state"""
+        """Deserialize state (for compatibility)"""
         state = cls(presets)
-        state.alpha = data.get('alpha', state.alpha)
-        state.beta = data.get('beta', state.beta)
         state.selections = data.get('selections', state.selections)
-        state.total_reward = data.get('total_reward', state.total_reward)
         state.total_pulls = data.get('total_pulls', 0)
         state.phase = data.get('phase', 'exploration')
         return state
@@ -74,108 +96,147 @@ class BanditState:
 
 def select_preset(
     features: Dict[str, Any],
-    state_path: str = "~/.rag_bandit_state.json"
+    state_path: str = "~/.aria_contextual_bandit.json",
+    epsilon: float = EPSILON
 ) -> Tuple[Preset, str, Dict[str, Any]]:
     """
-    Select preset using Thompson Sampling
-    
+    Select preset using LinUCB with epsilon-greedy exploration
+
+    API-compatible replacement for Thompson Sampling version.
+
     Args:
-        features: Query features (not used in basic implementation)
+        features: Query features from QueryFeatureExtractor
         state_path: Path to persistent state file
-    
+        epsilon: Probability of random exploration (default 0.10 = 10%)
+
     Returns:
         (selected_preset, selection_reason, metadata)
     """
     state_path_expanded = Path(os.path.expanduser(state_path))
-    
-    # Load or initialize state
-    if state_path_expanded.exists():
-        try:
-            with open(state_path_expanded, 'r') as f:
-                data = json.load(f)
-            state = BanditState.from_dict(data)
-        except:
-            state = BanditState()
+
+    # Initialize or load LinUCB bandit
+    arms = [p["name"] for p in DEFAULT_PRESETS]
+    bandit = ContextualBandit(
+        arms=arms,
+        feature_dim=10,
+        alpha=1.0,
+        state_path=state_path_expanded
+    )
+
+    # Determine phase based on number of observations
+    if bandit.n_observations < 20:
+        phase = "exploration"
     else:
-        state = BanditState()
-    
-    # Determine phase
-    state.total_pulls += 1
-    if state.total_pulls < 20:
-        state.phase = "exploration"
+        phase = "exploitation"
+
+    # Select arm using epsilon-greedy LinUCB
+    arm_name, ucb_score, feature_vector, selection_method = bandit.select_arm_epsilon_greedy(
+        query_context=features,
+        epsilon=epsilon
+    )
+
+    # Convert arm name to Preset object
+    preset_dict = next(p for p in DEFAULT_PRESETS if p["name"] == arm_name)
+    selected_preset = Preset(preset_dict["name"], preset_dict["args"])
+
+    # Create reason string (for logging/debugging)
+    if selection_method == "epsilon_random":
+        reason = f"epsilon-greedy random (ε={epsilon}) → {arm_name}"
     else:
-        state.phase = "exploitation"
-    
-    # Thompson Sampling: sample from Beta distribution
-    samples = {}
-    for preset in state.presets:
-        # Sample from Beta(alpha, beta)
-        alpha = state.alpha[preset.name]
-        beta = state.beta[preset.name]
-        sample = random.betavariate(alpha, beta)
-        samples[preset.name] = sample
-    
-    # Select preset with highest sample
-    selected_name = max(samples.keys(), key=lambda k: samples[k])
-    selected_preset = next(p for p in state.presets if p.name == selected_name)
-    
-    # Track selection
-    state.selections[selected_name] += 1
-    
-    # Save state
-    state_path_expanded.parent.mkdir(parents=True, exist_ok=True)
-    with open(state_path_expanded, 'w') as f:
-        json.dump(state.to_dict(), f, indent=2)
-    
-    reason = f"Thompson sample: {samples[selected_name]:.3f}"
+        reason = f"LinUCB UCB (score={ucb_score:.3f}) → {arm_name}"
+
+    # Metadata (compatible with Thompson version)
     meta = {
-        'phase': state.phase,
-        'total_pulls': state.total_pulls,
-        'samples': samples
+        'phase': phase,
+        'total_pulls': bandit.n_observations,
+        'selection_method': selection_method,
+        'epsilon': epsilon,
+        'ucb_score': ucb_score,
+        'feature_vector': feature_vector.tolist(),  # For debugging
+        'algorithm': 'LinUCB'
     }
-    
+
     return selected_preset, reason, meta
 
 
 def give_reward(
     preset_name: str,
     reward: float,
-    state_path: str = "~/.rag_bandit_state.json"
+    state_path: str = "~/.aria_contextual_bandit.json",
+    features: Optional[Dict[str, Any]] = None
 ) -> None:
     """
     Update bandit state with reward
-    
+
+    LinUCB version - requires features for proper updating.
+    Features are optional for backward compatibility but recommended.
+
     Args:
         preset_name: Name of preset that was used
         reward: Reward value (0.0-1.0)
         state_path: Path to persistent state file
+        features: Query features (REQUIRED for LinUCB, optional for compatibility)
     """
     state_path_expanded = Path(os.path.expanduser(state_path))
-    
+
     if not state_path_expanded.exists():
+        # No state to update
         return
-    
+
     try:
-        with open(state_path_expanded, 'r') as f:
-            data = json.load(f)
-        state = BanditState.from_dict(data)
-        
-        # Update Thompson Sampling parameters
-        if reward > 0.5:
-            # Success: increment alpha
-            state.alpha[preset_name] += reward
-        else:
-            # Failure: increment beta
-            state.beta[preset_name] += (1.0 - reward)
-        
-        # Track total reward
-        state.total_reward[preset_name] += reward
-        
-        # Save updated state
-        with open(state_path_expanded, 'w') as f:
-            json.dump(state.to_dict(), f, indent=2)
+        # Load LinUCB bandit
+        arms = [p["name"] for p in DEFAULT_PRESETS]
+        bandit = ContextualBandit(
+            arms=arms,
+            feature_dim=10,
+            alpha=1.0,
+            state_path=state_path_expanded
+        )
+
+        if features is None:
+            # Fallback: use default/zero features (not ideal but maintains compatibility)
+            print(f"[WARNING] give_reward called without features - using defaults", flush=True)
+            features = {
+                "complexity": "moderate",
+                "domain": "default",
+                "length": 50
+            }
+
+        # Extract feature vector
+        feature_vector = bandit.extract_features(features)
+
+        # Update LinUCB matrices
+        bandit.update(
+            arm_name=preset_name,
+            features=feature_vector,
+            reward=reward,
+            query_context=features
+        )
+
+        # State is automatically saved by ContextualBandit._save_state()
+
     except Exception as e:
-        pass  # Silently fail
+        # Silently fail to maintain compatibility
+        import sys
+        print(f"[WARNING] LinUCB update failed: {e}", file=sys.stderr, flush=True)
 
 
-__all__ = ['select_preset', 'give_reward', 'BanditState']
+# ============================================================================
+# Utility Functions (for compatibility)
+# ============================================================================
+
+def map_features_to_candidates(features: Dict[str, Any]) -> List[str]:
+    """
+    Legacy function from Thompson implementation.
+
+    LinUCB doesn't need rule-based candidate filtering since it learns
+    patterns automatically. This is kept for API compatibility only.
+
+    Returns all presets as candidates.
+    """
+    # LinUCB learns which presets work for which features automatically,
+    # so we don't need manual filtering rules
+    return [p["name"] for p in DEFAULT_PRESETS]
+
+
+__all__ = ['select_preset', 'give_reward', 'BanditState', 'map_features_to_candidates']

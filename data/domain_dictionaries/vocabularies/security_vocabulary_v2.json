@@ -1,0 +1,476 @@
+{
+  "domain": "security_ctf",
+  "version": "2.0",
+  "last_updated": "2024-11-14T00:00:00Z",
+  "anchor_alignment": "technical",
+  "concepts": {
+    "buffer_overflow": {
+      "term": "buffer_overflow",
+      "definition": "Memory safety violation where data exceeds buffer boundary, overwriting adjacent memory",
+      "synonyms": ["buffer overrun", "memory corruption"],
+      "related_concepts": ["stack_smashing", "heap_overflow", "ROP", "shellcode", "canary"],
+      "category": "memory_vulnerabilities",
+      "complexity": "intermediate",
+      "mental_models": ["memory_layout", "control_flow_hijack", "bounds_checking"],
+      "common_errors": ["off_by_one", "null_terminator_missing", "insufficient_bounds_check"],
+      "detection_patterns": ["segfault", "canary_corrupt", "return_address_overwrite"],
+      "epistemic_markers": {
+        "evidence_type": "technical_analysis",
+        "certainty_level": "well_understood"
+      },
+      "reasoning_patterns": ["identify buffer", "calculate overflow", "craft payload", "test exploitation"],
+      "examples": ["Classic stack overflow", "gets() vulnerability", "strcpy without bounds"],
+      "prerequisites": ["memory_layout", "assembly", "C_programming"],
+      "applications": ["exploitation", "CTF", "vulnerability_research", "defensive_programming"]
+    },
+    "SQL_injection": {
+      "term": "SQL_injection",
+      "definition": "Code injection where attacker inserts malicious SQL into application queries",
+      "synonyms": ["SQLi", "SQL code injection"],
+      "related_concepts": ["code_injection", "parameterized_queries", "ORM", "input_validation"],
+      "category": "web_vulnerabilities",
+      "complexity": "basic",
+      "mental_models": ["untrusted_input", "query_construction", "escaping"],
+      "common_errors": ["string_concatenation", "no_parameterization", "insufficient_sanitization"],
+      "detection_patterns": ["SQL error messages", "union SELECT", "time delays", "boolean based"],
+      "epistemic_markers": {
+        "evidence_type": "practical_exploitation",
+        "certainty_level": "proven_vulnerability"
+      },
+      "reasoning_patterns": ["identify injection point", "test for vulnerability", "enumerate database", "extract data"],
+      "examples": ["' OR '1'='1", "UNION SELECT", "blind SQLi", "time-based SQLi"],
+      "prerequisites": ["SQL", "web_applications", "HTTP"],
+      "applications": ["penetration_testing", "CTF", "secure_coding", "defense"]
+    },
+    "XSS": {
+      "term": "XSS",
+      "definition": "Cross-Site Scripting - injecting malicious scripts into trusted websites",
+      "synonyms": ["cross-site scripting", "javascript injection"],
+      "related_concepts": ["reflected_XSS", "stored_XSS", "DOM_XSS", "CSP", "sanitization"],
+      "category": "web_vulnerabilities",
+      "complexity": "basic",
+      "mental_models": ["untrusted_output", "context_escaping", "same_origin_policy"],
+      "common_errors": ["no_output_encoding", "trusting_user_input", "insufficient_sanitization"],
+      "detection_patterns": ["<script> tag", "javascript: protocol", "event handlers", "alert() popup"],
+      "epistemic_markers": {
+        "evidence_type": "practical_exploitation",
+        "certainty_level": "proven_vulnerability"
+      },
+      "reasoning_patterns": ["identify injection point", "craft payload", "test execution", "escalate impact"],
+      "examples": ["<script>alert(1)</script>", "reflected XSS in search", "stored XSS in comments"],
+      "prerequisites": ["HTML", "JavaScript", "web_applications"],
+      "applications": ["penetration_testing", "CTF", "secure_coding", "bug_bounty"]
+    },
+    "ROP": {
+      "term": "ROP",
+      "definition": "Return-Oriented Programming - chaining existing code gadgets to bypass DEP/NX",
+      "synonyms": ["return oriented programming", "gadget chaining"],
+      "related_concepts": ["buffer_overflow", "DEP", "NX", "ASLR", "gadget", "shellcode"],
+      "category": "exploitation_techniques",
+      "complexity": "advanced",
+      "mental_models": ["code_reuse", "gadget_chain", "stack_manipulation"],
+      "common_errors": ["wrong_gadget_addresses", "stack_alignment", "insufficient_gadgets"],
+      "detection_patterns": ["chain of returns", "unusual call patterns"],
+      "epistemic_markers": {
+        "evidence_type": "exploitation_technique",
+        "certainty_level": "proven_bypass"
+      },
+      "reasoning_patterns": ["find gadgets", "chain for desired effect", "build ROP chain", "test exploitation"],
+      "examples": ["ret2libc", "full ROP chain", "syscall gadget chain"],
+      "prerequisites": ["buffer_overflow", "assembly", "memory_protections"],
+      "applications": ["exploitation", "CTF", "research", "defensive_understanding"]
+    },
+    "privilege_escalation": {
+      "term": "privilege_escalation",
+      "definition": "Gaining higher permissions than initially granted",
+      "synonyms": ["privesc", "elevation of privilege"],
+      "related_concepts": ["lateral_movement", "SUID", "kernel_exploit", "sudo_misconfig"],
+      "category": "post_exploitation",
+      "complexity": "intermediate",
+      "mental_models": ["permission_model", "trust_boundaries", "attack_surface"],
+      "common_errors": ["noisy_enumeration", "missing_vectors", "insufficient_testing"],
+      "detection_patterns": ["SUID binaries", "sudo misconfiguration", "kernel version"],
+      "epistemic_markers": {
+        "evidence_type": "practical_technique",
+        "certainty_level": "context_dependent"
+      },
+      "reasoning_patterns": ["enumerate system", "identify vectors", "test exploits", "gain elevated access"],
+      "examples": ["SUID binary abuse", "sudo vulnerability", "kernel exploit", "DLL hijacking (Windows)"],
+      "prerequisites": ["operating_systems", "permissions_model", "enumeration"],
+      "applications": ["penetration_testing", "CTF", "red_teaming", "defensive_hardening"]
+    },
+    "cryptography": {
+      "term": "cryptography",
+      "definition": "Practice of secure communication through encoding and decoding",
+      "synonyms": ["crypto", "encryption"],
+      "related_concepts": ["encryption", "hashing", "PKI", "symmetric_crypto", "asymmetric_crypto"],
+      "category": "cryptographic_foundations",
+      "complexity": "advanced",
+      "mental_models": ["confidentiality", "integrity", "authentication", "key_management"],
+      "common_errors": ["ECB_mode", "weak_keys", "poor_random", "custom_crypto"],
+      "detection_patterns": ["encryption_usage", "key_exchange", "signatures"],
+      "epistemic_markers": {
+        "evidence_type": "mathematical_and_practical",
+        "certainty_level": "well_established"
+      },
+      "reasoning_patterns": ["identify crypto system", "analyze security properties", "test implementation"],
+      "examples": ["AES", "RSA", "Diffie-Hellman", "SHA-256", "TLS"],
+      "prerequisites": ["mathematics", "number_theory", "computer_science"],
+      "applications": ["secure_communications", "CTF", "protocol_design", "analysis"]
+    },
+    "reverse_engineering": {
+      "term": "reverse_engineering",
+      "definition": "Analyzing compiled code to understand functionality and find vulnerabilities",
+      "synonyms": ["reversing", "RE", "binary analysis"],
+      "related_concepts": ["disassembly", "decompilation", "debugging", "static_analysis", "dynamic_analysis"],
+      "category": "analysis_techniques",
+      "complexity": "advanced",
+      "mental_models": ["code_to_behavior", "control_flow", "data_flow"],
+      "common_errors": ["missing_obfuscation", "wrong_architecture", "insufficient_analysis"],
+      "detection_patterns": ["assembly_patterns", "library_calls", "string_references"],
+      "epistemic_markers": {
+        "evidence_type": "technical_analysis",
+        "certainty_level": "interpretation"
+      },
+      "reasoning_patterns": ["static analysis first", "dynamic analysis for confirmation", "hypothesis testing"],
+      "examples": ["IDA Pro analysis", "GDB debugging", "malware analysis", "protocol reversing"],
+      "prerequisites": ["assembly", "operating_systems", "debugging"],
+      "applications": ["malware_analysis", "CTF", "vulnerability_research", "protocol_analysis"]
+    },
+    "ASLR": {
+      "term": "ASLR",
+      "definition": "Address Space Layout Randomization - randomizing memory addresses to hinder exploitation",
+      "synonyms": ["address randomization"],
+      "related_concepts": ["DEP", "NX", "PIE", "information_leak", "bypass_techniques"],
+      "category": "memory_protections",
+      "complexity": "intermediate",
+      "mental_models": ["unpredictability", "entropy", "information_leak_requirement"],
+      "common_errors": ["insufficient_entropy", "PIE_not_enabled", "info_leak_available"],
+      "detection_patterns": ["randomized_addresses", "different_runs_different_addresses"],
+      "epistemic_markers": {
+        "evidence_type": "mitigation_technology",
+        "certainty_level": "probabilistic_defense"
+      },
+      "reasoning_patterns": ["check if enabled", "find information leak", "calculate addresses", "exploit"],
+      "examples": ["Linux ASLR", "Windows ASLR", "library randomization"],
+      "prerequisites": ["memory_layout", "exploitation"],
+      "applications": ["defense", "exploitation", "CTF"]
+    },
+    "format_string": {
+      "term": "format_string",
+      "definition": "Vulnerability where untrusted input is used as format string, allowing read/write primitives",
+      "synonyms": ["format string bug", "printf vulnerability"],
+      "related_concepts": ["printf", "arbitrary_read", "arbitrary_write", "stack_leak"],
+      "category": "memory_vulnerabilities",
+      "complexity": "advanced",
+      "mental_models": ["format_specifiers", "stack_reading", "memory_write"],
+      "common_errors": ["using_user_input_as_format", "no_validation"],
+      "detection_patterns": ["%x", "%s", "%n", "crash_on_format_string"],
+      "epistemic_markers": {
+        "evidence_type": "technical_vulnerability",
+        "certainty_level": "proven"
+      },
+      "reasoning_patterns": ["identify vulnerable printf", "leak addresses", "write to memory", "exploit"],
+      "examples": ["printf(user_input)", "%x leak", "%n write", "ASLR bypass via leak"],
+      "prerequisites": ["C_programming", "stack_layout", "format_specifiers"],
+      "applications": ["exploitation", "CTF", "secure_coding"]
+    },
+    "race_condition": {
+      "term": "race_condition",
+      "definition": "Timing-dependent bug where outcome depends on sequence/timing of uncontrollable events",
+      "synonyms": ["TOCTOU", "time-of-check-time-of-use"],
+      "related_concepts": ["concurrency", "synchronization", "atomicity", "symbolic_links"],
+      "category": "logic_vulnerabilities",
+      "complexity": "advanced",
+      "mental_models": ["timing_window", "concurrent_access", "check_vs_use"],
+      "common_errors": ["non_atomic_operations", "insufficient_locking", "assuming_sequential"],
+      "detection_patterns": ["timing_sensitive", "concurrent_access", "file_operations"],
+      "epistemic_markers": {
+        "evidence_type": "timing_dependent",
+        "certainty_level": "probabilistic"
+      },
+      "reasoning_patterns": ["identify race window", "create timing exploit", "win the race", "escalate"],
+      "examples": ["TOCTOU file access", "double fetch", "symlink race"],
+      "prerequisites": ["concurrency", "operating_systems", "file_systems"],
+      "applications": ["exploitation", "CTF", "secure_coding", "testing"]
+    },
+    "fuzzing": {
+      "term": "fuzzing",
+      "definition": "Automated testing technique feeding malformed/unexpected inputs to find bugs",
+      "synonyms": ["fuzz testing"],
+      "related_concepts": ["AFL", "libFuzzer", "coverage_guided", "mutation", "generation"],
+      "category": "vulnerability_discovery",
+      "complexity": "intermediate",
+      "mental_models": ["input_mutation", "coverage_feedback", "crash_detection"],
+      "common_errors": ["insufficient_corpus", "no_sanitizers", "ignoring_coverage"],
+      "detection_patterns": ["crashes", "hangs", "sanitizer_findings"],
+      "epistemic_markers": {
+        "evidence_type": "empirical_testing",
+        "certainty_level": "bug_detection"
+      },
+      "reasoning_patterns": ["prepare corpus", "run fuzzer", "triage crashes", "analyze root cause"],
+      "examples": ["AFL fuzzing", "libFuzzer", "structure-aware fuzzing"],
+      "prerequisites": ["programming", "debugging", "testing"],
+      "applications": ["vulnerability_discovery", "security_testing", "QA"]
+    },
+    "SSRF": {
+      "term": "SSRF",
+      "definition": "Server-Side Request Forgery - forcing server to make unintended requests",
+      "synonyms": ["server side request forgery"],
+      "related_concepts": ["CSRF", "URL_validation", "network_segmentation", "cloud_metadata"],
+      "category": "web_vulnerabilities",
+      "complexity": "intermediate",
+      "mental_models": ["server_as_proxy", "internal_network_access", "trust_boundary"],
+      "common_errors": ["insufficient_URL_validation", "blacklist_only", "no_network_segmentation"],
+      "detection_patterns": ["URL_parameter", "request_to_internal_IP", "cloud_metadata_access"],
+      "epistemic_markers": {
+        "evidence_type": "practical_vulnerability",
+        "certainty_level": "proven"
+      },
+      "reasoning_patterns": ["identify URL parameter", "test for SSRF", "bypass filters", "access internal resources"],
+      "examples": ["AWS metadata 169.254.169.254", "internal API access", "port scanning"],
+      "prerequisites": ["web_applications", "networking", "HTTP"],
+      "applications": ["penetration_testing", "CTF", "cloud_security"]
+    },
+    "deserialization": {
+      "term": "deserialization",
+      "definition": "Converting serialized data back to objects - vulnerable when untrusted data deserialized",
+      "synonyms": ["insecure deserialization", "object injection"],
+      "related_concepts": ["serialization", "RCE", "object_injection", "pickle", "Java_deserialization"],
+      "category": "logic_vulnerabilities",
+      "complexity": "advanced",
+      "mental_models": ["data_to_code", "magic_methods", "gadget_chains"],
+      "common_errors": ["deserializing_untrusted_data", "no_integrity_check", "dangerous_classes_available"],
+      "detection_patterns": ["serialized_format", "magic_bytes", "base64_encoded"],
+      "epistemic_markers": {
+        "evidence_type": "exploitation_technique",
+        "certainty_level": "proven_vulnerability"
+      },
+      "reasoning_patterns": ["identify deserialization", "craft malicious object", "trigger gadget chain", "RCE"],
+      "examples": ["Python pickle", "Java deserialization", "PHP unserialize", "ysoserial"],
+      "prerequisites": ["programming", "object_oriented", "serialization"],
+      "applications": ["exploitation", "CTF", "secure_coding", "penetration_testing"]
+    },
+    "lateral_movement": {
+      "term": "lateral_movement",
+      "definition": "Moving through network after initial compromise to reach target systems",
+      "synonyms": ["pivoting", "network traversal"],
+      "related_concepts": ["privilege_escalation", "credential_dumping", "pass_the_hash", "tunneling"],
+      "category": "post_exploitation",
+      "complexity": "advanced",
+      "mental_models": ["network_topology", "trust_relationships", "credential_reuse"],
+      "common_errors": ["noisy_scanning", "leaving_artifacts", "insufficient_pivoting"],
+      "detection_patterns": ["unusual_network_traffic", "credential_usage", "tool_signatures"],
+      "epistemic_markers": {
+        "evidence_type": "tactical_technique",
+        "certainty_level": "context_dependent"
+      },
+      "reasoning_patterns": ["map network", "dump credentials", "move to targets", "maintain access"],
+      "examples": ["Pass-the-Hash", "SSH tunneling", "PSExec", "proxychains"],
+      "prerequisites": ["networking", "operating_systems", "protocols"],
+      "applications": ["penetration_testing", "red_teaming", "CTF"]
+    },
+    "steganography": {
+      "term": "steganography",
+      "definition": "Hiding information within other non-secret data",
+      "synonyms": ["stego", "data hiding"],
+      "related_concepts": ["LSB", "covert_channels", "watermarking", "encoding"],
+      "category": "covert_techniques",
+      "complexity": "intermediate",
+      "mental_models": ["hidden_data", "carrier_medium", "statistical_detection"],
+      "common_errors": ["detectable_patterns", "poor_embedding", "statistical_anomalies"],
+      "detection_patterns": ["LSB_patterns", "statistical_tests", "known_stego_tools"],
+      "epistemic_markers": {
+        "evidence_type": "information_hiding",
+        "certainty_level": "technique_dependent"
+      },
+      "reasoning_patterns": ["identify carrier", "extract hidden data", "analyze patterns"],
+      "examples": ["LSB image stego", "audio stego", "network stego", "CTF challenges"],
+      "prerequisites": ["encoding", "file_formats", "statistics"],
+      "applications": ["CTF", "covert_communications", "digital_forensics"]
+    }
+  },
+  "reasoning_heuristics": [
+    {
+      "pattern": "Always check bounds before write",
+      "context": "Memory operations",
+      "limitations": "Performance overhead in some contexts",
+      "examples": ["Buffer operations", "array access", "string handling"]
+    },
+    {
+      "pattern": "Assume all input is malicious",
+      "context": "Input validation and sanitization",
+      "limitations": "Can't validate everything perfectly",
+      "examples": ["User input", "network data", "file contents"]
+    },
+    {
+      "pattern": "Defense in depth - multiple layers",
+      "context": "Security architecture",
+      "limitations": "Complexity and cost",
+      "examples": ["Firewall + IDS + endpoint + app security"]
+    },
+    {
+      "pattern": "Enumerate thoroughly before exploiting",
+      "context": "Penetration testing and CTF",
+      "limitations": "Time constraints, noise concerns",
+      "examples": ["System enumeration", "network scanning", "file discovery"]
+    },
+    {
+      "pattern": "Look for information leaks first",
+      "context": "Exploitation with ASLR/PIE",
+      "limitations": "Not always available",
+      "examples": ["Format string leaks", "error messages", "timing side channels"]
+    },
+    {
+      "pattern": "Never roll your own crypto",
+      "context": "Cryptographic implementation",
+      "limitations": "Research context may require it",
+      "examples": ["Use established libraries", "standard algorithms only"]
+    },
+    {
+      "pattern": "Chain vulnerabilities for impact",
+      "context": "Exploitation strategy",
+      "limitations": "Each link must work",
+      "examples": ["Info leak + buffer overflow", "SSRF + internal exploit"]
+    },
+    {
+      "pattern": "Test in safe environment first",
+      "context": "Exploit development",
+      "limitations": "Production may differ",
+      "examples": ["Local VM", "isolated network", "controlled testing"]
+    },
+    {
+      "pattern": "Fail securely - deny by default",
+      "context": "Secure design",
+      "limitations": "Usability trade-offs",
+      "examples": ["Whitelist over blacklist", "explicit allow vs deny"]
+    },
+    {
+      "pattern": "Sanitize output context-aware",
+      "context": "XSS prevention",
+      "limitations": "Context complexity",
+      "examples": ["HTML encode for HTML", "JS encode for JS", "URL encode for URL"]
+    }
+  ],
+  "common_errors": [
+    {
+      "error_type": "insufficient_input_validation",
+      "description": "Not properly validating or sanitizing untrusted input",
+      "symptoms": ["Injection vulnerabilities", "unexpected behavior", "crashes"],
+      "causes": ["Trust assumptions", "incomplete validation", "blacklist approach"],
+      "prevention": ["Whitelist validation", "parameterization", "context-aware encoding"],
+      "correction": ["Implement proper validation", "use prepared statements", "sanitize outputs"]
+    },
+    {
+      "error_type": "using_weak_cryptography",
+      "description": "Using outdated or weak cryptographic algorithms or practices",
+      "symptoms": ["Broken encryption", "compromised keys", "predictable output"],
+      "causes": ["Outdated knowledge", "performance concerns", "custom crypto"],
+      "prevention": ["Use modern algorithms", "proper key management", "established libraries"],
+      "correction": ["Upgrade to strong crypto", "rotate keys", "review implementation"]
+    },
+    {
+      "error_type": "race_condition_exploitation_fail",
+      "description": "Failing to win timing-dependent race conditions",
+      "symptoms": ["Inconsistent exploitation", "low success rate"],
+      "causes": ["Insufficient attempts", "wrong timing", "CPU scheduling"],
+      "prevention": ["Automate attempts", "optimize timing", "increase probability"],
+      "correction": ["Retry logic", "timing optimization", "parallel attempts"]
+    },
+    {
+      "error_type": "leaving_artifacts",
+      "description": "Leaving forensic evidence during penetration testing",
+      "symptoms": ["Detection", "attribution", "incident response"],
+      "causes": ["Noisy tools", "insufficient cleanup", "logging"],
+      "prevention": ["Stealth techniques", "cleanup scripts", "log awareness"],
+      "correction": ["Remove artifacts", "use evasion", "proper cleanup"]
+    },
+    {
+      "error_type": "ASLR_bypass_failure",
+      "description": "Unable to bypass ASLR due to lack of information leak",
+      "symptoms": ["Exploitation fails", "wrong addresses", "crashes"],
+      "causes": ["No info leak", "insufficient leak", "wrong address calculation"],
+      "prevention": ["Find info leak first", "multiple leak attempts", "verify addresses"],
+      "correction": ["Identify info leak", "use partial overwrites", "brute force low entropy"]
+    },
+    {
+      "error_type": "improper_gadget_chaining",
+      "description": "ROP chain fails due to incorrect gadgets or ordering",
+      "symptoms": ["Crash", "wrong behavior", "no shell"],
+      "causes": ["Wrong addresses", "bad gadgets", "stack misalignment"],
+      "prevention": ["Verify gadgets", "test chain incrementally", "check alignment"],
+      "correction": ["Debug with GDB", "fix gadget addresses", "realign stack"]
+    },
+    {
+      "error_type": "insufficient_enumeration",
+      "description": "Missing attack vectors due to incomplete reconnaissance",
+      "symptoms": ["Missed opportunities", "stuck on challenges", "incomplete assessment"],
+      "causes": ["Rushing", "tunnel vision", "incomplete methodology"],
+      "prevention": ["Systematic enumeration", "checklist", "automated scanning"],
+      "correction": ["Go back to enumeration", "use comprehensive tools", "methodical approach"]
+    },
+    {
+      "error_type": "noisy_exploitation",
+      "description": "Creating excessive network traffic or system activity",
+      "symptoms": ["Detection", "IDS alerts", "SOC investigation"],
+      "causes": ["Aggressive scanning", "verbose tools", "repeated attempts"],
+      "prevention": ["Rate limiting", "stealth options", "targeted approach"],
+      "correction": ["Reduce noise", "use evasion techniques", "patient approach"]
+    }
+  ],
+  "epistemic_standards": {
+    "preferred_evidence": [
+      "Proof-of-concept exploits",
+      "CVE entries and disclosures",
+      "Academic security research",
+      "Bug bounty reports",
+      "CTF writeups and techniques",
+      "Defensive detection rules",
+      "Vulnerability databases"
+    ],
+    "burden_of_proof": "Security claims require: reproducible exploit, technical analysis, responsible disclosure, and defensive mitigation",
+    "certainty_levels": {
+      "proven": "Working exploit, CVE assigned, verified vulnerability",
+      "likely": "Strong indicators, partial exploit, similar vulnerabilities known",
+      "theoretical": "Logical vulnerability, no working exploit, needs testing",
+      "speculative": "Potential attack surface, requires research, unproven"
+    }
+  },
+  "mental_models": [
+    {
+      "model_name": "kill_chain",
+      "description": "Attack phases: reconnaissance, weaponization, delivery, exploitation, installation, C2, actions",
+      "use_cases": ["Attack planning", "defense strategy", "incident response"],
+      "limitations": ["Linear model", "real attacks more complex"],
+      "related_concepts": ["attack_lifecycle", "defense_in_depth", "detection"]
+    },
+    {
+      "model_name": "CIA_triad",
+      "description": "Security goals: Confidentiality, Integrity, Availability",
+      "use_cases": ["Security requirements", "threat modeling", "control design"],
+      "limitations": ["Incomplete (missing authentication, etc.)", "simplification"],
+      "related_concepts": ["security_properties", "threat_modeling", "risk"]
+    },
+    {
+      "model_name": "attack_surface",
+      "description": "Sum of all possible entry points and vulnerabilities",
+      "use_cases": ["Risk assessment", "hardening priorities", "design review"],
+      "limitations": ["Hard to quantify", "dynamic", "incomplete knowledge"],
+      "related_concepts": ["threat_modeling", "reduction", "minimization"]
+    },
+    {
+      "model_name": "trust_boundaries",
+      "description": "Lines where trust level changes between components or zones",
+      "use_cases": ["Architecture review", "input validation points", "security controls"],
+      "limitations": ["Can be blurred", "multiple boundaries", "complexity"],
+      "related_concepts": ["threat_modeling", "validation", "authorization"]
+    },
+    {
+      "model_name": "exploit_primitives",
+      "description": "Building blocks: info leak, arbitrary read, arbitrary write, control flow hijack",
+      "use_cases": ["Exploit development", "vulnerability analysis", "chaining"],
+      "limitations": ["Context specific", "mitigation dependent"],
+      "related_concepts": ["exploitation", "primitives", "chaining"]
+    }
+  ]
+}

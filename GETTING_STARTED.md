@@ -106,19 +106,19 @@ python3 aria_main.py "What is machine learning?"
 **Expected output:**
 ```
 🎯 BANDIT SELECTION
-  preset: balanced
-  reason: Thompson sample: 0.85
+  preset: fast
+  reason: LinUCB selection (UCB: 0.85)
 
 📚 RETRIEVAL
   scanned: 5 files
-  kept: 3 chunks
+  kept: 28 chunks
 
 📊 METRICS
   coverage: 78.5%
   diversity: 0.95
   reward: 0.612
 
-✓ COMPLETE (1.2s)
+✓ COMPLETE (0.14s)
 ```
 
 ### With Custom Config
@@ -134,13 +134,10 @@ python3 aria_main.py "Your question" --preset deep
 ```
 
 **Available presets:**
-- `balanced` - Good all-around (default)
-- `diverse` - Maximum source variety
-- `focused` - Narrow, precise
-- `creative` - Explore unusual connections
-- `fast` - Quick, fewer chunks
-- `thorough` - Comprehensive coverage
-- `deep` - Maximum depth
+- `fast` - Quick retrieval (40 chunks, 1 rotation)
+- `balanced` - Standard retrieval (64 chunks, 2 rotations)
+- `deep` - Thorough retrieval (96 chunks, 3 rotations)
+- `diverse` - High variety (80 chunks, 2 rotations)
 
 ### Custom Output Directory
 
@@ -159,7 +156,7 @@ ARIA provides rich, colorized output in the terminal:
 ```
 🎯 BANDIT SELECTION
   preset: deep
-  reason: epsilon-greedy random (ε=0.1)
+  reason: LinUCB selection (UCB: 0.92)
   phase: exploitation
 
 📚 RETRIEVAL
@@ -336,18 +333,12 @@ aria = ARIA(
 )
 
 # Run query
-result = aria.query(
-    "What is machine learning?",
-    preset_override="deep"  # Optional
-)
+result = aria.query("What is machine learning?")
 
-# Access metrics
-print(f"Coverage: {result['metrics']['retrieval']['coverage_score']:.2%}")
-print(f"Sources: {result['metrics']['retrieval']['unique_sources']}")
-print(f"Reward: {result['metrics']['reward']:.3f}")
-
-# Get pack path
-pack_path = result['pack']
+# Access results
+print(f"Preset: {result['preset']}")
+print(f"Run dir: {result['run_dir']}")
+print(f"Pack: {result['pack']}")
 ```
 
 ---
@@ -400,8 +391,8 @@ python3 aria_main.py "test"
 ## Next Steps
 
 - **Read [README.md](README.md)** for feature overview
-- **Check [PERFORMANCE.md](PERFORMANCE.md)** for benchmarks
-- **Explore [SYSTEM_WORKING.md](SYSTEM_WORKING.md)** for test results
+- **Check [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** for system architecture
+- **Review [docs/USAGE.md](docs/USAGE.md)** for usage examples
 - **Review [aria_config.yaml](aria_config.yaml)** for all options
 
 ---

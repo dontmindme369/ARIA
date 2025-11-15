@@ -353,10 +353,11 @@ def main():
 
     args = ap.parse_args()
 
-    # Resolve paths
-    root = Path(__file__).parent.parent.parent
-    signatures_path = root / args.signatures
-    corpus_dir = root / args.corpus
+    # Resolve paths relative to project root (aria/)
+    # This file is in src/perspective/, so go up 2 levels to reach aria/
+    project_root = Path(__file__).parent.parent.parent
+    signatures_path = project_root / args.signatures
+    corpus_dir = project_root / args.corpus
 
     print(f"Signatures: {signatures_path}")
     print(f"Corpus: {corpus_dir}")

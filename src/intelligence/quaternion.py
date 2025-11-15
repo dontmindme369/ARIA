@@ -154,10 +154,13 @@ class Quaternion:
 
         Returns:
             Inverse quaternion
+
+        Raises:
+            ZeroDivisionError: If quaternion is zero (norm² < 1e-12)
         """
         norm_sq = self.w**2 + self.x**2 + self.y**2 + self.z**2
         if norm_sq < 1e-12:
-            return Quaternion(1, 0, 0, 0)
+            raise ZeroDivisionError("Cannot compute inverse of zero quaternion")
 
         conj = self.conjugate()
         return Quaternion(conj.w/norm_sq, conj.x/norm_sq,

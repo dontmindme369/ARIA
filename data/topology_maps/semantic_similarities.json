@@ -1,0 +1,103 @@
+{
+  "philosophy": {
+    "epistemology--metaphysics": 0.333,
+    "ethics--political_philosophy": 0.4,
+    "phenomenology--philosophy_of_mind": 0.371,
+    "phenomenology--existentialism": 0.4,
+    "philosophy_of_mind--philosophy_of_science": 0.333,
+    "skepticism--rationalism": 0.4,
+    "skepticism--empiricism": 0.4,
+    "utilitarianism--deontology": 0.4,
+    "utilitarianism--virtue_ethics": 0.4,
+    "deontology--virtue_ethics": 0.4,
+    "rationalism--empiricism": 0.4
+  },
+  "engineering": {
+    "stress--strain": 0.49,
+    "youngs_modulus--yield_strength": 0.4,
+    "fatigue--buckling": 0.4,
+    "thermal_expansion--heat_transfer": 0.333,
+    "heat_transfer--thermodynamics": 0.333,
+    "circuit_analysis--signal_processing": 0.333
+  },
+  "law": {
+    "tort--negligence": 0.433,
+    "negligence--strict_liability": 0.383,
+    "criminal_law--mens_rea": 0.4,
+    "evidence--hearsay": 0.4
+  },
+  "business": {
+    "unit_economics--CAC": 0.383,
+    "unit_economics--LTV": 0.444,
+    "unit_economics--gross_margin": 0.383,
+    "unit_economics--burn_rate": 0.333,
+    "unit_economics--runway": 0.383,
+    "CAC--LTV": 0.333,
+    "CAC--gross_margin": 0.4,
+    "CAC--burn_rate": 0.4,
+    "CAC--runway": 0.4,
+    "LTV--gross_margin": 0.333,
+    "LTV--burn_rate": 0.333,
+    "LTV--runway": 0.333,
+    "churn_rate--north_star_metric": 0.333,
+    "gross_margin--burn_rate": 0.4,
+    "gross_margin--runway": 0.4,
+    "burn_rate--runway": 0.44,
+    "product_market_fit--pivot": 0.4,
+    "product_market_fit--TAM_SAM_SOM": 0.4,
+    "product_market_fit--go_to_market": 0.4,
+    "product_market_fit--competitive_advantage": 0.333,
+    "pivot--TAM_SAM_SOM": 0.4,
+    "pivot--MVP": 0.373,
+    "pivot--go_to_market": 0.4,
+    "pivot--competitive_advantage": 0.333,
+    "TAM_SAM_SOM--go_to_market": 0.4,
+    "TAM_SAM_SOM--competitive_advantage": 0.333,
+    "go_to_market--competitive_advantage": 0.333
+  },
+  "creative_arts": {
+    "composition--rhythm": 0.333,
+    "composition--contrast": 0.4,
+    "narrative_arc--character_development": 0.373,
+    "narrative_arc--tension_and_release": 0.505,
+    "narrative_arc--point_of_view": 0.4,
+    "character_development--tension_and_release": 0.4,
+    "character_development--point_of_view": 0.333,
+    "voice--show_dont_tell": 0.333,
+    "visual_hierarchy--whitespace": 0.333,
+    "rhythm--contrast": 0.333,
+    "tension_and_release--point_of_view": 0.333
+  },
+  "social_sciences": {
+    "cognitive_bias--priming": 0.4,
+    "correlation_vs_causation--operationalization": 0.333,
+    "correlation_vs_causation--external_validity": 0.333,
+    "correlation_vs_causation--sampling_bias": 0.4,
+    "correlation_vs_causation--experimental_design": 0.333,
+    "operationalization--external_validity": 0.4,
+    "operationalization--ecological_fallacy": 0.333,
+    "operationalization--sampling_bias": 0.333,
+    "operationalization--experimental_design": 0.4,
+    "external_validity--ecological_fallacy": 0.333,
+    "external_validity--sampling_bias": 0.333,
+    "external_validity--experimental_design": 0.4,
+    "p_value--effect_size": 0.457,
+    "ecological_fallacy--experimental_design": 0.333,
+    "sampling_bias--experimental_design": 0.333
+  },
+  "security": {
+    "buffer_overflow--format_string": 0.333,
+    "SQL_injection--XSS": 0.4,
+    "SQL_injection--SSRF": 0.333,
+    "XSS--SSRF": 0.333,
+    "privilege_escalation--lateral_movement": 0.333,
+    "race_condition--deserialization": 0.4
+  },
+  "data_science": {
+    "overfitting--cross_validation": 0.333,
+    "overfitting--confusion_matrix": 0.333,
+    "feature_engineering--data_leakage": 0.4,
+    "cross_validation--confusion_matrix": 0.4,
+    "dimensionality_reduction--clustering": 0.333
+  }
+}
