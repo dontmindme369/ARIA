@@ -1,5 +1,4 @@
 # ARIA - Adaptive Retrieval with Intelligent Anchoring
-# Requirements for production deployment
 
 # Core dependencies
 numpy>=1.21.0

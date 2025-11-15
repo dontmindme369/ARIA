@@ -1,5 +1,5 @@
 # ============================================================================
-# ARIA SYSTEM & RAG ARCHITECTURE
+# ARIA SYSTEM & COGNITIVE ARCHITECTURE
 # ============================================================================
 ARIA orchestrator with multi-armed bandit optimization using Thompson Sampling
 PCA rotation matrices for contextual exploration not semantic similarity
@@ -10,7 +10,7 @@ Session enforcement with whohash based on user host and hardware anchors
 Exemplar fit scoring with coverage metrics and diversity analysis
 Telemetry logging with query response tracking and reward computation
 Bandit state management with preset selection and adaptive learning
-Retrieval augmented generation with context injection into prompts
+Self-learning cognitive architecture with adaptive context retrieval
 Dense pack generation with 20-50 filtered items per query
 Postfilter pipeline dropping low quality and off-topic chunks
 LM Studio plugin preprocessor with prompt injection

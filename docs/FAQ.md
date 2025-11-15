@@ -16,7 +16,7 @@ ARIA (Adaptive Resonant Intelligent Architecture) is a self-learning retrieval s
 
 It's designed to retrieve relevant context from your knowledge base for use with LLMs.
 
-### What makes ARIA different from other RAG systems?
+### What makes ARIA different from other cognitive architectures?
 
 **Unique Features**:
 1. **Quaternion Semantic Exploration** - Rotates embeddings in semantic space for broader coverage

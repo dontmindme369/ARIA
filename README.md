@@ -1,6 +1,6 @@
 # ARIA - Adaptive Resonant Intelligent Architecture
 
-**Self-learning RAG system with LinUCB contextual bandits, quaternion semantic exploration, and anchor-based perspective detection.**
+**Self-learning cognitive architecture with LinUCB contextual bandits, quaternion semantic exploration, and anchor-based perspective detection.**
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -11,7 +11,7 @@
 
 ## What is ARIA?
 
-ARIA is an advanced retrieval-augmented generation (RAG) system that **learns from every query** to continuously improve retrieval quality. It combines:
+ARIA is an advanced self-learning cognitive architecture that **learns from every query** to continuously improve retrieval quality. It combines:
 
 - 🎯 **LinUCB Contextual Bandits** - Feature-aware multi-armed bandit optimizes retrieval strategies
 - 🌀 **Quaternion Semantic Exploration** - 4D rotations through embedding space with golden ratio spiral
