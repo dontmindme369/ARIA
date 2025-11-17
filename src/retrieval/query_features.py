@@ -44,9 +44,9 @@ class QueryFeatureExtractor:
                 "stacktrace",
             ],
             "patterns": [
-                r"\\b[a-z_]+\\([^)]*\\)",
-                r"\\b[A-Z][a-zA-Z]*Error\\b",
-                r"`[^`]+`",
+                r"\b[a-z_]+\([^)]*\)",  # function calls: foo()
+                r"\b[A-Z][a-zA-Z]*Error\b",  # Error types: ValueError
+                r"`[^`]+`",  # code in backticks
             ],
         },
         "paper": {
@@ -60,19 +60,25 @@ class QueryFeatureExtractor:
                 "experiment",
                 "methodology",
             ],
-            "patterns": [r"\\bet al\\.", r"\\b\\d{4}\\b"],
+            "patterns": [
+                r"\bet al\.",  # citations
+                r"\b\d{4}\b"  # years
+            ],
         },
         "conversation": {
             "keywords": ["said", "discussed", "talked", "mentioned", "we", "our"],
-            "patterns": [r"\\bwe\\b|\\bour\\b|\\bus\\b"],
+            "patterns": [r"\b(we|our|us)\b"],  # conversational pronouns
         },
         "concept": {
             "keywords": ["explain", "how", "why", "what", "understand", "concept"],
-            "patterns": [r"\\b(how|why|what)\\s+(does|is|are)", r"\\bexplain\\b"],
+            "patterns": [
+                r"\b(how|why|what)\s+(does|is|are)",  # question patterns
+                r"\bexplain\b"  # explain requests
+            ],
         },
         "factual": {
             "keywords": ["when", "where", "who", "which", "date", "time"],
-            "patterns": [r"\\b(when|where|who)\\s+(did|was|is)"],
+            "patterns": [r"\b(when|where|who)\s+(did|was|is)"],  # factual questions
         },
     }
 
