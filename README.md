@@ -63,7 +63,7 @@ ARIA is an advanced self-learning cognitive architecture that **learns from ever
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/ARIA.git
+git clone https://github.com/dontmindme369/ARIA/.git
 cd ARIA
 pip install -r requirements.txt
 ```
