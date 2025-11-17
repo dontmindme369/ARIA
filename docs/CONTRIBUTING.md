@@ -40,8 +40,8 @@ Contribute new features or fixes:
 
 ```bash
 # Fork repository on GitHub, then:
-git clone https://github.com/YOUR_USERNAME/ARIA.git
-cd ARIA/aria
+git clone https://github.com/dontmindme369/ARIA.git
+cd ARIA
 ```
 
 ### 2. Create Virtual Environment
