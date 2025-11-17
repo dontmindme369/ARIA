@@ -17,8 +17,8 @@ This guide will help you set up and run ARIA on your system.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/dontmindme369/aria.git
-cd aria
+git clone https://github.com/dontmindme369/ARIA.git
+cd ARIA
 ```
 
 ### 2. Install Dependencies
@@ -399,8 +399,8 @@ python3 aria_main.py "test"
 
 ## Need Help?
 
-- **Issues:** [GitHub Issues](https://github.com/dontmindme369/aria/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/dontmindme369/aria/discussions)
+- **Issues:** [GitHub Issues](https://github.com/dontmindme369/ARIA/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/dontmindme369/ARIA/discussions)
 
 ---
 
