@@ -26,79 +26,24 @@ class PerspectiveOrientationDetector:
     etc.
     """
 
-    def __init__(self, signatures_path: str, softmax_temperature: float = 2.0):
+    def __init__(self, signatures_path: str):
         """
         Initialize with perspective vocabulary signatures.
 
         Args:
             signatures_path: Path to perspective_signatures.json
-            softmax_temperature: Temperature for softmax normalization (default 2.0)
-                - Lower (1.0-2.0): More balanced distribution
-                - Medium (2.0-3.0): Moderate sharpening (recommended)
-                - Higher (4.0-5.0): Very sharp, picks dominant perspective
-
-        Raises:
-            FileNotFoundError: If signatures file doesn't exist
-            ValueError: If signatures file is malformed or missing perspectives
         """
         self.signatures_path = Path(signatures_path)
-        self.softmax_temperature = softmax_temperature
-
-        # Validate file exists
-        if not self.signatures_path.exists():
-            raise FileNotFoundError(
-                f"Perspective signatures file not found: {self.signatures_path}\n"
-                f"Expected location: {self.signatures_path.absolute()}\n"
-                f"Please ensure the file exists or update the path."
-            )
-
         self.signatures = self._load_signatures()
         self.perspective_names = list(self.signatures.keys())
-
-        # Validate we have perspectives
-        if not self.perspective_names:
-            raise ValueError(f"No perspectives found in {self.signatures_path}")
 
         # Pre-compile regex patterns for fast matching
         self._compile_patterns()
 
     def _load_signatures(self) -> Dict:
-        """
-        Load perspective vocabulary signatures
-
-        Returns:
-            Dict mapping perspective names to signature dicts
-
-        Raises:
-            json.JSONDecodeError: If file is not valid JSON
-            ValueError: If file structure is invalid
-        """
-        try:
-            with open(self.signatures_path, 'r', encoding='utf-8') as f:
-                signatures = json.load(f)
-
-            # Validate structure
-            if not isinstance(signatures, dict):
-                raise ValueError(f"Signatures file must contain a JSON object, got {type(signatures)}")
-
-            # Validate each perspective has required marker types
-            for perspective, sig in signatures.items():
-                if not isinstance(sig, dict):
-                    raise ValueError(f"Perspective '{perspective}' signature must be a dict")
-
-                required_keys = ['primary_markers', 'secondary_markers', 'structural_markers']
-                for key in required_keys:
-                    if key not in sig:
-                        raise ValueError(f"Perspective '{perspective}' missing required key: {key}")
-                    if not isinstance(sig[key], list):
-                        raise ValueError(f"Perspective '{perspective}' {key} must be a list")
-
-            return signatures
-
-        except json.JSONDecodeError as e:
-            raise ValueError(f"Invalid JSON in signatures file {self.signatures_path}: {e}")
-        except Exception as e:
-            raise ValueError(f"Error loading signatures from {self.signatures_path}: {e}")
+        """Load perspective vocabulary signatures"""
+        with open(self.signatures_path, 'r') as f:
+            return json.load(f)
 
     def _compile_patterns(self):
         """Pre-compile regex patterns for each perspective marker"""
@@ -162,20 +107,15 @@ class PerspectiveOrientationDetector:
             scores[perspective] = normalized_score
 
         # Apply softmax with temperature to make scores sum to 1
-        # Temperature controls distribution sharpness:
-        # - Low (1.0): More uniform, preserves mixed perspectives
-        # - Medium (2.0-3.0): Balanced, recommended default
-        # - High (5.0+): Very sharp, strongly prefers dominant perspective
+        # Higher temperature (5.0) sharpens the distribution
+        temperature = 5.0
         score_values = np.array([scores[p] for p in self.perspective_names])
-
-        # Prevent numerical overflow in exp
-        score_values_shifted = score_values - np.max(score_values)
-        exp_scores = np.exp(score_values_shifted * self.softmax_temperature)
+        exp_scores = np.exp((score_values - np.max(score_values)) * temperature)
         softmax_scores = exp_scores / np.sum(exp_scores)
 
         # Update scores with softmax-normalized values
         for i, p in enumerate(self.perspective_names):
-            scores[p] = float(softmax_scores[i])
+            scores[p] = softmax_scores[i]
 
         return scores
 

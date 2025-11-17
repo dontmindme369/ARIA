@@ -212,46 +212,11 @@ class ContextualBandit:
         # Feature 9: Bias term (always 1)
         features[9] = 1.0
 
-        # VALIDATION: Ensure correct dimensionality
-        if features.shape[0] != self.feature_dim:
-            raise ValueError(f"Feature dimension mismatch: expected {self.feature_dim}, got {features.shape[0]}")
-
-        # Normalize using running statistics (after warmup period)
-        # Use minimum of 5 observations for more stable early learning
-        if self.n_observations >= 5:
-            # Robust normalization with epsilon to prevent division by zero
-            features = (features - self.feature_mean) / (self.feature_std + 1e-6)
+        # Normalize using running statistics (only after warmup)
+        if self.n_observations > 10:
+            features = (features - self.feature_mean) / (self.feature_std + 1e-8)
 
         return features
-
-    def _safe_matrix_inverse(self, A: np.ndarray, regularization: float = 1e-6) -> np.ndarray:
-        """
-        Safely compute matrix inverse with singularity protection.
-
-        Uses regularization to ensure matrix is well-conditioned.
-        Falls back to pseudo-inverse if standard inversion fails.
-
-        Args:
-            A: Square matrix to invert
-            regularization: Ridge regularization parameter
-
-        Returns:
-            Inverse or pseudo-inverse of A
-        """
-        try:
-            # Check condition number (high = nearly singular)
-            cond = np.linalg.cond(A)
-            if cond > 1e10:
-                # Matrix is ill-conditioned, add ridge regularization
-                A_reg = A + regularization * np.eye(A.shape[0])
-                return np.linalg.inv(A_reg)
-            else:
-                # Matrix is well-conditioned
-                return np.linalg.inv(A)
-        except np.linalg.LinAlgError:
-            # Matrix is singular, use pseudo-inverse
-            print(f"[WARNING] Singular matrix detected, using pseudo-inverse", flush=True)
-            return np.linalg.pinv(A)
 
     def select_arm(
         self, query_context: Dict[str, Any], mode: str = "ucb"
@@ -276,18 +241,15 @@ class ContextualBandit:
 
         scores = {}
         for name, arm in self.arms.items():
-            # Compute θ = A^-1 * b (ridge regression solution) - SAFE VERSION
-            A_inv = self._safe_matrix_inverse(self.A[name])
+            # Compute θ = A^-1 * b (ridge regression solution)
+            A_inv = np.linalg.inv(self.A[name])
             theta = A_inv @ self.b[name]
 
             # Expected reward: θ^T * x
             expected_reward = theta @ features
 
             # Confidence bound: α * sqrt(x^T * A^-1 * x)
-            # Clamp to prevent numerical issues
-            confidence_term = features @ A_inv @ features
-            confidence_term = max(0.0, confidence_term)  # Ensure non-negative
-            confidence = self.alpha * np.sqrt(confidence_term)
+            confidence = self.alpha * np.sqrt(features @ A_inv @ features)
 
             if mode == "ucb":
                 # Upper Confidence Bound
@@ -297,14 +259,10 @@ class ContextualBandit:
                 scores[name] = expected_reward
             elif mode == "thompson":
                 # Thompson sampling with linear posterior
-                try:
-                    sampled_theta = np.random.multivariate_normal(
-                        theta, self.alpha**2 * A_inv
-                    )
-                    scores[name] = sampled_theta @ features
-                except np.linalg.LinAlgError:
-                    # Fallback to UCB if sampling fails
-                    scores[name] = expected_reward + confidence
+                sampled_theta = np.random.multivariate_normal(
+                    theta, self.alpha**2 * A_inv
+                )
+                scores[name] = sampled_theta @ features
 
         # Select best arm
         best_arm = max(scores.keys(), key=lambda k: scores[k])
@@ -328,10 +286,6 @@ class ContextualBandit:
             (arm_name, expected_reward, features, selection_method)
         """
         import random
-
-        # VALIDATION: Ensure epsilon is in valid range
-        if not (0.0 <= epsilon <= 1.0):
-            raise ValueError(f"Epsilon must be in [0, 1], got {epsilon}")
 
         if random.random() < epsilon:
             # Exploration: random selection
@@ -408,8 +362,8 @@ class ContextualBandit:
 
         arm = self.arms[arm_name]
 
-        # Compute current theta (weights) - SAFE VERSION
-        A_inv = self._safe_matrix_inverse(self.A[arm_name])
+        # Compute current theta (weights)
+        A_inv = np.linalg.inv(self.A[arm_name])
         theta = A_inv @ self.b[arm_name]
 
         return {
@@ -434,14 +388,11 @@ class ContextualBandit:
 
         rankings = []
         for name, arm in self.arms.items():
-            # SAFE VERSION - use safe matrix inversion
-            A_inv = self._safe_matrix_inverse(self.A[name])
+            A_inv = np.linalg.inv(self.A[name])
             theta = A_inv @ self.b[name]
 
             expected_reward = theta @ features
-            confidence_term = features @ A_inv @ features
-            confidence_term = max(0.0, confidence_term)  # Ensure non-negative
-            confidence = self.alpha * np.sqrt(confidence_term)
+            confidence = self.alpha * np.sqrt(features @ A_inv @ features)
             ucb_score = expected_reward + confidence
 
             rankings.append((name, ucb_score))
