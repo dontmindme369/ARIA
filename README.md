@@ -9,7 +9,7 @@ ARIA is a foundation, so build on top of it. Don't rely on broken paradigms and 
 With that being said, share this far and wide and go make this better than I ever could alone.
 
 
-# ARIA - Adaptive Resonant Intelligent Architecture
+# ARIA - Adaptive Resonant Intelligence Architecture
 
 **Self-learning cognitive architecture with LinUCB contextual bandits, quaternion semantic exploration, and anchor-based perspective detection.**
 
