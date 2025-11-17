@@ -543,16 +543,47 @@ class ARIA:
         try:
             from perspective.detector import PerspectiveOrientationDetector
 
-            # Lazy-load detector
+            # Lazy-load detector with fallback path resolution
             if not hasattr(self, '_perspective_detector'):
-                signatures_path = PROJECT_ROOT / "data" / "domain_dictionaries" / "perspective_signatures_v2.json"
+                # Try multiple possible locations for signature file
+                possible_paths = [
+                    PROJECT_ROOT / "data" / "domain_dictionaries" / "perspective_signatures_v2.json",
+                    PROJECT_ROOT / "data" / "perspective_signatures" / "anchor_perspective_signatures_v2.json",
+                    PROJECT_ROOT / "data" / "domain_dictionaries" / "perspective_signatures.json",  # Non-v2 fallback
+                ]
+
+                signatures_path = None
+                for path in possible_paths:
+                    if path.exists():
+                        signatures_path = path
+                        break
+
+                if signatures_path is None:
+                    raise FileNotFoundError(
+                        f"Perspective signatures file not found. Tried:\n" +
+                        "\n".join(f"  - {p}" for p in possible_paths)
+                    )
+
                 self._perspective_detector = PerspectiveOrientationDetector(str(signatures_path))
+                print(f"[ARIA] Loaded perspective detector from: {signatures_path.name}")
 
             result = self._perspective_detector.detect(query_text)
             return result
 
+        except FileNotFoundError as e:
+            print(f"[ARIA ERROR] Perspective signatures file not found: {e}", file=sys.stderr)
+            print(f"[ARIA ERROR] Perspective detection disabled - using fallback mixed mode", file=sys.stderr)
+            # Fallback to mixed
+            return {
+                "primary": "mixed",
+                "confidence": 0.0,
+                "weights": {},
+                "orientation_vector": [0.125] * 8  # Uniform distribution
+            }
         except Exception as e:
-            print(f"[ARIA] Perspective detection failed: {e}")
+            print(f"[ARIA WARNING] Perspective detection failed: {e}", file=sys.stderr)
+            import traceback
+            traceback.print_exc(file=sys.stderr)
             # Fallback to mixed
             return {
                 "primary": "mixed",
@@ -790,16 +821,31 @@ class ARIA:
                 anchor_mode = "casual"  # Fallback to casual
                 anchor_alignment = 0.0
 
-        # Find scripts
+        # Find scripts with validation
         v7_script = _which_script(CANDIDATE_V7)
         post_script = _which_script(CANDIDATE_POST)
 
         if not v7_script:
+            print(f"[ARIA ERROR] Retrieval script not found. Tried: {', '.join(CANDIDATE_V7)}", file=sys.stderr)
             return {
                 "preset": "default_fallback",
-                "reason": "v7 script not found",
+                "reason": "v7 retrieval script not found",
                 "result": {"ok": False, "reason": "retrieval script not found"},
+                "run_dir": str(run_dir),
             }
+
+        # Validate script is executable
+        v7_path = Path(v7_script)
+        if not v7_path.exists():
+            print(f"[ARIA ERROR] Script path invalid: {v7_script}", file=sys.stderr)
+            return {
+                "preset": preset.name,
+                "reason": reason,
+                "result": {"ok": False, "reason": "script path invalid"},
+                "run_dir": str(run_dir),
+            }
+
+        print(f"[ARIA] Using retrieval script: {v7_path.name}")
 
         # Prepare retrieval
         flags = self.preset_to_cli_args(preset)
@@ -811,7 +857,7 @@ class ARIA:
 
         start = time.time()
 
-        # Call v7 retrieval
+        # Call v7 retrieval with retry logic
         idx_arg = ":".join(str(p) for p in self.index_roots)
         cmd = [
             "python3", v7_script,
@@ -822,14 +868,61 @@ class ARIA:
             *rotation_params  # Add perspective-biased rotation
         ]
 
-        try:
-            subprocess.run(cmd, check=True, capture_output=True, text=True, timeout=30)
-        except Exception as e:
-            return {
-                "preset": preset.name,
-                "reason": reason,
-                "result": {"ok": False, "error": str(e)},
-            }
+        # Retry configuration
+        max_retries = 2
+        timeout_seconds = 60  # Increased from 30s for large knowledge bases
+        retry_count = 0
+        last_error = None
+
+        while retry_count <= max_retries:
+            try:
+                result = subprocess.run(
+                    cmd,
+                    check=True,
+                    capture_output=True,
+                    text=True,
+                    timeout=timeout_seconds
+                )
+                break  # Success, exit retry loop
+
+            except subprocess.TimeoutExpired as e:
+                last_error = e
+                retry_count += 1
+                if retry_count <= max_retries:
+                    print(f"[ARIA WARNING] Retrieval timeout (attempt {retry_count}/{max_retries + 1}), retrying...", file=sys.stderr)
+                    time.sleep(1)  # Brief pause before retry
+                else:
+                    print(f"[ARIA ERROR] Retrieval timeout after {max_retries + 1} attempts", file=sys.stderr)
+                    return {
+                        "preset": preset.name,
+                        "reason": reason,
+                        "result": {"ok": False, "error": f"timeout after {timeout_seconds}s ({max_retries + 1} attempts)"},
+                        "run_dir": str(run_dir),
+                    }
+
+            except subprocess.CalledProcessError as e:
+                last_error = e
+                print(f"[ARIA ERROR] Retrieval script failed with code {e.returncode}", file=sys.stderr)
+                print(f"[ARIA ERROR] stdout: {e.stdout[:500]}", file=sys.stderr)
+                print(f"[ARIA ERROR] stderr: {e.stderr[:500]}", file=sys.stderr)
+                return {
+                    "preset": preset.name,
+                    "reason": reason,
+                    "result": {"ok": False, "error": str(e), "returncode": e.returncode},
+                    "run_dir": str(run_dir),
+                }
+
+            except Exception as e:
+                last_error = e
+                print(f"[ARIA ERROR] Unexpected retrieval error: {e}", file=sys.stderr)
+                import traceback
+                traceback.print_exc(file=sys.stderr)
+                return {
+                    "preset": preset.name,
+                    "reason": reason,
+                    "result": {"ok": False, "error": str(e)},
+                    "run_dir": str(run_dir),
+                }
 
         if not pack_path.exists():
             return {
@@ -934,28 +1027,59 @@ class ARIA:
         })
 
         # Calculate compound reward from multiple signals
+        # Configurable weights for multi-objective optimization
+        EXEMPLAR_WEIGHT = 0.35  # Quality/relevance to anchor
+        COVERAGE_WEIGHT = 0.35  # Semantic coverage of query
+        DIVERSITY_WEIGHT = 0.20  # Source diversity
+        SEMANTIC_RECALL_WEIGHT = 0.10  # BM25 recall
+
         reward = 0.0
         exemplar_fit = 0.0
 
         if self.exemplar_scorer and raw_chunks:
             try:
                 exemplar_fit, _ = self.exemplar_scorer.calculate_fit(retrieved_text[:5000], cov_score)
-            except Exception:
-                pass
+            except Exception as e:
+                print(f"[ARIA WARNING] Exemplar scoring failed: {e}", file=sys.stderr)
+                exemplar_fit = cov_score  # Fallback to coverage as proxy
 
-        # Compound reward: exemplar_fit (40%) + coverage (30%) + diversity (30%)
-        reward = (
-            0.4 * exemplar_fit +
-            0.3 * cov_score +
-            0.3 * r.diversity_mm
-        )
+        # Compound reward with explicit weights (should sum to 1.0)
+        reward_components = {
+            "exemplar_fit": exemplar_fit * EXEMPLAR_WEIGHT,
+            "coverage": cov_score * COVERAGE_WEIGHT,
+            "diversity": r.diversity_mm * DIVERSITY_WEIGHT,
+            "semantic_recall": semantic_recall * SEMANTIC_RECALL_WEIGHT,
+        }
 
-        # Penalize if issues detected
+        # Base reward (before penalties)
+        base_reward = sum(reward_components.values())
+
+        # Apply penalties for quality issues (additive penalty, not multiplicative)
+        issue_penalty = 0.0
         if run_metrics.issues:
-            reward *= 0.8  # 20% penalty for quality issues
+            # Each issue type gets a specific penalty
+            for issue in run_metrics.issues:
+                if "slow" in issue.lower():
+                    issue_penalty += 0.05  # 5% penalty for slow queries
+                elif "duplicate" in issue.lower():
+                    issue_penalty += 0.10  # 10% penalty for high duplication
+                elif "coverage" in issue.lower():
+                    issue_penalty += 0.15  # 15% penalty for low coverage
+                else:
+                    issue_penalty += 0.05  # 5% for other issues
+
+            # Cap total penalty at 30%
+            issue_penalty = min(issue_penalty, 0.30)
+
+        # Final reward = base - penalties
+        reward = base_reward - issue_penalty
 
         # Clip to [0, 1] range
         reward = max(0.0, min(1.0, reward))
+
+        # Log reward breakdown for debugging (can disable in production)
+        if os.environ.get("ARIA_DEBUG_REWARD"):
+            print(f"[ARIA REWARD] Base: {base_reward:.3f}, Components: {reward_components}, Penalty: {issue_penalty:.3f}, Final: {reward:.3f}")
 
         # Update metrics with final reward
         run_metrics.reward = reward
