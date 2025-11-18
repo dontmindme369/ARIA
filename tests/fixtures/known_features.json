@@ -1,0 +1,51 @@
+{
+  "query_feature_mappings": [
+    {
+      "query": "What is a binary search tree?",
+      "expected": {
+        "domain": "code",
+        "complexity": "simple",
+        "has_question": true,
+        "word_count": 6,
+        "technical_density_min": 0.15
+      }
+    },
+    {
+      "query": "Compare gradient descent optimization algorithms",
+      "expected": {
+        "domain": "concept",
+        "complexity": "complex",
+        "has_question": false,
+        "word_count": 5,
+        "technical_density_min": 0.5
+      }
+    },
+    {
+      "query": "Debug ValueError in line 42",
+      "expected": {
+        "domain": "code",
+        "complexity": "medium",
+        "has_question": false,
+        "word_count": 5
+      }
+    },
+    {
+      "query": "Explain the methodology used in the AlphaGo paper et al. 2016",
+      "expected": {
+        "domain": "paper",
+        "complexity": "complex",
+        "has_question": false,
+        "technical_density_min": 0.2
+      }
+    },
+    {
+      "query": "What is the meaning of justice?",
+      "expected": {
+        "domain": "concept",
+        "complexity": "simple",
+        "has_question": true,
+        "word_count": 6
+      }
+    }
+  ]
+}
