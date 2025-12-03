@@ -8,14 +8,25 @@ PyYAML>=6.0
 # Optional: Semantic search (recommended for better results)
 sentence-transformers>=2.2.0
 
+# BM25 lexical search
+rank-bm25>=0.2.2
+
 # Optional: PDF support
 PyPDF2>=3.0.0
 
-# Optional: Word document support  
+# Optional: Word document support
 python-docx>=0.8.11
 
+# Testing dependencies
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-benchmark>=4.0.0
+pytest-xdist>=3.0.0
+hypothesis>=6.0.0
+coverage>=7.0.0
+
 # Development dependencies (optional)
-# pytest>=7.0.0
-# pytest-cov>=4.0.0
-# black>=22.0.0
-# mypy>=0.990
+black>=22.0.0
+mypy>=0.990
+flake8>=6.0.0
+isort>=5.12.0

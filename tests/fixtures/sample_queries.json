@@ -1,0 +1,47 @@
+{
+  "simple_queries": [
+    "What is Python?",
+    "Define recursion",
+    "Who invented the internet?"
+  ],
+  "complex_queries": [
+    "Compare and contrast the architectural differences between TensorFlow and PyTorch",
+    "Explain the relationship between entropy, information theory, and machine learning",
+    "Analyze the ethical implications of autonomous weapons systems"
+  ],
+  "code_queries": [
+    "How do I implement a binary search tree in Python?",
+    "Debug ValueError: invalid literal for int() with base 10",
+    "def quicksort(arr):",
+    "What causes memory leaks in Python?",
+    "Explain the difference between __init__ and __new__"
+  ],
+  "paper_queries": [
+    "Summarize the Attention is All You Need paper",
+    "What is the methodology in the AlphaGo research?",
+    "Compare BERT and GPT architectures from recent papers"
+  ],
+  "philosophical_queries": [
+    "What is the meaning of justice?",
+    "Explain the concept of free will",
+    "What is the nature of consciousness?",
+    "Is there objective truth?"
+  ],
+  "factual_queries": [
+    "When was the Declaration of Independence signed?",
+    "Where is the Eiffel Tower located?",
+    "Who wrote Hamlet?"
+  ],
+  "edge_cases": [
+    "",
+    "a",
+    "???",
+    "How do I? What? Why?",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  ],
+  "multilingual_queries": [
+    "Qu'est-ce que l'intelligence artificielle?",
+    "Was ist maschinelles Lernen?",
+    "¿Qué es la programación?"
+  ]
+}
