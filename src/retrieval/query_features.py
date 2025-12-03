@@ -1,3 +1,4 @@
+from __future__ import annotations
 import os
 import re
 import numpy as np
@@ -10,8 +11,7 @@ DATA_DIR = os.getenv("ARIA_DATA_DIR", "./data")
 CACHE_DIR = os.getenv("ARIA_CACHE_DIR", "./cache")
 OUTPUT_DIR = os.getenv("ARIA_OUTPUT_DIR", "./output")
 
-
-@dataclass
+dataclass
 class QueryFeatures:
     length: int
     word_count: int
@@ -78,7 +78,7 @@ class QueryFeatureExtractor:
         },
         "factual": {
             "keywords": ["when", "where", "who", "which", "date", "time"],
-            "patterns": [r"\b(when|where|who)\s+(did|was|is)"],  # factual questions
+            "patterns": [r"\b(when|where|who)\s+(did|was|is)"]  # factual questions
         },
     }
 
